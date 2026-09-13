@@ -70,11 +70,14 @@ class _WelcomeContent extends StatelessWidget {
           Icons.movie_outlined,
           color: StartScreen._primaryColor,
           size: 72,
+          semanticLabel: 'MovieLog 영화 아이콘',
         ),
         SizedBox(height: 72),
         Text(
           '영화의 순간을\n기록하세요',
           textAlign: TextAlign.center,
+          maxLines: 2,
+          overflow: TextOverflow.ellipsis,
           style: TextStyle(
             color: StartScreen._titleColor,
             fontSize: 38,
@@ -87,6 +90,8 @@ class _WelcomeContent extends StatelessWidget {
         Text(
           '보고 싶은 영화부터 나만의 평점까지\n한곳에서 관리해요',
           textAlign: TextAlign.center,
+          maxLines: 2,
+          overflow: TextOverflow.ellipsis,
           style: TextStyle(
             color: StartScreen._bodyColor,
             fontSize: 17,
