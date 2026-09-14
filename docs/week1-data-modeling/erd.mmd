@@ -1,0 +1,119 @@
+erDiagram
+    MEMBERS ||--o{ SOCIAL_ACCOUNTS : has
+    REGIONS ||--o{ MEMBERS : lives_in
+    MEMBERS ||--o{ MEMBER_TERMS : agrees
+    TERMS ||--o{ MEMBER_TERMS : records
+    MEMBERS ||--o{ MEMBER_FOOD_CATEGORIES : prefers
+    FOOD_CATEGORIES ||--o{ MEMBER_FOOD_CATEGORIES : selected_as
+    MEMBERS ||--o{ MEMBER_MISSIONS : participates
+    REGIONS o|--o{ REGIONS : contains
+    REGIONS ||--o{ STORES : contains
+    FOOD_CATEGORIES ||--o{ STORES : classifies
+    STORES ||--o{ MISSIONS : offers
+    MISSIONS ||--o{ MEMBER_MISSIONS : records
+    MEMBER_MISSIONS ||--o| REVIEWS : creates
+    REVIEWS ||--o{ REVIEW_IMAGES : contains
+
+    MEMBERS {
+        BIGINT id PK
+        BIGINT region_id FK
+        VARCHAR email UK "optional"
+        VARCHAR name
+        VARCHAR nickname UK
+        VARCHAR phone_number "optional"
+        VARCHAR gender
+        DATE birth_date
+        VARCHAR address_detail "optional"
+        VARCHAR status
+        DATETIME deleted_at "optional, soft delete"
+    }
+    SOCIAL_ACCOUNTS {
+        BIGINT id PK
+        BIGINT member_id FK
+        VARCHAR provider
+        VARCHAR provider_user_id
+    }
+    REGIONS {
+        BIGINT id PK
+        BIGINT parent_region_id FK "optional"
+        VARCHAR code UK
+        VARCHAR name
+        TINYINT depth
+        DATETIME deleted_at "optional"
+    }
+    FOOD_CATEGORIES {
+        BIGINT id PK
+        VARCHAR code UK
+        VARCHAR name UK
+        INT display_order
+        DATETIME deleted_at "optional"
+    }
+    TERMS {
+        BIGINT id PK
+        VARCHAR title
+        VARCHAR content_url
+        VARCHAR version
+        BOOLEAN is_required
+        DATETIME effective_at
+        DATETIME deleted_at "optional"
+    }
+    MEMBER_TERMS {
+        BIGINT id PK
+        BIGINT member_id FK
+        BIGINT term_id FK
+        BOOLEAN is_agreed
+        DATETIME agreed_at "optional"
+    }
+    MEMBER_FOOD_CATEGORIES {
+        BIGINT id PK
+        BIGINT member_id FK
+        BIGINT food_category_id FK
+    }
+    STORES {
+        BIGINT id PK
+        BIGINT region_id FK
+        BIGINT food_category_id FK
+        VARCHAR name
+        VARCHAR address
+        VARCHAR description "optional"
+        VARCHAR image_url "optional"
+        VARCHAR status
+        DATETIME deleted_at "optional"
+    }
+    MISSIONS {
+        BIGINT id PK
+        BIGINT store_id FK
+        VARCHAR title
+        VARCHAR description
+        DECIMAL minimum_order_amount "optional"
+        INT reward_points
+        DATETIME started_at "optional"
+        DATETIME ended_at "optional"
+        VARCHAR status
+        DATETIME deleted_at "optional"
+    }
+    MEMBER_MISSIONS {
+        BIGINT id PK
+        BIGINT member_id FK
+        BIGINT mission_id FK
+        VARCHAR status
+        VARCHAR verification_code "optional"
+        DATETIME verification_requested_at "optional"
+        DATETIME accepted_at
+        DATETIME completed_at "optional"
+        DATETIME claimed_at "optional"
+    }
+    REVIEWS {
+        BIGINT id PK
+        BIGINT member_mission_id FK,UK
+        TINYINT rating
+        VARCHAR content "optional"
+        VARCHAR status
+        DATETIME deleted_at "optional"
+    }
+    REVIEW_IMAGES {
+        BIGINT id PK
+        BIGINT review_id FK
+        VARCHAR image_url
+        INT display_order
+    }
