@@ -49,8 +49,18 @@ Margin을 적용한 위치: ProfileStats 위·아래 간격
 AppColors에서 관리한 값: violet, violetContainer, warmWhite, white, black, gray, outline
 ThemeData에서 관리한 값: Material 3, ColorScheme, TextTheme, AppBarTheme, 시스템 UI 스타일
 적용한 Font: Manrope
-트러블슈팅: 직접 발생한 내용 기록
-1주차 회고: 직접 작성
+트러블슈팅: 0주차 시작 화면의 기본 Icon을 SvgPicture.asset으로 교체한 뒤, const Column 내부에서 const 생성자가 아닌 SvgPicture.asset을 호출해 const_with_non_const 컴파일 오류가 발생했다. 부모 Column의 const를 제거하고 값이 고정된 Text와 SizedBox에만 const를 개별 적용한 뒤 flutter analyze와 flutter test로 해결을 확인했다.
+1주차 회고: 이번 미션을 통해 화면마다 색상과 TextStyle을 직접 반복하기보다 AppColors, AppTextStyles, AppTheme로 디자인 시스템을 분리하는 이유를 이해했다. 프로필 화면을 ProfileHeader, ProfileStats, StatItem, FavoriteGenres처럼 의미 단위로 나누면서 재사용 가능한 Widget의 장점도 확인했다. 또한 PNG와 SVG Asset의 차이, Row와 Column의 주축·교차축, Padding과 Margin의 역할을 실제 화면에 적용해 보았다. 다음 화면을 구현할 때도 먼저 Widget Tree와 공통 스타일을 설계한 뒤 작은 Widget 단위로 개발하고 싶다.
+```
+
+## 트러블슈팅 기록 예시
+
+```text
+이슈: 0주차 시작 화면의 Icons.movie_outlined를 MovieLog SVG 로고로 교체한 뒤 const_with_non_const 컴파일 오류가 발생했다.
+원인: flutter_svg의 SvgPicture.asset 생성자는 const 생성자가 아닌데, 해당 Widget이 const Column 내부에 포함되어 있었다.
+해결: 부모 Column의 const를 제거하고, 컴파일 시점에 값이 고정되는 Text와 SizedBox에만 const를 개별 적용했다. 이후 flutter analyze에서 컴파일 오류가 사라지고 flutter test 2개가 모두 통과하는 것을 확인했다.
+다른 해결 방법: SvgPicture.asset을 별도의 StatelessWidget으로 분리하거나, SVG를 포함하는 더 작은 상위 영역만 non-const Widget으로 구성할 수도 있다.
+다시 발생하지 않게 확인한 내용: 외부 패키지 Widget의 생성자가 const를 지원하는지 먼저 확인하고, Asset이나 패키지 Widget을 추가한 직후 flutter analyze와 flutter test를 실행한다.
 ```
 
 ## 제출
