@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'screens/start_screen.dart';
+import 'screens/profile_screen.dart';
+import 'theme/app_theme.dart';
 
 class MovieLogApp extends StatelessWidget {
   const MovieLogApp({super.key});
@@ -10,15 +11,8 @@ class MovieLogApp extends StatelessWidget {
     return MaterialApp(
       title: 'MovieLog',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        useMaterial3: true,
-        scaffoldBackgroundColor: const Color(0xFFFAF9F5),
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color(0xFF6750A4),
-          brightness: Brightness.light,
-        ),
-      ),
-      home: const StartScreen(),
+      theme: AppTheme.light,
+      home: const ProfileScreen(),
     );
   }
 }

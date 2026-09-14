@@ -1,6 +1,6 @@
 # MovieLog
 
-UMC 11기 PE(Mobile) 0주차 Flutter 필수 미션 프로젝트입니다.
+UMC 11기 PE(Mobile) Flutter 필수 미션 프로젝트입니다.
 
 ## 실행
 
@@ -24,3 +24,16 @@ dart run lib/week0/dart_practice.dart
 - `Icons.movie_outlined` 기본 Material 아이콘 사용
 - 앱 설정과 화면 Widget 분리
 - Widget 테스트 추가
+
+## 1주차 구현 내용
+
+- Material 3 기반 `AppColors`, `AppTextStyles`, `AppTheme` 구성
+- Manrope 폰트와 MovieLog 공통 이미지·SVG Asset 등록
+- 0주차 시작 화면의 기본 아이콘을 MovieLog SVG 로고로 교체
+- 공용 `CommonAppBar`와 정적인 프로필 화면 구현
+- 프로필 이미지, 재사용 가능한 통계 카드, 선호 장르 Chip 구현
+- `List`와 `map`을 활용한 통계·장르 UI 생성
+- 프로필 이미지 로드 실패 시 기본 아이콘 표시
+- SVG 아이콘에 테마 색상 `colorFilter` 적용
+
+1주차 제출 전 확인 사항은 `WEEK1_SUBMISSION_GUIDE.md`에 정리되어 있습니다.
