@@ -26,19 +26,7 @@
 
 1. Android Emulator에서 프로필 화면을 실행한다.
 2. Figma의 `W1-01`과 Flutter 실행 화면을 나란히 비교해 캡처한다.
-3. 아래 Widget Tree를 손으로 그리거나 문서로 정리해 캡처한다.
-
-```text
-ProfileScreen
-├─ CommonAppBar
-└─ ProfileBody
-   ├─ ProfileHeader
-   ├─ EditProfileButton
-   ├─ ProfileStats
-   │  └─ StatItem × 3
-   └─ FavoriteGenres
-      └─ Chip × 3
-```
+3. `WEEK1_WIDGET_TREE.md`를 열어 작성된 Widget Tree 문서를 확인하고 캡처한다.
 
 4. 실행 화면과 Widget Tree 캡처를 원본 MakeUs 워크스페이스의 1주차 페이지에 첨부한다.
 5. PR 링크와 아래 미션 내용을 같은 페이지에 기록한다.
