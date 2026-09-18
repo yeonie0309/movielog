@@ -17,6 +17,7 @@ abstract final class AppTheme {
       surface: AppColors.warmWhite,
       onSurface: AppColors.black,
       outline: AppColors.outline,
+      error: AppColors.error,
     ),
     textTheme: const TextTheme(
       titleLarge: AppTextStyles.titleLarge,
@@ -41,6 +42,31 @@ abstract final class AppTheme {
         statusBarBrightness: Brightness.light,
         systemNavigationBarColor: AppColors.warmWhite,
         systemNavigationBarIconBrightness: Brightness.dark,
+      ),
+    ),
+    inputDecorationTheme: InputDecorationTheme(
+      filled: true,
+      fillColor: AppColors.white,
+      contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+      border: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(12),
+        borderSide: const BorderSide(color: AppColors.outline),
+      ),
+      enabledBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(12),
+        borderSide: const BorderSide(color: AppColors.outline),
+      ),
+      focusedBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(12),
+        borderSide: const BorderSide(color: AppColors.violet, width: 2),
+      ),
+      errorBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(12),
+        borderSide: const BorderSide(color: AppColors.error),
+      ),
+      focusedErrorBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(12),
+        borderSide: const BorderSide(color: AppColors.error, width: 2),
       ),
     ),
   );

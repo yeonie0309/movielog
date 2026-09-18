@@ -10,4 +10,6 @@ abstract final class AppColors {
   static const black = Color(0xFF1C1B1F);
   static const gray = Color(0xFF79747E);
   static const outline = Color(0xFFCAC4D0);
+  static const error = Color(0xFFBA1A1A);
+  static const success = Color(0xFF2E7D32);
 }
