@@ -1,4 +1,5 @@
 -- 공통 실습 Required Mission 3개와 LIMIT/OFFSET 확인 쿼리
+SET NAMES utf8mb4;
 USE umc_week2_library;
 
 -- 실습 체크리스트: 단일 테이블에서 대여 가능한 책 조회

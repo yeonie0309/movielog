@@ -1,4 +1,5 @@
 -- 01_schema.sql 실행 후 사용한다.
+SET NAMES utf8mb4;
 USE umc_week2_library;
 
 INSERT INTO users (nickname)

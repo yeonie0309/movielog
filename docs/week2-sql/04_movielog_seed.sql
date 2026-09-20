@@ -1,4 +1,5 @@
 -- docs/week1-data-modeling/schema.sql을 movielog_week2 DB에 실행한 뒤 사용한다.
+SET NAMES utf8mb4;
 
 INSERT INTO regions (id, parent_region_id, code, name, depth)
 VALUES
