@@ -1,0 +1,7 @@
+flowchart LR
+    A[member_missions<br/>회원별 수행 상태] -->|mission_id = id| B[missions<br/>미션·보상 정보]
+    B -->|store_id = id| C[stores<br/>가게 정보]
+
+    style A fill:#EADDFF,stroke:#6750A4
+    style B fill:#EADDFF,stroke:#6750A4
+    style C fill:#EADDFF,stroke:#6750A4
