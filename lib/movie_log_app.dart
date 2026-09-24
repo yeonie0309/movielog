@@ -1,18 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
-import 'screens/sign_up_screen.dart';
+import 'router/app_router.dart';
 import 'theme/app_theme.dart';
 
 class MovieLogApp extends StatelessWidget {
-  const MovieLogApp({super.key});
+  const MovieLogApp({super.key, this.routerConfig});
+
+  final GoRouter? routerConfig;
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       title: 'MovieLog',
       debugShowCheckedModeBanner: false,
       theme: AppTheme.light,
-      home: const SignUpScreen(),
+      routerConfig: routerConfig ?? AppRouter.router,
     );
   }
 }

@@ -1,12 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:movielog/movie_log_app.dart';
+import 'package:movielog/router/app_router.dart';
 import 'package:movielog/screens/profile_screen.dart';
 import 'package:movielog/screens/start_screen.dart';
 
 void main() {
+  Future<void> pumpMovieLogAt(
+    WidgetTester tester,
+    String initialLocation,
+  ) async {
+    final router = AppRouter.create(initialLocation: initialLocation);
+    addTearDown(router.dispose);
+    await tester.pumpWidget(MovieLogApp(routerConfig: router));
+    await tester.pumpAndSettle();
+  }
+
   testWidgets('2주차 회원가입 화면의 필수 입력과 비활성 버튼을 표시한다', (tester) async {
-    await tester.pumpWidget(const MovieLogApp());
+    await pumpMovieLogAt(tester, '/register');
 
     expect(find.text('회원가입'), findsOneWidget);
     expect(find.byKey(const Key('nickname-field')), findsOneWidget);
@@ -21,7 +32,7 @@ void main() {
   });
 
   testWidgets('잘못된 입력에 Validation 메시지를 표시한다', (tester) async {
-    await tester.pumpWidget(const MovieLogApp());
+    await pumpMovieLogAt(tester, '/register');
 
     await tester.enterText(find.byKey(const Key('nickname-field')), '가');
     await tester.enterText(find.byKey(const Key('email-field')), 'wrong-email');
@@ -34,7 +45,7 @@ void main() {
   });
 
   testWidgets('모든 입력과 약관 동의가 유효하면 가입할 수 있다', (tester) async {
-    await tester.pumpWidget(const MovieLogApp());
+    await pumpMovieLogAt(tester, '/register');
 
     await tester.enterText(find.byKey(const Key('nickname-field')), '무비러버');
     await tester.enterText(
@@ -56,14 +67,14 @@ void main() {
 
     await tester.ensureVisible(find.byKey(const Key('sign-up-button')));
     await tester.tap(find.byKey(const Key('sign-up-button')));
-    await tester.pump();
+    await tester.pumpAndSettle();
 
-    expect(find.text('모든 입력값이 유효합니다.'), findsOneWidget);
-    expect(find.text('입력값을 확인했습니다. API는 연결하지 않았어요.'), findsOneWidget);
+    expect(find.text('오늘의 영화 한 편을 기록해 보세요.'), findsOneWidget);
+    expect(find.byKey(const Key('main-navigation-bar')), findsOneWidget);
   });
 
   testWidgets('별점을 선택하면 평점 저장 버튼이 활성화된다', (tester) async {
-    await tester.pumpWidget(const MovieLogApp());
+    await pumpMovieLogAt(tester, '/register');
 
     await tester.ensureVisible(
       find.byKey(const Key('open-rating-practice-button')),

@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
-import '../theme/app_colors.dart';
 import '../widgets/common_app_bar.dart';
 import '../widgets/sign_up/sign_up_header.dart';
 import '../widgets/sign_up/sign_up_text_field.dart';
-import 'rating_input_screen.dart';
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({super.key});
@@ -26,7 +25,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
   bool _agreedToTerms = false;
   bool _obscurePassword = true;
-  bool _submittedSuccessfully = false;
 
   bool get _canSubmit =>
       _nicknameController.text.trim().length >= 2 &&
@@ -39,9 +37,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
   }
 
   void _refreshFormState(String _) {
-    setState(() {
-      _submittedSuccessfully = false;
-    });
+    setState(() {});
   }
 
   void _submit() {
@@ -49,16 +45,11 @@ class _SignUpScreenState extends State<SignUpScreen> {
     if (!isValid || !_agreedToTerms) return;
 
     FocusScope.of(context).unfocus();
-    setState(() => _submittedSuccessfully = true);
-    ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(content: Text('입력값을 확인했습니다. API는 연결하지 않았어요.')),
-    );
+    context.go('/home');
   }
 
   void _openRatingPractice() {
-    Navigator.of(
-      context,
-    ).push(MaterialPageRoute<void>(builder: (_) => const RatingInputScreen()));
+    context.push('/rating-practice');
   }
 
   String? _validateNickname(String? value) {
@@ -185,7 +176,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
                               onChanged: (value) {
                                 setState(() {
                                   _agreedToTerms = value ?? false;
-                                  _submittedSuccessfully = false;
                                 });
                               },
                             ),
@@ -209,21 +199,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
                             child: const Text('가입하기'),
                           ),
                         ),
-                        if (_submittedSuccessfully) ...[
-                          const SizedBox(height: 12),
-                          const Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Icon(
-                                Icons.check_circle_outline,
-                                color: AppColors.success,
-                                size: 20,
-                              ),
-                              SizedBox(width: 8),
-                              Flexible(child: Text('모든 입력값이 유효합니다.')),
-                            ],
-                          ),
-                        ],
                         const SizedBox(height: 12),
                         TextButton.icon(
                           key: const Key('open-rating-practice-button'),
