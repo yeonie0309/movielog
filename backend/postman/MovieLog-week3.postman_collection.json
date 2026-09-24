@@ -1,0 +1,55 @@
+{
+  "info": {
+    "name": "MovieLog - UMC PE 3주차 Backend",
+    "description": "NestJS + MySQL Raw SQL 실습 및 필수/선택 미션 검증",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:3000"
+    }
+  ],
+  "item": [
+    {
+      "name": "Health Check",
+      "request": { "method": "GET", "url": "{{baseUrl}}/" }
+    },
+    {
+      "name": "전체 도서 조회",
+      "request": { "method": "GET", "url": "{{baseUrl}}/books" }
+    },
+    {
+      "name": "신규 도서 등록",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"categoryId\": 1,\n  \"title\": \"클린 코드\",\n  \"description\": \"애자일 소프트웨어 장인 정신\"\n}"
+        },
+        "url": "{{baseUrl}}/books"
+      }
+    },
+    {
+      "name": "필수 1 - 특정 카테고리 도서 조회",
+      "request": { "method": "GET", "url": "{{baseUrl}}/books/category/1" }
+    },
+    {
+      "name": "필수 2 - 신규 대여 기록 생성",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"userId\": 1,\n  \"bookId\": 1\n}"
+        },
+        "url": "{{baseUrl}}/rentals"
+      }
+    },
+    {
+      "name": "선택 - 도서 반납 처리",
+      "request": { "method": "PATCH", "url": "{{baseUrl}}/rentals/1/return" }
+    }
+  ]
+}
