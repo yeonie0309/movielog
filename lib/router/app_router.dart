@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
+import '../data/genre_preference.dart';
 import '../data/mock_movies.dart';
 import '../screens/home_screen.dart';
 import '../screens/main_screen.dart';
@@ -10,11 +11,17 @@ import '../screens/my_page_screen.dart';
 import '../screens/rating_input_screen.dart';
 import '../screens/sign_up_screen.dart';
 import '../screens/start_screen.dart';
+import '../services/fake_movie_service.dart';
 
 abstract final class AppRouter {
   static final router = create();
 
-  static GoRouter create({String initialLocation = '/start'}) {
+  static GoRouter create({
+    String initialLocation = '/start',
+    GenrePreferenceStore? genrePreference,
+    FakeMovieService movieService = const FakeMovieService(),
+    Duration movieRequestTimeout = const Duration(seconds: 4),
+  }) {
     final rootNavigatorKey = GlobalKey<NavigatorState>();
 
     return GoRouter(
@@ -55,7 +62,18 @@ abstract final class AppRouter {
                     final selectedGenres = genres == null || genres.isEmpty
                         ? <String>{}
                         : genres.split(',').toSet();
-                    return MovieListScreen(selectedGenres: selectedGenres);
+                    final stateName = state.uri.queryParameters['state'];
+                    final loadMode = MovieLoadMode.values.firstWhere(
+                      (mode) => mode.name == stateName,
+                      orElse: () => MovieLoadMode.success,
+                    );
+                    return MovieListScreen(
+                      selectedGenres: selectedGenres,
+                      initialMode: loadMode,
+                      movieService: movieService,
+                      requestTimeout: movieRequestTimeout,
+                      genrePreference: genrePreference,
+                    );
                   },
                 ),
               ],
