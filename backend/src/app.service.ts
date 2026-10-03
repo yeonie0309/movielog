@@ -4,7 +4,7 @@ import { Injectable } from '@nestjs/common';
 export class AppService {
   getHealth(): { service: string; status: string } {
     return {
-      service: 'MovieLog week 3 API',
+      service: 'MovieLog week 4 ORM API',
       status: 'ok',
     };
   }
