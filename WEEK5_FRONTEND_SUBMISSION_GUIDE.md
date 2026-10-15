@@ -31,9 +31,17 @@
 
 실제 TMDB 응답은 계속 바뀌므로 제목과 개수는 실행 시점의 결과를 적습니다. Token을 일부러 공개하거나 영상에 입력하는 방식으로 Error를 재현하지 않습니다.
 
+## 2026-10-16 검증 결과
+
+- 실제 토큰으로 Popular 200(첫 페이지 20개), Genre 200(19개), Discover 전체·장르 28 필터 200을 확인했습니다.
+- `flutter test` 34개 통과, `flutter analyze --no-fatal-infos` error/warning 0개(기존 0주차 info 2개).
+- Android 에뮬레이터에서 `flutter test integration_test/week5_live_tmdb_test.dart -d emulator-5554` 통과: 인기 5개, 목록 30개·중복 제거, 장르 28 재조회, 상세 및 평점 Dialog로 실제 TMDB ID 전달.
+- 처음 통합 테스트에서 홈·영화 탭의 동일한 Hero 태그 충돌을 발견했고, 홈의 보조 카드 Hero 애니메이션만 비활성화해 재실행 통과했습니다.
+- 토큰 원문은 Git에 포함하지 않았고, 네트워크 로그의 Authorization은 `Bearer ***`로 출력됐습니다.
+
 ## 워크북 최종 체크리스트 판단
 
-코드·자동 테스트로 Client 분리, `.env` 제외, 5개/30개, DTO 변환, 장르 재조회, 상태·재시도, 영화 ID 전달을 확인할 수 있습니다. 다만 **실제 TMDB 200 응답, 요청 로그와 화면, 수동 상태 검증, PR·스터디 증빙은 직접 확인한 후** 해당 항목에 체크합니다. Challenge Mission의 다중 장르 선택 및 실패 Dialog는 구현 범위에 포함하지 않았으므로 체크하지 않습니다.
+코드·자동 테스트와 실제 API/Android 통합 테스트로 Client 분리, `.env` 제외, 5개/30개, DTO 변환, 장르 재조회, 상태·재시도, 영화 ID 전달을 확인했습니다. 다만 **화면·영상 캡처, 수동 Empty/Error 재현, PR·스터디 증빙은 실제로 첨부한 후** 해당 항목에 체크합니다. Challenge Mission의 다중 장르 선택 및 실패 Dialog는 구현 범위에 포함하지 않았으므로 체크하지 않습니다.
 
 ## Notion 제출 양식 예시
 

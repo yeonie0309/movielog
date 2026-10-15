@@ -180,7 +180,13 @@ class _PopularContent extends StatelessWidget {
               final movie = movies[index + 1];
               return SizedBox(
                 width: 144,
-                child: MovieCard(movie: movie, onTap: () => onOpenMovie(movie)),
+                child: HeroMode(
+                  enabled: false,
+                  child: MovieCard(
+                    movie: movie,
+                    onTap: () => onOpenMovie(movie),
+                  ),
+                ),
               );
             },
           ),
