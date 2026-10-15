@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:provider/provider.dart';
 
 import '../data/genre_preference.dart';
 import '../data/mock_movies.dart';
+import '../data/services/tmdb_movie_service.dart';
+import '../models/movie.dart';
 import '../screens/home_screen.dart';
 import '../screens/main_screen.dart';
 import '../screens/movie_detail_screen.dart';
@@ -11,16 +14,21 @@ import '../screens/my_page_screen.dart';
 import '../screens/rating_input_screen.dart';
 import '../screens/sign_up_screen.dart';
 import '../screens/start_screen.dart';
+import '../screens/tmdb_home_screen.dart';
+import '../screens/tmdb_movie_list_screen.dart';
 import '../services/fake_movie_service.dart';
+import '../view_models/movie_home_view_model.dart';
+import '../view_models/movie_list_view_model.dart';
 
 abstract final class AppRouter {
-  static final router = create();
+  static final router = create(useTmdb: true);
 
   static GoRouter create({
     String initialLocation = '/start',
     GenrePreferenceStore? genrePreference,
     FakeMovieService movieService = const FakeMovieService(),
     Duration movieRequestTimeout = const Duration(seconds: 4),
+    bool useTmdb = false,
   }) {
     final rootNavigatorKey = GlobalKey<NavigatorState>();
 
@@ -49,7 +57,14 @@ abstract final class AppRouter {
               routes: [
                 GoRoute(
                   path: '/home',
-                  builder: (context, state) => const HomeScreen(),
+                  builder: (context, state) => useTmdb
+                      ? ChangeNotifierProvider(
+                          create: (context) => MovieHomeViewModel(
+                            context.read<MovieCatalogService>(),
+                          )..loadPopular(),
+                          child: const TmdbHomeScreen(),
+                        )
+                      : const HomeScreen(),
                 ),
               ],
             ),
@@ -58,6 +73,14 @@ abstract final class AppRouter {
                 GoRoute(
                   path: '/movies',
                   builder: (context, state) {
+                    if (useTmdb) {
+                      return ChangeNotifierProvider(
+                        create: (context) => MovieListViewModel(
+                          context.read<MovieCatalogService>(),
+                        )..loadInitial(),
+                        child: const TmdbMovieListScreen(),
+                      );
+                    }
                     final genres = state.uri.queryParameters['genres'];
                     final selectedGenres = genres == null || genres.isEmpty
                         ? <String>{}
@@ -93,7 +116,14 @@ abstract final class AppRouter {
           path: '/movies/:movieId',
           builder: (context, state) {
             final movieId = int.tryParse(state.pathParameters['movieId'] ?? '');
-            return MovieDetailScreen(movie: findMovieById(movieId));
+            final passedMovie = state.extra;
+            return MovieDetailScreen(
+              movie: passedMovie is Movie && passedMovie.id == movieId
+                  ? passedMovie
+                  : useTmdb
+                  ? null
+                  : findMovieById(movieId),
+            );
           },
         ),
       ],
