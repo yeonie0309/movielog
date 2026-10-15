@@ -46,7 +46,7 @@
 ## Notion 제출 양식 예시
 
 ```text
-PR 링크: (생성 후 링크)
+PR 링크: https://github.com/yeonie0309/movielog/pull/11
 TMDB Token 비노출 확인: .env는 Git에서 제외했고, 디버그 로그의 Authorization은 Bearer ***로 마스킹함. PR·캡처·영상에 원문 없음.
 Popular 5개 화면: (홈 캡처 첨부)
 Discover 최대 30개 화면과 실제 개수: (영화 탭 캡처 첨부, 실행 시 표시된 개수 기입)
