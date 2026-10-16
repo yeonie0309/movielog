@@ -37,4 +37,3 @@
 - `flutter test -d emulator-5554 integration_test/week5_network_video_test.dart`: 1개 통과 (실제 TMDB·장르 전후 요청)
 - `flutter analyze --no-fatal-infos`: 종료 코드 0, 기존 0주차 `avoid_print` info 2개
 
-원본 Notion의 화면 증빙란에는 위 이미지들을 첨부하되, 04~07번은 반드시 **테스트 서비스로 재현**했다고 표시하세요. 스터디 인증 사진은 이 저장소에서 만들 수 없으므로 실제 모임 사진을 별도로 첨부해야 합니다.
