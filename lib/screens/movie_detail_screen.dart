@@ -43,7 +43,8 @@ class _MovieDetailScreenState extends State<MovieDetailScreen> {
   Future<void> _openRatingDialog() async {
     final rating = await showDialog<double>(
       context: context,
-      builder: (context) => RatingDialog(initialRating: _myRating),
+      builder: (context) =>
+          RatingDialog(movieId: widget.movie?.id, initialRating: _myRating),
     );
 
     if (rating == null || !mounted) return;
@@ -126,7 +127,11 @@ class _MovieDetailScreenState extends State<MovieDetailScreen> {
                   ),
                   const SizedBox(height: 8),
                   Text(
-                    '${movie.genre} · ${movie.year} · ${movie.runtimeMinutes}분',
+                    [
+                      movie.genre,
+                      if (movie.year > 0) '${movie.year}',
+                      if (movie.runtimeMinutes > 0) '${movie.runtimeMinutes}분',
+                    ].join(' · '),
                     textAlign: TextAlign.center,
                     style: Theme.of(context).textTheme.bodyMedium,
                   ),
@@ -156,7 +161,7 @@ class _MovieDetailScreenState extends State<MovieDetailScreen> {
                   Text('줄거리', style: Theme.of(context).textTheme.titleMedium),
                   const SizedBox(height: 10),
                   Text(
-                    movie.overview,
+                    movie.overview.isEmpty ? '줄거리 정보가 없어요.' : movie.overview,
                     style: Theme.of(context).textTheme.bodyLarge,
                   ),
                   const SizedBox(height: 28),

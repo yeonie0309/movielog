@@ -51,7 +51,10 @@ class MovieCard extends StatelessWidget {
                 const SizedBox(width: 8),
                 Expanded(
                   child: Text(
-                    '${movie.genre} · ${movie.year}',
+                    [
+                      movie.genre,
+                      if (movie.year > 0) '${movie.year}',
+                    ].join(' · '),
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                     style: Theme.of(context).textTheme.bodySmall,
