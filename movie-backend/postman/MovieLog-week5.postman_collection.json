@@ -1,0 +1,72 @@
+{
+  "info": {
+    "name": "MovieLog - UMC PE 5주차 Movie API",
+    "description": "새 영화 평점 서비스. TMDB 토큰을 넣지 않습니다. 실제 MySQL 시드 기반 조회 API 검증.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [{ "key": "baseUrl", "value": "http://localhost:3000" }],
+  "item": [
+    {
+      "name": "닉네임 중복 200 false",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/members/nickname/%EC%88%98%ED%98%84"
+      }
+    },
+    {
+      "name": "닉네임 사용 가능 200 true",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/members/nickname/newnickname"
+      }
+    },
+    {
+      "name": "이메일 중복 200 false",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/members/email/noco%40umc.com"
+      }
+    },
+    {
+      "name": "이메일 사용 가능 200 true",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/members/email/new%40example.com"
+      }
+    },
+    {
+      "name": "회원 1 평점 최신순 200",
+      "request": { "method": "GET", "url": "{{baseUrl}}/members/1/ratings" }
+    },
+    {
+      "name": "회원 3 빈 평점 목록 200",
+      "request": { "method": "GET", "url": "{{baseUrl}}/members/3/ratings" }
+    },
+    {
+      "name": "없는 회원 404",
+      "request": { "method": "GET", "url": "{{baseUrl}}/members/999/ratings" }
+    },
+    {
+      "name": "닉네임 형식 오류 400",
+      "request": { "method": "GET", "url": "{{baseUrl}}/members/nickname/a" }
+    },
+    {
+      "name": "이메일 형식 오류 400",
+      "request": { "method": "GET", "url": "{{baseUrl}}/members/email/invalid" }
+    },
+    {
+      "name": "평점 첫 페이지",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/members/1/ratings?page=0&size=1"
+      }
+    },
+    {
+      "name": "평점 두 번째 페이지",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/members/1/ratings?page=1&size=1"
+      }
+    }
+  ]
+}
