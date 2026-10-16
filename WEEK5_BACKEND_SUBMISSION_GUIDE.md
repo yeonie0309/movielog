@@ -13,7 +13,8 @@
 - TMDB 영화 정보는 기존 Flutter의 TMDB Client가 조회하고, 자체 API는 회원·평점만 담당합니다.
 - 선택 실습인 닉네임·이메일 형식 검증과 평점 페이지네이션을 구현했습니다.
 - CORS는 localhost:5173만 허용하며, 미허용 출처 차단도 확인했습니다.
-- push/PR은 아직 수행하지 않았습니다. 예정 제목: `feat: 5주차 영화 평점 API와 화면 연동 구현`.
+- PR: [#12 — feat: 5주차 영화 평점 API와 화면 연동 구현](https://github.com/yeonie0309/movielog/pull/12).
+- 기준 브랜치는 `feature/week-5-frontend`이며 선행 PR #11·#10의 병합 상태에 따라 추후 조정합니다.
 
 ## 요구사항과 확인 위치
 
@@ -216,4 +217,4 @@ CORS는 인증이나 네이티브 앱 접근 제어가 아니므로 앞으로 �
 - 회원가입 저장·로그인/JWT·평점 CRUD·Favorite Entity/API는 이후 주차 범위.
 - 실기기·iOS·배포 환경은 이번 Android 에뮬레이터 검증에 포함하지 않음.
 - 원본 MakeUs Notion 첨부, 실제 스터디 사진, UMC 사이트 제출은 직접 진행.
-- PR은 아직 없으며 최종 코드 검토 뒤 별도 진행 가능.
+- 커밋·push·PR #12 생성 완료. PR 병합은 수행하지 않았습니다.

@@ -33,7 +33,7 @@ CORS Console 증빙은 앱 검증과 충돌하지 않도록 **3001번** 보조 �
 API 요청과 응답은 실제 서버를 사용했습니다. 실기기 숫자 키보드 조작은 별도 미검증입니다.
 
 핵심 코드는 제출 가이드의 Entity/DTO/Controller/Service 경로를 참고해
-Notion 코드 블록에 복사하거나, 추후 PR 파일 링크를 첨부합니다.
+Notion 코드 블록에 복사하거나, [PR #12의 변경 파일](https://github.com/yeonie0309/movielog/pull/12/files) 링크를 첨부합니다.
 
 ## 추가 증빙
 
