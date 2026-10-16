@@ -1,0 +1,8 @@
+[
+  {
+    "level": "error",
+    "message": "MovieLog fetch 실패: TypeError: Failed to fetch\n    at check (http://localhost:5173/:59:28)\n    at HTMLButtonElement.onclick (http://localhost:5173/:25:63)",
+    "timestamp": "2026-10-16T18:15:33.776Z",
+    "url": "http://localhost:5173/"
+  }
+]

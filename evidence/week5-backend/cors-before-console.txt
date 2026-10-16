@@ -1,0 +1,7 @@
+														82 container Access to fetch at 'http://localhost:3001/members/nickname/%EC%88%98%ED%98%84' from origin 'http://localhost:5173' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.
+																85 container (index):1 Access to fetch at 'http://localhost:3001/members/nickname/%EC%88%98%ED%98%84' from origin 'http://localhost:5173' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. Stack table collapsed
+																		89 text Access to fetch at '
+																		95 텍스트 ' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.
+														96 container Failed to load resource: net::ERR_FAILED
+																99 container :3001/members/nickna…EC%88%98%ED%98%84:1 Failed to load resource: net::ERR_FAILED Stack table collapsed
+																		106 text Failed to load resource: net::ERR_FAILED
