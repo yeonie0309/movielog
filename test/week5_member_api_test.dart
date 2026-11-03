@@ -6,6 +6,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:movielog/core/network/movielog_client.dart';
 import 'package:movielog/data/models/member_rating.dart';
 import 'package:movielog/data/services/member_api_service.dart';
+import 'package:movielog/data/services/member_check_service.dart';
 import 'package:movielog/movie_log_app.dart';
 import 'package:movielog/router/app_router.dart';
 
@@ -39,9 +40,14 @@ void main() {
     final router = AppRouter.create(initialLocation: '/register');
     addTearDown(router.dispose);
     await tester.pumpWidget(
-      MovieLogApp(routerConfig: router, memberApiService: service),
+      MovieLogApp(
+        routerConfig: router,
+        memberApiService: service,
+        memberCheckService: _CheckAdapter(service),
+      ),
     );
     await tester.enterText(find.byKey(const Key('nickname-field')), '수현');
+    await tester.pump();
     await tester.tap(find.byKey(const Key('check-nickname-button')));
     await tester.pumpAndSettle();
     expect(find.text('이미 사용 중인 닉네임입니다.'), findsOneWidget);
@@ -64,9 +70,14 @@ void main() {
     final router = AppRouter.create(initialLocation: '/register');
     addTearDown(router.dispose);
     await tester.pumpWidget(
-      MovieLogApp(routerConfig: router, memberApiService: service),
+      MovieLogApp(
+        routerConfig: router,
+        memberApiService: service,
+        memberCheckService: _CheckAdapter(service),
+      ),
     );
     await tester.enterText(find.byKey(const Key('nickname-field')), '수현');
+    await tester.pump();
     await tester.tap(find.byKey(const Key('check-nickname-button')));
     await tester.pump();
     await tester.enterText(find.byKey(const Key('nickname-field')), '다른닉네임');
@@ -106,6 +117,16 @@ void main() {
     expect(find.byKey(const Key('member-rating-1')), findsNothing);
     expect(find.text('양의 정수 회원 ID를 입력해 주세요.'), findsOneWidget);
   });
+}
+
+// Preserve week 5's fake API scenarios while the signup UI now uses v5's service.
+class _CheckAdapter extends MemberCheckService {
+  _CheckAdapter(this.source) : super(Dio());
+  final MemberApiService source;
+  @override
+  Future<bool> checkNickname(String value) => source.checkNickname(value);
+  @override
+  Future<bool> checkEmail(String value) => source.checkEmail(value);
 }
 
 class _MemberService implements MemberApiService {

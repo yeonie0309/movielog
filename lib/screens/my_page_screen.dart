@@ -32,6 +32,14 @@ class MyPageScreen extends StatelessWidget {
             ),
             const FavoriteGenres(),
             const SizedBox(height: 24),
+            ListTile(
+              key: const Key('open-my-ratings'),
+              leading: const Icon(Icons.star_outline),
+              title: const Text('내가 등록한 평점'),
+              subtitle: const Text('학습용 공개 회원 1의 평점'),
+              trailing: const Icon(Icons.chevron_right),
+              onTap: () => context.push('/my/ratings'),
+            ),
             OutlinedButton.icon(
               key: const Key('open-member-ratings-button'),
               onPressed: () => context.push('/member-ratings'),

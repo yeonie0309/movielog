@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:provider/provider.dart';
 
 import '../widgets/common_app_bar.dart';
 import '../widgets/sign_up/sign_up_header.dart';
 import '../widgets/sign_up/sign_up_text_field.dart';
-import '../widgets/sign_up/availability_check.dart';
+import '../view_models/sign_up_view_model.dart';
+import '../widgets/movielog_button.dart';
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({super.key});
@@ -26,12 +28,22 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
   bool _agreedToTerms = false;
   bool _obscurePassword = true;
+  late final SignUpViewModel _viewModel;
+
+  @override
+  void initState() {
+    super.initState();
+    _viewModel = SignUpViewModel(context.read())..addListener(_onCheckChanged);
+  }
+
+  void _onCheckChanged() => setState(() {});
 
   bool get _canSubmit =>
       _nicknameController.text.trim().length >= 2 &&
       _isValidEmail(_emailController.text.trim()) &&
       _passwordController.text.length >= 8 &&
-      _agreedToTerms;
+      _agreedToTerms &&
+      !_viewModel.hasBlockingCheck;
 
   static bool _isValidEmail(String email) {
     return RegExp(r'^[^\s@]+@[^\s@]+\.[^\s@]+$').hasMatch(email);
@@ -43,7 +55,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
   void _submit() {
     final isValid = _formKey.currentState?.validate() ?? false;
-    if (!isValid || !_agreedToTerms) return;
+    if (!isValid || !_canSubmit) return;
 
     FocusScope.of(context).unfocus();
     context.go('/home');
@@ -76,6 +88,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
   @override
   void dispose() {
+    _viewModel.removeListener(_onCheckChanged);
+    _viewModel.dispose();
     _nicknameController.dispose();
     _emailController.dispose();
     _passwordController.dispose();
@@ -115,38 +129,84 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       children: [
                         const SignUpHeader(),
                         const SizedBox(height: 32),
-                        SignUpTextField(
-                          fieldKey: const Key('nickname-field'),
-                          controller: _nicknameController,
-                          focusNode: _nicknameFocusNode,
-                          label: '닉네임',
-                          hint: '두 글자 이상 입력해 주세요',
-                          validator: _validateNickname,
-                          onChanged: _refreshFormState,
-                          onFieldSubmitted: (_) =>
-                              _emailFocusNode.requestFocus(),
+                        Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Expanded(
+                              child: SignUpTextField(
+                                fieldKey: const Key('nickname-field'),
+                                controller: _nicknameController,
+                                focusNode: _nicknameFocusNode,
+                                label: '닉네임',
+                                hint: '두 글자 이상 입력해 주세요',
+                                validator: _validateNickname,
+                                forceErrorText: _viewModel.nicknameErrorText,
+                                suffixIcon:
+                                    _viewModel.nicknameCheckStatus ==
+                                        CheckStatus.available
+                                    ? const Icon(
+                                        Icons.check_circle,
+                                        color: Colors.green,
+                                      )
+                                    : null,
+                                onChanged: (value) {
+                                  _viewModel.onNicknameChanged(value);
+                                  _refreshFormState(value);
+                                },
+                                onFieldSubmitted: (_) =>
+                                    _emailFocusNode.requestFocus(),
+                              ),
+                            ),
+                            const SizedBox(width: 8),
+                            _checkButton(true),
+                          ],
                         ),
-                        AvailabilityCheck(
-                          controller: _nicknameController,
-                          isNickname: true,
-                        ),
+                        if (_viewModel.nicknameCheckStatus ==
+                            CheckStatus.available)
+                          const Text(
+                            '사용 가능한 닉네임입니다.',
+                            key: Key('nickname-availability-message'),
+                          ),
                         const SizedBox(height: 16),
-                        SignUpTextField(
-                          fieldKey: const Key('email-field'),
-                          controller: _emailController,
-                          focusNode: _emailFocusNode,
-                          label: '이메일',
-                          hint: 'movielog@example.com',
-                          keyboardType: TextInputType.emailAddress,
-                          validator: _validateEmail,
-                          onChanged: _refreshFormState,
-                          onFieldSubmitted: (_) =>
-                              _passwordFocusNode.requestFocus(),
+                        Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Expanded(
+                              child: SignUpTextField(
+                                fieldKey: const Key('email-field'),
+                                controller: _emailController,
+                                focusNode: _emailFocusNode,
+                                label: '이메일',
+                                hint: 'movielog@example.com',
+                                keyboardType: TextInputType.emailAddress,
+                                validator: _validateEmail,
+                                forceErrorText: _viewModel.emailErrorText,
+                                suffixIcon:
+                                    _viewModel.emailCheckStatus ==
+                                        CheckStatus.available
+                                    ? const Icon(
+                                        Icons.check_circle,
+                                        color: Colors.green,
+                                      )
+                                    : null,
+                                onChanged: (value) {
+                                  _viewModel.onEmailChanged(value);
+                                  _refreshFormState(value);
+                                },
+                                onFieldSubmitted: (_) =>
+                                    _passwordFocusNode.requestFocus(),
+                              ),
+                            ),
+                            const SizedBox(width: 8),
+                            _checkButton(false),
+                          ],
                         ),
-                        AvailabilityCheck(
-                          controller: _emailController,
-                          isNickname: false,
-                        ),
+                        if (_viewModel.emailCheckStatus ==
+                            CheckStatus.available)
+                          const Text(
+                            '사용 가능한 이메일입니다.',
+                            key: Key('email-availability-message'),
+                          ),
                         const SizedBox(height: 16),
                         SignUpTextField(
                           fieldKey: const Key('password-field'),
@@ -200,13 +260,11 @@ class _SignUpScreenState extends State<SignUpScreen> {
                           ],
                         ),
                         const SizedBox(height: 24),
-                        SizedBox(
-                          height: 52,
-                          child: FilledButton(
-                            key: const Key('sign-up-button'),
-                            onPressed: _canSubmit ? _submit : null,
-                            child: const Text('가입하기'),
-                          ),
+                        MovieLogButton(
+                          key: const Key('sign-up-button'),
+                          onPressed: _canSubmit ? _submit : null,
+                          label: '가입하기',
+                          width: double.infinity,
                         ),
                         const SizedBox(height: 12),
                         TextButton.icon(
@@ -223,6 +281,33 @@ class _SignUpScreenState extends State<SignUpScreen> {
             );
           },
         ),
+      ),
+    );
+  }
+
+  Widget _checkButton(bool nickname) {
+    final status = nickname
+        ? _viewModel.nicknameCheckStatus
+        : _viewModel.emailCheckStatus;
+    final enabled = nickname
+        ? _viewModel.canCheckNickname
+        : _viewModel.canCheckEmail;
+    return Padding(
+      padding: const EdgeInsets.only(top: 6),
+      child: MovieLogButton(
+        key: Key(nickname ? 'check-nickname-button' : 'check-email-button'),
+        label: '중복 확인',
+        isLoading: status == CheckStatus.checking,
+        onPressed: enabled
+            ? () {
+                FocusScope.of(context).unfocus();
+                if (nickname) {
+                  _viewModel.checkNickname(_nicknameController.text);
+                } else {
+                  _viewModel.checkEmail(_emailController.text);
+                }
+              }
+            : null,
       ),
     );
   }

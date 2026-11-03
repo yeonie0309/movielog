@@ -15,6 +15,7 @@ class SignUpTextField extends StatelessWidget {
     this.obscureText = false,
     this.suffixIcon,
     this.onFieldSubmitted,
+    this.forceErrorText,
   });
 
   final Key fieldKey;
@@ -29,6 +30,7 @@ class SignUpTextField extends StatelessWidget {
   final bool obscureText;
   final Widget? suffixIcon;
   final ValueChanged<String>? onFieldSubmitted;
+  final String? forceErrorText;
 
   @override
   Widget build(BuildContext context) {
@@ -40,6 +42,7 @@ class SignUpTextField extends StatelessWidget {
       textInputAction: textInputAction,
       obscureText: obscureText,
       validator: validator,
+      forceErrorText: forceErrorText,
       onChanged: onChanged,
       onFieldSubmitted: onFieldSubmitted,
       decoration: InputDecoration(

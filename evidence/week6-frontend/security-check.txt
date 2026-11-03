@@ -1,0 +1,4 @@
+PASS: .env ignored and untracked.
+PASS: actual TMDB token absent from current frontend code, tests, tools and week6 evidence.
+Scope: current files only; no claim about all historical commits.
+Workbook requests are GET only and use a separate Dio without Authorization.

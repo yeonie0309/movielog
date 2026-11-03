@@ -1,6 +1,7 @@
 import 'package:dio/dio.dart';
 
 import '../models/tmdb_genre_dto.dart';
+import '../models/tmdb_movie_dto.dart';
 import '../models/tmdb_movie_page_dto.dart';
 
 abstract class MovieCatalogService {
@@ -9,10 +10,23 @@ abstract class MovieCatalogService {
   Future<List<TmdbGenreDto>> fetchGenres();
 }
 
-class TmdbMovieService implements MovieCatalogService {
+abstract class MovieDetailService {
+  Future<TmdbMovieDto> fetchMovieDetail(int movieId);
+}
+
+class TmdbMovieService implements MovieCatalogService, MovieDetailService {
   TmdbMovieService(this._dio);
 
   final Dio _dio;
+
+  @override
+  Future<TmdbMovieDto> fetchMovieDetail(int movieId) async {
+    final response = await _dio.get<Map<String, dynamic>>(
+      '/movie/$movieId',
+      queryParameters: {'language': 'ko-KR'},
+    );
+    return TmdbMovieDto.fromJson(response.data!);
+  }
 
   @override
   Future<TmdbMoviePageDto> fetchPopular({int page = 1}) async {
@@ -55,11 +69,15 @@ class TmdbMovieService implements MovieCatalogService {
   }
 }
 
-class MissingTokenMovieService implements MovieCatalogService {
+class MissingTokenMovieService
+    implements MovieCatalogService, MovieDetailService {
   const MissingTokenMovieService();
 
   Never _missing() =>
       throw StateError('프로젝트 루트 .env 파일에 TMDB_ACCESS_TOKEN을 설정해 주세요.');
+
+  @override
+  Future<TmdbMovieDto> fetchMovieDetail(int movieId) async => _missing();
 
   @override
   Future<TmdbMoviePageDto> fetchPopular({int page = 1}) async => _missing();
