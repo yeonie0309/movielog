@@ -6,6 +6,7 @@
 - 원본 페이지: https://app.notion.com/p/makeus-challenge/6-80ab57f4596b8285aa93011bc5e03468
 - 시작 시 로컬·원격 `main`은 `2445f60` 초기 설정 커밋. 5주차까지 코드는 `feature/week-5-backend`의 `ffd248a`에 존재했다.
 - 브랜치: `feature/week-6-frontend`. 선행 주차 전체를 다시 PR에 포함하지 않도록 기준 브랜치는 `feature/week-5-backend`.
+- PR: [#13 — feat: 6주차 중복 확인 및 평점 조회 구현](https://github.com/yeonie0309/movielog/pull/13). 화면 14장은 두 열 표로 첨부 완료. 병합하지 않음.
 - 기존 0~5주차 코드 및 백엔드 보존. 기존 미추적 week4 캡처 파일은 이번 커밋에 포함하지 않는다.
 - 이번 프론트는 공식 **v5** 공개 API의 GET 3개를 사용한다. 로컬 5주차 백엔드와 혼동하지 않는다.
 - 회원가입 POST, 평점 생성·수정·삭제, JWT 로그인은 범위 밖이다. 가입하기는 기존 Form 검증 후 홈 이동만 한다.
@@ -27,6 +28,7 @@
 - `flutter analyze --no-fatal-infos`: exit 0. 기존 0주차 `avoid_print` info 2건만 남음. 경고·오류 없음. **info가 전혀 없는 결과라고 표현하지 않는다.**
 - `flutter test --reporter expanded`: **49개 통과**. 기존 주차 테스트 포함.
 - Android Pixel 7 통합 테스트: 실제 공개 v5/TMDB 조회 및 테스트 서비스 상태 재현 **2개 통과**.
+- `flutter run -d emulator-5554 --debug`: 실제 `lib/main.dart` 빌드·설치·실행 성공.
 - 320px / 1024px 회원가입 레이아웃, Form 서버 오류, 응답 역전, dispose, 캐시·404·일시 장애 재시도 검증.
 - `git diff --check`: 통과.
 - `.env` ignored/untracked, 실제 TMDB 토큰이 현재 프론트 코드·테스트·도구·6주차 증빙 파일에 없는지 검사. 모든 과거 커밋을 검사했다는 뜻은 아님.
