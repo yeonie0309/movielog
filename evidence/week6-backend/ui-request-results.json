@@ -1,0 +1,93 @@
+[
+  {
+    "body": "{\n  \"email\": \"w6capture01@example.com\",\n  \"password\": \"Umc!1234\",\n  \"nickname\": \"w6capture01\"\n}",
+    "request": "POST http://localhost:3006/members",
+    "response": "{\n  \"isSuccess\": true,\n  \"code\": \"COMMON201\",\n  \"message\": \"회원가입에 성공했습니다.\",\n  \"result\": {\n    \"memberId\": 10,\n    \"email\": \"w6capture01@example.com\",\n    \"nickname\": \"w6capture01\"\n  }\n}",
+    "status": "HTTP 201 Created",
+    "time": "실행 시각 2026-11-03T19:16:53.966Z · 94 ms · 실제 로컬 API 응답"
+  },
+  {
+    "body": "{\n  \"email\": \"invalid-email\",\n  \"password\": \"weak\",\n  \"nickname\": \"a\"\n}",
+    "request": "POST http://localhost:3006/members",
+    "response": "{\n  \"isSuccess\": false,\n  \"code\": \"COMMON400\",\n  \"message\": \"올바른 이메일 형식이 아닙니다.\",\n  \"result\": null\n}",
+    "status": "HTTP 400 Bad Request",
+    "time": "실행 시각 2026-11-03T19:17:08.477Z · 16 ms · 실제 로컬 API 응답"
+  },
+  {
+    "body": "{\n  \"movieId\": 550,\n  \"score\": 5,\n  \"comment\": \"워크북 평점 등록 실습\"\n}",
+    "request": "POST http://localhost:3006/members/10/ratings",
+    "response": "{\n  \"isSuccess\": true,\n  \"code\": \"COMMON201\",\n  \"message\": \"평점 등록에 성공했습니다.\",\n  \"result\": 5\n}",
+    "status": "HTTP 201 Created",
+    "time": "실행 시각 2026-11-03T19:17:08.820Z · 18 ms · 실제 로컬 API 응답"
+  },
+  {
+    "body": "{\n  \"score\": 4,\n  \"comment\": \"수정 후 조회로 확인한 후기\"\n}",
+    "request": "PATCH http://localhost:3006/members/10/ratings/5",
+    "response": "{\n  \"isSuccess\": true,\n  \"code\": \"COMMON200\",\n  \"message\": \"평점 수정에 성공했습니다.\",\n  \"result\": null\n}",
+    "status": "HTTP 200 OK",
+    "time": "실행 시각 2026-11-03T19:17:09.143Z · 16 ms · 실제 로컬 API 응답"
+  },
+  {
+    "body": "(요청 본문 없음)",
+    "request": "GET http://localhost:3006/members/10/ratings",
+    "response": "[\n  {\n    \"ratingId\": 5,\n    \"movieId\": 550,\n    \"score\": 4,\n    \"comment\": \"수정 후 조회로 확인한 후기\",\n    \"createdAt\": \"2026-11-03T19:17:08.000Z\",\n    \"updatedAt\": \"2026-11-03T19:17:09.000Z\"\n  }\n]",
+    "status": "HTTP 200 OK",
+    "time": "실행 시각 2026-11-03T19:17:09.459Z · 7 ms · 실제 로컬 API 응답"
+  },
+  {
+    "body": "{\n  \"email\": \"w6capture01@example.com\",\n  \"password\": \"Umc!1234\",\n  \"nickname\": \"newnickname\"\n}",
+    "request": "POST http://localhost:3006/members",
+    "response": "{\n  \"isSuccess\": false,\n  \"code\": \"MEMBER4091\",\n  \"message\": \"이미 사용 중인 이메일입니다.\",\n  \"result\": null\n}",
+    "status": "HTTP 409 Conflict",
+    "time": "실행 시각 2026-11-03T19:17:17.225Z · 11 ms · 실제 로컬 API 응답"
+  },
+  {
+    "body": "{\n  \"email\": \"new-w6capture01@example.com\",\n  \"password\": \"Umc!1234\",\n  \"nickname\": \"w6capture01\"\n}",
+    "request": "POST http://localhost:3006/members",
+    "response": "{\n  \"isSuccess\": false,\n  \"code\": \"MEMBER4092\",\n  \"message\": \"이미 사용 중인 닉네임입니다.\",\n  \"result\": null\n}",
+    "status": "HTTP 409 Conflict",
+    "time": "실행 시각 2026-11-03T19:17:17.551Z · 7 ms · 실제 로컬 API 응답"
+  },
+  {
+    "body": "{\n  \"movieId\": 550,\n  \"score\": 3\n}",
+    "request": "POST http://localhost:3006/members/10/ratings",
+    "response": "{\n  \"isSuccess\": false,\n  \"code\": \"RATING4091\",\n  \"message\": \"이미 이 영화에 평점을 남기셨습니다.\",\n  \"result\": null\n}",
+    "status": "HTTP 409 Conflict",
+    "time": "실행 시각 2026-11-03T19:17:17.884Z · 7 ms · 실제 로컬 API 응답"
+  },
+  {
+    "body": "{\n  \"movieId\": 155,\n  \"score\": 6\n}",
+    "request": "POST http://localhost:3006/members/10/ratings",
+    "response": "{\n  \"isSuccess\": false,\n  \"code\": \"COMMON400\",\n  \"message\": \"별점은 5점 이하여야 합니다.\",\n  \"result\": null\n}",
+    "status": "HTTP 400 Bad Request",
+    "time": "실행 시각 2026-11-03T19:17:18.217Z · 7 ms · 실제 로컬 API 응답"
+  },
+  {
+    "body": "{\n  \"score\": 1\n}",
+    "request": "PATCH http://localhost:3006/members/1/ratings/5",
+    "response": "{\n  \"isSuccess\": false,\n  \"code\": \"RATING4031\",\n  \"message\": \"본인이 작성한 평점만 수정하거나 삭제할 수 있습니다.\",\n  \"result\": null\n}",
+    "status": "HTTP 403 Forbidden",
+    "time": "실행 시각 2026-11-03T19:17:18.551Z · 6 ms · 실제 로컬 API 응답"
+  },
+  {
+    "body": "{\n  \"score\": 1\n}",
+    "request": "PATCH http://localhost:3006/members/10/ratings/9007199254740991",
+    "response": "{\n  \"isSuccess\": false,\n  \"code\": \"RATING4041\",\n  \"message\": \"존재하지 않는 평점입니다.\",\n  \"result\": null\n}",
+    "status": "HTTP 404 Not Found",
+    "time": "실행 시각 2026-11-03T19:17:18.867Z · 7 ms · 실제 로컬 API 응답"
+  },
+  {
+    "body": "(요청 본문 없음)",
+    "request": "DELETE http://localhost:3006/members/10/ratings/5",
+    "response": "(204 No Content — 응답 본문 없음)",
+    "status": "HTTP 204 No Content",
+    "time": "실행 시각 2026-11-03T19:17:19.210Z · 15 ms · 실제 로컬 API 응답"
+  },
+  {
+    "body": "(요청 본문 없음)",
+    "request": "GET http://localhost:3006/members/10/ratings",
+    "response": "[]",
+    "status": "HTTP 200 OK",
+    "time": "실행 시각 2026-11-03T19:17:19.534Z · 7 ms · 실제 로컬 API 응답"
+  }
+]

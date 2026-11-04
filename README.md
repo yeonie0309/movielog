@@ -47,3 +47,12 @@ dart run lib/week0/dart_practice.dart
 - [API 명세](movie-backend/docs/API_SPEC.md)
 - [제출 가이드와 변경 파일 목록](WEEK5_BACKEND_SUBMISSION_GUIDE.md)
 - [Postman·CORS·Flutter 화면 증빙](evidence/week5-backend/README.md)
+
+## 6주차 백엔드 — 입력한 데이터를 저장하기
+
+NestJS 영화 서비스에 회원가입·평점 등록/수정/삭제를 추가했습니다. 기존 Flutter·조회 API는 보존합니다.
+
+- [6주차 API 명세](movie-backend/docs/WEEK6_API_SPEC.md)
+- [제출물·실행 결과·Notion 작성 초안](WEEK6_BACKEND_SUBMISSION_GUIDE.md)
+- [실제 요청·응답 캡처 및 검증 로그](evidence/week6-backend/README.md)
+- [원본 Notion 반영 승인 계획](WEEK6_BACKEND_NOTION_PLAN.md)
