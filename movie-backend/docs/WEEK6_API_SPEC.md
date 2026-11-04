@@ -1,9 +1,5 @@
 # 6주차 — 입력한 데이터를 저장하기: API 명세
 
-원본: [레아의 워크북](https://app.notion.com/p/makeus-challenge/6-ad6b57f4596b83b7b7cb81df305179e9).
-선택 스택: **NestJS + TypeORM + MySQL**. 이번 검증 서버는 `http://localhost:3006`.
-기본 실행 포트는 기존처럼 3000이며 `PORT`로 변경합니다. 인증/JWT는 7주차입니다.
-`memberId`를 URL로 받는 것은 학습용이며 실제 로그인 사용자 인증을 대신하지 않습니다.
 
 ## 요청·응답
 
