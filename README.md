@@ -1,17 +1,26 @@
-# movielog
+# MovieLog
 
-A new Flutter project.
+UMC 11기 PE(Mobile) 0주차 Flutter 필수 미션 프로젝트입니다.
 
-## Getting Started
+## 실행
 
-This project is a starting point for a Flutter application.
+```bash
+flutter pub get
+flutter run -d emulator-5554
+```
 
-A few resources to get you started if this is your first Flutter project:
+## Dart 연습 실행
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+```bash
+dart run lib/week0/dart_practice.dart
+```
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+`Movie` 클래스, `List<Movie>`, 반복문, Null Safety 기본값 처리를 확인할 수 있습니다.
+
+## 0주차 구현 내용
+
+- Flutter 및 Android Emulator 개발 환경 구성
+- Figma `W0-01` 기준 MovieLog 시작 화면 구현
+- `Icons.movie_outlined` 기본 Material 아이콘 사용
+- 앱 설정과 화면 Widget 분리
+- Widget 테스트 추가
