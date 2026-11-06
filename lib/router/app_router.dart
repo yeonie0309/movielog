@@ -14,6 +14,9 @@ import '../screens/my_page_screen.dart';
 import '../screens/my_ratings_screen.dart';
 import '../data/services/rating_api_service.dart';
 import '../view_models/my_ratings_view_model.dart';
+import '../view_models/learning_member_session.dart';
+import '../screens/movie_detail_loader.dart';
+import '../data/models/tmdb_movie_dto.dart';
 import '../screens/member_ratings_screen.dart';
 import '../screens/rating_input_screen.dart';
 import '../screens/sign_up_screen.dart';
@@ -118,13 +121,33 @@ abstract final class AppRouter {
                     GoRoute(
                       path: 'ratings',
                       parentNavigatorKey: rootNavigatorKey,
-                      builder: (context, state) => ChangeNotifierProvider(
-                        create: (context) => MyRatingsViewModel(
-                          context.read<RatingApiService>(),
-                          context.read<MovieDetailService>(),
-                        )..load(),
-                        child: const MyRatingsScreen(),
-                      ),
+                      builder: (context, state) {
+                        final id = context
+                            .watch<LearningMemberSession>()
+                            .memberId;
+                        if (id == null) {
+                          return Scaffold(
+                            appBar: AppBar(
+                              title: const Text('내가 등록한 평점'),
+                              centerTitle: true,
+                            ),
+                            body: Center(
+                              child: TextButton(
+                                onPressed: () => context.push('/register'),
+                                child: const Text('학습용 회원가입이 필요합니다.'),
+                              ),
+                            ),
+                          );
+                        }
+                        return ChangeNotifierProvider(
+                          create: (context) => MyRatingsViewModel(
+                            context.read<RatingApiService>(),
+                            context.read<MovieDetailService>(),
+                            id,
+                          )..load(),
+                          child: const MyRatingsScreen(),
+                        );
+                      },
                     ),
                   ],
                 ),
@@ -138,6 +161,20 @@ abstract final class AppRouter {
           builder: (context, state) {
             final movieId = int.tryParse(state.pathParameters['movieId'] ?? '');
             final passedMovie = state.extra;
+            if (useTmdb) {
+              if (movieId == null || movieId < 1) {
+                return const Scaffold(
+                  body: Center(child: Text('영화 ID가 올바르지 않습니다.')),
+                );
+              }
+              return MovieDetailLoader(
+                movieId: movieId,
+                initialMovie:
+                    passedMovie is TmdbMovieDto && passedMovie.id == movieId
+                    ? passedMovie
+                    : null,
+              );
+            }
             return MovieDetailScreen(
               movie: passedMovie is Movie && passedMovie.id == movieId
                   ? passedMovie

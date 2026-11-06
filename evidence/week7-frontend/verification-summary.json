@@ -1,0 +1,210 @@
+{
+  "tests": 79,
+  "integrationScenarios": 2,
+  "realApiRequests": 21,
+  "account": {
+    "memberId": 18,
+    "email": "lea.w7.second.mw4ooi9q@example.com",
+    "nickname": "smw4ooi9q"
+  },
+  "movieId": 155,
+  "ratingId": 12,
+  "images": [
+    {
+      "name": "01-live-input-invalidated.png",
+      "width": 1080,
+      "height": 2400
+    },
+    {
+      "name": "02-live-final-signup-409.png",
+      "width": 1080,
+      "height": 2400
+    },
+    {
+      "name": "03-live-signup-success.png",
+      "width": 1080,
+      "height": 2400
+    },
+    {
+      "name": "04-live-rating-unselected.png",
+      "width": 1080,
+      "height": 2400
+    },
+    {
+      "name": "05-live-rating-created-snackbar.png",
+      "width": 1080,
+      "height": 2400
+    },
+    {
+      "name": "06-live-rating-list.png",
+      "width": 1080,
+      "height": 2400
+    },
+    {
+      "name": "07-live-edit-prefilled.png",
+      "width": 1080,
+      "height": 2400
+    },
+    {
+      "name": "08-live-updated-list.png",
+      "width": 1080,
+      "height": 2400
+    },
+    {
+      "name": "09-live-delete-confirm.png",
+      "width": 1080,
+      "height": 2400
+    },
+    {
+      "name": "10-live-delete-cancelled.png",
+      "width": 1080,
+      "height": 2400
+    },
+    {
+      "name": "11-live-delete-empty.png",
+      "width": 1080,
+      "height": 2400
+    },
+    {
+      "name": "12-injected-write-failure-input-retained.png",
+      "width": 1080,
+      "height": 2400
+    },
+    {
+      "name": "13-injected-write-success-get-error.png",
+      "width": 1080,
+      "height": 2400
+    },
+    {
+      "name": "14-injected-get-only-retry.png",
+      "width": 1080,
+      "height": 2400
+    },
+    {
+      "name": "15-injected-multiple-selection.png",
+      "width": 1080,
+      "height": 2400
+    },
+    {
+      "name": "16-injected-bulk-loading-overlay.png",
+      "width": 1080,
+      "height": 2400
+    },
+    {
+      "name": "17-injected-partial-delete.png",
+      "width": 1080,
+      "height": 2400
+    }
+  ],
+  "videos": [
+    {
+      "name": "01-live-crud.mp4",
+      "seconds": 38.2015,
+      "bytes": 1378044
+    },
+    {
+      "name": "02-injected-recovery.mp4",
+      "seconds": 23.9096,
+      "bytes": 962024
+    }
+  ],
+  "actualServerVsInjected": "01-11 actual v6+TMDB; 12-17 injected failures in actual Android app",
+  "supplementalImages": [
+    "18-manual-signup-complete.jpg",
+    "19-manual-rating-unselected.jpg",
+    "20-manual-rating-selected-enabled.jpg",
+    "21-manual-rating-created.jpg",
+    "22-manual-created-get-list.jpg",
+    "23-manual-edit-prefilled.jpg",
+    "24-manual-updated-get-list.jpg",
+    "25-manual-delete-confirm.jpg",
+    "26-manual-delete-cancelled.jpg",
+    "27-manual-delete-empty.jpg",
+    "28-flutter-analyze-actual-output.jpg",
+    "29-github-pr-15.jpg",
+    "30-manual-duplicate-unavailable.jpg",
+    "31-manual-duplicate-available.jpg",
+    "32-manual-checks-invalidated.jpg"
+  ],
+  "manualVerification": "Chrome direct UI: member19/TMDB155; availability/duplicate/input invalidation; rating 0-disabled to 4-enabled; create/GET/edit5/GET/delete cancel/delete empty. Signup by user. Server400/final signup409/inflight guards/write and GET failure recovery remain automated-only; do not check ALL manual verification yet.",
+  "files": [
+    "README.md",
+    "WEEK7_FRONTEND_NOTION_PLAN.md",
+    "WEEK7_FRONTEND_SUBMISSION_GUIDE.md",
+    "evidence/week7-frontend/01-live-crud.mp4",
+    "evidence/week7-frontend/01-live-input-invalidated.png",
+    "evidence/week7-frontend/02-injected-recovery.mp4",
+    "evidence/week7-frontend/02-live-final-signup-409.png",
+    "evidence/week7-frontend/03-live-signup-success.png",
+    "evidence/week7-frontend/04-live-rating-unselected.png",
+    "evidence/week7-frontend/05-live-rating-created-snackbar.png",
+    "evidence/week7-frontend/06-live-rating-list.png",
+    "evidence/week7-frontend/07-live-edit-prefilled.png",
+    "evidence/week7-frontend/08-live-updated-list.png",
+    "evidence/week7-frontend/09-live-delete-confirm.png",
+    "evidence/week7-frontend/10-live-delete-cancelled.png",
+    "evidence/week7-frontend/11-live-delete-empty.png",
+    "evidence/week7-frontend/12-injected-write-failure-input-retained.png",
+    "evidence/week7-frontend/13-injected-write-success-get-error.png",
+    "evidence/week7-frontend/14-injected-get-only-retry.png",
+    "evidence/week7-frontend/15-injected-multiple-selection.png",
+    "evidence/week7-frontend/16-injected-bulk-loading-overlay.png",
+    "evidence/week7-frontend/17-injected-partial-delete.png",
+    "evidence/week7-frontend/18-manual-signup-complete.jpg",
+    "evidence/week7-frontend/19-manual-rating-unselected.jpg",
+    "evidence/week7-frontend/20-manual-rating-selected-enabled.jpg",
+    "evidence/week7-frontend/21-manual-rating-created.jpg",
+    "evidence/week7-frontend/22-manual-created-get-list.jpg",
+    "evidence/week7-frontend/23-manual-edit-prefilled.jpg",
+    "evidence/week7-frontend/24-manual-updated-get-list.jpg",
+    "evidence/week7-frontend/25-manual-delete-confirm.jpg",
+    "evidence/week7-frontend/26-manual-delete-cancelled.jpg",
+    "evidence/week7-frontend/27-manual-delete-empty.jpg",
+    "evidence/week7-frontend/28-flutter-analyze-actual-output.jpg",
+    "evidence/week7-frontend/29-github-pr-15.jpg",
+    "evidence/week7-frontend/30-manual-duplicate-unavailable.jpg",
+    "evidence/week7-frontend/31-manual-duplicate-available.jpg",
+    "evidence/week7-frontend/32-manual-checks-invalidated.jpg",
+    "evidence/week7-frontend/README.md",
+    "evidence/week7-frontend/changed-files.txt",
+    "evidence/week7-frontend/flutter-analyze.txt",
+    "evidence/week7-frontend/flutter-integration-test.txt",
+    "evidence/week7-frontend/flutter-test.txt",
+    "evidence/week7-frontend/live-api-results.json",
+    "evidence/week7-frontend/security-check.txt",
+    "evidence/week7-frontend/verification-summary.json",
+    "integration_test/week7_evidence_test.dart",
+    "lib/core/network/workbook_client.dart",
+    "lib/data/models/common_response.dart",
+    "lib/data/models/create_member_request.dart",
+    "lib/data/models/rating_request.dart",
+    "lib/data/models/sign_up_models.dart",
+    "lib/data/services/rating_api_service.dart",
+    "lib/data/services/sign_up_service.dart",
+    "lib/movie_log_app.dart",
+    "lib/router/app_router.dart",
+    "lib/screens/movie_detail_loader.dart",
+    "lib/screens/movie_detail_screen.dart",
+    "lib/screens/my_ratings_screen.dart",
+    "lib/screens/sign_up_screen.dart",
+    "lib/screens/tmdb_home_screen.dart",
+    "lib/screens/tmdb_movie_list_screen.dart",
+    "lib/view_models/learning_member_session.dart",
+    "lib/view_models/movie_detail_view_model.dart",
+    "lib/view_models/my_ratings_view_model.dart",
+    "lib/view_models/sign_up_view_model.dart",
+    "lib/view_models/submit_status.dart",
+    "lib/widgets/movie/delete_rating_dialog.dart",
+    "lib/widgets/movie/movie_rating_input.dart",
+    "lib/widgets/movie/rating_dialog.dart",
+    "test/week3_navigation_test.dart",
+    "test/week5_tmdb_test.dart",
+    "test/week6_frontend_test.dart",
+    "test/week7_frontend_test.dart",
+    "test/widget_test.dart",
+    "tool/capture_week7.cjs",
+    "tool/check_week7_evidence.cjs",
+    "tool/verify_week7.cjs",
+    "tool/verify_week7_tests.cjs"
+  ]
+}

@@ -13,7 +13,6 @@ import 'package:movielog/router/app_router.dart';
 import 'package:movielog/view_models/movie_home_view_model.dart';
 import 'package:movielog/view_models/movie_list_view_model.dart';
 import 'package:movielog/view_models/movie_load_status.dart';
-import 'package:movielog/widgets/movie/rating_dialog.dart';
 
 void main() {
   test('TMDB DTO는 snake_case, null, num을 변환한다', () {
@@ -174,9 +173,15 @@ void main() {
     await tester.ensureVisible(
       find.byKey(const Key('open-rating-dialog-button')),
     );
-    await tester.tap(find.byKey(const Key('open-rating-dialog-button')));
-    await tester.pumpAndSettle();
-    expect(tester.widget<RatingDialog>(find.byType(RatingDialog)).movieId, 550);
+    expect(
+      tester
+          .widget<FilledButton>(
+            find.byKey(const Key('open-rating-dialog-button')),
+          )
+          .onPressed,
+      isNull,
+    );
+    expect(find.text('학습용 회원가입 후 평점을 남길 수 있습니다.'), findsOneWidget);
   });
 }
 
