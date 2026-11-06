@@ -4,6 +4,7 @@
 실제 NestJS + TypeORM + MySQL을 사용했다. Postman 컬렉션은 Newman으로 실행했다.
 01~07, 09~12는 **실제 API/CLI 기록을 로컬 읽기 전용 뷰어에서 캡처한 사진**이다.
 08은 **실제 jwt.io 페이지에서 payload를 확인한 사진**이다.
+13은 생성된 [PR #16](https://github.com/yeonie0309/movielog/pull/16) 화면이다.
 
 | 파일 | 원본 Notion에서 첨부할 위치 |
 | --- | --- |
@@ -19,6 +20,7 @@
 | 10-login-member-decorator.jpg | 선택 미션의 기본 예시 / 적용 코드 / 정상 API 응답 |
 | 11-cli-checks.jpg | 실습 인증의 backend lint/test, Flutter analyze/test |
 | 12-postman-newman.jpg | 필수 미션의 9단계 시나리오 실행 결과 |
+| 13-pr-created.jpg | PR 생성 및 기준 브랜치 확인 |
 
 로그인 A는 memberId 11, B는 12, 생성 평점은 ratingId 6, TMDB movieId 155였다.
 스크립트가 두 회원과 평점을 정리한 뒤 기존 DB 행의 동일성을 확인했다.

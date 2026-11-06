@@ -22,7 +22,8 @@
     "09-identical-login-failure.jpg",
     "10-login-member-decorator.jpg",
     "11-cli-checks.jpg",
-    "12-postman-newman.jpg"
+    "12-postman-newman.jpg",
+    "13-pr-created.jpg"
   ],
   "secretsAbsent": true,
   "files": [
@@ -39,6 +40,7 @@
     "evidence/week7-backend/10-login-member-decorator.jpg",
     "evidence/week7-backend/11-cli-checks.jpg",
     "evidence/week7-backend/12-postman-newman.jpg",
+    "evidence/week7-backend/13-pr-created.jpg",
     "evidence/week7-backend/README.md",
     "evidence/week7-backend/changed-files.txt",
     "evidence/week7-backend/flutter-analyze.txt",
