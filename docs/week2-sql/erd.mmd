@@ -1,0 +1,50 @@
+erDiagram
+    USERS ||--o{ RENTAL : rents
+    CATEGORY ||--o{ BOOK : classifies
+    BOOK ||--o{ RENTAL : appears_in
+    BOOK ||--o{ BOOK_TAG : has
+    TAG ||--o{ BOOK_TAG : labels
+    USERS ||--o{ BOOK_LIKE : likes
+    BOOK ||--o{ BOOK_LIKE : liked_by
+    USERS ||--o{ NOTIFICATION : receives
+
+    USERS {
+        BIGINT user_id PK
+        VARCHAR nickname
+    }
+    CATEGORY {
+        BIGINT category_id PK
+        VARCHAR name
+    }
+    BOOK {
+        BIGINT book_id PK
+        BIGINT category_id FK
+        VARCHAR title
+        TEXT description
+        BOOLEAN is_available
+    }
+    RENTAL {
+        BIGINT rental_id PK
+        BIGINT user_id FK
+        BIGINT book_id FK
+        DATETIME rented_at
+        DATETIME due_at
+        DATETIME returned_at
+    }
+    TAG {
+        BIGINT tag_id PK
+        VARCHAR name
+    }
+    BOOK_TAG {
+        BIGINT book_id PK,FK
+        BIGINT tag_id PK,FK
+    }
+    BOOK_LIKE {
+        BIGINT user_id PK,FK
+        BIGINT book_id PK,FK
+    }
+    NOTIFICATION {
+        BIGINT notification_id PK
+        BIGINT user_id FK
+        VARCHAR type
+    }
