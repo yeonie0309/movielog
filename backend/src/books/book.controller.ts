@@ -1,28 +1,20 @@
-import { Body, Controller, Get, Param, Post } from '@nestjs/common';
-import type { RowDataPacket } from 'mysql2/promise';
+import { Body, Controller, Get, Post, Query } from '@nestjs/common';
 import { BookService } from './book.service.js';
+import { BookResponseDto } from './dto/book-response.dto.js';
+import { CreateBookDto } from './dto/create-book.dto.js';
+import { GetBooksQueryDto } from './dto/get-books-query.dto.js';
 
 @Controller('books')
 export class BookController {
   constructor(private readonly bookService: BookService) {}
 
   @Get()
-  async getBooks(): Promise<RowDataPacket[]> {
-    return this.bookService.getAllBooks();
-  }
-
-  @Get('category/:categoryId')
-  async getBooksByCategory(
-    @Param('categoryId') categoryId: string,
-  ): Promise<RowDataPacket[]> {
-    return this.bookService.getBooksByCategory(categoryId);
+  async getBooks(@Query() query: GetBooksQueryDto): Promise<BookResponseDto[]> {
+    return this.bookService.getBooks(query.keyword);
   }
 
   @Post()
-  async createBook(@Body() body: Record<string, unknown>): Promise<{
-    message: string;
-    bookId: number;
-  }> {
+  async createBook(@Body() body: CreateBookDto): Promise<BookResponseDto> {
     return this.bookService.createBook(body);
   }
 }

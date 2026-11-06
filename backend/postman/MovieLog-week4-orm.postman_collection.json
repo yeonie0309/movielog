@@ -1,0 +1,98 @@
+{
+  "info": {
+    "_postman_id": "4e953716-c991-4a63-8800-4a2941de0b91",
+    "name": "MovieLog Week 4 ORM",
+    "description": "UMC PE 4주차 NestJS + TypeORM 필수/선택 미션 검증",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:3000"
+    }
+  ],
+  "item": [
+    {
+      "name": "1. GET 전체 도서 목록 - 200",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/books"
+      }
+    },
+    {
+      "name": "2. GET 제목 검색 - 200",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/books?keyword=ORM"
+      }
+    },
+    {
+      "name": "3. POST 신규 도서 - 201",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"categoryId\": 1,\n  \"title\": \"Postman ORM {{$timestamp}}\",\n  \"description\": \"4주차 TypeORM 등록 검증\"\n}"
+        },
+        "url": "{{baseUrl}}/books"
+      }
+    },
+    {
+      "name": "4. POST 빈 제목 - 400",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"categoryId\": 1,\n  \"title\": \"   \"\n}"
+        },
+        "url": "{{baseUrl}}/books"
+      }
+    },
+    {
+      "name": "5. POST 없는 카테고리 - 404",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"categoryId\": 999,\n  \"title\": \"없는 카테고리 요청\"\n}"
+        },
+        "url": "{{baseUrl}}/books"
+      }
+    },
+    {
+      "name": "6. POST 중복 제목 - 409",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"categoryId\": 1,\n  \"title\": \"ORM 실전 테스트 20261003\"\n}"
+        },
+        "url": "{{baseUrl}}/books"
+      }
+    }
+  ]
+}
