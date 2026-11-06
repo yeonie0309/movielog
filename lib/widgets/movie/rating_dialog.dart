@@ -4,8 +4,10 @@ import '../../theme/app_colors.dart';
 import 'movie_rating_input.dart';
 
 class RatingDialog extends StatefulWidget {
-  const RatingDialog({super.key, this.initialRating = 0});
+  const RatingDialog({super.key, this.movieId, this.initialRating = 0});
 
+  // TODO(5주차 유저별 평점 조회 API): 자체 백엔드 요청의 movieId로 전달한다.
+  final int? movieId;
   final double initialRating;
 
   @override

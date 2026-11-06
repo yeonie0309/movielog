@@ -5,6 +5,7 @@ class Movie {
     required this.genre,
     required this.year,
     required this.posterAsset,
+    this.posterPath,
     required this.overview,
     required this.runtimeMinutes,
     required this.averageRating,
@@ -15,6 +16,7 @@ class Movie {
   final String genre;
   final int year;
   final String posterAsset;
+  final String? posterPath;
   final String overview;
   final int runtimeMinutes;
   final double averageRating;

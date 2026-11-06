@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../models/movie.dart';
 import '../../theme/app_colors.dart';
+import 'tmdb_poster_image.dart';
 
 class MoviePoster extends StatelessWidget {
   const MoviePoster({
@@ -17,21 +18,23 @@ class MoviePoster extends StatelessWidget {
   Widget build(BuildContext context) {
     return ClipRRect(
       borderRadius: borderRadius,
-      child: Image.asset(
-        movie.posterAsset,
-        fit: BoxFit.cover,
-        semanticLabel: '${movie.title} 포스터',
-        errorBuilder: (context, error, stackTrace) => const ColoredBox(
-          color: AppColors.violetContainer,
-          child: Center(
-            child: Icon(
-              Icons.movie_outlined,
-              color: AppColors.violet,
-              size: 44,
+      child: movie.posterAsset.isEmpty
+          ? TmdbPosterImage(posterPath: movie.posterPath)
+          : Image.asset(
+              movie.posterAsset,
+              fit: BoxFit.cover,
+              semanticLabel: '${movie.title} 포스터',
+              errorBuilder: (context, error, stackTrace) => const ColoredBox(
+                color: AppColors.violetContainer,
+                child: Center(
+                  child: Icon(
+                    Icons.movie_outlined,
+                    color: AppColors.violet,
+                    size: 44,
+                  ),
+                ),
+              ),
             ),
-          ),
-        ),
-      ),
     );
   }
 }

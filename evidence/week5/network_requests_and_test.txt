@@ -1,0 +1,18 @@
+[TMDB 요청] GET https://api.themoviedb.org/3/genre/movie/list?language=ko
+[TMDB 요청 Header] {Authorization: Bearer ***, accept: application/json}
+[TMDB 요청] GET https://api.themoviedb.org/3/discover/movie?language=ko-KR&page=1&sort_by=popularity.desc&include_adult=false&include_video=false
+[TMDB 요청 Header] {Authorization: Bearer ***, accept: application/json}
+[TMDB 요청] GET https://api.themoviedb.org/3/discover/movie?language=ko-KR&page=2&sort_by=popularity.desc&include_adult=false&include_video=false
+[TMDB 요청 Header] {Authorization: Bearer ***, accept: application/json}
+WEEK5_VIDEO_READY=전체 30편
+[TMDB 요청] GET https://api.themoviedb.org/3/discover/movie?language=ko-KR&page=1&sort_by=popularity.desc&include_adult=false&include_video=false&with_genres=28
+[TMDB 요청 Header] {Authorization: Bearer ***, accept: application/json}
+[TMDB 요청] GET https://api.themoviedb.org/3/discover/movie?language=ko-KR&page=2&sort_by=popularity.desc&include_adult=false&include_video=false&with_genres=28
+[TMDB 요청 Header] {Authorization: Bearer ***, accept: application/json}
+WEEK5_VIDEO_STATE=액션 30편
+[TMDB 요청] GET https://api.themoviedb.org/3/discover/movie?language=ko-KR&page=1&sort_by=popularity.desc&include_adult=false&include_video=false
+[TMDB 요청 Header] {Authorization: Bearer ***, accept: application/json}
+[TMDB 요청] GET https://api.themoviedb.org/3/discover/movie?language=ko-KR&page=2&sort_by=popularity.desc&include_adult=false&include_video=false
+[TMDB 요청 Header] {Authorization: Bearer ***, accept: application/json}
+WEEK5_VIDEO_STATE=전체 복귀 30편
+00:57 +1: All tests passed! (Android emulator-5554, 실제 TMDB)

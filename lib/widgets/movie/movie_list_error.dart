@@ -3,9 +3,14 @@ import 'package:flutter/material.dart';
 import '../../theme/app_colors.dart';
 
 class MovieListError extends StatelessWidget {
-  const MovieListError({super.key, required this.onRetry});
+  const MovieListError({
+    super.key,
+    required this.onRetry,
+    this.message = '잠시 후 다시 시도해 주세요.',
+  });
 
   final VoidCallback onRetry;
+  final String message;
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +33,7 @@ class MovieListError extends StatelessWidget {
             ),
             const SizedBox(height: 8),
             Text(
-              '잠시 후 다시 시도해 주세요.',
+              message,
               textAlign: TextAlign.center,
               style: Theme.of(context).textTheme.bodyMedium
                   ?.copyWith(color: AppColors.gray),
