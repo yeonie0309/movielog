@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="820" viewBox="0 0 1400 820">
+<defs><style>
+text{font-family:Arial,'Apple SD Gothic Neo',sans-serif;fill:#252235}.title{font-size:30px;font-weight:700}.head{font-size:23px;font-weight:700;fill:white}.row{font-size:18px}.note{font-size:17px;fill:#625874}.edge{fill:none;stroke:#79639a;stroke-width:3}.box{fill:white;stroke:#c8bed8;stroke-width:2}
+</style></defs>
+<rect width="1400" height="820" fill="#f7f5fc"/>
+<text x="55" y="62" class="title">MovieLog · Member / Rating / Favorite ERD</text>
+<text x="55" y="99" class="note">UMC PE 5주차 — 회원·평점 조회 / Favorite은 8주차를 위한 스키마만 준비</text>
+<rect x="55" y="230" width="370" height="340" rx="12" class="box"/>
+<path d="M67 230H413Q425 230 425 242V282H55V242Q55 230 67 230" fill="#7055a2"/>
+<text x="79" y="265" class="head">member</text>
+<g class="row">
+<text x="78" y="320">PK  member_id    BIGINT</text>
+<text x="78" y="360">UQ  email             VARCHAR(254)</text>
+<text x="78" y="400">      password       VARCHAR(60)</text>
+<text x="78" y="440">UQ  nickname       VARCHAR(50)</text>
+<text x="78" y="480">      created_at     DATETIME</text>
+<text x="78" y="520">      updated_at    DATETIME</text>
+</g>
+<rect x="720" y="145" width="610" height="305" rx="12" class="box"/>
+<path d="M732 145H1318Q1330 145 1330 157V197H720V157Q720 145 732 145" fill="#7055a2"/>
+<text x="745" y="181" class="head">rating</text>
+<g class="row">
+<text x="745" y="231">PK  rating_id    BIGINT</text><text x="1025" y="231">FK  member_id    BIGINT</text>
+<text x="745" y="273">      movie_id   BIGINT</text><text x="1025" y="273">      score     TINYINT (1~5)</text>
+<text x="745" y="315">      comment   TEXT (NULL)</text>
+<text x="745" y="357">      created_at / updated_at    DATETIME</text>
+<text x="745" y="410">UNIQUE (member_id, movie_id)</text>
+</g>
+<rect x="720" y="495" width="610" height="225" rx="12" class="box"/>
+<path d="M732 495H1318Q1330 495 1330 507V547H720V507Q720 495 732 495" fill="#81708f"/>
+<text x="745" y="531" class="head">favorite · schema only</text>
+<g class="row">
+<text x="745" y="582">PK  favorite_id   BIGINT</text><text x="1025" y="582">FK  member_id    BIGINT</text>
+<text x="745" y="623">      movie_id    BIGINT</text>
+<text x="745" y="663">      created_at / updated_at    DATETIME</text>
+<text x="745" y="700">UNIQUE (member_id, movie_id)</text>
+</g>
+<path d="M425 350H550V270H720M425 450H550V590H720" class="edge"/>
+<path d="M447 340V360M700 260V280M700 270L720 258M700 270L720 282M447 440V460M700 580V600M700 590L720 578M700 590L720 602" class="edge"/>
+<text x="467" y="330" class="row">1</text><text x="670" y="250" class="row">N</text>
+<text x="467" y="480" class="row">1</text><text x="670" y="572" class="row">N</text>
+<text x="55" y="760" class="note">movie_id = TMDB의 외부 영화 식별자. 로컬 영화 테이블·영화 FK는 생성하지 않습니다.</text>
+<text x="55" y="792" class="note">member 1 : N rating / member 1 : N favorite · 한 회원의 같은 영화 중복 평점·즐겨찾기는 DB UNIQUE로 방지합니다.</text>
+</svg>

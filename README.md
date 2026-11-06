@@ -37,3 +37,13 @@ dart run lib/week0/dart_practice.dart
 - SVG 아이콘에 테마 색상 `colorFilter` 적용
 
 1주차 제출 전 확인 사항은 `WEEK1_SUBMISSION_GUIDE.md`에 정리되어 있습니다.
+
+## 5주차 백엔드와 화면 연결
+
+기존 도서 서비스는 `backend/`, 새 영화 평점 서비스는 `movie-backend/`에 있습니다.
+회원가입의 닉네임·이메일 중복 확인과 마이페이지의 회원별 평점 조회를 실제 API에 연결했습니다.
+
+- [새 백엔드 실행 방법](movie-backend/README.md)
+- [API 명세](movie-backend/docs/API_SPEC.md)
+- [제출 가이드와 변경 파일 목록](WEEK5_BACKEND_SUBMISSION_GUIDE.md)
+- [Postman·CORS·Flutter 화면 증빙](evidence/week5-backend/README.md)

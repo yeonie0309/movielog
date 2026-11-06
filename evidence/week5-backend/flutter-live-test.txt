@@ -1,0 +1,18 @@
+00:00 +0: loading /Users/yeonie/UMC11/movielog/integration_test/week5_backend_live_test.dart
+Running Gradle task 'assembleDebug'...
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by net.rubygrapefruit.platform.internal.NativeLibraryLoader in an unnamed module (file:/Users/yeonie/.gradle/wrapper/dists/gradle-9.3.1-all/9ot9r568e8zfvvd4mn8rbu1j0/gradle-9.3.1/lib/native-platform-0.22-milestone-29.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+Running Gradle task 'assembleDebug'...                             13.9s
+✓ Built build/app/outputs/flutter-apk/app-debug.apk
+Installing build/app/outputs/flutter-apk/app-debug.apk...          780ms
+00:00 +0: 실제 NestJS/MySQL API 3개를 Flutter 화면에서 조회
+WEEK5_BACKEND_CAPTURE=06-app-duplicate
+WEEK5_BACKEND_CAPTURE=07-app-available
+WEEK5_BACKEND_CAPTURE=08-app-ratings
+WEEK5_BACKEND_CAPTURE=09-app-empty
+WEEK5_BACKEND_CAPTURE=10-app-not-found
+00:41 +1: (tearDownAll)
+00:43 +1: All tests passed!

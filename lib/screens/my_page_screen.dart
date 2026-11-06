@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 import '../widgets/profile/edit_profile_button.dart';
 import '../widgets/profile/favorite_genres.dart';
@@ -30,6 +31,13 @@ class MyPageScreen extends StatelessWidget {
               child: const ProfileStats(),
             ),
             const FavoriteGenres(),
+            const SizedBox(height: 24),
+            OutlinedButton.icon(
+              key: const Key('open-member-ratings-button'),
+              onPressed: () => context.push('/member-ratings'),
+              icon: const Icon(Icons.star_outline),
+              label: const Text('회원별 영화 평점 조회'),
+            ),
           ],
         ),
       ),

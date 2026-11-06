@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 import '../widgets/common_app_bar.dart';
 import '../widgets/sign_up/sign_up_header.dart';
 import '../widgets/sign_up/sign_up_text_field.dart';
+import '../widgets/sign_up/availability_check.dart';
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({super.key});
@@ -125,6 +126,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
                           onFieldSubmitted: (_) =>
                               _emailFocusNode.requestFocus(),
                         ),
+                        AvailabilityCheck(
+                          controller: _nicknameController,
+                          isNickname: true,
+                        ),
                         const SizedBox(height: 16),
                         SignUpTextField(
                           fieldKey: const Key('email-field'),
@@ -137,6 +142,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
                           onChanged: _refreshFormState,
                           onFieldSubmitted: (_) =>
                               _passwordFocusNode.requestFocus(),
+                        ),
+                        AvailabilityCheck(
+                          controller: _emailController,
+                          isNickname: false,
                         ),
                         const SizedBox(height: 16),
                         SignUpTextField(
