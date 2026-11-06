@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:movielog/view_models/learning_member_session.dart';
 import 'package:movielog/core/network/workbook_client.dart';
 import 'package:movielog/data/models/member_rating.dart';
 import 'package:movielog/data/models/tmdb_movie_dto.dart';
@@ -67,7 +68,7 @@ void main() {
       '/v5/members/nickname/${Uri.encodeComponent('한 글')}',
     );
     expect(requests[1].path, '/v5/members/email/a%2Bb%40example.com');
-    expect(requests[2].path, '/v5/members/1/ratings');
+    expect(requests[2].path, '/v6/members/1/ratings');
     expect(rows.single.comment, isNull);
     expect(rows.single.score, 4);
     expect(rows.single.createdAt.isUtc, isTrue);
@@ -285,6 +286,7 @@ void main() {
         routerConfig: router,
         ratingApiService: api,
         movieDetailService: DetailFake(),
+        learningSession: LearningMemberSession()..setMemberId(1),
       ),
     );
     await tester.ensureVisible(find.byKey(const Key('open-my-ratings')));

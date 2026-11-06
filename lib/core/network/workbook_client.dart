@@ -1,6 +1,7 @@
 import 'package:dio/dio.dart';
 
-/// Public workbook v5 API. Never attach the TMDB bearer token here.
+/// Public workbook API; each Service selects v5 (legacy) or v6 explicitly.
+/// Never attach the TMDB bearer token or request/response body logger here.
 Dio createWorkbookClient() => Dio(
   BaseOptions(
     baseUrl: 'https://workbook.devnoco.com',

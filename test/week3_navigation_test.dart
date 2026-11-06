@@ -3,6 +3,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:movielog/data/genre_preference.dart';
 import 'package:movielog/movie_log_app.dart';
 import 'package:movielog/router/app_router.dart';
+import 'package:movielog/widgets/movielog_button.dart';
 
 void main() {
   Future<void> pumpAt(WidgetTester tester, String location) async {
@@ -101,7 +102,7 @@ void main() {
     await tester.tap(dialogStars.at(3));
     await tester.pump();
 
-    final confirmButton = tester.widget<FilledButton>(
+    final confirmButton = tester.widget<MovieLogButton>(
       find.byKey(const Key('confirm-rating-button')),
     );
     expect(confirmButton.onPressed, isNotNull);
@@ -109,7 +110,7 @@ void main() {
     await tester.tap(find.byKey(const Key('reset-rating-button')));
     await tester.pump();
     expect(find.text('별을 눌러 평점을 선택해 주세요.'), findsOneWidget);
-    final resetConfirmButton = tester.widget<FilledButton>(
+    final resetConfirmButton = tester.widget<MovieLogButton>(
       find.byKey(const Key('confirm-rating-button')),
     );
     expect(resetConfirmButton.onPressed, isNull);

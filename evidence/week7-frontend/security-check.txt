@@ -1,0 +1,3 @@
+PASS: 44 changed/new text files checked against local secret values; no secret values printed.
+PASS: no tracked .env.
+PASS: git diff --check.

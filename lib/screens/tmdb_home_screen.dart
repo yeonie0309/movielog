@@ -15,7 +15,10 @@ class TmdbHomeScreen extends StatelessWidget {
   const TmdbHomeScreen({super.key});
 
   void _openMovie(BuildContext context, Movie movie) {
-    context.push('/movies/${movie.id}', extra: movie);
+    final dto = context.read<MovieHomeViewModel>().popularMovies.firstWhere(
+      (dto) => dto.id == movie.id,
+    );
+    context.push('/movies/${movie.id}', extra: dto);
   }
 
   @override
@@ -72,10 +75,8 @@ class TmdbHomeScreen extends StatelessWidget {
                   MovieLoadStatus.success => _PopularContent(
                     movies: viewModel.popularMovies
                         .map(
-                          (movie) => movieFromTmdb(
-                            movie,
-                            genres: viewModel.genres,
-                          ),
+                          (movie) =>
+                              movieFromTmdb(movie, genres: viewModel.genres),
                         )
                         .toList(),
                     onOpenMovie: (movie) => _openMovie(context, movie),

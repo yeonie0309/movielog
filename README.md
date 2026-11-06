@@ -56,3 +56,13 @@ NestJS 영화 서비스에 회원가입·평점 등록/수정/삭제를 추가�
 - [제출물·실행 결과·Notion 작성 초안](WEEK6_BACKEND_SUBMISSION_GUIDE.md)
 - [실제 요청·응답 캡처 및 검증 로그](evidence/week6-backend/README.md)
 - [원본 Notion 반영 승인 계획](WEEK6_BACKEND_NOTION_PLAN.md)
+
+## 7주차 프론트엔드 — 회원가입과 평점 CRUD 확장
+
+공개 MovieLog v6에 회원가입 및 평점 등록·수정·삭제를 연결했습니다.
+가입으로 받은 학습용 회원 ID는 메모리 세션에만 보관하며 로그인 인증은 아닙니다.
+기존 0~6주차 실습과 백엔드는 보존합니다.
+
+- [요구사항·구현·검증·제출 양식](WEEK7_FRONTEND_SUBMISSION_GUIDE.md)
+- [실제 API/실패 주입 화면·영상·로그](evidence/week7-frontend/README.md)
+- [원본 Notion 작성 승인 계획](WEEK7_FRONTEND_NOTION_PLAN.md)

@@ -45,7 +45,7 @@ void main() {
     expect(find.text('비밀번호는 8자 이상 입력해 주세요.'), findsOneWidget);
   });
 
-  testWidgets('모든 입력과 약관 동의가 유효하면 가입할 수 있다', (tester) async {
+  testWidgets('입력과 약관만으로 가입할 수 없고 두 중복 확인이 필요하다', (tester) async {
     await pumpMovieLogAt(tester, '/register');
 
     await tester.enterText(find.byKey(const Key('nickname-field')), '무비러버');
@@ -55,7 +55,7 @@ void main() {
     );
     await tester.enterText(
       find.byKey(const Key('password-field')),
-      'password123',
+      'Test1234!',
     );
     await tester.ensureVisible(find.byKey(const Key('terms-checkbox')));
     await tester.tap(find.byKey(const Key('terms-checkbox')));
@@ -64,14 +64,7 @@ void main() {
     final enabledButton = tester.widget<MovieLogButton>(
       find.byKey(const Key('sign-up-button')),
     );
-    expect(enabledButton.onPressed, isNotNull);
-
-    await tester.ensureVisible(find.byKey(const Key('sign-up-button')));
-    await tester.tap(find.byKey(const Key('sign-up-button')));
-    await tester.pumpAndSettle();
-
-    expect(find.text('오늘의 영화 한 편을 기록해 보세요.'), findsOneWidget);
-    expect(find.byKey(const Key('main-navigation-bar')), findsOneWidget);
+    expect(enabledButton.onPressed, isNull);
   });
 
   testWidgets('별점을 선택하면 평점 저장 버튼이 활성화된다', (tester) async {
