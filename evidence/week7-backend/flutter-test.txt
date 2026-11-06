@@ -1,0 +1,110 @@
+00:00 +0: loading /Users/yeonie/UMC11/movielog/test/fake_movie_service_test.dart
+00:00 +0: /Users/yeonie/UMC11/movielog/test/fake_movie_service_test.dart: 성공 모드는 영화 목록을 반환한다
+00:00 +1: /Users/yeonie/UMC11/movielog/test/fake_movie_service_test.dart: 빈 모드는 빈 목록을 반환한다
+00:00 +2: /Users/yeonie/UMC11/movielog/test/fake_movie_service_test.dart: 실패 모드는 MovieLoadException을 던진다
+00:00 +3: /Users/yeonie/UMC11/movielog/test/week2_sql_test.dart: (setUpAll)
+00:00 +3: /Users/yeonie/UMC11/movielog/test/week2_sql_test.dart: 공통 ERD의 8개 테이블과 PK/FK 관계를 정의한다
+00:00 +4: /Users/yeonie/UMC11/movielog/test/week2_sql_test.dart: 공통 더미 데이터가 모든 실습 관계를 포함한다
+00:00 +5: /Users/yeonie/UMC11/movielog/test/week2_sql_test.dart: Required Mission 3개가 JOIN, WHERE, 정렬과 범위를 사용한다
+00:00 +6: /Users/yeonie/UMC11/movielog/test/week2_sql_test.dart: MovieLog 확장 쿼리는 진행 중 미션을 높은 보상순으로 조회한다
+00:00 +7: /Users/yeonie/UMC11/movielog/test/week2_sql_test.dart: (tearDownAll)
+00:00 +7: /Users/yeonie/UMC11/movielog/test/week5_member_api_test.dart: 자체 API Client에는 TMDB Authorization이 없다
+00:00 +8: /Users/yeonie/UMC11/movielog/test/week5_member_api_test.dart: 중복 확인 결과와 입력 변경 시 이전 결과 무효화
+00:01 +9: /Users/yeonie/UMC11/movielog/test/week5_member_api_test.dart: 중복 확인 결과와 입력 변경 시 이전 결과 무효화
+00:01 +10: /Users/yeonie/UMC11/movielog/test/week5_member_api_test.dart: 중복 확인 결과와 입력 변경 시 이전 결과 무효화
+00:01 +11: /Users/yeonie/UMC11/movielog/test/week5_member_api_test.dart: 중복 확인 결과와 입력 변경 시 이전 결과 무효화
+00:01 +12: /Users/yeonie/UMC11/movielog/test/week5_member_api_test.dart: 중복 확인 결과와 입력 변경 시 이전 결과 무효화
+00:01 +13: /Users/yeonie/UMC11/movielog/test/week5_member_api_test.dart: 중복 확인 결과와 입력 변경 시 이전 결과 무효화
+00:01 +14: /Users/yeonie/UMC11/movielog/test/week5_member_api_test.dart: 중복 확인 결과와 입력 변경 시 이전 결과 무효화
+00:01 +15: /Users/yeonie/UMC11/movielog/test/week5_member_api_test.dart: 중복 확인 결과와 입력 변경 시 이전 결과 무효화
+00:01 +16: /Users/yeonie/UMC11/movielog/test/week7_frontend_test.dart: 가입 제출 중 화면 이탈·중복 탭 차단, 서버400은 비밀번호 필드, 수정 시 해제
+00:01 +16: /Users/yeonie/UMC11/movielog/test/week3_navigation_test.dart: NavigationBar로 홈, 영화, 마이페이지를 전환한다
+영화 목록 Mock 요청 종료
+00:01 +17: /Users/yeonie/UMC11/movielog/test/week5_tmdb_test.dart: TMDB 카드의 ID가 상세 화면과 평점 Dialog까지 전달된다
+00:01 +18: /Users/yeonie/UMC11/movielog/test/week5_tmdb_test.dart: TMDB 카드의 ID가 상세 화면과 평점 Dialog까지 전달된다
+00:01 +19: /Users/yeonie/UMC11/movielog/test/week5_tmdb_test.dart: TMDB 카드의 ID가 상세 화면과 평점 Dialog까지 전달된다
+00:01 +20: /Users/yeonie/UMC11/movielog/test/week5_tmdb_test.dart: TMDB 카드의 ID가 상세 화면과 평점 Dialog까지 전달된다
+00:01 +21: /Users/yeonie/UMC11/movielog/test/week5_tmdb_test.dart: TMDB 카드의 ID가 상세 화면과 평점 Dialog까지 전달된다
+00:01 +22: /Users/yeonie/UMC11/movielog/test/week5_tmdb_test.dart: TMDB 카드의 ID가 상세 화면과 평점 Dialog까지 전달된다
+00:01 +23: /Users/yeonie/UMC11/movielog/test/week5_tmdb_test.dart: TMDB 카드의 ID가 상세 화면과 평점 Dialog까지 전달된다
+00:01 +24: /Users/yeonie/UMC11/movielog/test/week5_tmdb_test.dart: TMDB 카드의 ID가 상세 화면과 평점 Dialog까지 전달된다
+00:01 +25: /Users/yeonie/UMC11/movielog/test/week5_tmdb_test.dart: TMDB 카드의 ID가 상세 화면과 평점 Dialog까지 전달된다
+00:01 +26: /Users/yeonie/UMC11/movielog/test/week5_tmdb_test.dart: TMDB 카드의 ID가 상세 화면과 평점 Dialog까지 전달된다
+00:01 +27: /Users/yeonie/UMC11/movielog/test/week5_tmdb_test.dart: TMDB 카드의 ID가 상세 화면과 평점 Dialog까지 전달된다
+00:01 +28: /Users/yeonie/UMC11/movielog/test/week5_tmdb_test.dart: TMDB 카드의 ID가 상세 화면과 평점 Dialog까지 전달된다
+00:01 +29: /Users/yeonie/UMC11/movielog/test/week5_tmdb_test.dart: TMDB 카드의 ID가 상세 화면과 평점 Dialog까지 전달된다
+00:01 +30: /Users/yeonie/UMC11/movielog/test/week5_tmdb_test.dart: TMDB 카드의 ID가 상세 화면과 평점 Dialog까지 전달된다
+00:01 +31: /Users/yeonie/UMC11/movielog/test/week5_tmdb_test.dart: TMDB 카드의 ID가 상세 화면과 평점 Dialog까지 전달된다
+00:01 +32: /Users/yeonie/UMC11/movielog/test/week5_tmdb_test.dart: TMDB 카드의 ID가 상세 화면과 평점 Dialog까지 전달된다
+00:01 +33: /Users/yeonie/UMC11/movielog/test/week5_tmdb_test.dart: TMDB 카드의 ID가 상세 화면과 평점 Dialog까지 전달된다
+00:01 +34: /Users/yeonie/UMC11/movielog/test/week5_tmdb_test.dart: TMDB 카드의 ID가 상세 화면과 평점 Dialog까지 전달된다
+00:01 +35: /Users/yeonie/UMC11/movielog/test/week5_tmdb_test.dart: TMDB 카드의 ID가 상세 화면과 평점 Dialog까지 전달된다
+00:01 +36: /Users/yeonie/UMC11/movielog/test/week5_tmdb_test.dart: TMDB 카드의 ID가 상세 화면과 평점 Dialog까지 전달된다
+00:01 +37: /Users/yeonie/UMC11/movielog/test/week5_tmdb_test.dart: TMDB 카드의 ID가 상세 화면과 평점 Dialog까지 전달된다
+00:01 +38: /Users/yeonie/UMC11/movielog/test/week5_tmdb_test.dart: TMDB 카드의 ID가 상세 화면과 평점 Dialog까지 전달된다
+00:02 +39: /Users/yeonie/UMC11/movielog/test/week5_tmdb_test.dart: TMDB 카드의 ID가 상세 화면과 평점 Dialog까지 전달된다
+00:02 +40: /Users/yeonie/UMC11/movielog/test/week5_tmdb_test.dart: TMDB 카드의 ID가 상세 화면과 평점 Dialog까지 전달된다
+00:02 +41: /Users/yeonie/UMC11/movielog/test/week5_tmdb_test.dart: TMDB 카드의 ID가 상세 화면과 평점 Dialog까지 전달된다
+00:02 +42: /Users/yeonie/UMC11/movielog/test/week5_tmdb_test.dart: TMDB 카드의 ID가 상세 화면과 평점 Dialog까지 전달된다
+00:02 +43: /Users/yeonie/UMC11/movielog/test/week5_tmdb_test.dart: TMDB 카드의 ID가 상세 화면과 평점 Dialog까지 전달된다
+00:02 +44: /Users/yeonie/UMC11/movielog/test/week5_tmdb_test.dart: TMDB 카드의 ID가 상세 화면과 평점 Dialog까지 전달된다
+00:02 +44: /Users/yeonie/UMC11/movielog/test/week3_navigation_test.dart: 영화 카드에서 Path ID 상세로 이동하고 뒤로 돌아온다
+영화 목록 Mock 요청 종료
+00:02 +45: /Users/yeonie/UMC11/movielog/test/widget_test.dart: 2주차 회원가입 화면의 필수 입력과 비활성 버튼을 표시한다
+00:02 +46: /Users/yeonie/UMC11/movielog/test/widget_test.dart: 2주차 회원가입 화면의 필수 입력과 비활성 버튼을 표시한다
+00:02 +47: /Users/yeonie/UMC11/movielog/test/week3_navigation_test.dart: 영화 카드에서 Path ID 상세로 이동하고 뒤로 돌아온다
+00:02 +48: /Users/yeonie/UMC11/movielog/test/week7_frontend_test.dart: 평점 Dialog 정수·코멘트·실패 입력 유지·이탈 차단
+00:02 +49: /Users/yeonie/UMC11/movielog/test/widget_test.dart: 잘못된 입력에 Validation 메시지를 표시한다
+00:02 +49: /Users/yeonie/UMC11/movielog/test/week3_navigation_test.dart: BottomSheet 선택 결과를 Query 장르 필터로 적용한다
+영화 목록 Mock 요청 종료
+00:02 +50: /Users/yeonie/UMC11/movielog/test/widget_test.dart: 잘못된 입력에 Validation 메시지를 표시한다
+00:02 +51: /Users/yeonie/UMC11/movielog/test/widget_test.dart: 잘못된 입력에 Validation 메시지를 표시한다
+00:02 +52: /Users/yeonie/UMC11/movielog/test/week3_navigation_test.dart: BottomSheet 선택 결과를 Query 장르 필터로 적용한다
+00:02 +53: /Users/yeonie/UMC11/movielog/test/week7_frontend_test.dart: 평점 목록 편집·취소·마지막 삭제 Empty
+00:02 +54: /Users/yeonie/UMC11/movielog/test/widget_test.dart: 입력과 약관만으로 가입할 수 없고 두 중복 확인이 필요하다
+00:02 +55: /Users/yeonie/UMC11/movielog/test/widget_test.dart: 입력과 약관만으로 가입할 수 없고 두 중복 확인이 필요하다
+00:02 +56: /Users/yeonie/UMC11/movielog/test/week3_navigation_test.dart: 상세 화면에서 평점 Dialog를 사용한다
+00:02 +57: /Users/yeonie/UMC11/movielog/test/week3_navigation_test.dart: 상세 화면에서 평점 Dialog를 사용한다
+00:02 +58: /Users/yeonie/UMC11/movielog/test/week3_navigation_test.dart: 상세 화면에서 평점 Dialog를 사용한다
+00:02 +59: /Users/yeonie/UMC11/movielog/test/week3_navigation_test.dart: 상세 화면에서 평점 Dialog를 사용한다
+00:02 +60: /Users/yeonie/UMC11/movielog/test/week3_navigation_test.dart: 상세 화면에서 평점 Dialog를 사용한다
+00:02 +61: /Users/yeonie/UMC11/movielog/test/widget_test.dart: 별점을 선택하면 평점 저장 버튼이 활성화된다
+00:02 +62: /Users/yeonie/UMC11/movielog/test/widget_test.dart: 1주차 프로필 화면을 보존한다
+00:02 +63: /Users/yeonie/UMC11/movielog/test/week6_frontend_test.dart: 회원가입 Row·스크롤 레이아웃 320.0 너비
+00:02 +64: /Users/yeonie/UMC11/movielog/test/week6_frontend_test.dart: 회원가입 Row·스크롤 레이아웃 320.0 너비
+00:03 +64: /Users/yeonie/UMC11/movielog/test/week4_async_movie_list_test.dart: 대기 후 성공 상태를 표시한다
+영화 목록 Mock 요청 종료
+00:03 +65: /Users/yeonie/UMC11/movielog/test/week6_frontend_test.dart: 회원가입 Row·스크롤 레이아웃 320.0 너비
+00:03 +65: /Users/yeonie/UMC11/movielog/test/week4_async_movie_list_test.dart: 빈 응답이면 Empty 위젯을 표시한다
+영화 목록 Mock 요청 종료
+00:03 +66: /Users/yeonie/UMC11/movielog/test/week6_frontend_test.dart: 회원가입 Row·스크롤 레이아웃 320.0 너비
+00:03 +66: /Users/yeonie/UMC11/movielog/test/week4_async_movie_list_test.dart: 오류에서 다시 시도하면 성공 목록을 표시한다
+영화 목록 Mock 요청 실패: Instance of 'MovieLoadException'
+00:03 +67: /Users/yeonie/UMC11/movielog/test/week4_async_movie_list_test.dart: 오류에서 다시 시도하면 성공 목록을 표시한다
+#0      FakeMovieService.fetchMovies (package:movielog/services/fake_movie_service.dart:24:32)
+<asynchronous suspension>
+<asynchronous suspension>
+#2      _MovieListScreenState._fetchMovies (package:movielog/screens/movie_list_screen.dart:84:14)
+<asynchronous suspension>
+<asynchronous suspension>
+#4      _MovieListScreenState._loadInitialData (package:movielog/screens/movie_list_screen.dart:68:21)
+<asynchronous suspension>
+#5      _FutureBuilderState._subscribe.<anonymous closure> (package:flutter/src/widgets/async.dart:641:7)
+<asynchronous suspension>
+(elided 2 frames from dart:async)
+영화 목록 Mock 요청 종료
+영화 목록 Mock 요청 종료
+00:03 +68: /Users/yeonie/UMC11/movielog/test/week6_frontend_test.dart: 회원가입 Row·스크롤 레이아웃 1024.0 너비
+00:03 +69: /Users/yeonie/UMC11/movielog/test/week4_async_movie_list_test.dart: 선택한 장르를 저장하고 다시 생성할 때 복원한다
+00:03 +70: /Users/yeonie/UMC11/movielog/test/week4_async_movie_list_test.dart: 선택한 장르를 저장하고 다시 생성할 때 복원한다
+00:03 +71: /Users/yeonie/UMC11/movielog/test/week4_async_movie_list_test.dart: 선택한 장르를 저장하고 다시 생성할 때 복원한다
+00:03 +72: /Users/yeonie/UMC11/movielog/test/week4_async_movie_list_test.dart: 선택한 장르를 저장하고 다시 생성할 때 복원한다
+00:03 +73: /Users/yeonie/UMC11/movielog/test/week4_async_movie_list_test.dart: 선택한 장르를 저장하고 다시 생성할 때 복원한다
+00:03 +74: /Users/yeonie/UMC11/movielog/test/week4_async_movie_list_test.dart: 선택한 장르를 저장하고 다시 생성할 때 복원한다
+00:03 +75: /Users/yeonie/UMC11/movielog/test/week4_async_movie_list_test.dart: 선택한 장르를 저장하고 다시 생성할 때 복원한다
+영화 목록 Mock 요청 종료
+영화 목록 Mock 요청 종료
+00:03 +76: /Users/yeonie/UMC11/movielog/test/week6_frontend_test.dart: 서버 중복은 Form 자체를 invalid로 만들고 수정하면 해제
+00:03 +77: /Users/yeonie/UMC11/movielog/test/week6_frontend_test.dart: 공용 버튼 너비 3종·로딩 라벨 숨김·disabled 연타 차단
+00:03 +78: /Users/yeonie/UMC11/movielog/test/week6_frontend_test.dart: 마이페이지 자식 평점 화면·뒤로가기·하단 탭 없음·null 후기 숨김
+00:04 +79: All tests passed!
