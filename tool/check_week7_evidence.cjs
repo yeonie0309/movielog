@@ -3,6 +3,12 @@ const {execFileSync}=require('node:child_process');
 const root=path.resolve(__dirname,'..');const out=path.join(root,'evidence/week7-frontend');
 const names=fs.readdirSync(out);const images=names.filter(n=>n.endsWith('.png'));
 if(images.length!==17)throw Error('Expected 17 images');
+const supplementalImages=names.filter(n=>n.endsWith('.jpg')).sort();
+if(supplementalImages.length!==15)throw Error('Expected 15 supplemental screenshots');
+for(const name of supplementalImages){
+  const b=fs.readFileSync(path.join(out,name));
+  if(b[0]!==0xff||b[1]!==0xd8||b.length<1000)throw Error('Invalid JPEG '+name);
+}
 const dimensions=images.map(name=>{
   const b=fs.readFileSync(path.join(out,name));
   if(b.subarray(0,8).toString('hex')!=='89504e470d0a1a0a')throw Error('Invalid PNG '+name);
@@ -45,7 +51,8 @@ const summary={tests:79,integrationScenarios:2,realApiRequests:live.requests.len
   account:{memberId:live.memberId,email:live.email,nickname:live.nickname},
   movieId:live.movieId,ratingId:live.ratingId,images:dimensions,videos,
   actualServerVsInjected:'01-11 actual v6+TMDB; 12-17 injected failures in actual Android app',
-  manualVerification:'User final manual verification pending; do not check its Notion item yet',
+  supplementalImages,
+  manualVerification:'Chrome direct UI: member19/TMDB155; availability/duplicate/input invalidation; rating 0-disabled to 4-enabled; create/GET/edit5/GET/delete cancel/delete empty. Signup by user. Server400/final signup409/inflight guards/write and GET failure recovery remain automated-only; do not check ALL manual verification yet.',
   files};
 fs.writeFileSync(path.join(out,'verification-summary.json'),JSON.stringify(summary,null,2)+'\n');
 console.log(JSON.stringify({tests:79,integration:2,requests:live.requests.length,images:images.length,videos},null,2));
