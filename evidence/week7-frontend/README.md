@@ -3,6 +3,11 @@
 모든 PNG/MP4는 Android 에뮬레이터의 실제 실행 화면입니다. UI를 합성하지 않았습니다.
 단, **실제 서버 연결**과 **테스트용 실패 주입**은 아래처럼 구분해야 합니다.
 
+PR: https://github.com/yeonie0309/movielog/pull/15
+
+- [실제 CRUD 영상 직접 첨부](https://github.com/user-attachments/assets/13f97958-1cab-4904-bade-35d7009c203a)
+- [실패 주입 복구 영상 직접 첨부](https://github.com/user-attachments/assets/a3207aaa-1185-4b72-a10b-6dc78345cde4)
+
 ## 실제 공개 v6 + TMDB
 
 | 파일 | 내용 |

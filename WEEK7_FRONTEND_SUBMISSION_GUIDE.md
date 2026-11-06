@@ -3,6 +3,8 @@
 원본: [레아의 워크북](https://app.notion.com/p/makeus-challenge/7-CRUD-499b57f4596b83c5b5918118bf2710da).
 이 문서는 제출 초안입니다. 원본 Notion은 아직 작성하거나 제출하지 않았습니다.
 
+PR: [#15 — feat: 7주차 회원가입 및 평점 CRUD 연동](https://github.com/yeonie0309/movielog/pull/15)
+
 ## 작업 기준
 
 - 작업 전 로컬 main `2445f60`, fetch 후 origin/main `a10ad32` (1주차까지 반영).
@@ -101,7 +103,7 @@ PATCH 200 + 공통 응답, GET 200 + 수정된 평점 배열.
 
 ## 제출 양식 초안
 
-PR 링크: PR 생성 후 실제 URL 기입
+PR 링크: https://github.com/yeonie0309/movielog/pull/15
 
 생성한 본인 테스트 계정(비밀번호 제외):
 memberId 18 / nickname smw4ooi9q / email lea.w7.second.mw4ooi9q@example.com.
