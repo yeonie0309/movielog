@@ -1,0 +1,182 @@
+Project umc_reward_service {
+  database_type: 'MySQL'
+  Note: 'UMC PE 1주차 요구사항 기반 리워드 서비스 ERD'
+}
+
+Table members {
+  id bigint [pk, increment]
+  region_id bigint [not null]
+  email varchar(255) [unique]
+  name varchar(50) [not null]
+  nickname varchar(30) [not null, unique]
+  phone_number varchar(20)
+  gender varchar(20) [not null]
+  birth_date date [not null]
+  address_detail varchar(255)
+  status varchar(20) [not null, default: 'active']
+  created_at datetime [not null]
+  updated_at datetime [not null]
+  deleted_at datetime
+}
+
+Table social_accounts {
+  id bigint [pk, increment]
+  member_id bigint [not null]
+  provider varchar(20) [not null]
+  provider_user_id varchar(255) [not null]
+  created_at datetime [not null]
+  updated_at datetime [not null]
+
+  indexes {
+    (provider, provider_user_id) [unique]
+    (member_id, provider) [unique]
+  }
+}
+
+Table regions {
+  id bigint [pk, increment]
+  parent_region_id bigint
+  code varchar(30) [not null, unique]
+  name varchar(50) [not null]
+  depth tinyint [not null, default: 1]
+  created_at datetime [not null]
+  updated_at datetime [not null]
+  deleted_at datetime
+}
+
+Table food_categories {
+  id bigint [pk, increment]
+  code varchar(30) [not null, unique]
+  name varchar(50) [not null, unique]
+  display_order int [not null, default: 0]
+  created_at datetime [not null]
+  updated_at datetime [not null]
+  deleted_at datetime
+}
+
+Table terms {
+  id bigint [pk, increment]
+  title varchar(100) [not null]
+  content_url varchar(2048) [not null]
+  version varchar(20) [not null]
+  is_required boolean [not null]
+  effective_at datetime [not null]
+  created_at datetime [not null]
+  updated_at datetime [not null]
+  deleted_at datetime
+
+  indexes {
+    (title, version) [unique]
+  }
+}
+
+Table member_terms {
+  id bigint [pk, increment]
+  member_id bigint [not null]
+  term_id bigint [not null]
+  is_agreed boolean [not null]
+  agreed_at datetime
+  created_at datetime [not null]
+  updated_at datetime [not null]
+
+  indexes {
+    (member_id, term_id) [unique]
+  }
+}
+
+Table member_food_categories {
+  id bigint [pk, increment]
+  member_id bigint [not null]
+  food_category_id bigint [not null]
+  created_at datetime [not null]
+
+  indexes {
+    (member_id, food_category_id) [unique]
+  }
+}
+
+Table stores {
+  id bigint [pk, increment]
+  region_id bigint [not null]
+  food_category_id bigint [not null]
+  name varchar(100) [not null]
+  address varchar(255) [not null]
+  description varchar(500)
+  image_url varchar(2048)
+  status varchar(20) [not null, default: 'open']
+  created_at datetime [not null]
+  updated_at datetime [not null]
+  deleted_at datetime
+}
+
+Table missions {
+  id bigint [pk, increment]
+  store_id bigint [not null]
+  title varchar(100) [not null]
+  description varchar(500) [not null]
+  minimum_order_amount decimal(10,2)
+  reward_points int [not null]
+  started_at datetime
+  ended_at datetime
+  status varchar(20) [not null, default: 'active']
+  created_at datetime [not null]
+  updated_at datetime [not null]
+  deleted_at datetime
+}
+
+Table member_missions {
+  id bigint [pk, increment]
+  member_id bigint [not null]
+  mission_id bigint [not null]
+  status varchar(20) [not null, default: 'accepted']
+  verification_code varchar(100)
+  verification_requested_at datetime
+  accepted_at datetime [not null]
+  completed_at datetime
+  claimed_at datetime
+  created_at datetime [not null]
+  updated_at datetime [not null]
+
+  indexes {
+    (member_id, mission_id) [unique]
+    (member_id, status)
+  }
+}
+
+Table reviews {
+  id bigint [pk, increment]
+  member_mission_id bigint [not null, unique]
+  rating tinyint [not null]
+  content varchar(1000)
+  status varchar(20) [not null, default: 'published']
+  created_at datetime [not null]
+  updated_at datetime [not null]
+  deleted_at datetime
+}
+
+Table review_images {
+  id bigint [pk, increment]
+  review_id bigint [not null]
+  image_url varchar(2048) [not null]
+  display_order int [not null, default: 0]
+  created_at datetime [not null]
+
+  indexes {
+    (review_id, display_order) [unique]
+  }
+}
+
+Ref: social_accounts.member_id > members.id
+Ref: regions.parent_region_id > regions.id
+Ref: members.region_id > regions.id
+Ref: member_terms.member_id > members.id
+Ref: member_terms.term_id > terms.id
+Ref: member_food_categories.member_id > members.id
+Ref: member_food_categories.food_category_id > food_categories.id
+Ref: stores.region_id > regions.id
+Ref: stores.food_category_id > food_categories.id
+Ref: missions.store_id > stores.id
+Ref: member_missions.member_id > members.id
+Ref: member_missions.mission_id > missions.id
+Ref: reviews.member_mission_id - member_missions.id
+Ref: review_images.review_id > reviews.id
