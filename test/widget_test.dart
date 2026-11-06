@@ -4,6 +4,7 @@ import 'package:movielog/movie_log_app.dart';
 import 'package:movielog/router/app_router.dart';
 import 'package:movielog/screens/profile_screen.dart';
 import 'package:movielog/screens/start_screen.dart';
+import 'package:movielog/widgets/movielog_button.dart';
 
 void main() {
   Future<void> pumpMovieLogAt(
@@ -25,7 +26,7 @@ void main() {
     expect(find.byKey(const Key('password-field')), findsOneWidget);
     expect(find.byKey(const Key('terms-checkbox')), findsOneWidget);
 
-    final button = tester.widget<FilledButton>(
+    final button = tester.widget<MovieLogButton>(
       find.byKey(const Key('sign-up-button')),
     );
     expect(button.onPressed, isNull);
@@ -60,7 +61,7 @@ void main() {
     await tester.tap(find.byKey(const Key('terms-checkbox')));
     await tester.pump();
 
-    final enabledButton = tester.widget<FilledButton>(
+    final enabledButton = tester.widget<MovieLogButton>(
       find.byKey(const Key('sign-up-button')),
     );
     expect(enabledButton.onPressed, isNotNull);

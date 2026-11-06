@@ -11,6 +11,9 @@ import '../screens/main_screen.dart';
 import '../screens/movie_detail_screen.dart';
 import '../screens/movie_list_screen.dart';
 import '../screens/my_page_screen.dart';
+import '../screens/my_ratings_screen.dart';
+import '../data/services/rating_api_service.dart';
+import '../view_models/my_ratings_view_model.dart';
 import '../screens/member_ratings_screen.dart';
 import '../screens/rating_input_screen.dart';
 import '../screens/sign_up_screen.dart';
@@ -111,6 +114,19 @@ abstract final class AppRouter {
                 GoRoute(
                   path: '/my',
                   builder: (context, state) => const MyPageScreen(),
+                  routes: [
+                    GoRoute(
+                      path: 'ratings',
+                      parentNavigatorKey: rootNavigatorKey,
+                      builder: (context, state) => ChangeNotifierProvider(
+                        create: (context) => MyRatingsViewModel(
+                          context.read<RatingApiService>(),
+                          context.read<MovieDetailService>(),
+                        )..load(),
+                        child: const MyRatingsScreen(),
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),

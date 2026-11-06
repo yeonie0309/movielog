@@ -1,0 +1,40 @@
+00:00 +0: loading /Users/yeonie/UMC11/movielog/integration_test/week6_evidence_test.dart
+Running Gradle task 'assembleDebug'...
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by net.rubygrapefruit.platform.internal.NativeLibraryLoader in an unnamed module (file:/Users/yeonie/.gradle/wrapper/dists/gradle-9.3.1-all/9ot9r568e8zfvvd4mn8rbu1j0/gradle-9.3.1/lib/native-platform-0.22-milestone-29.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+Running Gradle task 'assembleDebug'...                             12.2s
+✓ Built build/app/outputs/flutter-apk/app-debug.apk
+Installing build/app/outputs/flutter-apk/app-debug.apk...          286ms
+00:00 +0: 실제 공개 v5·TMDB 조회 및 회원가입/마이페이지 경로 검증
+WEEK6_CAPTURE=01-live-before
+WEEK6_CAPTURE=02-live-duplicated
+WEEK6_CAPTURE=03-live-invalidated
+WEEK6_CAPTURE=04-live-reentered-duplicate
+WEEK6_CAPTURE=05-live-available
+WEEK6_CAPTURE=06-live-my-page
+[TMDB 요청] GET https://api.themoviedb.org/3/movie/13?language=ko-KR
+[TMDB 요청 Header] {Authorization: Bearer ***, accept: application/json}
+[TMDB 응답] 200 https://api.themoviedb.org/3/movie/13?language=ko-KR
+[TMDB 응답 Body] {adult: false, backdrop_path: /66Kn4XWhkuPkJxOJyPEx4U2CUfN.jpg, belongs_to_collection: null, budget: 55000000, genres: [{id: 35, name: 코미디}, {id: 18, name: 드라마}, {id: 10749, name: 로맨스}], homepage: , id: 13, imdb_id: tt0109830, origin_country: [US], original_language: en, original_title: Forrest Gump, overview: 불편한 다리, 남들보다 조금 떨어지는 지능을 가진 포레스트 검프는 헌신적인 어머니의 보살핌과 첫사랑 제니와의 만남으로 편견과 괴롭힘 속에서도 따뜻한 마음을 지니고 성장한다. 또래들의 괴롭힘을 피해 도망치던 포레스트는 누구보다 빠르게 달릴 수 있는 자신의 재능을 깨닫는다. 그의 재능을 알아 본 대학에서 그를 미식축구 선수로 발탁하고, 졸업 후에도 뛰어난 신체능력으로 군에 들어가 무공훈장을 수여받는 등 탄탄한 인생 가도에 오르게 된 포레스트. 하지만 어머니가 병에 걸려 죽음을 맞이하고, 첫사랑 제니 역시 그의 곁을 떠나가며 다시 한 번 인생의 전환점을 맞이하게 되는데..., popularity: 32.5019, poster_path: /l8wvbQQIBV8LBHmx3Wx9xbE2kzt.jpg, production_companies: [{id: 4, logo_path: /jay6WcMgagAklUt7i9Euwj1pzTF.png, name: Paramount Pictures, origin_country: US}, {id: 21920, logo_path: null, name: The Steve Tisch Company, origin_country: US}, {id: 412, logo_path: null, name: Wendy Finerman Productions, origin_country: US}], production_countries: [{iso_3166_1: US, name: United States of America}], release_date: 1994-06-23, revenue: 677387716, runtime: 142, softcore: false, spoken_languages: [{english_name: English, iso_639_1: en, name: English}], status: Released, tagline: 인생은 초콜릿 상자와 같은 거야. 네가 무엇을 고를지 아무도 모른단다, title: 포레스트 검프, video: false, vote_average: 8.461, vote_count: 30805}
+[TMDB 요청] GET https://api.themoviedb.org/3/movie/680?language=ko-KR
+[TMDB 요청 Header] {Authorization: Bearer ***, accept: application/json}
+[TMDB 응답] 200 https://api.themoviedb.org/3/movie/680?language=ko-KR
+[TMDB 응답 Body] {adult: false, backdrop_path: /suaEOtk1N1sgg2MTM7oZd2cfVp3.jpg, belongs_to_collection: null, budget: 8000000, genres: [{id: 53, name: 스릴러}, {id: 80, name: 범죄}, {id: 35, name: 코미디}], homepage: , id: 680, imdb_id: tt0110912, origin_country: [US], original_language: en, original_title: Pulp Fiction, overview: 펌프킨와 허니 버니가 레스토랑에서 강도 행각을 벌이기 시작한다. 빈센트와 그 동료 쥴스는 두목의 금가방을 찾기 위해 다른 건달이 사는 아파트를 찾아간다. 마르셀러스는 부치에게 돈을 주며 상대 선수에게 져 주라고 하지만 부치는 상대 선수를 때려 눕히고 도망치다, 어릴 때 아버지에게 물려받은 시계를 찾기 위해 아파트로 향한다. 아무런 상관 없이 보이는 이 사건들이 서로 얽히고 섥히면서 예상치 못한 인과관계가 만들어지는데..., popularity: 34.8513, poster_path: /lnRkeQstaCvfMahZq7p9eAWzK1a.jpg, production_companies: [{id: 14, logo_path: /m6AHu84oZQxvq7n1rsvMNJIAsMu.png, name: Miramax, origin_country: US}, {id: 59, logo_path: /b1tj5EWcFQLYaQrw1D9V4s8kUgN.png, name: A Band Apart, origin_country: US}, {id: 216, logo_path: /iKPzC6YxqNAk6fMoTtFhIF5p6yw.png, name: Jersey Films, origin_country: US}], production_countries: [{iso_3166_1: US, name: United States of America}], release_date: 1994-09-10, revenue: 213928762, runtime: 154, softcore: false, spoken_languages: [{english_name: English, iso_639_1: en, name: English}, {english_name: Spanish, iso_639_1: es, name: Español}, {english_name: French, iso_639_1: fr, name: Français}], status: Released, tagline: 쿠엔틴 타란티노만의 블랙 코미디, title: 펄프 픽션, video: false, vote_average: 8.481, vote_count: 31236}
+[TMDB 요청] GET https://api.themoviedb.org/3/movie/550?language=ko-KR
+[TMDB 요청 Header] {Authorization: Bearer ***, accept: application/json}
+[TMDB 응답] 200 https://api.themoviedb.org/3/movie/550?language=ko-KR
+[TMDB 응답 Body] {adult: false, backdrop_path: /c6OLXfKAk5BKeR6broC8pYiCquX.jpg, belongs_to_collection: null, budget: 63000000, genres: [{id: 18, name: 드라마}, {id: 53, name: 스릴러}], homepage: , id: 550, imdb_id: tt0137523, origin_country: [US], original_language: en, original_title: Fight Club, overview: 자동차 회사의 리콜 심사관으로 일하는 주인공은 일상의 무료함과 공허함 속에서 늘 새로운 탈출을 꿈꾼다. 그는 비행기에서 자신을 비누 제조업자라고 소개하는 타일러 더든을 만난다. 집에 돌아온 주인공은 아파트가 누군가에 의해 폭파되었음을 발견하고, 타일러에게 도움을 청해 함께 생활하게 된다. 어느 날 밤 타일러는 주인공에게 자신을 때려달라고 부탁한다. 사람은 싸워봐야 진정한 자신을 알 수 있다는 것이다. 결국 이들은 매주 토요일 밤 술집 지하에서 맨주먹으로 격투를 벌이는 파이트 클럽을 결성하기에 이르는데..., popularity: 40.5107, poster_path: /eKZ07Ted7VHxQjbuZrRBFOamcKJ.jpg, production_companies: [{id: 711, logo_path: /tEiIH5QesdheJmDAqQwvtN60727.png, name: Fox 2000 Pictures, origin_country: US}, {id: 508, logo_path: /4sGWXoboEkWPphI6es6rTmqkCBh.png, name: Regency Enterprises, origin_country: US}, {id: 4700, logo_path: /A32wmjrs9Psf4zw0uaixF0GXfxq.png, name: Linson Entertainment, origin_country: US}, {id: 25, logo_path: /nM2MfoMqzJQRiSynsDabOtFKetD.png, name: 20th Century Fox, origin_country: US}, {id: 20555, logo_path: /hD8yEGUBlHOcfHYbujp71vD8gZp.png, name: Taurus Film, origin_country: DE}], production_countries: [{iso_3166_1: DE, name: Germany}, {iso_3166_1: US, name: United States of America}], release_date: 1999-10-15, revenue: 100853753, runtime: 139, softcore: false, spoken_languages: [{english_name: English, iso_639_1: en, name: English}], status: Released, tagline: 믿어왔던 상식과 규칙에 통렬한 카운터를 날리는 스타일리시 액션 무비!, title: 파이트 클럽, video: false, vote_average: 8.438, vote_count: 33220}
+WEEK6_CAPTURE=07-live-ratings-success
+00:36 +1: 테스트 서비스로 통신중·실패·Empty·Error·재시도 재현
+WEEK6_CAPTURE=08-test-check-loading
+WEEK6_CAPTURE=09-test-check-network-error
+WEEK6_CAPTURE=10-test-ratings-loading
+WEEK6_CAPTURE=11-test-ratings-empty
+WEEK6_CAPTURE=12-test-ratings-error
+WEEK6_CAPTURE=13-test-ratings-retry-success
+WEEK6_CAPTURE=14-test-button-widths
+01:01 +2: (tearDownAll)
+01:01 +2: All tests passed!

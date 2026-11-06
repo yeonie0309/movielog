@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:dio/dio.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:integration_test/integration_test.dart';
 import 'package:movielog/movie_log_app.dart';
 import 'package:movielog/router/app_router.dart';
+import 'package:movielog/core/network/movielog_client.dart';
+import 'package:movielog/data/services/member_api_service.dart';
+import 'package:movielog/data/services/member_check_service.dart';
 
 void main() {
   IntegrationTestWidgetsFlutterBinding.ensureInitialized();
@@ -10,19 +14,23 @@ void main() {
   testWidgets('실제 NestJS/MySQL API 3개를 Flutter 화면에서 조회', (tester) async {
     final router = AppRouter.create(initialLocation: '/register');
     addTearDown(router.dispose);
-    await tester.pumpWidget(MovieLogApp(routerConfig: router));
+    await tester.pumpWidget(
+      MovieLogApp(routerConfig: router, memberCheckService: _Week5Checks()),
+    );
 
     for (final [nickname, email, result] in [
       ['수현', 'noco@umc.com', '이미 사용 중인'],
       ['새닉네임', 'new@example.com', '사용 가능한'],
     ]) {
       await tester.enterText(find.byKey(const Key('nickname-field')), nickname);
+      await tester.pump();
       await tester.ensureVisible(
         find.byKey(const Key('check-nickname-button')),
       );
       await tester.tap(find.byKey(const Key('check-nickname-button')));
       await waitFor(tester, find.text('$result 닉네임입니다.'));
       await tester.enterText(find.byKey(const Key('email-field')), email);
+      await tester.pump();
       await tester.ensureVisible(find.byKey(const Key('check-email-button')));
       await tester.tap(find.byKey(const Key('check-email-button')));
       await waitFor(tester, find.text('$result 이메일입니다.'));
@@ -78,6 +86,16 @@ void main() {
       await capture(tester, image);
     }
   });
+}
+
+// Keep this historical test pointed at its local NestJS API, not public v5.
+class _Week5Checks extends MemberCheckService {
+  _Week5Checks() : super(Dio());
+  final _legacy = HttpMemberApiService(createMovieLogClient());
+  @override
+  Future<bool> checkNickname(String value) => _legacy.checkNickname(value);
+  @override
+  Future<bool> checkEmail(String value) => _legacy.checkEmail(value);
 }
 
 Future<void> waitFor(WidgetTester tester, Finder finder) async {

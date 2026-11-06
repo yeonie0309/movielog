@@ -29,9 +29,14 @@ class TmdbMovieDto {
       posterPath: json['poster_path'] as String?,
       backdropPath: json['backdrop_path'] as String?,
       releaseDate: json['release_date'] as String?,
-      genreIds: (json['genre_ids'] as List<dynamic>? ?? const [])
-          .map((value) => (value as num).toInt())
-          .toList(),
+      genreIds:
+          (json['genre_ids'] as List<dynamic>? ??
+                  (json['genres'] as List<dynamic>?)
+                      ?.map((genre) => (genre as Map<String, dynamic>)['id'])
+                      .toList() ??
+                  const [])
+              .map((value) => (value as num).toInt())
+              .toList(),
       voteAverage: (json['vote_average'] as num? ?? 0).toDouble(),
       popularity: (json['popularity'] as num? ?? 0).toDouble(),
     );
