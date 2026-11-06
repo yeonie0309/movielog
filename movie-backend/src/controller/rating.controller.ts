@@ -10,18 +10,21 @@ import {
   Patch,
   Post,
   Query,
+  UseGuards,
 } from "@nestjs/common";
 import { RatingService } from "../service/rating.service";
 import { RatingsQueryDto } from "../dto/ratings-query.dto";
-import { MemberIdParamsDto, RatingParamsDto } from "../dto/rating-params.dto";
+import { RatingIdParamsDto } from "../dto/rating-params.dto";
 import { CreateRatingDto, UpdateRatingDto } from "../dto/write-rating.dto";
 import { success } from "../dto/api-response";
+import { AuthGuard } from "../auth/auth.guard";
+import { LoginMember } from "../auth/login-member.decorator";
 
-@Controller("members")
+@Controller()
 export class RatingController {
   constructor(private readonly ratings: RatingService) {}
 
-  @Get(":memberId/ratings")
+  @Get("members/:memberId/ratings")
   getRatings(
     @Param("memberId", ParseIntPipe) memberId: number,
     @Query() query: RatingsQueryDto,
@@ -32,28 +35,38 @@ export class RatingController {
     return this.ratings.getRatingsByMember(memberId, query);
   }
 
-  @Post(":memberId/ratings")
+  @Post("ratings")
+  @UseGuards(AuthGuard)
   @HttpCode(201)
-  async create(
-    @Param() params: MemberIdParamsDto,
-    @Body() dto: CreateRatingDto,
-  ) {
+  async create(@LoginMember() memberId: number, @Body() dto: CreateRatingDto) {
     return success(
-      await this.ratings.create(params.memberId, dto),
+      await this.ratings.create(memberId, dto),
       "평점 등록에 성공했습니다.",
       201,
     );
   }
 
-  @Patch(":memberId/ratings/:ratingId")
-  async update(@Param() params: RatingParamsDto, @Body() dto: UpdateRatingDto) {
-    await this.ratings.update(params.ratingId, params.memberId, dto);
-    return success(null, "평점 수정에 성공했습니다.");
+  @Patch("ratings/:ratingId")
+  @UseGuards(AuthGuard)
+  async update(
+    @LoginMember() memberId: number,
+    @Param() params: RatingIdParamsDto,
+    @Body() dto: UpdateRatingDto,
+  ) {
+    return success(
+      await this.ratings.update(params.ratingId, memberId, dto),
+      "평점 수정에 성공했습니다.",
+    );
   }
 
-  @Delete(":memberId/ratings/:ratingId")
-  @HttpCode(204)
-  async delete(@Param() params: RatingParamsDto) {
-    await this.ratings.delete(params.ratingId, params.memberId);
+  @Delete("ratings/:ratingId")
+  @UseGuards(AuthGuard)
+  @HttpCode(200)
+  async delete(
+    @LoginMember() memberId: number,
+    @Param() params: RatingIdParamsDto,
+  ) {
+    await this.ratings.delete(params.ratingId, memberId);
+    return success(null, "평점을 삭제했습니다.");
   }
 }
