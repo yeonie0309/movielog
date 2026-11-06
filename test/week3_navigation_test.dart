@@ -1,13 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:movielog/data/genre_preference.dart';
 import 'package:movielog/movie_log_app.dart';
 import 'package:movielog/router/app_router.dart';
 
 void main() {
   Future<void> pumpAt(WidgetTester tester, String location) async {
-    final router = AppRouter.create(initialLocation: location);
+    final router = AppRouter.create(
+      initialLocation: location,
+      genrePreference: _MemoryGenrePreference(),
+    );
     addTearDown(router.dispose);
     await tester.pumpWidget(MovieLogApp(routerConfig: router));
+    await tester.pump(const Duration(seconds: 1));
     await tester.pumpAndSettle();
   }
 
@@ -27,6 +32,8 @@ void main() {
 
     expect(find.text('오늘의 추천'), findsOneWidget);
     await tester.tap(find.text('영화'));
+    await tester.pump();
+    await tester.pump(const Duration(seconds: 1));
     await tester.pumpAndSettle();
     expect(find.byKey(const Key('movie-grid')), findsOneWidget);
 
@@ -113,4 +120,16 @@ void main() {
     await tester.pumpAndSettle();
     expect(find.text('4.0점으로 저장했어요.'), findsOneWidget);
   });
+}
+
+class _MemoryGenrePreference implements GenrePreferenceStore {
+  Set<String> value = <String>{};
+
+  @override
+  Future<Set<String>> read() async => Set<String>.of(value);
+
+  @override
+  Future<void> save(Set<String> genres) async {
+    value = Set<String>.of(genres);
+  }
 }

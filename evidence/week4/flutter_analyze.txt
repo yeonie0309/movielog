@@ -1,0 +1,10 @@
+flutter analyze --no-fatal-infos
+
+Analyzing movielog...
+
+info - Don't invoke 'print' in production code. Try using a logging framework - lib/week0/dart_practice.dart:16:5 - avoid_print
+info - Don't invoke 'print' in production code. Try using a logging framework - lib/week0/dart_practice.dart:21:3 - avoid_print
+
+2 issues found. (exit code 0)
+
+결과: error 0개, warning 0개. 위 2개는 기존 0주차 연습 코드의 info입니다.
