@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="ko">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MovieLog · 6주차 실제 API 요청·응답</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      background: #f5f3f9;
+      color: #242133;
+      font:
+        16px/1.55 system-ui,
+        sans-serif;
+    }
+    main {
+      max-width: 1240px;
+      margin: 30px auto;
+      padding: 0 28px;
+    }
+    h1 {
+      font-size: 28px;
+      margin: 0;
+    }
+    p {
+      margin: 8px 0 18px;
+      color: #615c70;
+    }
+    nav {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin: 16px 0;
+    }
+    button,
+    select {
+      font: inherit;
+      padding: 10px 14px;
+      border-radius: 9px;
+      border: 1px solid #d6cfdf;
+    }
+    button {
+      cursor: pointer;
+      background: white;
+    }
+    button.primary {
+      background: #7153a0;
+      color: white;
+      border: 0;
+    }
+    button:disabled {
+      opacity: 0.5;
+    }
+    select {
+      width: 100%;
+      margin-bottom: 16px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    section {
+      border: 1px solid #ddd5e7;
+      background: white;
+      border-radius: 14px;
+      padding: 20px;
+      min-width: 0;
+    }
+    h2 {
+      font-size: 18px;
+      margin: 0 0 12px;
+    }
+    pre {
+      font:
+        14px/1.6 ui-monospace,
+        monospace;
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+      background: #f6f4fa;
+      padding: 14px;
+      border-radius: 8px;
+      margin: 12px 0;
+      min-height: 210px;
+    }
+    .badge {
+      font-weight: 700;
+      display: inline-block;
+      padding: 5px 12px;
+      border-radius: 20px;
+      background: #eae4f6;
+    }
+    .ok {
+      color: #177649;
+      background: #e4f5eb;
+    }
+    .error {
+      color: #ac2343;
+      background: #ffedf0;
+    }
+    .small {
+      font-size: 13px;
+    }
+    .meta {
+      padding: 12px 0;
+    }
+    .hidden {
+      display: none;
+    }
+    @media (max-width: 800px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+  <main>
+    <h1>MovieLog · 6주차 실제 API 요청·응답</h1>
+    <p>
+      로컬 NestJS + TypeORM + 실제 MySQL · 응답을 브라우저에서 직접 요청합니다.
+      Mock 응답이 아닙니다.
+    </p>
+    <nav>
+      <button id="live-tab">실제 요청 실행</button
+      ><button id="race-email">DB 동시 저장 · 이메일 UNIQUE 증빙</button
+      ><button id="race-nickname">DB 동시 저장 · 닉네임 UNIQUE 증빙</button
+      ><button id="storage">bcrypt·데이터 정리 검증</button>
+    </nav>
+    <div id="live-panel">
+      <select id="case" aria-label="요청 선택"></select>
+      <div class="grid">
+        <section>
+          <h2 id="request-title">요청</h2>
+          <div id="url" class="badge"></div>
+          <pre id="request"></pre>
+          <button id="send" class="primary">실제 API로 전송</button>
+          <p class="small">
+            비밀번호는 워크북 공개 예제의 실습용 값이며 개인 계정 비밀번호가
+            아닙니다.
+          </p>
+        </section>
+        <section>
+          <h2>실제 서버 응답</h2>
+          <span id="status" class="badge">아직 요청하지 않았습니다</span>
+          <pre id="response"></pre>
+          <div id="meta" class="small meta"></div>
+        </section>
+      </div>
+    </div>
+    <section id="report-panel" class="hidden">
+      <h2 id="report-title"></h2>
+      <p id="report-description"></p>
+      <pre id="report"></pre>
+    </section>
+  </main>
+  <script>
+    const base = "http://localhost:3006";
+    let memberId = "",
+      ratingId = "";
+    const tag = "w6capture01";
+    const cases = [
+      [
+        "01 회원가입 성공 · 201",
+        "POST",
+        () => "/members",
+        () => ({
+          email: tag + "@example.com",
+          password: "Umc!1234",
+          nickname: tag,
+        }),
+      ],
+      [
+        "02 회원가입 검증 실패 · 400",
+        "POST",
+        () => "/members",
+        () => ({ email: "invalid-email", password: "weak", nickname: "a" }),
+      ],
+      [
+        "03 평점 등록 성공 · 201",
+        "POST",
+        () => `/members/${memberId}/ratings`,
+        () => ({ movieId: 550, score: 5, comment: "워크북 평점 등록 실습" }),
+      ],
+      [
+        "04 평점 수정 성공 · 200",
+        "PATCH",
+        () => `/members/${memberId}/ratings/${ratingId}`,
+        () => ({ score: 4, comment: "수정 후 조회로 확인한 후기" }),
+      ],
+      ["05 수정 후 조회 · 200", "GET", () => `/members/${memberId}/ratings`],
+      [
+        "06 이메일 중복 · 409",
+        "POST",
+        () => "/members",
+        () => ({
+          email: tag + "@example.com",
+          password: "Umc!1234",
+          nickname: "newnickname",
+        }),
+      ],
+      [
+        "07 닉네임 중복 · 409",
+        "POST",
+        () => "/members",
+        () => ({
+          email: "new-" + tag + "@example.com",
+          password: "Umc!1234",
+          nickname: tag,
+        }),
+      ],
+      [
+        "08 중복 평점 · 409",
+        "POST",
+        () => `/members/${memberId}/ratings`,
+        () => ({ movieId: 550, score: 3 }),
+      ],
+      [
+        "09 잘못된 별점 · 400",
+        "POST",
+        () => `/members/${memberId}/ratings`,
+        () => ({ movieId: 155, score: 6 }),
+      ],
+      [
+        "10 다른 회원의 수정 차단 · 403",
+        "PATCH",
+        () => `/members/1/ratings/${ratingId}`,
+        () => ({ score: 1 }),
+      ],
+      [
+        "11 없는 평점 · 404",
+        "PATCH",
+        () => `/members/${memberId}/ratings/9007199254740991`,
+        () => ({ score: 1 }),
+      ],
+      [
+        "12 평점 삭제 · 204",
+        "DELETE",
+        () => `/members/${memberId}/ratings/${ratingId}`,
+      ],
+      [
+        "13 삭제 후 조회 · 빈 배열",
+        "GET",
+        () => `/members/${memberId}/ratings`,
+      ],
+    ];
+    const $ = (id) => document.getElementById(id);
+    cases.forEach((c, i) => $("case").add(new Option(c[0], i)));
+    function preview() {
+      const c = cases[Number($("case").value)];
+      $("request-title").textContent = c[0];
+      $("url").textContent = c[1] + " " + base + c[2]();
+      $("request").textContent = c[3]
+        ? JSON.stringify(c[3](), null, 2)
+        : "(요청 본문 없음)";
+      $("status").textContent = "아직 요청하지 않았습니다";
+      $("status").className = "badge";
+      $("response").textContent = "";
+      $("meta").textContent = "";
+    }
+    $("case").onchange = preview;
+    $("send").onclick = async () => {
+      const c = cases[Number($("case").value)],
+        body = c[3]?.();
+      $("send").disabled = true;
+      $("status").textContent = "요청 중…";
+      try {
+        const t = performance.now();
+        const res = await fetch(base + c[2](), {
+          method: c[1],
+          headers: { "Content-Type": "application/json" },
+          ...(body ? { body: JSON.stringify(body) } : {}),
+        });
+        const text = await res.text();
+        const data = text ? JSON.parse(text) : null;
+        if (res.status === 201 && c[2]() === "/members")
+          memberId = data.result.memberId;
+        else if (res.status === 201) ratingId = data.result;
+        $("status").textContent = `HTTP ${res.status} ${res.statusText}`;
+        $("status").className = "badge " + (res.ok ? "ok" : "error");
+        $("response").textContent = data
+          ? JSON.stringify(data, null, 2)
+          : "(204 No Content — 응답 본문 없음)";
+        $("meta").textContent =
+          `실행 시각 ${new Date().toISOString()} · ${Math.round(performance.now() - t)} ms · 실제 로컬 API 응답`;
+      } catch (e) {
+        $("status").textContent = "요청 실패";
+        $("response").textContent = String(e);
+      } finally {
+        $("send").disabled = false;
+      }
+    };
+    $("live-tab").onclick = () => {
+      $("live-panel").classList.remove("hidden");
+      $("report-panel").classList.add("hidden");
+    };
+    async function showReport(field) {
+      const r = await (await fetch("/report.json")).json();
+      $("live-panel").classList.add("hidden");
+      $("report-panel").classList.remove("hidden");
+      if (field === "storage") {
+        $("report-title").textContent =
+          "실제 MySQL 저장·bcrypt·데이터 정리 검증";
+        $("report-description").textContent =
+          "검증 스크립트의 실제 실행 기록 · " + r.verifiedAt;
+        $("report").textContent = JSON.stringify(
+          {
+            passwordStorage: r.passwordStorage,
+            ratingAfterDelete: r.ratingAfterDelete,
+            cleanup: r.cleanup,
+            passed: r.passed,
+          },
+          null,
+          2,
+        );
+        return;
+      }
+      const race = r.challenge.find((c) => c.field === field);
+      $("report-title").textContent =
+        "실제 MySQL 동시 저장 · " + field + " UNIQUE";
+      $("report-description").textContent =
+        "테스트 전용 동기화 지점으로 사전 검사 2건 통과 후 저장을 동시에 진행했습니다. 실제 DB·운영 Service·전역 Filter를 사용한 실행 기록입니다. " +
+        r.verifiedAt;
+      $("report").textContent = JSON.stringify(
+        {
+          prechecksPassed: race.prechecksPassed,
+          actualDatabaseErrors: race.dbErrors,
+          storedRows: race.storedRows,
+          responses: race.responses.map((c) => ({
+            request: c.request,
+            status: c.status,
+            response: c.response,
+          })),
+        },
+        null,
+        2,
+      );
+    }
+    $("race-email").onclick = () => showReport("email");
+    $("race-nickname").onclick = () => showReport("nickname");
+    $("storage").onclick = () => showReport("storage");
+    preview();
+  </script>
+</html>

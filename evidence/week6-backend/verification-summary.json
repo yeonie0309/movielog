@@ -1,0 +1,96 @@
+{
+  "verifiedAt": "2026-11-04T10:10:19.735Z",
+  "images": [
+    {
+      "file": "01-signup-201.jpg",
+      "width": 1890,
+      "height": 925
+    },
+    {
+      "file": "02-signup-validation-400.jpg",
+      "width": 1890,
+      "height": 925
+    },
+    {
+      "file": "03-rating-create-201.jpg",
+      "width": 1890,
+      "height": 925
+    },
+    {
+      "file": "04-rating-update-200.jpg",
+      "width": 1890,
+      "height": 925
+    },
+    {
+      "file": "05-rating-after-update.jpg",
+      "width": 1890,
+      "height": 925
+    },
+    {
+      "file": "06-duplicate-email-409.jpg",
+      "width": 1890,
+      "height": 925
+    },
+    {
+      "file": "07-duplicate-nickname-409.jpg",
+      "width": 1890,
+      "height": 925
+    },
+    {
+      "file": "08-duplicate-rating-409.jpg",
+      "width": 1890,
+      "height": 925
+    },
+    {
+      "file": "09-score-validation-400.jpg",
+      "width": 1890,
+      "height": 925
+    },
+    {
+      "file": "10-owner-403.jpg",
+      "width": 1890,
+      "height": 925
+    },
+    {
+      "file": "11-rating-not-found-404.jpg",
+      "width": 1890,
+      "height": 925
+    },
+    {
+      "file": "12-rating-delete-204.jpg",
+      "width": 1890,
+      "height": 925
+    },
+    {
+      "file": "13-rating-after-delete.jpg",
+      "width": 1890,
+      "height": 925
+    },
+    {
+      "file": "14-db-email-unique-race.jpg",
+      "width": 2339,
+      "height": 1959
+    },
+    {
+      "file": "15-db-nickname-unique-race.jpg",
+      "width": 2339,
+      "height": 1959
+    },
+    {
+      "file": "16-bcrypt-and-cleanup.jpg",
+      "width": 1890,
+      "height": 925
+    }
+  ],
+  "standardMission": true,
+  "challengeMission": true,
+  "backendHttpTests": 47,
+  "flutterTests": 49,
+  "liveHttpRequests": 23,
+  "realDbConcurrencyPairs": 2,
+  "browserRequests": 13,
+  "npmAuditVulnerabilities": 0,
+  "gitDiffCheck": "passed",
+  "notionWriteback": "awaiting approval; not performed",
+  "submission": "not performed"
+}

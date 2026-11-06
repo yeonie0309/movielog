@@ -1,5 +1,22 @@
 # MovieLog 5주차 Movie API
 
+## 6주차 저장 API 확장
+
+회원가입 및 평점 POST/PATCH/DELETE와 공통 오류 Filter를 추가했습니다.
+기존 GET 성공 응답은 보존합니다. [6주차 API 명세](docs/WEEK6_API_SPEC.md),
+[6주차 제출 가이드](../WEEK6_BACKEND_SUBMISSION_GUIDE.md),
+[실제 요청·응답 캡처](../evidence/week6-backend/README.md)를 참고하세요.
+
+- 필요한 DB 권한: `umc_movie`의 SELECT·INSERT·UPDATE·DELETE. 비밀번호 변경이나 DDL 권한 추가 없음.
+- `npm test`: 기존 조회 8개 + 신규 쓰기 39개, 총 47개 HTTP E2E (DB Repository 대체).
+- `node --env-file=../backend/.env scripts/verify-week6.cjs`: 실제 MySQL/API + DB UNIQUE 경쟁.
+  **이 실행에서 새로 만든 고유 prefix fixture만 정리하며 기존 데이터는 수정하지 않습니다.**
+- `node scripts/serve-week6-evidence.cjs`: 127.0.0.1:5173 실제 요청·응답 캡처 UI.
+- `postman/MovieLog-week6.postman_collection.json`: 01~13 순차 실행, memberId/ratingId 자동 저장.
+- `PORT=3006 DB_NAME=umc_movie node --env-file=../backend/.env dist/main.js`: 이번 증빙 서버 실행.
+- 신규 회원 비밀번호는 bcrypt cost 10/60자 해시. 기존 5주차 더미 비밀번호는 마이그레이션하지 않습니다.
+- 공개 v5를 사용하는 6주차 Flutter는 변경하지 않았습니다. 로그인·JWT·실제 Flutter 쓰기 연동은 다음 주차 범위입니다.
+
 기존 `backend/`의 3~4주차 도서 서비스를 보존하고 새로 만든 NestJS + TypeORM
 프로젝트입니다. [API 명세](docs/API_SPEC.md), [제출 가이드](../WEEK5_BACKEND_SUBMISSION_GUIDE.md).
 

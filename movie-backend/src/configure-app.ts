@@ -1,9 +1,11 @@
 import { ValidationPipe, type INestApplication } from "@nestjs/common";
+import { HttpExceptionFilter } from "./filter/http-exception.filter";
 
 export function configureApp(
   app: INestApplication,
   env: NodeJS.ProcessEnv = process.env,
 ) {
+  app.useGlobalFilters(new HttpExceptionFilter());
   app.useGlobalPipes(
     new ValidationPipe({
       transform: true,

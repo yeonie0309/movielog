@@ -1,0 +1,2 @@
+git diff --check HEAD (staged + unstaged tracked changes)
+Exit code: 0
