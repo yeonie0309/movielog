@@ -2,11 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
 
+import 'package:provider/provider.dart';
+
+import '../view_models/auth_view_model.dart';
 import '../theme/app_colors.dart';
 import '../theme/app_text_styles.dart';
 
 class StartScreen extends StatelessWidget {
-  const StartScreen({super.key});
+  const StartScreen({super.key, this.sessionCheck = false});
+  final bool sessionCheck;
 
   @override
   Widget build(BuildContext context) {
@@ -20,21 +24,43 @@ class StartScreen extends StatelessWidget {
             children: [
               const _WelcomeContent(),
               const Spacer(),
-              SizedBox(
-                height: 58,
-                child: ElevatedButton(
-                  onPressed: () => context.go('/register'),
-                  style: ElevatedButton.styleFrom(
-                    elevation: 0,
-                    backgroundColor: AppColors.violet,
-                    foregroundColor: AppColors.white,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(18),
+              if (sessionCheck) ...[
+                if (context.watch<AuthViewModel>().status ==
+                    AuthStatus.retryRequired) ...[
+                  Text(
+                    context.watch<AuthViewModel>().message ?? '로그인 상태 확인 실패',
+                    textAlign: TextAlign.center,
+                  ),
+                  TextButton(
+                    onPressed: context.read<AuthViewModel>().restoreSession,
+                    child: const Text('다시 시도'),
+                  ),
+                ] else
+                  const Center(
+                    child: Column(
+                      children: [
+                        CircularProgressIndicator(),
+                        SizedBox(height: 16),
+                        Text('로그인 상태 확인 중…'),
+                      ],
                     ),
                   ),
-                  child: const Text('시작하기', style: AppTextStyles.button),
+              ] else
+                SizedBox(
+                  height: 58,
+                  child: ElevatedButton(
+                    onPressed: () => context.go('/register'),
+                    style: ElevatedButton.styleFrom(
+                      elevation: 0,
+                      backgroundColor: AppColors.violet,
+                      foregroundColor: AppColors.white,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(18),
+                      ),
+                    ),
+                    child: const Text('시작하기', style: AppTextStyles.button),
+                  ),
                 ),
-              ),
             ],
           ),
         ),

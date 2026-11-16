@@ -1,0 +1,245 @@
+{
+  "phase": "live",
+  "passed": true,
+  "email": "lea.w8.mwjdtvya@example.com",
+  "nickname": "w8mwjdtvyaC",
+  "movieId": 155,
+  "ratingId": 36,
+  "ratingCleaned": true,
+  "secureStorageRead": true,
+  "fixtureAccountsCreated": 2,
+  "requests": [
+    {
+      "method": "POST",
+      "path": "/v7/members",
+      "status": 201,
+      "body": {
+        "email": "lea.w8.mwjdtvya@example.com",
+        "nickname": "w8mwjdtvyaA"
+      },
+      "bearerAttached": false,
+      "response": {
+        "isSuccess": true,
+        "code": "COMMON201",
+        "message": "회원가입에 성공했습니다.",
+        "result": {
+          "memberId": 52,
+          "email": "lea.w8.mwjdtvya@example.com",
+          "nickname": "w8mwjdtvyaA"
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/v7/members",
+      "status": 201,
+      "body": {
+        "email": "lea.w8.other.mwjdtvya@example.com",
+        "nickname": "w8mwjdtvyaB"
+      },
+      "bearerAttached": false,
+      "response": {
+        "isSuccess": true,
+        "code": "COMMON201",
+        "message": "회원가입에 성공했습니다.",
+        "result": {
+          "memberId": 53,
+          "email": "lea.w8.other.mwjdtvya@example.com",
+          "nickname": "w8mwjdtvyaB"
+        }
+      }
+    },
+    {
+      "loginInputMatchesFixture": true
+    },
+    {
+      "method": "POST",
+      "path": "/v7/auth/login",
+      "status": 200,
+      "body": {
+        "email": "lea.w8.mwjdtvya@example.com"
+      },
+      "bearerAttached": false,
+      "response": {
+        "isSuccess": true,
+        "code": "COMMON200",
+        "message": "로그인에 성공했습니다.",
+        "result": {
+          "nickname": "w8mwjdtvyaA"
+        }
+      }
+    },
+    {
+      "loginInputMatchesFixture": false
+    },
+    {
+      "method": "POST",
+      "path": "/v7/auth/login",
+      "status": 401,
+      "response": {
+        "isSuccess": false,
+        "code": "AUTH401_1",
+        "message": "이메일 또는 비밀번호가 올바르지 않습니다.",
+        "result": null
+      }
+    },
+    {
+      "loginInputMatchesFixture": true
+    },
+    {
+      "method": "POST",
+      "path": "/v7/auth/login",
+      "status": 200,
+      "body": {
+        "email": "lea.w8.mwjdtvya@example.com"
+      },
+      "bearerAttached": false,
+      "response": {
+        "isSuccess": true,
+        "code": "COMMON200",
+        "message": "로그인에 성공했습니다.",
+        "result": {
+          "nickname": "w8mwjdtvyaA"
+        }
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/v7/members/me",
+      "status": 200,
+      "body": null,
+      "bearerAttached": true,
+      "response": {
+        "isSuccess": true,
+        "code": "COMMON200",
+        "message": "회원 정보를 조회했습니다.",
+        "result": {
+          "email": "lea.w8.mwjdtvya@example.com",
+          "nickname": "w8mwjdtvyaA",
+          "createdAt": "2026-11-16T14:52:14.146Z"
+        }
+      }
+    },
+    {
+      "method": "PATCH",
+      "path": "/v7/members/me",
+      "status": 409,
+      "response": {
+        "isSuccess": false,
+        "code": "MEMBER409_1",
+        "message": "이미 사용 중인 닉네임입니다.",
+        "result": null
+      }
+    },
+    {
+      "method": "PATCH",
+      "path": "/v7/members/me",
+      "status": 200,
+      "body": {
+        "nickname": "w8mwjdtvyaC"
+      },
+      "bearerAttached": true,
+      "response": {
+        "isSuccess": true,
+        "code": "COMMON200",
+        "message": "회원 정보를 수정했습니다.",
+        "result": {
+          "email": "lea.w8.mwjdtvya@example.com",
+          "nickname": "w8mwjdtvyaC",
+          "createdAt": "2026-11-16T14:52:14.146Z"
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/v7/ratings",
+      "status": 201,
+      "body": {
+        "movieId": 155,
+        "score": 4,
+        "comment": "토큰으로 등록한 8주차 평점"
+      },
+      "bearerAttached": true,
+      "response": {
+        "isSuccess": true,
+        "code": "COMMON201",
+        "message": "평점을 등록했습니다.",
+        "result": {
+          "ratingId": 36,
+          "movieId": 155,
+          "score": 4,
+          "comment": "토큰으로 등록한 8주차 평점",
+          "createdAt": "2026-11-16T14:53:13.394Z",
+          "updatedAt": "2026-11-16T14:53:13.394Z"
+        }
+      }
+    },
+    {
+      "method": "PATCH",
+      "path": "/v7/ratings/36",
+      "status": 200,
+      "body": {
+        "score": 5,
+        "comment": "수정 후 별점 5점"
+      },
+      "bearerAttached": true,
+      "response": {
+        "isSuccess": true,
+        "code": "COMMON200",
+        "message": "평점을 수정했습니다.",
+        "result": {
+          "ratingId": 36,
+          "movieId": 155,
+          "score": 5,
+          "comment": "수정 후 별점 5점",
+          "createdAt": "2026-11-16T14:53:13.394Z",
+          "updatedAt": "2026-11-16T14:53:29.000Z"
+        }
+      }
+    },
+    {
+      "loginInputMatchesFixture": true
+    },
+    {
+      "method": "POST",
+      "path": "/v7/auth/login",
+      "status": 200,
+      "body": {
+        "email": "lea.w8.other.mwjdtvya@example.com"
+      },
+      "bearerAttached": false,
+      "response": {
+        "isSuccess": true,
+        "code": "COMMON200",
+        "message": "로그인에 성공했습니다.",
+        "result": {
+          "nickname": "w8mwjdtvyaB"
+        }
+      }
+    },
+    {
+      "method": "PATCH",
+      "path": "/v7/ratings/36",
+      "status": 403,
+      "response": {
+        "isSuccess": false,
+        "code": "RATING403_1",
+        "message": "본인이 작성한 평점만 수정하거나 삭제할 수 있습니다.",
+        "result": null
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/v7/ratings/36",
+      "status": 200,
+      "body": null,
+      "bearerAttached": true,
+      "response": {
+        "isSuccess": true,
+        "code": "COMMON200",
+        "message": "평점을 삭제했습니다.",
+        "result": null
+      }
+    }
+  ]
+}

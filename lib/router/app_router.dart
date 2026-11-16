@@ -26,6 +26,22 @@ import '../screens/tmdb_movie_list_screen.dart';
 import '../services/fake_movie_service.dart';
 import '../view_models/movie_home_view_model.dart';
 import '../view_models/movie_list_view_model.dart';
+import '../view_models/auth_view_model.dart';
+import '../screens/login_screen.dart';
+import '../screens/auth_my_page_screen.dart';
+import '../screens/edit_profile_screen.dart';
+import '../data/services/auth_api_service.dart';
+
+String? authRedirect(AuthStatus status, String location) {
+  final public = location == '/login' || location == '/register';
+  return switch (status) {
+    AuthStatus.initializing ||
+    AuthStatus.retryRequired => location == '/start' ? null : '/start',
+    AuthStatus.signedOut ||
+    AuthStatus.authenticating => public ? null : '/login',
+    AuthStatus.signedIn => public || location == '/start' ? '/home' : null,
+  };
+}
 
 abstract final class AppRouter {
   static final router = create(useTmdb: true);
@@ -36,16 +52,23 @@ abstract final class AppRouter {
     FakeMovieService movieService = const FakeMovieService(),
     Duration movieRequestTimeout = const Duration(seconds: 4),
     bool useTmdb = false,
+    AuthViewModel? auth,
   }) {
     final rootNavigatorKey = GlobalKey<NavigatorState>();
 
     return GoRouter(
       navigatorKey: rootNavigatorKey,
       initialLocation: initialLocation,
+      refreshListenable: auth,
+      redirect: auth == null
+          ? null
+          : (_, state) => authRedirect(auth.status, state.uri.path),
       routes: [
+        if (auth != null)
+          GoRoute(path: '/login', builder: (_, _) => const LoginScreen()),
         GoRoute(
           path: '/start',
-          builder: (context, state) => const StartScreen(),
+          builder: (context, state) => StartScreen(sessionCheck: auth != null),
         ),
         GoRoute(
           path: '/register',
@@ -61,7 +84,11 @@ abstract final class AppRouter {
         ),
         StatefulShellRoute.indexedStack(
           builder: (context, state, navigationShell) {
-            return MainScreen(navigationShell: navigationShell);
+            return MainScreen(
+              key: ValueKey('main-${auth?.sessionVersion}'),
+              navigationShell: navigationShell,
+              auth: auth,
+            );
           },
           branches: [
             StatefulShellBranch(
@@ -116,12 +143,33 @@ abstract final class AppRouter {
               routes: [
                 GoRoute(
                   path: '/my',
-                  builder: (context, state) => const MyPageScreen(),
+                  builder: (context, state) => auth == null
+                      ? const MyPageScreen()
+                      : const AuthMyPageScreen(),
                   routes: [
+                    if (auth != null)
+                      GoRoute(
+                        path: 'profile/edit',
+                        parentNavigatorKey: rootNavigatorKey,
+                        builder: (_, _) => const EditProfileScreen(),
+                      ),
                     GoRoute(
                       path: 'ratings',
                       parentNavigatorKey: rootNavigatorKey,
                       builder: (context, state) {
+                        if (auth != null) {
+                          return ChangeNotifierProvider(
+                            key: ValueKey('ratings-${auth.sessionVersion}'),
+                            create: (context) =>
+                                MyRatingsViewModel.authenticated(
+                                  context.read<RatingApiService>(),
+                                  context.read<MovieDetailService>(),
+                                  auth,
+                                  context.read<AuthenticatedRatingApiService>(),
+                                )..load(),
+                            child: const MyRatingsScreen(),
+                          );
+                        }
                         final id = context
                             .watch<LearningMemberSession>()
                             .memberId;
