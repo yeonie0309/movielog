@@ -8,10 +8,14 @@ class MovieRatingInput extends StatelessWidget {
     super.key,
     required this.rating,
     required this.onRatingUpdate,
+    this.integerOnly = false,
+    this.enabled = true,
   });
 
   final double rating;
   final ValueChanged<double> onRatingUpdate;
+  final bool integerOnly;
+  final bool enabled;
 
   @override
   Widget build(BuildContext context) {
@@ -27,8 +31,9 @@ class MovieRatingInput extends StatelessWidget {
         const SizedBox(height: 16),
         RatingBar.builder(
           initialRating: rating,
-          minRating: 0.5,
-          allowHalfRating: true,
+          minRating: integerOnly ? 1 : 0.5,
+          allowHalfRating: !integerOnly,
+          ignoreGestures: !enabled,
           itemCount: 5,
           itemSize: 42,
           itemPadding: const EdgeInsets.symmetric(horizontal: 3),

@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:go_router/go_router.dart';
+import 'package:provider/provider.dart';
+
+import '../view_models/movie_detail_view_model.dart';
+import '../view_models/learning_member_session.dart';
 
 import '../models/movie.dart';
 import '../theme/app_colors.dart';
@@ -8,9 +12,14 @@ import '../widgets/movie/movie_poster.dart';
 import '../widgets/movie/rating_dialog.dart';
 
 class MovieDetailScreen extends StatefulWidget {
-  const MovieDetailScreen({super.key, required this.movie});
+  const MovieDetailScreen({
+    super.key,
+    required this.movie,
+    this.serverLinked = false,
+  });
 
   final Movie? movie;
+  final bool serverLinked;
 
   @override
   State<MovieDetailScreen> createState() => _MovieDetailScreenState();
@@ -41,6 +50,34 @@ class _MovieDetailScreenState extends State<MovieDetailScreen> {
   }
 
   Future<void> _openRatingDialog() async {
+    if (widget.serverLinked) {
+      final vm = context.read<MovieDetailViewModel>();
+      final saved = await showDialog<bool>(
+        context: context,
+        barrierDismissible: false,
+        builder: (_) => RatingDialog(
+          onSubmit: (score, comment) async {
+            try {
+              await vm.createRating(score: score, comment: comment);
+            } catch (_) {
+              if (mounted) {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(content: Text(vm.submitMessage ?? '평점 등록에 실패했습니다.')),
+                );
+              }
+              rethrow;
+            }
+          },
+        ),
+      );
+      if (!mounted || saved != true) return;
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text('평점을 등록했습니다. 마이페이지의 "내가 등록한 평점"에서 확인할 수 있습니다.'),
+        ),
+      );
+      return;
+    }
     final rating = await showDialog<double>(
       context: context,
       builder: (context) =>
@@ -167,7 +204,12 @@ class _MovieDetailScreenState extends State<MovieDetailScreen> {
                   const SizedBox(height: 28),
                   FilledButton.icon(
                     key: const Key('open-rating-dialog-button'),
-                    onPressed: _openRatingDialog,
+                    onPressed:
+                        widget.serverLinked &&
+                            context.watch<LearningMemberSession>().memberId ==
+                                null
+                        ? null
+                        : _openRatingDialog,
                     icon: const Icon(Icons.star_outline_rounded),
                     label: Text(
                       _myRating == 0
@@ -175,6 +217,12 @@ class _MovieDetailScreenState extends State<MovieDetailScreen> {
                           : '내 평점 ${_myRating.toStringAsFixed(1)} · 다시 선택',
                     ),
                   ),
+                  if (widget.serverLinked &&
+                      context.watch<LearningMemberSession>().memberId == null)
+                    TextButton(
+                      onPressed: () => context.push('/register'),
+                      child: const Text('학습용 회원가입 후 평점을 남길 수 있습니다.'),
+                    ),
                 ],
               ),
             ),

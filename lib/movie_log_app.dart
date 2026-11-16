@@ -7,6 +7,8 @@ import 'core/network/tmdb_client.dart';
 import 'core/network/movielog_client.dart';
 import 'core/network/workbook_client.dart';
 import 'data/services/member_check_service.dart';
+import 'data/services/sign_up_service.dart';
+import 'view_models/learning_member_session.dart';
 import 'data/services/rating_api_service.dart';
 import 'data/services/member_api_service.dart';
 import 'data/services/tmdb_movie_service.dart';
@@ -22,6 +24,7 @@ class MovieLogApp extends StatelessWidget {
     this.memberCheckService,
     this.ratingApiService,
     this.movieDetailService,
+    this.learningSession,
   });
 
   final GoRouter? routerConfig;
@@ -30,11 +33,15 @@ class MovieLogApp extends StatelessWidget {
   final MemberCheckService? memberCheckService;
   final RatingApiService? ratingApiService;
   final MovieDetailService? movieDetailService;
+  final LearningMemberSession? learningSession;
 
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
+        ChangeNotifierProvider(
+          create: (_) => learningSession ?? LearningMemberSession(),
+        ),
         Provider<MemberApiService>(
           create: (_) =>
               memberApiService ?? HttpMemberApiService(createMovieLogClient()),
@@ -45,7 +52,7 @@ class MovieLogApp extends StatelessWidget {
         ),
         Provider<MemberCheckService>(
           create: (context) =>
-              memberCheckService ?? MemberCheckService(context.read()),
+              memberCheckService ?? SignUpService(context.read()),
         ),
         Provider<RatingApiService>(
           create: (context) =>

@@ -85,8 +85,12 @@ class TmdbMovieListScreen extends StatelessWidget {
                           (dto) => movieFromTmdb(dto, genres: viewModel.genres),
                         )
                         .toList(),
-                    onMovieTap: (movie) =>
-                        context.push('/movies/${movie.id}', extra: movie),
+                    onMovieTap: (movie) => context.push(
+                      '/movies/${movie.id}',
+                      extra: viewModel.movies.firstWhere(
+                        (dto) => dto.id == movie.id,
+                      ),
+                    ),
                     onRefresh: () => context.read<MovieListViewModel>().retry(),
                   ),
                 };
