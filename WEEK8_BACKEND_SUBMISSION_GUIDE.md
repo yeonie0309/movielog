@@ -3,7 +3,7 @@
 대상은 레아의 워크북 「8주차 - 서비스의 핵심 기능 만들기」이다.
 https://app.notion.com/p/makeus-challenge/8-391b57f4596b82f1a1c60115790ffcb8
 
-PR_LINK_PENDING
+https://github.com/yeonie0309/movielog/pull/18
 
 브랜치는 feature/week-8-backend이다. 원격 main은 a10ad32로 이전 주차 전체가 반영되지 않았다. 8주차 프론트 PR #17이 반영된 origin/feature/week-7-backend의 2fa4973에서 작업했다. 원본 페이지의 별도 브랜치·PR 제목 규칙을 찾지 못해 기존 feature/week-N-backend 형식을 사용했다.
 
@@ -137,7 +137,7 @@ Favorite 엔티티와 입력·응답 DTO를 추가한 뒤 Service·Controller를
 
 PR 링크
 
-PR_LINK_PENDING
+https://github.com/yeonie0309/movielog/pull/18
 
 ## 9. 트러블슈팅
 

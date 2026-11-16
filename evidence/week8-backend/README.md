@@ -34,3 +34,6 @@ https://app.notion.com/p/makeus-challenge/8-391b57f4596b82f1a1c60115790ffcb8
 스터디 인증샷은 실제 모임 사진이므로 본인이 추가한다. 노션 전체 작성 순서는 루트 WEEK8_BACKEND_SUBMISSION_GUIDE.md를 따른다.
 
 Postman 직접 실행 목록은 postman-live-captures.json, 정리 결과는 postman-fixture-cleanup.json에 있다. 16번 사진은 영화 기록 충돌 검증을 위해 즐겨찾기를 먼저 등록한 화면이다.
+
+PR — https://github.com/yeonie0309/movielog/pull/18
+17-pr-created.jpg는 생성된 PR 화면이며 미션 기록의 PR 링크와 함께 첨부한다.
