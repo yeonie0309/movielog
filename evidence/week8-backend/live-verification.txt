@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "requests": 37,
+  "rollback": {
+    "failure": "Test-only second save failure inside real MySQL transaction",
+    "ratingObservedBeforeFailure": true,
+    "ratingRowsAfterRollback": 0,
+    "favoriteRowsAfterRollback": 0
+  },
+  "uniqueRace": {
+    "bothPrechecksAbsent": true,
+    "outcomes": [
+      "one insert succeeded",
+      "one DB UNIQUE errno1062"
+    ],
+    "rowCount": 1
+  },
+  "cleanup": "Temporary rows removed; preexisting rows unchanged"
+}

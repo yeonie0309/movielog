@@ -1,3 +1,8 @@
+import { Favorite } from "./entity/favorite.entity";
+import { FavoriteController } from "./controller/favorite.controller";
+import { MovieRecordController } from "./controller/movie-record.controller";
+import { FavoriteService } from "./service/favorite.service";
+import { MovieRecordService } from "./service/movie-record.service";
 import { Module } from "@nestjs/common";
 import { ConfigModule, ConfigService } from "@nestjs/config";
 import { TypeOrmModule } from "@nestjs/typeorm";
@@ -30,15 +35,28 @@ import { AuthService } from "./service/auth.service";
         username: config.get("DB_USER", "umc_week2"),
         password: config.get("DB_PASSWORD", ""),
         database: config.get("DB_NAME", "umc_movie"),
-        entities: [Member, Rating],
+        entities: [Member, Rating, Favorite],
         synchronize: false,
         charset: "utf8mb4",
         timezone: "Z",
       }),
     }),
-    TypeOrmModule.forFeature([Member, Rating]),
+    TypeOrmModule.forFeature([Member, Rating, Favorite]),
   ],
-  controllers: [AuthController, MemberController, RatingController],
-  providers: [AuthService, AuthGuard, MemberService, RatingService],
+  controllers: [
+    AuthController,
+    MemberController,
+    RatingController,
+    FavoriteController,
+    MovieRecordController,
+  ],
+  providers: [
+    AuthService,
+    AuthGuard,
+    MemberService,
+    RatingService,
+    FavoriteService,
+    MovieRecordService,
+  ],
 })
 export class AppModule {}

@@ -1,0 +1,713 @@
+{
+  "info": {
+    "name": "MovieLog 8주차 Backend · 실제 실행 응답",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": "실제 NestJS + MySQL 실행 응답 예제. 비밀번호·토큰 값은 포함하지 않습니다. 예제를 열어 보거나 본인의 로컬 토큰으로 요청을 재실행합니다."
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:3008"
+    },
+    {
+      "key": "accessToken",
+      "value": ""
+    }
+  ],
+  "item": [
+    {
+      "name": "01 즐겨찾기 등록 201",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{accessToken}}",
+              "type": "string"
+            }
+          ]
+        },
+        "url": "{{baseUrl}}/favorites",
+        "description": "실제 로컬 API 실행 응답을 예제로 보관했습니다. 실행 원본은 evidence/week8-backend/live-api-results.json에 있습니다. 재실행은 본인 토큰을 로컬 환경 accessToken 변수에 설정합니다.",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"movieId\": 550\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": [
+        {
+          "name": "실제 실행 응답 · 201",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{accessToken}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "url": "{{baseUrl}}/favorites",
+            "description": "실제 로컬 API 실행 응답을 예제로 보관했습니다. 실행 원본은 evidence/week8-backend/live-api-results.json에 있습니다. 재실행은 본인 토큰을 로컬 환경 accessToken 변수에 설정합니다.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"movieId\": 550\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            }
+          ],
+          "_postman_previewlanguage": "json",
+          "body": "{\n  \"isSuccess\": true,\n  \"code\": \"COMMON201\",\n  \"message\": \"즐겨찾기를 등록했습니다.\",\n  \"result\": {\n    \"favoriteId\": 1,\n    \"movieId\": 550,\n    \"createdAt\": \"2026-11-16T18:19:10.000Z\"\n  }\n}"
+        }
+      ]
+    },
+    {
+      "name": "02 즐겨찾기 중복 409",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{accessToken}}",
+              "type": "string"
+            }
+          ]
+        },
+        "url": "{{baseUrl}}/favorites",
+        "description": "실제 로컬 API 실행 응답을 예제로 보관했습니다. 실행 원본은 evidence/week8-backend/live-api-results.json에 있습니다. 재실행은 본인 토큰을 로컬 환경 accessToken 변수에 설정합니다.",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"movieId\": 550\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": [
+        {
+          "name": "실제 실행 응답 · 409",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{accessToken}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "url": "{{baseUrl}}/favorites",
+            "description": "실제 로컬 API 실행 응답을 예제로 보관했습니다. 실행 원본은 evidence/week8-backend/live-api-results.json에 있습니다. 재실행은 본인 토큰을 로컬 환경 accessToken 변수에 설정합니다.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"movieId\": 550\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "Conflict",
+          "code": 409,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            }
+          ],
+          "_postman_previewlanguage": "json",
+          "body": "{\n  \"isSuccess\": false,\n  \"code\": \"FAVORITE409_1\",\n  \"message\": \"이미 이 영화를 즐겨찾기하셨습니다.\",\n  \"result\": null\n}"
+        }
+      ]
+    },
+    {
+      "name": "03 즐겨찾기 목록",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{accessToken}}",
+              "type": "string"
+            }
+          ]
+        },
+        "url": "{{baseUrl}}/favorites",
+        "description": "실제 로컬 API 실행 응답을 예제로 보관했습니다. 실행 원본은 evidence/week8-backend/live-api-results.json에 있습니다. 재실행은 본인 토큰을 로컬 환경 accessToken 변수에 설정합니다."
+      },
+      "response": [
+        {
+          "name": "실제 실행 응답 · 200",
+          "originalRequest": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{accessToken}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "url": "{{baseUrl}}/favorites",
+            "description": "실제 로컬 API 실행 응답을 예제로 보관했습니다. 실행 원본은 evidence/week8-backend/live-api-results.json에 있습니다. 재실행은 본인 토큰을 로컬 환경 accessToken 변수에 설정합니다."
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            }
+          ],
+          "_postman_previewlanguage": "json",
+          "body": "{\n  \"isSuccess\": true,\n  \"code\": \"COMMON200\",\n  \"message\": \"내 즐겨찾기 목록을 조회했습니다.\",\n  \"result\": [\n    {\n      \"favoriteId\": 1,\n      \"movieId\": 550,\n      \"createdAt\": \"2026-11-16T18:19:10.000Z\"\n    }\n  ]\n}"
+        }
+      ]
+    },
+    {
+      "name": "04 등록 후 여부 true",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{accessToken}}",
+              "type": "string"
+            }
+          ]
+        },
+        "url": "{{baseUrl}}/favorites/550",
+        "description": "실제 로컬 API 실행 응답을 예제로 보관했습니다. 실행 원본은 evidence/week8-backend/live-api-results.json에 있습니다. 재실행은 본인 토큰을 로컬 환경 accessToken 변수에 설정합니다."
+      },
+      "response": [
+        {
+          "name": "실제 실행 응답 · 200",
+          "originalRequest": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{accessToken}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "url": "{{baseUrl}}/favorites/550",
+            "description": "실제 로컬 API 실행 응답을 예제로 보관했습니다. 실행 원본은 evidence/week8-backend/live-api-results.json에 있습니다. 재실행은 본인 토큰을 로컬 환경 accessToken 변수에 설정합니다."
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            }
+          ],
+          "_postman_previewlanguage": "json",
+          "body": "{\n  \"isSuccess\": true,\n  \"code\": \"COMMON200\",\n  \"message\": \"즐겨찾기 여부를 조회했습니다.\",\n  \"result\": {\n    \"isFavorite\": true\n  }\n}"
+        }
+      ]
+    },
+    {
+      "name": "05 즐겨찾기 해제 200",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{accessToken}}",
+              "type": "string"
+            }
+          ]
+        },
+        "url": "{{baseUrl}}/favorites/550",
+        "description": "실제 로컬 API 실행 응답을 예제로 보관했습니다. 실행 원본은 evidence/week8-backend/live-api-results.json에 있습니다. 재실행은 본인 토큰을 로컬 환경 accessToken 변수에 설정합니다."
+      },
+      "response": [
+        {
+          "name": "실제 실행 응답 · 200",
+          "originalRequest": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{accessToken}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "url": "{{baseUrl}}/favorites/550",
+            "description": "실제 로컬 API 실행 응답을 예제로 보관했습니다. 실행 원본은 evidence/week8-backend/live-api-results.json에 있습니다. 재실행은 본인 토큰을 로컬 환경 accessToken 변수에 설정합니다."
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            }
+          ],
+          "_postman_previewlanguage": "json",
+          "body": "{\n  \"isSuccess\": true,\n  \"code\": \"COMMON200\",\n  \"message\": \"즐겨찾기를 해제했습니다.\",\n  \"result\": null\n}"
+        }
+      ]
+    },
+    {
+      "name": "06 해제 후 여부 false",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{accessToken}}",
+              "type": "string"
+            }
+          ]
+        },
+        "url": "{{baseUrl}}/favorites/550",
+        "description": "실제 로컬 API 실행 응답을 예제로 보관했습니다. 실행 원본은 evidence/week8-backend/live-api-results.json에 있습니다. 재실행은 본인 토큰을 로컬 환경 accessToken 변수에 설정합니다."
+      },
+      "response": [
+        {
+          "name": "실제 실행 응답 · 200",
+          "originalRequest": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{accessToken}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "url": "{{baseUrl}}/favorites/550",
+            "description": "실제 로컬 API 실행 응답을 예제로 보관했습니다. 실행 원본은 evidence/week8-backend/live-api-results.json에 있습니다. 재실행은 본인 토큰을 로컬 환경 accessToken 변수에 설정합니다."
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            }
+          ],
+          "_postman_previewlanguage": "json",
+          "body": "{\n  \"isSuccess\": true,\n  \"code\": \"COMMON200\",\n  \"message\": \"즐겨찾기 여부를 조회했습니다.\",\n  \"result\": {\n    \"isFavorite\": false\n  }\n}"
+        }
+      ]
+    },
+    {
+      "name": "07 영화 기록 두 행 저장",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{accessToken}}",
+              "type": "string"
+            }
+          ]
+        },
+        "url": "{{baseUrl}}/movie-records",
+        "description": "실제 로컬 API 실행 응답을 예제로 보관했습니다. 실행 원본은 evidence/week8-backend/live-api-results.json에 있습니다. 재실행은 본인 토큰을 로컬 환경 accessToken 변수에 설정합니다.",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"movieId\": 238,\n  \"score\": 5,\n  \"comment\": \"다시 보고 싶은 영화입니다.\",\n  \"addToFavorites\": true\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": [
+        {
+          "name": "실제 실행 응답 · 201",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{accessToken}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "url": "{{baseUrl}}/movie-records",
+            "description": "실제 로컬 API 실행 응답을 예제로 보관했습니다. 실행 원본은 evidence/week8-backend/live-api-results.json에 있습니다. 재실행은 본인 토큰을 로컬 환경 accessToken 변수에 설정합니다.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"movieId\": 238,\n  \"score\": 5,\n  \"comment\": \"다시 보고 싶은 영화입니다.\",\n  \"addToFavorites\": true\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            }
+          ],
+          "_postman_previewlanguage": "json",
+          "body": "{\n  \"isSuccess\": true,\n  \"code\": \"COMMON201\",\n  \"message\": \"영화 기록을 저장했습니다.\",\n  \"result\": {\n    \"rating\": {\n      \"ratingId\": 7,\n      \"movieId\": 238,\n      \"score\": 5,\n      \"comment\": \"다시 보고 싶은 영화입니다.\",\n      \"createdAt\": \"2026-11-16T18:19:10.000Z\",\n      \"updatedAt\": \"2026-11-16T18:19:10.000Z\"\n    },\n    \"favorite\": {\n      \"favoriteId\": 3,\n      \"movieId\": 238,\n      \"createdAt\": \"2026-11-16T18:19:10.000Z\"\n    }\n  }\n}"
+        }
+      ]
+    },
+    {
+      "name": "08 평점만 저장",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{accessToken}}",
+              "type": "string"
+            }
+          ]
+        },
+        "url": "{{baseUrl}}/movie-records",
+        "description": "실제 로컬 API 실행 응답을 예제로 보관했습니다. 실행 원본은 evidence/week8-backend/live-api-results.json에 있습니다. 재실행은 본인 토큰을 로컬 환경 accessToken 변수에 설정합니다.",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"movieId\": 155,\n  \"score\": 4,\n  \"addToFavorites\": false\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": [
+        {
+          "name": "실제 실행 응답 · 201",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{accessToken}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "url": "{{baseUrl}}/movie-records",
+            "description": "실제 로컬 API 실행 응답을 예제로 보관했습니다. 실행 원본은 evidence/week8-backend/live-api-results.json에 있습니다. 재실행은 본인 토큰을 로컬 환경 accessToken 변수에 설정합니다.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"movieId\": 155,\n  \"score\": 4,\n  \"addToFavorites\": false\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            }
+          ],
+          "_postman_previewlanguage": "json",
+          "body": "{\n  \"isSuccess\": true,\n  \"code\": \"COMMON201\",\n  \"message\": \"영화 기록을 저장했습니다.\",\n  \"result\": {\n    \"rating\": {\n      \"ratingId\": 8,\n      \"movieId\": 155,\n      \"score\": 4,\n      \"comment\": null,\n      \"createdAt\": \"2026-11-16T18:19:10.000Z\",\n      \"updatedAt\": \"2026-11-16T18:19:10.000Z\"\n    },\n    \"favorite\": null\n  }\n}"
+        }
+      ]
+    },
+    {
+      "name": "09 토큰 누락",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "auth": {
+          "type": "noauth"
+        },
+        "url": "{{baseUrl}}/favorites",
+        "description": "실제 로컬 API 실행 응답을 예제로 보관했습니다. 실행 원본은 evidence/week8-backend/live-api-results.json에 있습니다. 재실행은 본인 토큰을 로컬 환경 accessToken 변수에 설정합니다.",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"movieId\": 550\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": [
+        {
+          "name": "실제 실행 응답 · 401",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "auth": {
+              "type": "noauth"
+            },
+            "url": "{{baseUrl}}/favorites",
+            "description": "실제 로컬 API 실행 응답을 예제로 보관했습니다. 실행 원본은 evidence/week8-backend/live-api-results.json에 있습니다. 재실행은 본인 토큰을 로컬 환경 accessToken 변수에 설정합니다.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"movieId\": 550\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "Unauthorized",
+          "code": 401,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            }
+          ],
+          "_postman_previewlanguage": "json",
+          "body": "{\n  \"isSuccess\": false,\n  \"code\": \"AUTH401_2\",\n  \"message\": \"로그인이 필요한 요청입니다.\",\n  \"result\": null\n}"
+        }
+      ]
+    },
+    {
+      "name": "10 기존 즐겨찾기 충돌",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{accessToken}}",
+              "type": "string"
+            }
+          ]
+        },
+        "url": "{{baseUrl}}/movie-records",
+        "description": "실제 로컬 API 실행 응답을 예제로 보관했습니다. 실행 원본은 evidence/week8-backend/live-api-results.json에 있습니다. 재실행은 본인 토큰을 로컬 환경 accessToken 변수에 설정합니다.",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"movieId\": 680,\n  \"score\": 5,\n  \"addToFavorites\": true\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": [
+        {
+          "name": "실제 실행 응답 · 409",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{accessToken}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "url": "{{baseUrl}}/movie-records",
+            "description": "실제 로컬 API 실행 응답을 예제로 보관했습니다. 실행 원본은 evidence/week8-backend/live-api-results.json에 있습니다. 재실행은 본인 토큰을 로컬 환경 accessToken 변수에 설정합니다.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"movieId\": 680,\n  \"score\": 5,\n  \"addToFavorites\": true\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "Conflict",
+          "code": 409,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            }
+          ],
+          "_postman_previewlanguage": "json",
+          "body": "{\n  \"isSuccess\": false,\n  \"code\": \"FAVORITE409_1\",\n  \"message\": \"이미 이 영화를 즐겨찾기하셨습니다.\",\n  \"result\": null\n}"
+        }
+      ]
+    }
+  ]
+}

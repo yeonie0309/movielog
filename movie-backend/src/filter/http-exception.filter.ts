@@ -45,7 +45,9 @@ export class HttpExceptionFilter implements ExceptionFilter {
               ? ["MEMBER4092", "이미 사용 중인 닉네임입니다."]
               : key === "uk_rating_member_movie"
                 ? ["RATING409_1", "이미 이 영화에 평점을 남기셨습니다."]
-                : ["COMMON409", "이미 존재하는 데이터입니다."];
+                : key === "uk_favorite_member_movie"
+                  ? ["FAVORITE409_1", "이미 이 영화를 즐겨찾기하셨습니다."]
+                  : ["COMMON409", "이미 존재하는 데이터입니다."];
       } else if (driver.errno === 1452) {
         status = 404;
         code = "MEMBER404_1";
