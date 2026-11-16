@@ -1,0 +1,49 @@
+{
+  "phase": "restore",
+  "passed": true,
+  "restoredAfterProcessRestart": true,
+  "logoutTokenDeleted": true,
+  "protectedRedirect": true,
+  "invalidToken401": true,
+  "requests": [
+    {
+      "method": "GET",
+      "path": "/v7/members/me",
+      "status": 200,
+      "body": null,
+      "bearerAttached": true,
+      "response": {
+        "isSuccess": true,
+        "code": "COMMON200",
+        "message": "회원 정보를 조회했습니다.",
+        "result": {
+          "email": "lea.w8.mwjdtvya@example.com",
+          "nickname": "w8mwjdtvyaC",
+          "createdAt": "2026-11-16T14:52:14.146Z"
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/v7/auth/login",
+      "status": 401,
+      "response": {
+        "isSuccess": false,
+        "code": "AUTH401_1",
+        "message": "이메일 또는 비밀번호가 올바르지 않습니다.",
+        "result": null
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/v7/members/me",
+      "status": 401,
+      "response": {
+        "isSuccess": false,
+        "code": "AUTH401_3",
+        "message": "유효하지 않은 토큰입니다.",
+        "result": null
+      }
+    }
+  ]
+}

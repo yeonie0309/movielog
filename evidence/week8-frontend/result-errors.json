@@ -1,0 +1,7 @@
+{
+  "phase": "errors",
+  "passed": true,
+  "injected503RetainsToken": true,
+  "injected403RetainsSession": true,
+  "injectedExpired401ClearsSession": true
+}

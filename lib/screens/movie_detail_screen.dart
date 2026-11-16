@@ -5,6 +5,7 @@ import 'package:provider/provider.dart';
 
 import '../view_models/movie_detail_view_model.dart';
 import '../view_models/learning_member_session.dart';
+import '../view_models/auth_view_model.dart';
 
 import '../models/movie.dart';
 import '../theme/app_colors.dart';
@@ -60,7 +61,10 @@ class _MovieDetailScreenState extends State<MovieDetailScreen> {
             try {
               await vm.createRating(score: score, comment: comment);
             } catch (_) {
-              if (mounted) {
+              if (mounted &&
+                  (context.read<AuthViewModel?>() == null ||
+                      context.read<AuthViewModel?>()?.status ==
+                          AuthStatus.signedIn)) {
                 ScaffoldMessenger.of(context).showSnackBar(
                   SnackBar(content: Text(vm.submitMessage ?? '평점 등록에 실패했습니다.')),
                 );
@@ -113,6 +117,11 @@ class _MovieDetailScreenState extends State<MovieDetailScreen> {
       );
     }
 
+    final currentRating = context
+        .watch<AuthViewModel?>()
+        ?.sessionRatings
+        .where((rating) => rating.movieId == movie.id)
+        .firstOrNull;
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
@@ -206,18 +215,26 @@ class _MovieDetailScreenState extends State<MovieDetailScreen> {
                     key: const Key('open-rating-dialog-button'),
                     onPressed:
                         widget.serverLinked &&
+                            context.watch<AuthViewModel?>()?.status !=
+                                AuthStatus.signedIn &&
                             context.watch<LearningMemberSession>().memberId ==
                                 null
                         ? null
+                        : currentRating != null
+                        ? () => context.push('/my/ratings')
                         : _openRatingDialog,
                     icon: const Icon(Icons.star_outline_rounded),
                     label: Text(
-                      _myRating == 0
+                      currentRating != null
+                          ? '내 평점 ${currentRating.score} · 수정하기'
+                          : _myRating == 0
                           ? '평점 남기기'
                           : '내 평점 ${_myRating.toStringAsFixed(1)} · 다시 선택',
                     ),
                   ),
                   if (widget.serverLinked &&
+                      context.watch<AuthViewModel?>()?.status !=
+                          AuthStatus.signedIn &&
                       context.watch<LearningMemberSession>().memberId == null)
                     TextButton(
                       onPressed: () => context.push('/register'),

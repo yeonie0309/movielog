@@ -4,9 +4,22 @@ import 'package:flutter/foundation.dart';
 import '../data/models/rating_request.dart';
 import '../data/services/rating_api_service.dart';
 import 'submit_status.dart';
+import 'auth_view_model.dart';
+import '../data/services/auth_api_service.dart';
+import '../core/network/api_error.dart';
 
 class MovieDetailViewModel extends ChangeNotifier {
   MovieDetailViewModel(this._service, this.memberId, this.movieId);
+  MovieDetailViewModel.authenticated(
+    this._service,
+    this.movieId,
+    AuthViewModel auth,
+    AuthenticatedRatingApiService tokenApi,
+  ) : memberId = null,
+      _auth = auth,
+      _tokenApi = tokenApi;
+  AuthViewModel? _auth;
+  AuthenticatedRatingApiService? _tokenApi;
   final RatingApiService _service;
   final int? memberId;
   final int movieId;
@@ -17,22 +30,30 @@ class MovieDetailViewModel extends ChangeNotifier {
   Future<void> createRating({required int score, String? comment}) async {
     if (_disposed || submitStatus == SubmitStatus.submitting) return;
     final id = memberId;
-    if (id == null) throw StateError('먼저 학습용 회원가입을 완료해 주세요.');
+    if (_auth == null && id == null) throw StateError('먼저 학습용 회원가입을 완료해 주세요.');
+    final version = _auth?.sessionVersion;
     submitStatus = SubmitStatus.submitting;
     submitMessage = null;
     notifyListeners();
     try {
-      await _service.createRating(
-        memberId: id,
-        request: CreateRatingRequest(
-          movieId: movieId,
-          score: score,
-          comment: comment,
-        ),
+      final request = CreateRatingRequest(
+        movieId: movieId,
+        score: score,
+        comment: comment,
       );
+      if (_auth == null) {
+        await _service.createRating(memberId: id!, request: request);
+      } else {
+        final rating = await _tokenApi!.createRating(request);
+        if (!_auth!.isCurrent(version!)) throw const SessionChangedException();
+        _auth!.keepRating(rating, version);
+      }
       if (_disposed) return;
       submitStatus = SubmitStatus.success;
     } catch (error) {
+      if (_auth != null && isSessionError(error)) {
+        await _auth!.expireSession(version!);
+      }
       if (_disposed) return;
       submitStatus = SubmitStatus.error;
       submitMessage = error is DioException

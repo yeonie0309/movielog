@@ -2,6 +2,9 @@ import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 
 import '../data/models/member_rating.dart';
+import '../core/network/api_error.dart';
+import '../data/services/auth_api_service.dart';
+import 'auth_view_model.dart';
 import '../data/models/tmdb_movie_dto.dart';
 import '../data/services/rating_api_service.dart';
 import '../data/services/tmdb_movie_service.dart';
@@ -20,6 +23,17 @@ class MyRatingsViewModel extends ChangeNotifier {
     this._movies, [
     this.memberId = sampleMemberId,
   ]);
+  MyRatingsViewModel.authenticated(
+    this._ratingsApi,
+    this._movies,
+    AuthViewModel auth,
+    AuthenticatedRatingApiService tokenApi,
+  ) : memberId = 0,
+      _auth = auth,
+      _tokenApi = tokenApi;
+  AuthViewModel? _auth;
+  AuthenticatedRatingApiService? _tokenApi;
+  bool get authenticated => _auth != null;
   final RatingApiService _ratingsApi;
   final MovieDetailService _movies;
   final int memberId;
@@ -62,18 +76,51 @@ class MyRatingsViewModel extends ChangeNotifier {
     required int ratingId,
     required int score,
     String? comment,
-  }) => _write(
-    () => _ratingsApi.updateRating(
-      memberId: memberId,
-      ratingId: ratingId,
-      score: score,
-      comment: comment,
-    ),
-  );
+  }) => _write(() async {
+    if (_auth == null) {
+      await _ratingsApi.updateRating(
+        memberId: memberId,
+        ratingId: ratingId,
+        score: score,
+        comment: comment,
+      );
+    } else {
+      final version = _auth!.sessionVersion;
+      final rating = await _guarded(
+        () => _tokenApi!.updateRating(ratingId, score, comment),
+        ratingId,
+      );
+      _auth!.keepRating(rating, version);
+    }
+  });
 
-  Future<void> deleteRating(int ratingId) => _write(
-    () => _ratingsApi.deleteRating(memberId: memberId, ratingId: ratingId),
-  );
+  Future<void> deleteRating(int ratingId) => _write(() => _delete(ratingId));
+
+  Future<T> _guarded<T>(Future<T> Function() action, int ratingId) async {
+    final auth = _auth!;
+    final version = auth.sessionVersion;
+    try {
+      final result = await action();
+      if (!auth.isCurrent(version)) throw const SessionChangedException();
+      return result;
+    } catch (error) {
+      if (isSessionError(error)) await auth.expireSession(version);
+      if (apiErrorCode(error) == 'RATING404_1') {
+        auth.removeRating(ratingId, version);
+      }
+      rethrow;
+    }
+  }
+
+  Future<void> _delete(int ratingId) async {
+    if (_auth == null) {
+      await _ratingsApi.deleteRating(memberId: memberId, ratingId: ratingId);
+    } else {
+      final version = _auth!.sessionVersion;
+      await _guarded(() => _tokenApi!.deleteRating(ratingId), ratingId);
+      _auth!.removeRating(ratingId, version);
+    }
+  }
 
   Future<void> _write(Future<void> Function() action) async {
     if (_disposed || isWriting) throw StateError('처리 중입니다.');
@@ -111,10 +158,11 @@ class MyRatingsViewModel extends ChangeNotifier {
     try {
       for (final id in selectedRatingIds.toList()) {
         try {
-          await _ratingsApi.deleteRating(memberId: memberId, ratingId: id);
+          await _delete(id);
           selectedRatingIds.remove(id);
         } catch (_) {
           failed++;
+          if (_auth != null && _auth!.status != AuthStatus.signedIn) break;
         }
         if (_disposed) return;
       }
@@ -137,13 +185,19 @@ class MyRatingsViewModel extends ChangeNotifier {
   Future<void> load() async {
     if (_disposed) return;
     final version = ++_version;
-    bool isCurrent() => !_disposed && version == _version;
+    final sessionVersion = _auth?.sessionVersion;
+    bool isCurrent() =>
+        !_disposed &&
+        version == _version &&
+        (_auth == null || _auth!.isCurrent(sessionVersion!));
     status = MyRatingsStatus.loading;
     message = null;
     refreshWarning = null;
     notifyListeners();
     try {
-      final rows = await _ratingsApi.fetchMyRatings(memberId);
+      final rows = _auth == null
+          ? await _ratingsApi.fetchMyRatings(memberId)
+          : _auth!.sessionRatings;
       if (!isCurrent()) return;
       final result = <RatingWithMovie>[];
       for (final rating in rows) {

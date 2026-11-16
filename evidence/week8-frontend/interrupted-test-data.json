@@ -1,0 +1,14 @@
+{
+  "memberId": 50,
+  "rating": [
+    {
+      "ratingId": 35,
+      "movieId": 155,
+      "score": 5,
+      "comment": "수정 후 별점 5점",
+      "createdAt": "2026-11-16T14:42:12.150Z",
+      "updatedAt": "2026-11-16T14:42:27.000Z"
+    }
+  ],
+  "reason": "Earlier test runner uninstalled app and removed the disposable credentials. Latest successful rating 36 was deleted."
+}

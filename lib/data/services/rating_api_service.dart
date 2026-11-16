@@ -76,7 +76,12 @@ String writeErrorMessage(DioException error) =>
 bool shouldRefreshAfterRatingError(DioException error) {
   final data = error.response?.data;
   final code = data is Map ? data['code'] : null;
-  return code == 'COMMON403' || code == 'COMMON404';
+  return const {
+    'COMMON403',
+    'COMMON404',
+    'RATING403_1',
+    'RATING404_1',
+  }.contains(code);
 }
 
 String writeMyRatingsErrorMessage(DioException error) =>

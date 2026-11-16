@@ -1,0 +1,27 @@
+{
+  "flutterTests": 94,
+  "androidScenarios": 4,
+  "actualV7Requests": 17,
+  "analyzeExitCode": 0,
+  "existingWeek0Infos": 2,
+  "nativePlatform": "Android Pixel 7 emulator",
+  "pngScreenshots": 18,
+  "videos": 2,
+  "tokenValuesAbsentFromChangedText": true,
+  "envUntracked": true,
+  "finalFixtureMemberIds": [
+    52,
+    53
+  ],
+  "finalRatingId": 36,
+  "finalRatingDeleted": true,
+  "earlierInterruptedRatingRemaining": {
+    "memberId": 50,
+    "ratingId": 35
+  },
+  "fixtureAccountsCreatedAcrossAttempts": 14,
+  "manualUserCheckPending": true,
+  "expiry4014": "injected",
+  "invalid4013": "actualAPI",
+  "iOSVerified": false
+}

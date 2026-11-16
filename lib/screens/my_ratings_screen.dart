@@ -3,6 +3,7 @@ import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
 
 import '../view_models/my_ratings_view_model.dart';
+import '../view_models/auth_view_model.dart';
 import '../widgets/common_app_bar.dart';
 import '../widgets/movielog_button.dart';
 import '../widgets/movie/tmdb_poster_image.dart';
@@ -55,6 +56,8 @@ class MyRatingsScreen extends StatelessWidget {
                     child: Text(
                       vm.isEditing
                           ? '${vm.selectedRatingIds.length}개 선택'
+                          : vm.authenticated
+                          ? '이번 로그인에서 등록한 평점 · 재시작 시 목록 초기화'
                           : '학습용 회원 ${vm.memberId} · 로그인 인증이 아닌 메모리 세션',
                     ),
                   ),
@@ -103,7 +106,9 @@ class MyRatingsScreen extends StatelessWidget {
                               child: Text(vm.message!),
                             ),
                           Text(
-                            '학습용 회원 ${vm.memberId} · 평점 ${vm.ratings.length}건',
+                            vm.authenticated
+                                ? '현재 세션 평점 ${vm.ratings.length}건'
+                                : '학습용 회원 ${vm.memberId} · 평점 ${vm.ratings.length}건',
                           ),
                           const SizedBox(height: 8),
                           ...vm.ratings.map((item) => _card(context, vm, item)),
@@ -199,7 +204,7 @@ class MyRatingsScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    item.movie?.title ?? '영화 정보를 찾을 수 없어요',
+                    item.movie?.title ?? '영화 #${rating.movieId}',
                     style: const TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 17,
@@ -237,11 +242,34 @@ class MyRatingsScreen extends StatelessWidget {
                               builder: (_) => RatingDialog(
                                 initialRating: rating.score.toDouble(),
                                 initialComment: rating.comment,
-                                onSubmit: (score, comment) => vm.updateRating(
-                                  ratingId: rating.ratingId,
-                                  score: score,
-                                  comment: comment,
-                                ),
+                                onSubmit: (score, comment) async {
+                                  try {
+                                    await vm.updateRating(
+                                      ratingId: rating.ratingId,
+                                      score: score,
+                                      comment: comment,
+                                    );
+                                  } catch (_) {
+                                    if (context.mounted &&
+                                        vm.authenticated &&
+                                        context
+                                                .read<AuthViewModel?>()
+                                                ?.status ==
+                                            AuthStatus.signedIn) {
+                                      ScaffoldMessenger.of(context)
+                                        ..hideCurrentSnackBar()
+                                        ..showSnackBar(
+                                          SnackBar(
+                                            content: Text(
+                                              vm.operationMessage ??
+                                                  '평점 수정에 실패했습니다.',
+                                            ),
+                                          ),
+                                        );
+                                    }
+                                    rethrow;
+                                  }
+                                },
                               ),
                             );
                             if (context.mounted && saved == true) {

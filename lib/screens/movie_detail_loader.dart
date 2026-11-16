@@ -8,6 +8,8 @@ import '../view_models/learning_member_session.dart';
 import '../view_models/movie_detail_view_model.dart';
 import '../view_models/tmdb_movie_mapper.dart';
 import 'movie_detail_screen.dart';
+import '../view_models/auth_view_model.dart';
+import '../data/services/auth_api_service.dart';
 
 class MovieDetailLoader extends StatefulWidget {
   const MovieDetailLoader({
@@ -59,14 +61,25 @@ class _MovieDetailLoaderState extends State<MovieDetailLoader> {
           ),
         );
       }
+      final auth = context.watch<AuthViewModel?>();
+      final authenticated = auth?.status == AuthStatus.signedIn;
       final memberId = context.watch<LearningMemberSession>().memberId;
       return ChangeNotifierProvider(
-        key: ValueKey('detail-${widget.movieId}-$memberId'),
-        create: (context) => MovieDetailViewModel(
-          context.read<RatingApiService>(),
-          memberId,
-          snapshot.data!.id,
+        key: ValueKey(
+          'detail-${widget.movieId}-$memberId-${auth?.sessionVersion}',
         ),
+        create: (context) => authenticated
+            ? MovieDetailViewModel.authenticated(
+                context.read<RatingApiService>(),
+                snapshot.data!.id,
+                auth!,
+                context.read<AuthenticatedRatingApiService>(),
+              )
+            : MovieDetailViewModel(
+                context.read<RatingApiService>(),
+                memberId,
+                snapshot.data!.id,
+              ),
         child: MovieDetailScreen(
           movie: movieFromTmdb(snapshot.data!),
           serverLinked: true,

@@ -8,7 +8,8 @@ import 'member_check_service.dart';
 
 // Keep the earlier read-only service as a compatibility adapter for week 6.
 class SignUpService extends MemberCheckService {
-  SignUpService(this._client) : super(_client);
+  SignUpService(this._client, {this.version = 'v6'}) : super(_client);
+  final String version;
   final Dio _client;
   @override
   Future<bool> checkNickname(String value) => _check('nickname', value);
@@ -16,7 +17,7 @@ class SignUpService extends MemberCheckService {
   Future<bool> checkEmail(String value) => _check('email', value);
   Future<bool> _check(String field, String value) async {
     final response = await _client.get<Map<String, dynamic>>(
-      '/v6/members/$field/${Uri.encodeComponent(value.trim())}',
+      '/$version/members/$field/${Uri.encodeComponent(value.trim())}',
     );
     return CheckResult.fromJson(response.data!).available;
   }
@@ -25,7 +26,7 @@ class SignUpService extends MemberCheckService {
     CreateMemberRequest request,
   ) async {
     final response = await _client.post<Map<String, dynamic>>(
-      '/v6/members',
+      '/$version/members',
       data: request.toJson(),
     );
     if (response.statusCode != 201) {
