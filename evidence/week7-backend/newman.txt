@@ -1,0 +1,106 @@
+npm warn deprecated har-validator@5.1.5: this library is no longer supported
+npm warn deprecated uuid@3.4.0: uuid@10 and below is no longer supported.  For ESM codebases, update to uuid@latest.  For CommonJS codebases, use uuid@11 (but be aware this version will likely be deprecated in 2028).
+npm warn deprecated uuid@8.3.2: uuid@10 and below is no longer supported.  For ESM codebases, update to uuid@latest.  For CommonJS codebases, use uuid@11 (but be aware this version will likely be deprecated in 2028).
+npm warn deprecated @faker-js/faker@5.5.3: Please update to a newer version.
+(node:54020) [DEP0176] DeprecationWarning: fs.F_OK is deprecated, use fs.constants.F_OK instead
+(Use `node --trace-deprecation ...` to show where the warning was created)
+newman
+
+MovieLog 7주차 JWT 인증·인가
+
+→ 01 준비 · 회원 A 가입
+  POST http://localhost:3007/members [201 Created, 420B, 125ms]
+  ✓  HTTP 201
+  ✓  공통 응답 code
+  ✓  isSuccess
+
+→ 01 준비 · 회원 B 가입
+  POST http://localhost:3007/members [201 Created, 420B, 67ms]
+  ✓  HTTP 201
+  ✓  공통 응답 code
+  ✓  isSuccess
+
+→ 02 로그인 · 회원 A
+  POST http://localhost:3007/auth/login [200 OK, 569B, 59ms]
+  ✓  HTTP 200
+  ✓  공통 응답 code
+  ✓  isSuccess
+  ✓  accessToken 존재
+
+→ 02 로그인 · 회원 B
+  POST http://localhost:3007/auth/login [200 OK, 569B, 58ms]
+  ✓  HTTP 200
+  ✓  공통 응답 code
+  ✓  isSuccess
+  ✓  accessToken 존재
+
+→ 03 본인 평점 등록 · memberId 없는 body
+  POST http://localhost:3007/ratings [201 Created, 500B, 16ms]
+  ✓  HTTP 201
+  ✓  공통 응답 code
+  ✓  isSuccess
+  ✓  movieId 전달
+
+→ 04 동일 영화 중복 등록
+  POST http://localhost:3007/ratings [409 Conflict, 373B, 4ms]
+  ✓  HTTP 409
+  ✓  공통 응답 code
+  ✓  isSuccess
+
+→ 05 본인 평점 수정
+  PATCH http://localhost:3007/ratings/6 [200 OK, 490B, 13ms]
+  ✓  HTTP 200
+  ✓  공통 응답 code
+  ✓  isSuccess
+  ✓  수정 결과 DTO
+
+→ 06 토큰 B로 회원 A 평점 수정 · 403
+  PATCH http://localhost:3007/ratings/6 [403 Forbidden, 397B, 3ms]
+  ✓  HTTP 403
+  ✓  공통 응답 code
+  ✓  isSuccess
+
+→ 07 토큰 없이 수정 · 401
+  PATCH http://localhost:3007/ratings/6 [401 Unauthorized, 364B, 1ms]
+  ✓  HTTP 401
+  ✓  공통 응답 code
+  ✓  isSuccess
+
+→ 08 없는 평점 삭제 · 404
+  DELETE http://localhost:3007/ratings/9007199254740991 [404 Not Found, 365B, 3ms]
+  ✓  HTTP 404
+  ✓  공통 응답 code
+  ✓  isSuccess
+
+→ 09 본인 평점 삭제 · 200 및 result null
+  DELETE http://localhost:3007/ratings/6 [200 OK, 342B, 7ms]
+  ✓  HTTP 200
+  ✓  공통 응답 code
+  ✓  isSuccess
+  ✓  삭제 result null
+
+→ 실습 인증 · 토큰 없이 내 정보 조회
+  GET http://localhost:3007/members/me [401 Unauthorized, 364B, 1ms]
+  ✓  HTTP 401
+  ✓  공통 응답 code
+  ✓  isSuccess
+
+┌─────────────────────────┬───────────────────┬──────────────────┐
+│                         │          executed │           failed │
+├─────────────────────────┼───────────────────┼──────────────────┤
+│              iterations │                 1 │                0 │
+├─────────────────────────┼───────────────────┼──────────────────┤
+│                requests │                12 │                0 │
+├─────────────────────────┼───────────────────┼──────────────────┤
+│            test-scripts │                12 │                0 │
+├─────────────────────────┼───────────────────┼──────────────────┤
+│      prerequest-scripts │                12 │                0 │
+├─────────────────────────┼───────────────────┼──────────────────┤
+│              assertions │                41 │                0 │
+├─────────────────────────┴───────────────────┴──────────────────┤
+│ total run duration: 516ms                                      │
+├────────────────────────────────────────────────────────────────┤
+│ total data received: 2.12kB (approx)                           │
+├────────────────────────────────────────────────────────────────┤
+│ average response time: 29ms [min: 1ms, max: 125ms, s.d.: 37ms] │
+└────────────────────────────────────────────────────────────────┘

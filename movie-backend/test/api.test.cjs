@@ -1,6 +1,7 @@
 const { before, after, test } = require("node:test");
 const assert = require("node:assert/strict");
 const { Test } = require("@nestjs/testing");
+const { JwtModule } = require("@nestjs/jwt");
 const { getRepositoryToken } = require("@nestjs/typeorm");
 const request = require("supertest");
 const { Member } = require("../dist/entity/member.entity");
@@ -54,6 +55,11 @@ const ratings = {
 };
 async function createApp(env) {
   const module = await Test.createTestingModule({
+    imports: [
+      JwtModule.register({
+        secret: "test-only-week7-jwt-key-at-least-32-bytes",
+      }),
+    ],
     controllers: [MemberController, RatingController],
     providers: [
       MemberService,

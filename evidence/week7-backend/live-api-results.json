@@ -1,0 +1,558 @@
+{
+  "verifiedAt": "2026-11-06T16:44:36.344Z",
+  "environment": "Actual local NestJS + TypeORM + MySQL; Postman collection executed by Newman",
+  "requests": [
+    {
+      "name": "01 준비 · 회원 A 가입",
+      "request": {
+        "method": "POST",
+        "url": "http://localhost:3007/members",
+        "body": {
+          "email": "w7618e11a@example.com",
+          "nickname": "w7618e11A",
+          "password": "[비밀번호 생략]"
+        },
+        "authentication": "없음"
+      },
+      "status": 201,
+      "response": {
+        "isSuccess": true,
+        "code": "COMMON201",
+        "message": "회원가입에 성공했습니다.",
+        "result": {
+          "memberId": 11,
+          "email": "w7618e11a@example.com",
+          "nickname": "w7618e11A"
+        }
+      }
+    },
+    {
+      "name": "01 준비 · 회원 B 가입",
+      "request": {
+        "method": "POST",
+        "url": "http://localhost:3007/members",
+        "body": {
+          "email": "w7618e11b@example.com",
+          "nickname": "w7618e11B",
+          "password": "[비밀번호 생략]"
+        },
+        "authentication": "없음"
+      },
+      "status": 201,
+      "response": {
+        "isSuccess": true,
+        "code": "COMMON201",
+        "message": "회원가입에 성공했습니다.",
+        "result": {
+          "memberId": 12,
+          "email": "w7618e11b@example.com",
+          "nickname": "w7618e11B"
+        }
+      }
+    },
+    {
+      "name": "02 로그인 · 회원 A",
+      "request": {
+        "method": "POST",
+        "url": "http://localhost:3007/auth/login",
+        "body": {
+          "email": "w7618e11a@example.com",
+          "password": "[비밀번호 생략]"
+        },
+        "authentication": "없음"
+      },
+      "status": 200,
+      "response": {
+        "isSuccess": true,
+        "code": "COMMON200",
+        "message": "로그인에 성공했습니다.",
+        "result": {
+          "nickname": "w7618e11A",
+          "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMSIsImVtYWlsIjoidzc2MThlMTFhQGV4YW1wbGUuY29tIiwiaWF0IjoxNzkzOTgzNDc5LCJleHAiOjE3OTM5ODM1Mzl9.TI_7U-gdlsvHoMoe3T8VwOuWuRjcPzo0tdpj1PRBkRI"
+        }
+      }
+    },
+    {
+      "name": "02 로그인 · 회원 B",
+      "request": {
+        "method": "POST",
+        "url": "http://localhost:3007/auth/login",
+        "body": {
+          "email": "w7618e11b@example.com",
+          "password": "[비밀번호 생략]"
+        },
+        "authentication": "없음"
+      },
+      "status": 200,
+      "response": {
+        "isSuccess": true,
+        "code": "COMMON200",
+        "message": "로그인에 성공했습니다.",
+        "result": {
+          "nickname": "w7618e11B",
+          "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMiIsImVtYWlsIjoidzc2MThlMTFiQGV4YW1wbGUuY29tIiwiaWF0IjoxNzkzOTgzNDc5LCJleHAiOjE3OTM5ODM1Mzl9.l5TvHJbrOqvqJhZXr8U9fVCFQ8YFdv0vTUoI759xZ8E"
+        }
+      }
+    },
+    {
+      "name": "03 본인 평점 등록 · memberId 없는 body",
+      "request": {
+        "method": "POST",
+        "url": "http://localhost:3007/ratings",
+        "body": {
+          "movieId": 155,
+          "score": 4,
+          "comment": "JWT 소유권 검증"
+        },
+        "authentication": "Bearer (실습 토큰)"
+      },
+      "status": 201,
+      "response": {
+        "isSuccess": true,
+        "code": "COMMON201",
+        "message": "평점 등록에 성공했습니다.",
+        "result": {
+          "ratingId": 6,
+          "movieId": 155,
+          "score": 4,
+          "comment": "JWT 소유권 검증",
+          "createdAt": "2026-11-06T16:44:39.000Z",
+          "updatedAt": "2026-11-06T16:44:39.000Z"
+        }
+      }
+    },
+    {
+      "name": "04 동일 영화 중복 등록",
+      "request": {
+        "method": "POST",
+        "url": "http://localhost:3007/ratings",
+        "body": {
+          "movieId": 155,
+          "score": 3
+        },
+        "authentication": "Bearer (실습 토큰)"
+      },
+      "status": 409,
+      "response": {
+        "isSuccess": false,
+        "code": "RATING409_1",
+        "message": "이미 이 영화에 평점을 남기셨습니다.",
+        "result": null
+      }
+    },
+    {
+      "name": "05 본인 평점 수정",
+      "request": {
+        "method": "PATCH",
+        "url": "http://localhost:3007/ratings/6",
+        "body": {
+          "score": 5,
+          "comment": "토큰 A 수정"
+        },
+        "authentication": "Bearer (실습 토큰)"
+      },
+      "status": 200,
+      "response": {
+        "isSuccess": true,
+        "code": "COMMON200",
+        "message": "평점 수정에 성공했습니다.",
+        "result": {
+          "ratingId": 6,
+          "movieId": 155,
+          "score": 5,
+          "comment": "토큰 A 수정",
+          "createdAt": "2026-11-06T16:44:39.000Z",
+          "updatedAt": "2026-11-06T16:44:39.000Z"
+        }
+      }
+    },
+    {
+      "name": "06 토큰 B로 회원 A 평점 수정 · 403",
+      "request": {
+        "method": "PATCH",
+        "url": "http://localhost:3007/ratings/6",
+        "body": {
+          "score": 1
+        },
+        "authentication": "Bearer (실습 토큰)"
+      },
+      "status": 403,
+      "response": {
+        "isSuccess": false,
+        "code": "RATING403_1",
+        "message": "본인이 작성한 평점만 수정하거나 삭제할 수 있습니다.",
+        "result": null
+      }
+    },
+    {
+      "name": "07 토큰 없이 수정 · 401",
+      "request": {
+        "method": "PATCH",
+        "url": "http://localhost:3007/ratings/6",
+        "body": {
+          "score": 1
+        },
+        "authentication": "없음"
+      },
+      "status": 401,
+      "response": {
+        "isSuccess": false,
+        "code": "AUTH401_2",
+        "message": "로그인이 필요한 요청입니다.",
+        "result": null
+      }
+    },
+    {
+      "name": "08 없는 평점 삭제 · 404",
+      "request": {
+        "method": "DELETE",
+        "url": "http://localhost:3007/ratings/9007199254740991",
+        "body": null,
+        "authentication": "Bearer (실습 토큰)"
+      },
+      "status": 404,
+      "response": {
+        "isSuccess": false,
+        "code": "RATING404_1",
+        "message": "해당 평점을 찾을 수 없습니다.",
+        "result": null
+      }
+    },
+    {
+      "name": "09 본인 평점 삭제 · 200 및 result null",
+      "request": {
+        "method": "DELETE",
+        "url": "http://localhost:3007/ratings/6",
+        "body": null,
+        "authentication": "Bearer (실습 토큰)"
+      },
+      "status": 200,
+      "response": {
+        "isSuccess": true,
+        "code": "COMMON200",
+        "message": "평점을 삭제했습니다.",
+        "result": null
+      }
+    },
+    {
+      "name": "실습 인증 · 토큰 없이 내 정보 조회",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:3007/members/me",
+        "body": null,
+        "authentication": "없음"
+      },
+      "status": 401,
+      "response": {
+        "isSuccess": false,
+        "code": "AUTH401_2",
+        "message": "로그인이 필요한 요청입니다.",
+        "result": null
+      }
+    },
+    {
+      "name": "내 정보 조회 / LoginMember 데코레이터",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:3007/members/me",
+        "body": null,
+        "authentication": "Bearer (실습 토큰)"
+      },
+      "status": 200,
+      "response": {
+        "isSuccess": true,
+        "code": "COMMON200",
+        "message": "회원 정보를 조회했습니다.",
+        "result": {
+          "email": "w7618e11a@example.com",
+          "nickname": "w7618e11A",
+          "createdAt": "2026-11-06T16:44:39.000Z"
+        }
+      }
+    },
+    {
+      "name": "자기 닉네임 유지",
+      "request": {
+        "method": "PATCH",
+        "url": "http://localhost:3007/members/me",
+        "body": {
+          "nickname": "w7618e11A"
+        },
+        "authentication": "Bearer (실습 토큰)"
+      },
+      "status": 200,
+      "response": {
+        "isSuccess": true,
+        "code": "COMMON200",
+        "message": "회원 정보를 수정했습니다.",
+        "result": {
+          "email": "w7618e11a@example.com",
+          "nickname": "w7618e11A",
+          "createdAt": "2026-11-06T16:44:39.000Z"
+        }
+      }
+    },
+    {
+      "name": "닉네임 수정",
+      "request": {
+        "method": "PATCH",
+        "url": "http://localhost:3007/members/me",
+        "body": {
+          "nickname": "w7618e11C"
+        },
+        "authentication": "Bearer (실습 토큰)"
+      },
+      "status": 200,
+      "response": {
+        "isSuccess": true,
+        "code": "COMMON200",
+        "message": "회원 정보를 수정했습니다.",
+        "result": {
+          "email": "w7618e11a@example.com",
+          "nickname": "w7618e11C",
+          "createdAt": "2026-11-06T16:44:39.000Z"
+        }
+      }
+    },
+    {
+      "name": "닉네임 수정 후 조회",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:3007/members/me",
+        "body": null,
+        "authentication": "Bearer (실습 토큰)"
+      },
+      "status": 200,
+      "response": {
+        "isSuccess": true,
+        "code": "COMMON200",
+        "message": "회원 정보를 조회했습니다.",
+        "result": {
+          "email": "w7618e11a@example.com",
+          "nickname": "w7618e11C",
+          "createdAt": "2026-11-06T16:44:39.000Z"
+        }
+      }
+    },
+    {
+      "name": "다른 회원 닉네임 중복",
+      "request": {
+        "method": "PATCH",
+        "url": "http://localhost:3007/members/me",
+        "body": {
+          "nickname": "w7618e11B"
+        },
+        "authentication": "Bearer (실습 토큰)"
+      },
+      "status": 409,
+      "response": {
+        "isSuccess": false,
+        "code": "MEMBER409_1",
+        "message": "이미 사용 중인 닉네임입니다.",
+        "result": null
+      }
+    },
+    {
+      "name": "틀린 비밀번호",
+      "request": {
+        "method": "POST",
+        "url": "http://localhost:3007/auth/login",
+        "body": {
+          "email": "w7618e11a@example.com",
+          "password": "[비밀번호 생략]"
+        },
+        "authentication": "없음"
+      },
+      "status": 401,
+      "response": {
+        "isSuccess": false,
+        "code": "AUTH401_1",
+        "message": "이메일 또는 비밀번호가 올바르지 않습니다.",
+        "result": null
+      }
+    },
+    {
+      "name": "미가입 이메일",
+      "request": {
+        "method": "POST",
+        "url": "http://localhost:3007/auth/login",
+        "body": {
+          "email": "w7618e11missing@example.com",
+          "password": "[비밀번호 생략]"
+        },
+        "authentication": "없음"
+      },
+      "status": 401,
+      "response": {
+        "isSuccess": false,
+        "code": "AUTH401_1",
+        "message": "이메일 또는 비밀번호가 올바르지 않습니다.",
+        "result": null
+      }
+    },
+    {
+      "name": "payload 한 글자 교체",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:3007/members/me",
+        "body": null,
+        "authentication": "Bearer (실습 토큰)"
+      },
+      "status": 401,
+      "response": {
+        "isSuccess": false,
+        "code": "AUTH401_3",
+        "message": "유효하지 않은 토큰입니다.",
+        "result": null
+      }
+    },
+    {
+      "name": "작성자 body 주입 거절",
+      "request": {
+        "method": "POST",
+        "url": "http://localhost:3007/ratings",
+        "body": {
+          "movieId": 155,
+          "score": 4,
+          "memberId": 12
+        },
+        "authentication": "Bearer (실습 토큰)"
+      },
+      "status": 400,
+      "response": {
+        "isSuccess": false,
+        "code": "COMMON400",
+        "message": "property memberId should not exist",
+        "result": null
+      }
+    },
+    {
+      "name": "기존 memberId 쓰기 경로 제거",
+      "request": {
+        "method": "POST",
+        "url": "http://localhost:3007/members/11/ratings",
+        "body": {
+          "movieId": 155,
+          "score": 4
+        },
+        "authentication": "Bearer (실습 토큰)"
+      },
+      "status": 404,
+      "response": {
+        "isSuccess": false,
+        "code": "COMMON404",
+        "message": "Cannot POST /members/11/ratings",
+        "result": null
+      }
+    },
+    {
+      "name": "본인 삭제 후 공개 빈 목록",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:3007/members/11/ratings",
+        "authentication": "없음"
+      },
+      "status": 200,
+      "response": []
+    },
+    {
+      "name": "만료 전 /members/me 성공",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:3007/members/me",
+        "body": null,
+        "authentication": "Bearer (실습 토큰)"
+      },
+      "status": 200,
+      "response": {
+        "isSuccess": true,
+        "code": "COMMON200",
+        "message": "회원 정보를 조회했습니다.",
+        "result": {
+          "email": "w7618e11a@example.com",
+          "nickname": "w7618e11C",
+          "createdAt": "2026-11-06T16:44:39.000Z"
+        }
+      }
+    },
+    {
+      "name": "60초 만료 후 AUTH401_4",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:3007/members/me",
+        "body": null,
+        "authentication": "Bearer (실습 토큰)"
+      },
+      "status": 401,
+      "response": {
+        "isSuccess": false,
+        "code": "AUTH401_4",
+        "message": "토큰이 만료되었습니다. 다시 로그인해주세요.",
+        "result": null
+      }
+    }
+  ],
+  "passed": true,
+  "newman": {
+    "stats": {
+      "iterations": {
+        "total": 1,
+        "pending": 0,
+        "failed": 0
+      },
+      "items": {
+        "total": 12,
+        "pending": 0,
+        "failed": 0
+      },
+      "scripts": {
+        "total": 24,
+        "pending": 0,
+        "failed": 0
+      },
+      "prerequests": {
+        "total": 12,
+        "pending": 0,
+        "failed": 0
+      },
+      "requests": {
+        "total": 12,
+        "pending": 0,
+        "failed": 0
+      },
+      "tests": {
+        "total": 12,
+        "pending": 0,
+        "failed": 0
+      },
+      "assertions": {
+        "total": 41,
+        "pending": 0,
+        "failed": 0
+      },
+      "testScripts": {
+        "total": 12,
+        "pending": 0,
+        "failed": 0
+      },
+      "prerequestScripts": {
+        "total": 12,
+        "pending": 0,
+        "failed": 0
+      }
+    },
+    "failures": []
+  },
+  "payload": {
+    "sub": "11",
+    "email": "w7618e11a@example.com",
+    "iat": 1793983479,
+    "exp": 1793983539
+  },
+  "cleanup": {
+    "fixtureMembersRemoved": 2,
+    "existingMembersUnchanged": true,
+    "existingRatingsUnchanged": true
+  },
+  "tokensExpiredBeforeSaving": true
+}

@@ -44,12 +44,12 @@ export class HttpExceptionFilter implements ExceptionFilter {
             : key === "nickname"
               ? ["MEMBER4092", "이미 사용 중인 닉네임입니다."]
               : key === "uk_rating_member_movie"
-                ? ["RATING4091", "이미 이 영화에 평점을 남기셨습니다."]
+                ? ["RATING409_1", "이미 이 영화에 평점을 남기셨습니다."]
                 : ["COMMON409", "이미 존재하는 데이터입니다."];
       } else if (driver.errno === 1452) {
         status = 404;
-        code = "MEMBER4041";
-        message = "존재하지 않는 유저입니다.";
+        code = "MEMBER404_1";
+        message = "해당 회원을 찾을 수 없습니다.";
       }
     }
     response

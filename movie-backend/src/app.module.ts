@@ -7,10 +7,20 @@ import { MemberController } from "./controller/member.controller";
 import { RatingController } from "./controller/rating.controller";
 import { MemberService } from "./service/member.service";
 import { RatingService } from "./service/rating.service";
+import { JwtModule } from "@nestjs/jwt";
+import { jwtOptions } from "./auth/jwt-options";
+import { AuthGuard } from "./auth/auth.guard";
+import { AuthController } from "./controller/auth.controller";
+import { AuthService } from "./service/auth.service";
 
 @Module({
   imports: [
     ConfigModule.forRoot({ isGlobal: true }),
+    JwtModule.registerAsync({
+      global: true,
+      inject: [ConfigService],
+      useFactory: jwtOptions,
+    }),
     TypeOrmModule.forRootAsync({
       inject: [ConfigService],
       useFactory: (config: ConfigService) => ({
@@ -28,7 +38,7 @@ import { RatingService } from "./service/rating.service";
     }),
     TypeOrmModule.forFeature([Member, Rating]),
   ],
-  controllers: [MemberController, RatingController],
-  providers: [MemberService, RatingService],
+  controllers: [AuthController, MemberController, RatingController],
+  providers: [AuthService, AuthGuard, MemberService, RatingService],
 })
 export class AppModule {}

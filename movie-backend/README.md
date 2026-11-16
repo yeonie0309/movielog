@@ -1,5 +1,13 @@
 # MovieLog 5주차 Movie API
 
+## 7주차 로그인·인증·인가 확장
+
+JWT 로그인, 내 정보 조회·닉네임 수정, 토큰 기반 평점 쓰기와 `@LoginMember`를 구현했습니다.
+[7주차 API 명세](docs/WEEK7_API_SPEC.md), [제출 가이드](../WEEK7_BACKEND_SUBMISSION_GUIDE.md),
+[실제 실행 사진](../evidence/week7-backend/README.md)을 참고하세요.
+현재 쓰기는 `/ratings` 경로와 Bearer 인증을 사용하고 삭제는 200 공통 응답을 반환합니다.
+아래 5~6주차 실행 설명과 스크립트는 해당 주차 브랜치의 계약을 설명합니다.
+
 ## 6주차 저장 API 확장
 
 회원가입 및 평점 POST/PATCH/DELETE와 공통 오류 Filter를 추가했습니다.
