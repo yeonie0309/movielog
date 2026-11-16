@@ -23,6 +23,7 @@ evidence/week8-frontend/19-flutter-checks.jpg
 evidence/week8-frontend/20-safe-network.jpg
 evidence/week8-frontend/README.md
 evidence/week8-frontend/android-errors.txt
+evidence/week8-frontend/android-invalid.txt
 evidence/week8-frontend/android-live.txt
 evidence/week8-frontend/android-restore.txt
 evidence/week8-frontend/changed-files.txt
@@ -30,6 +31,7 @@ evidence/week8-frontend/flutter-analyze.txt
 evidence/week8-frontend/flutter-test.txt
 evidence/week8-frontend/interrupted-test-data.json
 evidence/week8-frontend/result-errors.json
+evidence/week8-frontend/result-invalid.json
 evidence/week8-frontend/result-live.json
 evidence/week8-frontend/result-restore.json
 evidence/week8-frontend/verification-summary.json

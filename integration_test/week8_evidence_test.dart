@@ -490,6 +490,23 @@ void main() {
       });
       // ignore: avoid_print
       print('WEEK8_VIDEO_STOP=02-restart-logout-invalid');
+    } else if (phase == 'invalid') {
+      await tester.runAsync(
+        () => storage.saveAccessToken('invalid-local-test-token'),
+      );
+      await app();
+      await waitFor(tester, find.byKey(const Key('login-submit')));
+      await waitFor(tester, find.text('로그인 시간이 만료되었습니다. 다시 로그인해 주세요.'));
+      await capture(tester, '11-invalid-token');
+      expect(auth.status, AuthStatus.signedOut);
+      expect(await tester.runAsync(storage.readAccessToken), isNull);
+      report({
+        'phase': phase,
+        'passed': true,
+        'actualInvalidTokenNotice': true,
+        'tokenDeleted': true,
+        'requests': trace,
+      });
     } else {
       // Controlled API failures exercise real Android storage and production UI.
       await tester.runAsync(

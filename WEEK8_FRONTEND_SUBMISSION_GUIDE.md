@@ -16,7 +16,7 @@ PR_LINK_PENDING
 
 ## 구현과 검증 범위
 
-Flutter 테스트94개, Android UI 시나리오3개, 실제 v7 요청16건을 통과했다. analyze는 종료 코드0이며 기존 week0 info2건이다.
+Flutter 테스트94개, Android UI 시나리오4개, 실제 v7 요청17건을 통과했다. analyze는 종료 코드0이며 기존 week0 info2건이다.
 
 | 원본 항목 | 구현 및 확인 방법 |
 | --- | --- |

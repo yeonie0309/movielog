@@ -10,13 +10,13 @@ OUT = ROOT / 'evidence/week8-frontend'
 def git(*args):
     return subprocess.check_output(['git', *args], cwd=ROOT, text=True).strip().splitlines()
 
-results = {name: json.loads((OUT / f'result-{name}.json').read_text()) for name in ['live', 'restore', 'errors']}
+results = {name: json.loads((OUT / f'result-{name}.json').read_text()) for name in ['live', 'restore', 'errors', 'invalid']}
 assert all(result['passed'] for result in results.values())
 assert results['live']['ratingCleaned'] and results['live']['secureStorageRead']
 assert all(results['restore'][key] for key in ['restoredAfterProcessRestart','logoutTokenDeleted','protectedRedirect','invalidToken401'])
 assert all(results['errors'][key] for key in ['injected503RetainsToken','injected403RetainsSession','injectedExpired401ClearsSession'])
-requests = [r for name in ['live','restore'] for r in results[name]['requests'] if 'method' in r]
-assert len(requests) == 16
+requests = [r for name in ['live','restore','invalid'] for r in results[name]['requests'] if 'method' in r]
+assert len(requests) == 17
 assert {200, 201, 401, 403, 409}.issubset({r['status'] for r in requests})
 created = next(r for r in requests if r['method']=='POST' and r['path']=='/v7/ratings')
 assert created['bearerAttached'] and 'memberId' not in created['body']
@@ -26,7 +26,7 @@ assert '+94: All tests passed!' in (OUT/'flutter-test.txt').read_text()
 analyze = (OUT/'flutter-analyze.txt').read_text()
 assert 'error •' not in analyze and 'warning •' not in analyze
 assert '2 issues found' in analyze
-for phase in ['live','restore','errors']:
+for phase in ['live','restore','errors','invalid']:
     assert 'All tests passed!' in (OUT/f'android-{phase}.txt').read_text()
 pngs = list(OUT.glob('*.png'))
 assert len(pngs) == 18
@@ -66,7 +66,7 @@ assert not any(name.endswith('/.env') or name=='.env' for name in git('ls-files'
 subprocess.run(['git','diff','--check'],cwd=ROOT,check=True)
 changed.update({'evidence/week8-frontend/changed-files.txt','evidence/week8-frontend/verification-summary.json'})
 (OUT/'changed-files.txt').write_text('\n'.join(sorted(changed))+'\n')
-summary={'flutterTests':94,'androidScenarios':3,'actualV7Requests':len(requests),'analyzeExitCode':0,
+summary={'flutterTests':94,'androidScenarios':4,'actualV7Requests':len(requests),'analyzeExitCode':0,
          'existingWeek0Infos':2,'nativePlatform':'Android Pixel 7 emulator','pngScreenshots':len(pngs),
          'videos':2,'tokenValuesAbsentFromChangedText':True,'envUntracked':True,
          'finalFixtureMemberIds':[52,53],'finalRatingId':36,'finalRatingDeleted':True,
@@ -74,4 +74,4 @@ summary={'flutterTests':94,'androidScenarios':3,'actualV7Requests':len(requests)
          'fixtureAccountsCreatedAcrossAttempts':14,'manualUserCheckPending':True,
          'expiry4014':'injected','invalid4013':'actualAPI','iOSVerified':False}
 (OUT/'verification-summary.json').write_text(json.dumps(summary,ensure_ascii=False,indent=2)+'\n')
-print('PASS: Flutter 94, Android 3, actual API 16, secure storage restore/delete, artifacts, credential scan, ignored env, diff check')
+print('PASS: Flutter 94, Android 4, actual API 17, secure storage restore/delete, artifacts, credential scan, ignored env, diff check')

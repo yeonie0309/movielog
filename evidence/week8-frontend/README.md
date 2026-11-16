@@ -37,8 +37,8 @@
 
 ## CLI·요청 기록 사진
 
-- 19-flutter-checks.jpg — 실제 analyze·94개 테스트·Android 3단계 로그를 읽는 뷰어 화면.
-- 20-safe-network.jpg — 실제 v7 요청16건과 등록 body/result를 읽는 뷰어 화면.
+- 19-flutter-checks.jpg — 실제 analyze·94개 테스트·Android 4단계 로그를 읽는 뷰어 화면.
+- 20-safe-network.jpg — 실제 v7 요청17건과 등록 body/result를 읽는 뷰어 화면.
 - PR 화면은 생성 후 별도 첨부한다.
 
 ## 영상
@@ -53,6 +53,7 @@ JWT·비밀번호를 화면이나 영상에 출력하지 않는다. 녹화에 �
 - android-live.txt, result-live.json — 실제 회원52·53, TMDB movieId155, 최종 ratingId36. 평점36 삭제 확인.
 - android-restore.txt, result-restore.json — 새 프로세스 GET me 200, 로그아웃 시 secure storage null, 보호 redirect, 무효401.
 - android-errors.txt, result-errors.json — 실패 주입 시나리오.
+- android-invalid.txt, result-invalid.json — 최종 코드에서 실제 AUTH401_3과 Snackbar·토큰 삭제 추가 확인.
 - flutter-test.txt — 전체 회귀 테스트.
 - flutter-analyze.txt — 정적 분석. 기존 week0 avoid_print 정보2건.
 - interrupted-test-data.json — 중단 실행의 남은 데이터 내역.
