@@ -1,0 +1,71 @@
+{
+  "environment": "Actual Postman desktop Send requests to local NestJS + MySQL",
+  "captures": [
+    {
+      "file": "01-postman-created.png",
+      "method": "POST",
+      "url": "/favorites",
+      "status": 201
+    },
+    {
+      "file": "02-postman-duplicate.png",
+      "method": "POST",
+      "url": "/favorites",
+      "status": 409
+    },
+    {
+      "file": "03-postman-list.png",
+      "method": "GET",
+      "url": "/favorites",
+      "status": 200
+    },
+    {
+      "file": "04-postman-status-true.png",
+      "method": "GET",
+      "url": "/favorites/550",
+      "status": 200
+    },
+    {
+      "file": "05-postman-delete.png",
+      "method": "DELETE",
+      "url": "/favorites/550",
+      "status": 200
+    },
+    {
+      "file": "06-postman-status-false.png",
+      "method": "GET",
+      "url": "/favorites/550",
+      "status": 200
+    },
+    {
+      "file": "07-postman-movie-record.png",
+      "method": "POST",
+      "url": "/movie-records",
+      "status": 201
+    },
+    {
+      "file": "08-postman-rating-only.png",
+      "method": "POST",
+      "url": "/movie-records",
+      "status": 201
+    },
+    {
+      "file": "16-postman-prepare-favorite.png",
+      "method": "POST",
+      "url": "/favorites",
+      "status": 201
+    },
+    {
+      "file": "10-postman-record-conflict.png",
+      "method": "POST",
+      "url": "/movie-records",
+      "status": 409
+    },
+    {
+      "file": "09-postman-unauthorized.png",
+      "method": "POST",
+      "url": "/favorites",
+      "status": 401
+    }
+  ]
+}

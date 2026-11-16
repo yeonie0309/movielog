@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "scope": "Only the temporary Postman capture fixture",
+  "deletedRows": {
+    "favorite": 2,
+    "rating": 2,
+    "member": 1
+  }
+}

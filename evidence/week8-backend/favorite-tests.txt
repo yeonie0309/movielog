@@ -1,0 +1,18 @@
+✔ all five operations reject missing authentication (69.487667ms)
+✔ create, duplicate, own ordered list, status and delete contracts (11.614333ms)
+✔ members can favorite same movie and cannot list or delete each others relation (2.343208ms)
+✔ favorite body and path validation reject invalid or unsafe IDs and memberId injection (6.042041ms)
+✔ movie records commit both rows or rating only with favorite null (1.266875ms)
+✔ movie record validates score, comment, boolean and unexpected properties (3.879417ms)
+✔ preexisting favorite or rating does not add partial movie record rows (1.773916ms)
+✔ second write UNIQUE failure propagates and is mapped without SQL or parameter leakage (0.687959ms)
+✔ unexpected second write failure returns generic 500 and propagates rollback (0.554959ms)
+✔ Swagger lists protected operations, required record fields and response examples (0.841084ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 725.03625

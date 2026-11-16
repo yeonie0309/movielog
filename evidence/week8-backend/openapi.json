@@ -1,0 +1,653 @@
+{
+  "openapi": "3.0.0",
+  "paths": {
+    "/auth/login": {
+      "post": {
+        "operationId": "AuthController_login",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Auth"
+        ]
+      }
+    },
+    "/members/me": {
+      "get": {
+        "operationId": "MemberController_getMyInfo",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Member"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      },
+      "patch": {
+        "operationId": "MemberController_updateMyInfo",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MemberUpdateRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Member"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/members/nickname/{nickname}": {
+      "get": {
+        "operationId": "MemberController_checkNickname",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Member"
+        ]
+      }
+    },
+    "/members/email/{email}": {
+      "get": {
+        "operationId": "MemberController_checkEmail",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Member"
+        ]
+      }
+    },
+    "/members": {
+      "post": {
+        "operationId": "MemberController_signUp",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateMemberDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Member"
+        ]
+      }
+    },
+    "/members/{memberId}/ratings": {
+      "get": {
+        "operationId": "RatingController_getRatings",
+        "parameters": [
+          {
+            "name": "memberId",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "number"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Rating"
+        ]
+      }
+    },
+    "/ratings": {
+      "post": {
+        "operationId": "RatingController_create",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateRatingDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Rating"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/ratings/{ratingId}": {
+      "patch": {
+        "operationId": "RatingController_update",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateRatingDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Rating"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      },
+      "delete": {
+        "operationId": "RatingController_delete",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Rating"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/favorites": {
+      "post": {
+        "operationId": "FavoriteController_create",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateFavoriteDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "즐겨찾기를 등록했습니다.",
+            "content": {
+              "application/json": {
+                "example": {
+                  "isSuccess": true,
+                  "code": "COMMON201",
+                  "message": "즐겨찾기를 등록했습니다.",
+                  "result": {
+                    "favoriteId": 1,
+                    "movieId": 550,
+                    "createdAt": "2026-11-17T00:00:00.000Z"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "입력 검증 실패 · COMMON400"
+          },
+          "401": {
+            "description": "AUTH401_2 토큰 누락 / AUTH401_3 무효 / AUTH401_4 만료",
+            "content": {
+              "application/json": {
+                "example": {
+                  "isSuccess": false,
+                  "code": "AUTH401_2",
+                  "message": "로그인이 필요합니다.",
+                  "result": null
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "MEMBER404_1 회원 없음"
+          },
+          "409": {
+            "description": "FAVORITE409_1 즐겨찾기 중복. 영화 기록은 RATING409_1 평점 중복도 반환합니다.",
+            "content": {
+              "application/json": {
+                "example": {
+                  "isSuccess": false,
+                  "code": "FAVORITE409_1",
+                  "message": "이미 이 영화를 즐겨찾기하셨습니다.",
+                  "result": null
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "로그인 회원의 즐겨찾기 등록",
+        "tags": [
+          "8주차 즐겨찾기"
+        ]
+      },
+      "get": {
+        "operationId": "FavoriteController_list",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "내 즐겨찾기 목록을 조회했습니다.",
+            "content": {
+              "application/json": {
+                "example": {
+                  "isSuccess": true,
+                  "code": "COMMON200",
+                  "message": "내 즐겨찾기 목록을 조회했습니다.",
+                  "result": [
+                    {
+                      "favoriteId": 1,
+                      "movieId": 550,
+                      "createdAt": "2026-11-17T00:00:00.000Z"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "입력 검증 실패 · COMMON400"
+          },
+          "401": {
+            "description": "AUTH401_2 토큰 누락 / AUTH401_3 무효 / AUTH401_4 만료",
+            "content": {
+              "application/json": {
+                "example": {
+                  "isSuccess": false,
+                  "code": "AUTH401_2",
+                  "message": "로그인이 필요합니다.",
+                  "result": null
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "내 즐겨찾기 최신순 목록",
+        "tags": [
+          "8주차 즐겨찾기"
+        ]
+      }
+    },
+    "/favorites/{movieId}": {
+      "get": {
+        "operationId": "FavoriteController_status",
+        "parameters": [
+          {
+            "name": "movieId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 9007199254740991
+            },
+            "example": 550
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "즐겨찾기 여부를 조회했습니다.",
+            "content": {
+              "application/json": {
+                "example": {
+                  "isSuccess": true,
+                  "code": "COMMON200",
+                  "message": "즐겨찾기 여부를 조회했습니다.",
+                  "result": {
+                    "isFavorite": true
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "입력 검증 실패 · COMMON400"
+          },
+          "401": {
+            "description": "AUTH401_2 토큰 누락 / AUTH401_3 무효 / AUTH401_4 만료",
+            "content": {
+              "application/json": {
+                "example": {
+                  "isSuccess": false,
+                  "code": "AUTH401_2",
+                  "message": "로그인이 필요합니다.",
+                  "result": null
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "특정 영화 즐겨찾기 여부",
+        "tags": [
+          "8주차 즐겨찾기"
+        ]
+      },
+      "delete": {
+        "operationId": "FavoriteController_delete",
+        "parameters": [
+          {
+            "name": "movieId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 9007199254740991
+            },
+            "example": 550
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "즐겨찾기를 해제했습니다.",
+            "content": {
+              "application/json": {
+                "example": {
+                  "isSuccess": true,
+                  "code": "COMMON200",
+                  "message": "즐겨찾기를 해제했습니다.",
+                  "result": null
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "입력 검증 실패 · COMMON400"
+          },
+          "401": {
+            "description": "AUTH401_2 토큰 누락 / AUTH401_3 무효 / AUTH401_4 만료",
+            "content": {
+              "application/json": {
+                "example": {
+                  "isSuccess": false,
+                  "code": "AUTH401_2",
+                  "message": "로그인이 필요합니다.",
+                  "result": null
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "FAVORITE404_1 해제할 즐겨찾기 없음",
+            "content": {
+              "application/json": {
+                "example": {
+                  "isSuccess": false,
+                  "code": "FAVORITE404_1",
+                  "message": "즐겨찾기한 영화를 찾을 수 없습니다.",
+                  "result": null
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "내 즐겨찾기 해제",
+        "tags": [
+          "8주차 즐겨찾기"
+        ]
+      }
+    },
+    "/movie-records": {
+      "post": {
+        "operationId": "MovieRecordController_create",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "movieId",
+                  "score",
+                  "addToFavorites"
+                ],
+                "properties": {
+                  "movieId": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 9007199254740991,
+                    "example": 238
+                  },
+                  "score": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 5,
+                    "example": 5
+                  },
+                  "comment": {
+                    "type": "string",
+                    "nullable": true,
+                    "maxLength": 500,
+                    "example": "다시 보고 싶은 영화입니다."
+                  },
+                  "addToFavorites": {
+                    "type": "boolean",
+                    "example": true
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "영화 기록을 저장했습니다.",
+            "content": {
+              "application/json": {
+                "example": {
+                  "isSuccess": true,
+                  "code": "COMMON201",
+                  "message": "영화 기록을 저장했습니다.",
+                  "result": {
+                    "rating": {
+                      "ratingId": 1,
+                      "movieId": 238,
+                      "score": 5,
+                      "comment": "다시 보고 싶은 영화입니다.",
+                      "createdAt": "2026-11-17T00:00:00.000Z",
+                      "updatedAt": "2026-11-17T00:00:00.000Z"
+                    },
+                    "favorite": {
+                      "favoriteId": 1,
+                      "movieId": 238,
+                      "createdAt": "2026-11-17T00:00:00.000Z"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "입력 검증 실패 · COMMON400"
+          },
+          "401": {
+            "description": "AUTH401_2 토큰 누락 / AUTH401_3 무효 / AUTH401_4 만료",
+            "content": {
+              "application/json": {
+                "example": {
+                  "isSuccess": false,
+                  "code": "AUTH401_2",
+                  "message": "로그인이 필요합니다.",
+                  "result": null
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "MEMBER404_1 회원 없음"
+          },
+          "409": {
+            "description": "FAVORITE409_1 즐겨찾기 중복. 영화 기록은 RATING409_1 평점 중복도 반환합니다.",
+            "content": {
+              "application/json": {
+                "example": {
+                  "isSuccess": false,
+                  "code": "FAVORITE409_1",
+                  "message": "이미 이 영화를 즐겨찾기하셨습니다.",
+                  "result": null
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "평점과 선택적 즐겨찾기를 한 트랜잭션으로 저장",
+        "tags": [
+          "8주차 영화 기록"
+        ]
+      }
+    }
+  },
+  "info": {
+    "title": "MovieLog 8주차 API",
+    "description": "공개 회원가입·로그인·중복 확인·회원별 평점 조회와 Bearer 인증이 필요한 내 정보·평점 쓰기·즐겨찾기·영화 기록을 구분합니다. 요청에 memberId를 보내지 않습니다.",
+    "version": "8.0",
+    "contact": {}
+  },
+  "tags": [],
+  "servers": [],
+  "components": {
+    "securitySchemes": {
+      "bearer": {
+        "scheme": "bearer",
+        "bearerFormat": "JWT",
+        "type": "http"
+      }
+    },
+    "schemas": {
+      "LoginRequestDto": {
+        "type": "object",
+        "properties": {}
+      },
+      "MemberUpdateRequestDto": {
+        "type": "object",
+        "properties": {}
+      },
+      "CreateMemberDto": {
+        "type": "object",
+        "properties": {}
+      },
+      "CreateRatingDto": {
+        "type": "object",
+        "properties": {}
+      },
+      "UpdateRatingDto": {
+        "type": "object",
+        "properties": {}
+      },
+      "CreateFavoriteDto": {
+        "type": "object",
+        "properties": {
+          "movieId": {
+            "type": "number",
+            "example": 550,
+            "minimum": 1,
+            "maximum": 9007199254740991
+          }
+        },
+        "required": [
+          "movieId"
+        ]
+      },
+      "CreateMovieRecordDto": {
+        "type": "object",
+        "properties": {}
+      }
+    }
+  }
+}
