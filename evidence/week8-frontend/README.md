@@ -39,7 +39,9 @@
 
 - 19-flutter-checks.jpg — 실제 analyze·94개 테스트·Android 4단계 로그를 읽는 뷰어 화면.
 - 20-safe-network.jpg — 실제 v7 요청17건과 등록 body/result를 읽는 뷰어 화면.
-- PR 화면은 생성 후 별도 첨부한다.
+- 21-pr-created.jpg — PR #17의 생성 결과. 제출 양식의 PR 링크 항목에 함께 첨부한다.
+
+PR은 https://github.com/yeonie0309/movielog/pull/17 이다.
 
 ## 영상
 

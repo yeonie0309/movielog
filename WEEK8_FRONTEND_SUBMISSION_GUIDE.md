@@ -4,7 +4,7 @@
 
 https://app.notion.com/p/makeus-challenge/8-JWT-200b57f4596b83018ee881b5bf4f501d
 
-PR_LINK_PENDING
+https://github.com/yeonie0309/movielog/pull/17
 
 ## 작업 기준
 
@@ -169,7 +169,7 @@ Flutter 통합 테스트는 기본 설정에서 종료 후 앱을 제거한다. 
 
 ### PR 링크
 
-PR_LINK_PENDING
+https://github.com/yeonie0309/movielog/pull/17
 
 ### 로그인→GET me 증거
 
