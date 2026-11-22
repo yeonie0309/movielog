@@ -1,0 +1,82 @@
+fault-rollback: official monitor started 70af0029-25e4-41c2-9486-da26fdf406ce; 10 RPS; 480s; initial={'status': 'ok', 'version': 'v0.1.2-26-11-22-1'}
+DRAIN i-0252e3362f9987d4a
+SWAP i-0252e3362f9987d4a
+SSM command 4ff40574-3a72-4e5c-ad80-25588a64fe2a on i-0252e3362f9987d4a
+STOPPED: next instance was not touched; launch image pointer restored. Explicit rollback is required for the failed node.
+EXPECTED deployment failure: SSM command failed: Failed; inspect command 4ff40574-3a72-4e5c-ad80-25588a64fe2a
+[
+  {
+    "instance": "i-06828c9bd9203f43d",
+    "state": "healthy",
+    "reason": null
+  }
+]
+SSM command 74183499-140f-4a34-beee-d9bc0879aa19 on i-0252e3362f9987d4a
+{"isSuccess":false,"code":"COMMON500","message":"Service is not ready","result":null}HTTP 500
+189923011699.dkr.ecr.ap-southeast-2.amazonaws.com/movielog-infra-app:v0.1.2-26-11-22-2-fault
+
+Public service stayed available: 200 {"status":"ok","version":"v0.1.2-26-11-22-1"}
+ROLLBACK to known-good image
+DRAIN i-0252e3362f9987d4a
+SWAP i-0252e3362f9987d4a
+SSM command b5bacdd4-671c-42b8-a6d4-f02cb2a1d49f on i-0252e3362f9987d4a
+Container readiness passed
+
+----------ERROR-------
+WARNING! Your password will be stored unencrypted in /root/.docker/config.json.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/engine/reference/commandline/login/#credentials-store
+
+
+HEALTHY i-0252e3362f9987d4a
+DRAIN i-06828c9bd9203f43d
+SWAP i-06828c9bd9203f43d
+SSM command 6250d8fe-4791-4a24-94e8-b4ccdc50058b on i-06828c9bd9203f43d
+Container readiness passed
+
+----------ERROR-------
+WARNING! Your password will be stored unencrypted in /root/.docker/config.json.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/engine/reference/commandline/login/#credentials-store
+
+
+HEALTHY i-06828c9bd9203f43d
+ROLLING COMPLETE 189923011699.dkr.ecr.ap-southeast-2.amazonaws.com/movielog-infra-app:v0.1.2-26-11-22-1
+Observing 30 seconds of recovered service before ending the optional run.
+{
+  "runId": "70af0029-25e4-41c2-9486-da26fdf406ce",
+  "status": "stopped",
+  "startedAt": 1795284629246,
+  "finishedAt": 1795284942016,
+  "scenarioName": "MovieLog fault-rollback",
+  "totals": {
+    "sent": 3126,
+    "success": 3126,
+    "failure": 0,
+    "byType": {
+      "network": 0,
+      "timeout": 0,
+      "server": 0,
+      "client": 0
+    },
+    "slow": 0,
+    "dropped": 0
+  },
+  "percentiles": {
+    "p50": 267,
+    "p95": 333,
+    "p99": 406,
+    "max": 761,
+    "count": 3126
+  },
+  "baseline": {
+    "complete": true,
+    "sampleCount": 151,
+    "failureRate": 0,
+    "clientFailureRate": 0,
+    "p95": 530
+  },
+  "outages": [],
+  "downtimeMs": 0,
+  "warnings": []
+}

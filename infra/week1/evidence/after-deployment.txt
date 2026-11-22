@@ -1,0 +1,63 @@
+after: official monitor started 98492e6c-abfc-41ad-9274-616357af69f3; 10 RPS; 240s; initial={'status': 'ok', 'version': 'v0.1.1-26-11-22-1'}
+DRAIN i-0252e3362f9987d4a
+SWAP i-0252e3362f9987d4a
+SSM command 71b430ee-a3f3-4856-a2d0-b5580ed04f48 on i-0252e3362f9987d4a
+Container readiness passed
+
+----------ERROR-------
+WARNING! Your password will be stored unencrypted in /root/.docker/config.json.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/engine/reference/commandline/login/#credentials-store
+
+
+HEALTHY i-0252e3362f9987d4a
+DRAIN i-06828c9bd9203f43d
+SWAP i-06828c9bd9203f43d
+SSM command ed262a9e-3ed0-450a-bd08-77bd71d104c1 on i-06828c9bd9203f43d
+Container readiness passed
+
+----------ERROR-------
+WARNING! Your password will be stored unencrypted in /root/.docker/config.json.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/engine/reference/commandline/login/#credentials-store
+
+
+HEALTHY i-06828c9bd9203f43d
+ROLLING COMPLETE 189923011699.dkr.ecr.ap-southeast-2.amazonaws.com/movielog-infra-app:v0.1.2-26-11-22-1
+{
+  "runId": "98492e6c-abfc-41ad-9274-616357af69f3",
+  "status": "finished",
+  "startedAt": 1795284312738,
+  "finishedAt": 1795284552922,
+  "scenarioName": "MovieLog after",
+  "totals": {
+    "sent": 2400,
+    "success": 2400,
+    "failure": 0,
+    "byType": {
+      "network": 0,
+      "timeout": 0,
+      "server": 0,
+      "client": 0
+    },
+    "slow": 0,
+    "dropped": 0
+  },
+  "percentiles": {
+    "p50": 270,
+    "p95": 290,
+    "p99": 526,
+    "max": 616,
+    "count": 2400
+  },
+  "baseline": {
+    "complete": true,
+    "sampleCount": 151,
+    "failureRate": 0,
+    "clientFailureRate": 0,
+    "p95": 349
+  },
+  "outages": [],
+  "downtimeMs": 0,
+  "warnings": []
+}

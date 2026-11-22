@@ -1,0 +1,61 @@
+before: official monitor started 0a93e3da-3272-498a-882a-df679bae67c7; 10 RPS; 120s; initial={'status': 'ok'}
+SSM command d629731d-aa4a-4fb3-bea8-d0942cb005aa on i-0ff79ffe07bb34f71
+Container readiness passed
+
+----------ERROR-------
+WARNING! Your password will be stored unencrypted in /root/.docker/config.json.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/engine/reference/commandline/login/#credentials-store
+
+
+{
+  "runId": "0a93e3da-3272-498a-882a-df679bae67c7",
+  "status": "finished",
+  "startedAt": 1795283270765,
+  "finishedAt": 1795283390953,
+  "scenarioName": "MovieLog before",
+  "totals": {
+    "sent": 1200,
+    "success": 1163,
+    "failure": 37,
+    "byType": {
+      "network": 37,
+      "timeout": 0,
+      "server": 0,
+      "client": 0
+    },
+    "slow": 1,
+    "dropped": 0
+  },
+  "percentiles": {
+    "p50": 276,
+    "p95": 318,
+    "p99": 573,
+    "max": 1006,
+    "count": 1163
+  },
+  "baseline": {
+    "complete": true,
+    "sampleCount": 151,
+    "failureRate": 0,
+    "clientFailureRate": 0,
+    "p95": 540
+  },
+  "outages": [
+    {
+      "startTs": 1795283296966,
+      "endTs": 1795283300765,
+      "durationMs": 3799,
+      "failureCount": 37,
+      "byType": {
+        "network": 37,
+        "timeout": 0,
+        "server": 0,
+        "client": 0
+      },
+      "ongoing": false
+    }
+  ],
+  "downtimeMs": 3799,
+  "warnings": []
+}

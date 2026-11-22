@@ -1,0 +1,334 @@
+{
+  "region": "ap-southeast-2",
+  "observedAt": "2026-11-22T07:35:49.597435+00:00",
+  "database": {
+    "DBInstanceIdentifier": "movielog-infra1",
+    "Engine": "mysql",
+    "EngineVersion": "8.4.11",
+    "DBInstanceStatus": "available",
+    "DBInstanceClass": "db.t4g.micro",
+    "AllocatedStorage": 20,
+    "MultiAZ": false,
+    "PubliclyAccessible": false,
+    "StorageEncrypted": true,
+    "BackupRetentionPeriod": 0,
+    "MonitoringInterval": 0
+  },
+  "securityGroups": [
+    {
+      "GroupId": "sg-004a7587c839a3f35",
+      "IpPermissionsEgress": [
+        {
+          "IpProtocol": "-1",
+          "UserIdGroupPairs": [],
+          "IpRanges": [
+            {
+              "CidrIp": "0.0.0.0/0"
+            }
+          ],
+          "Ipv6Ranges": [],
+          "PrefixListIds": []
+        }
+      ],
+      "Tags": [
+        {
+          "Key": "Project",
+          "Value": "movielog-infra1"
+        },
+        {
+          "Key": "Purpose",
+          "Value": "UMC-Infra-week1-disposable"
+        }
+      ],
+      "VpcId": "vpc-0800988720726e899",
+      "SecurityGroupArn": "arn:aws:ec2:ap-southeast-2:189923011699:security-group/sg-004a7587c839a3f35",
+      "OwnerId": "189923011699",
+      "GroupName": "movielog-infra1-app",
+      "Description": "Disposable MovieLog Infra lab app",
+      "IpPermissions": [
+        {
+          "IpProtocol": "tcp",
+          "FromPort": 3000,
+          "ToPort": 3000,
+          "UserIdGroupPairs": [
+            {
+              "UserId": "189923011699",
+              "GroupId": "sg-0c9fef8be64ddb05c"
+            }
+          ],
+          "IpRanges": [],
+          "Ipv6Ranges": [],
+          "PrefixListIds": []
+        }
+      ]
+    },
+    {
+      "GroupId": "sg-07999b3d6a1c38ae6",
+      "IpPermissionsEgress": [
+        {
+          "IpProtocol": "-1",
+          "UserIdGroupPairs": [],
+          "IpRanges": [
+            {
+              "CidrIp": "0.0.0.0/0"
+            }
+          ],
+          "Ipv6Ranges": [],
+          "PrefixListIds": []
+        }
+      ],
+      "Tags": [
+        {
+          "Key": "Purpose",
+          "Value": "UMC-Infra-week1-disposable"
+        },
+        {
+          "Key": "Project",
+          "Value": "movielog-infra1"
+        }
+      ],
+      "VpcId": "vpc-0800988720726e899",
+      "SecurityGroupArn": "arn:aws:ec2:ap-southeast-2:189923011699:security-group/sg-07999b3d6a1c38ae6",
+      "OwnerId": "189923011699",
+      "GroupName": "movielog-infra1-db",
+      "Description": "Disposable MovieLog Infra lab db",
+      "IpPermissions": [
+        {
+          "IpProtocol": "tcp",
+          "FromPort": 3306,
+          "ToPort": 3306,
+          "UserIdGroupPairs": [
+            {
+              "UserId": "189923011699",
+              "GroupId": "sg-004a7587c839a3f35"
+            }
+          ],
+          "IpRanges": [],
+          "Ipv6Ranges": [],
+          "PrefixListIds": []
+        }
+      ]
+    },
+    {
+      "GroupId": "sg-0c9fef8be64ddb05c",
+      "IpPermissionsEgress": [
+        {
+          "IpProtocol": "-1",
+          "UserIdGroupPairs": [],
+          "IpRanges": [
+            {
+              "CidrIp": "0.0.0.0/0"
+            }
+          ],
+          "Ipv6Ranges": [],
+          "PrefixListIds": []
+        }
+      ],
+      "Tags": [
+        {
+          "Key": "Purpose",
+          "Value": "UMC-Infra-week1-disposable"
+        },
+        {
+          "Key": "Project",
+          "Value": "movielog-infra1"
+        }
+      ],
+      "VpcId": "vpc-0800988720726e899",
+      "SecurityGroupArn": "arn:aws:ec2:ap-southeast-2:189923011699:security-group/sg-0c9fef8be64ddb05c",
+      "OwnerId": "189923011699",
+      "GroupName": "movielog-infra1-alb",
+      "Description": "Disposable MovieLog Infra lab alb",
+      "IpPermissions": [
+        {
+          "IpProtocol": "tcp",
+          "FromPort": 80,
+          "ToPort": 80,
+          "UserIdGroupPairs": [],
+          "IpRanges": [
+            {
+              "Description": "HTTP health probe only",
+              "CidrIp": "0.0.0.0/0"
+            }
+          ],
+          "Ipv6Ranges": [],
+          "PrefixListIds": []
+        }
+      ]
+    }
+  ],
+  "parameters": [
+    {
+      "name": "/umc/app/db-host",
+      "type": "String"
+    },
+    {
+      "name": "/umc/app/db-name",
+      "type": "String"
+    },
+    {
+      "name": "/umc/app/db-password",
+      "type": "SecureString"
+    },
+    {
+      "name": "/umc/app/db-user",
+      "type": "String"
+    },
+    {
+      "name": "/umc/app/image",
+      "type": "String"
+    },
+    {
+      "name": "/umc/app/jwt-secret",
+      "type": "SecureString"
+    }
+  ],
+  "autoScaling": {
+    "AutoScalingGroupName": "movielog-infra1-asg",
+    "MinSize": 2,
+    "MaxSize": 4,
+    "DesiredCapacity": 2,
+    "HealthCheckType": "EC2",
+    "Instances": [
+      {
+        "InstanceId": "i-0252e3362f9987d4a",
+        "InstanceType": "t4g.micro",
+        "AvailabilityZone": "ap-southeast-2c",
+        "AvailabilityZoneId": "apse2-az2",
+        "LifecycleState": "InService",
+        "HealthStatus": "Healthy",
+        "LaunchTemplate": {
+          "LaunchTemplateId": "lt-04ceccb5284021655",
+          "LaunchTemplateName": "movielog-infra1-lt",
+          "Version": "1"
+        },
+        "ProtectedFromScaleIn": false
+      },
+      {
+        "InstanceId": "i-06828c9bd9203f43d",
+        "InstanceType": "t4g.micro",
+        "AvailabilityZone": "ap-southeast-2a",
+        "AvailabilityZoneId": "apse2-az1",
+        "LifecycleState": "InService",
+        "HealthStatus": "Healthy",
+        "LaunchTemplate": {
+          "LaunchTemplateId": "lt-04ceccb5284021655",
+          "LaunchTemplateName": "movielog-infra1-lt",
+          "Version": "1"
+        },
+        "ProtectedFromScaleIn": false
+      }
+    ]
+  },
+  "targets": [
+    {
+      "Target": {
+        "Id": "i-0252e3362f9987d4a",
+        "Port": 3000
+      },
+      "HealthCheckPort": "3000",
+      "TargetHealth": {
+        "State": "healthy"
+      },
+      "AdministrativeOverride": {
+        "State": "no_override",
+        "Reason": "AdministrativeOverride.NoOverride",
+        "Description": "No override is currently active on target"
+      }
+    },
+    {
+      "Target": {
+        "Id": "i-06828c9bd9203f43d",
+        "Port": 3000
+      },
+      "HealthCheckPort": "3000",
+      "TargetHealth": {
+        "State": "healthy"
+      },
+      "AdministrativeOverride": {
+        "State": "no_override",
+        "Reason": "AdministrativeOverride.NoOverride",
+        "Description": "No override is currently active on target"
+      }
+    }
+  ],
+  "targetAttributes": [
+    {
+      "Key": "target_group_health.unhealthy_state_routing.minimum_healthy_targets.percentage",
+      "Value": "off"
+    },
+    {
+      "Key": "deregistration_delay.timeout_seconds",
+      "Value": "30"
+    },
+    {
+      "Key": "stickiness.type",
+      "Value": "lb_cookie"
+    },
+    {
+      "Key": "stickiness.lb_cookie.duration_seconds",
+      "Value": "86400"
+    },
+    {
+      "Key": "slow_start.duration_seconds",
+      "Value": "0"
+    },
+    {
+      "Key": "stickiness.app_cookie.duration_seconds",
+      "Value": "86400"
+    },
+    {
+      "Key": "load_balancing.algorithm.type",
+      "Value": "round_robin"
+    },
+    {
+      "Key": "load_balancing.cross_zone.enabled",
+      "Value": "use_load_balancer_configuration"
+    },
+    {
+      "Key": "target_group_health.dns_failover.minimum_healthy_targets.percentage",
+      "Value": "off"
+    },
+    {
+      "Key": "target_group_health.unhealthy_state_routing.minimum_healthy_targets.count",
+      "Value": "1"
+    },
+    {
+      "Key": "stickiness.enabled",
+      "Value": "false"
+    },
+    {
+      "Key": "target_group_health.dns_failover.minimum_healthy_targets.count",
+      "Value": "1"
+    },
+    {
+      "Key": "stickiness.app_cookie.cookie_name",
+      "Value": ""
+    },
+    {
+      "Key": "load_balancing.algorithm.anomaly_mitigation",
+      "Value": "off"
+    }
+  ],
+  "instanceChecks": [
+    {
+      "instance": "i-0252e3362f9987d4a",
+      "commandId": "25ef9c83-4f7b-41d3-818f-0beb92dba844",
+      "status": "Success",
+      "output": "Image=189923011699.dkr.ecr.ap-southeast-2.amazonaws.com/movielog-infra-app:v0.1.2-26-11-22-1 Status=running Health=healthy User=node\n{\"status\":\"ok\",\"version\":\"v0.1.2-26-11-22-1\"}\nHTTP 200\nstatus: done\ntime: Sat, 21 Nov 2026 18:02:14 +0000\ndetail:\nDataSourceEc2\narn:aws:sts::189923011699:assumed-role/movielog-infra1/i-0252e3362f9987d4a\n/umc/app/image\nOutside-prefix access: DENIED\n"
+    },
+    {
+      "instance": "i-06828c9bd9203f43d",
+      "commandId": "c2da1cb4-3047-45bd-b2dc-b2645525dc95",
+      "status": "Success",
+      "output": "Image=189923011699.dkr.ecr.ap-southeast-2.amazonaws.com/movielog-infra-app:v0.1.2-26-11-22-1 Status=running Health=healthy User=node\n{\"status\":\"ok\",\"version\":\"v0.1.2-26-11-22-1\"}\nHTTP 200\nstatus: done\ntime: Sat, 21 Nov 2026 18:03:28 +0000\ndetail:\nDataSourceEc2\narn:aws:sts::189923011699:assumed-role/movielog-infra1/i-06828c9bd9203f43d\n/umc/app/image\nOutside-prefix access: DENIED\n"
+    }
+  ],
+  "parameterScopeSimulation": [
+    {
+      "resource": "arn:aws:ssm:${Region}:${Account}:${RelativeId}",
+      "decision": "explicitDeny"
+    }
+  ],
+  "parameterScopeEvidenceNote": "Runtime EC2 role checks in instanceChecks are authoritative; simulator may return ARN placeholders."
+}

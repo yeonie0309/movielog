@@ -1,0 +1,19 @@
+{
+  "backend-tests": {
+    "exitCode": 0
+  },
+  "backend-types": {
+    "exitCode": 0
+  },
+  "rolling-safety-tests": {
+    "exitCode": 0
+  },
+  "diff-check": {
+    "exitCode": 0
+  },
+  "secret-scan": {
+    "generatedSecretsChecked": 3,
+    "matchingFiles": [],
+    "stateIgnoredByGit": true
+  }
+}
