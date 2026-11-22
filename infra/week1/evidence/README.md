@@ -14,6 +14,7 @@
 | `09-verification-log.jpg` | 실제 테스트 CLI 출력·검증 JSON 뷰어 | 미션 기록의 테스트 |
 | `10-aws-security-log.jpg` | 실제 AWS API/SSM 출력 뷰어 | DB 비공개·암호화·파라미터 타입·EC2 역할 검증 |
 | `11-cleanup-log.jpg` | 실제 삭제 완료 조회 결과 뷰어 | 미션 기록 마지막 자원 정리 |
+| `12-pull-request.jpg` | 생성된 GitHub PR 실제 화면 | 미션 기록의 PR 링크 아래 |
 
 `*-result.jpg`는 같은 실제 화면의 결과 부분을 읽기 쉽게 캡처한 사진이다. 전체 화면도 함께 보관한다. 로그 뷰어 사진은 저장된 실제 파일을 표시한 화면이며, 원본은 아래 파일이다.
 

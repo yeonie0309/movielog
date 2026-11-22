@@ -54,3 +54,5 @@
 - [1주차](https://app.notion.com/p/makeus-challenge/1-c78b57f4596b8297958e819532236eee)
 
 INFRA_WEEK0_1_SUBMISSION_GUIDE.md에 위에서부터 넣을 문구·사진·완료 표시 기준을 정리했다. 실제 스터디 사진, 본인의 설명 가능 여부, 원본 Notion 반영·UMC 제출은 별도 확인 사항이다.
+
+구현·증빙 PR: https://github.com/yeonie0309/movielog/pull/19

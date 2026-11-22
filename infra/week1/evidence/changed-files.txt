@@ -21,6 +21,7 @@ infra/week1/evidence/08-fault-rollback-log.jpg
 infra/week1/evidence/09-verification-log.jpg
 infra/week1/evidence/10-aws-security-log.jpg
 infra/week1/evidence/11-cleanup-log.jpg
+infra/week1/evidence/12-pull-request.jpg
 infra/week1/evidence/README.md
 infra/week1/evidence/after-deployment.txt
 infra/week1/evidence/after-initial-health.json
