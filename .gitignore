@@ -1,5 +1,6 @@
 # Miscellaneous
 .env
+/infra/week1/.local/
 .env.*
 !.env.example
 *.class

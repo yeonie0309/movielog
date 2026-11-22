@@ -1,0 +1,23 @@
+$ python3 -m unittest discover -s infra/week1 -p test_*.py -v
+DRAIN i-a
+SWAP i-a
+STOPPED: next instance was not touched; launch image pointer restored. Explicit rollback is required for the failed node.
+STOPPED: next instance was not touched; launch image pointer restored. Explicit rollback is required for the failed node.
+DRAIN i-b
+SWAP i-b
+HEALTHY i-b
+DRAIN i-a
+SWAP i-a
+HEALTHY i-a
+ROLLING COMPLETE lab/repo:new
+test_cleanup_refuses_a_different_account (test_manage.RollingSafetyTests.test_cleanup_refuses_a_different_account) ... ok
+test_cleanup_refuses_a_different_region (test_manage.RollingSafetyTests.test_cleanup_refuses_a_different_region) ... ok
+test_failed_readiness_stops_before_second_node_and_restores_launch_pointer (test_manage.RollingSafetyTests.test_failed_readiness_stops_before_second_node_and_restores_launch_pointer) ... ok
+test_no_healthy_peer_is_never_drained (test_manage.RollingSafetyTests.test_no_healthy_peer_is_never_drained) ... ok
+test_rollback_recovers_failed_node_before_touching_healthy_peer (test_manage.RollingSafetyTests.test_rollback_recovers_failed_node_before_touching_healthy_peer) ... ok
+test_single_instance_cannot_run_rolling_deploy (test_manage.RollingSafetyTests.test_single_instance_cannot_run_rolling_deploy) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.001s
+
+OK

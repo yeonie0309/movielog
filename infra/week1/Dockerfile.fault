@@ -1,0 +1,8 @@
+# Disposable, intentional HTTP 500 image for the workbook rollback experiment.
+# This Dockerfile is never the normal application image build path.
+ARG BASE_IMAGE=movielog-infra:v0.1.2-26-11-22-1
+FROM ${BASE_IMAGE}
+USER root
+RUN node -e "const fs=require('fs'); const p='/app/dist/controller/health.controller.js'; let s=fs.readFileSync(p,'utf8'); if(!s.includes('SELECT 1')||!s.includes('ServiceUnavailableException')) throw Error('Unexpected health controller'); s=s.replace('SELECT 1','SELECT injected_health_failure').replace('ServiceUnavailableException','InternalServerErrorException'); fs.writeFileSync(p,s);"
+ENV APP_VERSION=v0.1.2-26-11-22-2-fault
+USER node

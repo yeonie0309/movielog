@@ -1,0 +1,64 @@
+diff --git a/public/app.js b/public/app.js
+index 4c879ac..a86176b 100644
+--- a/public/app.js
++++ b/public/app.js
+@@ -8,6 +8,10 @@ const stopBtn = document.querySelector('#stop-btn')
+ /** 서버 기본값으로 폼을 채운다. 기본값의 출처를 서버 한 곳으로 유지하기 위해서다. */
+ async function fillDefaults() {
+   const d = await (await fetch('/api/defaults')).json()
++  fillScenario(d)
++}
++
++function fillScenario(d) {
+   form.url.value = d.target.url
+   form.method.value = d.target.method
+   form.headersText.value = headersToText(d.target.headers)
+@@ -59,7 +63,7 @@ stopBtn.addEventListener('click', async () => {
+   await fetch(`/api/runs/${window.currentRunId}/stop`, { method: 'POST' })
+ })
+ 
+-fillDefaults()
++const defaultsReady = fillDefaults()
+ 
+ import { summaryTiles, outageLine } from './lib/present.js'
+ import { warningMessage } from './lib/warnings.js'
+@@ -120,6 +124,9 @@ window.addEventListener('run:started', ({ detail }) => {
+   document.querySelector('#export-k6').href = `/api/runs/${detail.runId}/export.k6.js`
+ 
+   resetResults()
++  // Completed runs are rendered from their exported records below. Opening an
++  // SSE stream for one would close on the initial terminal state before replay.
++  if (detail.replay) return
+   const source = new EventSource(`/api/runs/${detail.runId}/stream`)
+ 
+   source.addEventListener('bucket', (e) => {
+@@ -179,12 +186,25 @@ window.addEventListener('run:outages', ({ detail }) => {
+  * 버킷/순단은 SSE 쪽의 캐치업 재생이 채워준다.
+  */
+ async function restoreRunningRun() {
++  await defaultsReady
+   const runs = await (await fetch('/api/runs')).json()
+-  const running = runs.find((r) => r.status === 'running')
++  const requested = new URLSearchParams(location.search).get('run')
++  const running = requested ? runs.find((r) => r.runId === requested) : runs.find((r) => r.status === 'running')
+   if (running === undefined) return
+-
+-  setFormDisabled(true)
+-  window.dispatchEvent(new CustomEvent('run:started', { detail: { runId: running.runId } }))
++  const actual = await (await fetch(`/api/runs/${running.runId}/export.json`)).json()
++  fillScenario(actual.scenario)
++  setFormDisabled(running.status === 'running')
++  const replay = running.status !== 'running'
++  window.dispatchEvent(new CustomEvent('run:started', { detail: { runId: running.runId, replay } }))
++  if (replay) {
++    renderSummary(actual.summary)
++    for (const bucket of actual.buckets) {
++      window.dispatchEvent(new CustomEvent('run:bucket', { detail: bucket }))
++    }
++    for (const outage of actual.summary.outages) outageList.add(outage)
++    renderOutages()
++    window.dispatchEvent(new CustomEvent('run:outages', { detail: outageList.all() }))
++  }
+ }
+ 
+ restoreRunningRun()

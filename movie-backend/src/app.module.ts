@@ -17,6 +17,7 @@ import { jwtOptions } from "./auth/jwt-options";
 import { AuthGuard } from "./auth/auth.guard";
 import { AuthController } from "./controller/auth.controller";
 import { AuthService } from "./service/auth.service";
+import { HealthController } from "./controller/health.controller";
 
 @Module({
   imports: [
@@ -44,6 +45,7 @@ import { AuthService } from "./service/auth.service";
     TypeOrmModule.forFeature([Member, Rating, Favorite]),
   ],
   controllers: [
+    HealthController,
     AuthController,
     MemberController,
     RatingController,

@@ -1,0 +1,165 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><title>MovieLog Infra 실제 실행 증빙</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f5f7fb;color:#182337;font:16px/1.55 system-ui,sans-serif}
+header,main{max-width:1180px;margin:auto;padding:24px}header{padding-bottom:0}h1{font-size:28px;margin:8px 0}
+nav{display:flex;gap:16px;margin:16px 0;flex-wrap:wrap}a{color:#284fc7}section{background:white;border:1px solid #dbe2ed;border-radius:12px;padding:24px;margin:20px 0}
+h2{font-size:22px;margin:0 0 12px}p{color:#495a72}table{border-collapse:collapse;width:100%;font-size:15px}
+th,td{border-bottom:1px solid #dbe2ed;padding:12px 8px;text-align:left}th{background:#f1f5fb}
+pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#111c30;color:#eef5ff;border-radius:8px;padding:18px;font:13px/1.6 ui-monospace,monospace}
+.small{font-size:14px}.ok{color:#087d4d;font-weight:700}img{max-width:100%;border:1px solid #e2e8f0}code{font-family:ui-monospace,monospace}
+</style><header><h1>MovieLog Infra — 실제 실행 증빙</h1>
+<p>공식 측정 도구의 export JSON과 AWS CLI·SSM 실행 로그를 표시하는 제출용 뷰어입니다.</p>
+<nav><a href="#summary">측정 비교</a><a href="#fault">실패·롤백</a><a href="#checks">테스트</a><a href="#security">설정·권한</a><a href="#cleanup">정리</a></nav></header><main>
+<section id="summary"><h2>단일 배포 → 무중단 배포</h2>
+<table><thead><tr><th>측정</th><th>총 요청</th><th>실패</th><th>실패율</th><th>순단</th><th>다운타임</th><th>p95</th><th>dropped</th></tr></thead><tbody><tr><td>단일 배포</td><td>1,200</td><td>37</td><td>3.08%</td><td>1</td><td>3,799 ms</td><td>318 ms</td><td>0</td></tr><tr><td>무중단 배포</td><td>2,400</td><td>0</td><td>0.00%</td><td>0</td><td>0 ms</td><td>290 ms</td><td>0</td></tr><tr><td>실패 배포·롤백</td><td>3,126</td><td>0</td><td>0.00%</td><td>0</td><td>0 ms</td><td>333 ms</td><td>0</td></tr></tbody></table>
+<p class="small">공통: GET /health · 10 RPS · 요청 제한 5초 · baseline 15초 · 연속 실패 3건 이상을 순단으로 판정.
+단일 배포 120초, 무중단 배포 240초. 실패·롤백은 정상 복구 후 30초를 추가 관측하고 약 313초에 종료했습니다.</p>
+<p class="small">모든 최종 측정의 baseline 실패율 0, warnings 없음. 해당 측정 구간의 관측값입니다.</p>
+<a href="before.json">before 원본 JSON</a> · <a href="after.json">after 원본 JSON</a> · <a href="fault-rollback.json">실패·롤백 원본 JSON</a>
+</section>
+<section id="fault"><h2>선택 미션 — HTTP 500 배포 중단과 롤백</h2>
+<p>실제 SSM 로그의 관련 행 발췌입니다. 첫 서버 실패 후 다음 서버 배포를 중단하고, 공개 서비스의 200 응답을 확인한 뒤 정상 이미지로 복구했습니다.</p>
+<pre>DRAIN i-0252e3362f9987d4a
+SWAP i-0252e3362f9987d4a
+SSM command 4ff40574-3a72-4e5c-ad80-25588a64fe2a on i-0252e3362f9987d4a
+STOPPED: next instance was not touched; launch image pointer restored. Explicit rollback is required for the failed node.
+EXPECTED deployment failure: SSM command failed: Failed; inspect command 4ff40574-3a72-4e5c-ad80-25588a64fe2a
+SSM command 74183499-140f-4a34-beee-d9bc0879aa19 on i-0252e3362f9987d4a
+{&quot;isSuccess&quot;:false,&quot;code&quot;:&quot;COMMON500&quot;,&quot;message&quot;:&quot;Service is not ready&quot;,&quot;result&quot;:null}HTTP 500
+Public service stayed available: 200 {&quot;status&quot;:&quot;ok&quot;,&quot;version&quot;:&quot;v0.1.2-26-11-22-1&quot;}
+ROLLBACK to known-good image
+DRAIN i-0252e3362f9987d4a
+SWAP i-0252e3362f9987d4a
+SSM command b5bacdd4-671c-42b8-a6d4-f02cb2a1d49f on i-0252e3362f9987d4a
+HEALTHY i-0252e3362f9987d4a
+DRAIN i-06828c9bd9203f43d
+SWAP i-06828c9bd9203f43d
+SSM command 6250d8fe-4791-4a24-94e8-b4ccdc50058b on i-06828c9bd9203f43d
+HEALTHY i-06828c9bd9203f43d
+ROLLING COMPLETE 189923011699.dkr.ecr.ap-southeast-2.amazonaws.com/movielog-infra-app:v0.1.2-26-11-22-1
+Observing 30 seconds of recovered service before ending the optional run.</pre><a href="fault-rollback-deployment.txt">원본 전체 배포 로그</a></section>
+<section id="checks"><h2>테스트·타입 검사·비밀값 검사</h2>
+<p class="ok">백엔드 테스트 / 타입 검사 / 배포 안전장치 테스트 / diff 검사: exit code 0</p>
+<h3>백엔드 테스트 실제 출력</h3><pre>✔ 내 정보 수정은 닉네임 2~12자만 허용, 작성자 주입과 빈 요청 거절 (3.002167ms)
+✔ 보호된 모든 쓰기는 인증 우선, 이전 memberId 기반 쓰기 경로는 제거 (2.29925ms)
+✔ 소유자는 토큰으로 결정하고 쿼리 memberId 조작을 사용하지 않음 (0.978875ms)
+✔ JWT 설정은 비밀키 누락·짧은 키·잘못된 만료를 시작 전에 거절 (0.300458ms)
+ℹ tests 73
+ℹ suites 0
+ℹ pass 73
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2253.340958</pre>
+<h3>배포·정리 안전장치 단위 테스트 실제 출력</h3><pre>ROLLING COMPLETE lab/repo:new
+test_cleanup_refuses_a_different_account (test_manage.RollingSafetyTests.test_cleanup_refuses_a_different_account) ... ok
+test_cleanup_refuses_a_different_region (test_manage.RollingSafetyTests.test_cleanup_refuses_a_different_region) ... ok
+test_failed_readiness_stops_before_second_node_and_restores_launch_pointer (test_manage.RollingSafetyTests.test_failed_readiness_stops_before_second_node_and_restores_launch_pointer) ... ok
+test_no_healthy_peer_is_never_drained (test_manage.RollingSafetyTests.test_no_healthy_peer_is_never_drained) ... ok
+test_rollback_recovers_failed_node_before_touching_healthy_peer (test_manage.RollingSafetyTests.test_rollback_recovers_failed_node_before_touching_healthy_peer) ... ok
+test_single_instance_cannot_run_rolling_deploy (test_manage.RollingSafetyTests.test_single_instance_cannot_run_rolling_deploy) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.001s
+
+OK</pre>
+<pre>{
+  &quot;backend-tests&quot;: {
+    &quot;exitCode&quot;: 0
+  },
+  &quot;backend-types&quot;: {
+    &quot;exitCode&quot;: 0
+  },
+  &quot;rolling-safety-tests&quot;: {
+    &quot;exitCode&quot;: 0
+  },
+  &quot;diff-check&quot;: {
+    &quot;exitCode&quot;: 0
+  },
+  &quot;secret-scan&quot;: {
+    &quot;generatedSecretsChecked&quot;: 3,
+    &quot;matchingFiles&quot;: [],
+    &quot;stateIgnoredByGit&quot;: true
+  }
+}</pre>
+<a href="backend-tests.txt">전체 백엔드 로그</a> · <a href="rolling-safety-tests.txt">전체 안전장치 테스트 로그</a>
+</section>
+<section id="security"><h2>실제 AWS 설정과 EC2 역할 검증</h2>
+<p>관측 시각: 2026-11-22T07:35:49.597435+00:00. 비밀값을 포함하는 파라미터 값은 표시하지 않습니다.</p>
+<pre>{
+  &quot;DBInstanceIdentifier&quot;: &quot;movielog-infra1&quot;,
+  &quot;Engine&quot;: &quot;mysql&quot;,
+  &quot;EngineVersion&quot;: &quot;8.4.11&quot;,
+  &quot;DBInstanceStatus&quot;: &quot;available&quot;,
+  &quot;DBInstanceClass&quot;: &quot;db.t4g.micro&quot;,
+  &quot;AllocatedStorage&quot;: 20,
+  &quot;MultiAZ&quot;: false,
+  &quot;PubliclyAccessible&quot;: false,
+  &quot;StorageEncrypted&quot;: true,
+  &quot;BackupRetentionPeriod&quot;: 0,
+  &quot;MonitoringInterval&quot;: 0
+}</pre>
+<h3>파라미터 이름·타입</h3><pre>[
+  {
+    &quot;name&quot;: &quot;/umc/app/db-host&quot;,
+    &quot;type&quot;: &quot;String&quot;
+  },
+  {
+    &quot;name&quot;: &quot;/umc/app/db-name&quot;,
+    &quot;type&quot;: &quot;String&quot;
+  },
+  {
+    &quot;name&quot;: &quot;/umc/app/db-password&quot;,
+    &quot;type&quot;: &quot;SecureString&quot;
+  },
+  {
+    &quot;name&quot;: &quot;/umc/app/db-user&quot;,
+    &quot;type&quot;: &quot;String&quot;
+  },
+  {
+    &quot;name&quot;: &quot;/umc/app/image&quot;,
+    &quot;type&quot;: &quot;String&quot;
+  },
+  {
+    &quot;name&quot;: &quot;/umc/app/jwt-secret&quot;,
+    &quot;type&quot;: &quot;SecureString&quot;
+  }
+]</pre>
+<h3>각 서버의 실제 이미지·헬스·역할·허용/거절 결과</h3><pre>Image=189923011699.dkr.ecr.ap-southeast-2.amazonaws.com/movielog-infra-app:v0.1.2-26-11-22-1 Status=running Health=healthy User=node
+{&quot;status&quot;:&quot;ok&quot;,&quot;version&quot;:&quot;v0.1.2-26-11-22-1&quot;}
+HTTP 200
+status: done
+time: Sat, 21 Nov 2026 18:02:14 +0000
+detail:
+DataSourceEc2
+arn:aws:sts::189923011699:assumed-role/movielog-infra1/i-0252e3362f9987d4a
+/umc/app/image
+Outside-prefix access: DENIED
+
+
+Image=189923011699.dkr.ecr.ap-southeast-2.amazonaws.com/movielog-infra-app:v0.1.2-26-11-22-1 Status=running Health=healthy User=node
+{&quot;status&quot;:&quot;ok&quot;,&quot;version&quot;:&quot;v0.1.2-26-11-22-1&quot;}
+HTTP 200
+status: done
+time: Sat, 21 Nov 2026 18:03:28 +0000
+detail:
+DataSourceEc2
+arn:aws:sts::189923011699:assumed-role/movielog-infra1/i-06828c9bd9203f43d
+/umc/app/image
+Outside-prefix access: DENIED
+</pre>
+<a href="aws-configuration.json">원본 AWS 구성 JSON</a></section>
+<section id="cleanup"><h2>실습 리소스 정리 확인</h2><pre>{
+  &quot;checkedAt&quot;: &quot;2026-11-22T07:44:41.092998+00:00&quot;,
+  &quot;region&quot;: &quot;ap-southeast-2&quot;,
+  &quot;activeLabEC2&quot;: 0,
+  &quot;labRDS&quot;: 0,
+  &quot;labALB&quot;: 0,
+  &quot;labEBSVolumes&quot;: 0,
+  &quot;labALBPublicIPs&quot;: 0,
+  &quot;temporarySecretsRemovedFromLocalState&quot;: true,
+  &quot;defaultVpcAndSubnetsPreserved&quot;: true
+}</pre>
+<p class="small">기본 VPC·서브넷과 AWS 서비스 연결 역할은 유지합니다. 이번 실습용 리소스만 정리합니다.</p></section>
+</main></html>
