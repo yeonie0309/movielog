@@ -1,0 +1,3 @@
+# Keep original CLI output intact; code and documentation keep normal checks.
+evidence/week9-frontend/*.txt -whitespace
+evidence/week9-frontend/interrupted-attempts/*.txt -whitespace

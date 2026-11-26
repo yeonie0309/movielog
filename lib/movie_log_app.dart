@@ -5,6 +5,9 @@ import 'data/token_storage.dart';
 import 'data/services/auth_api_service.dart';
 import 'view_models/auth_view_model.dart';
 import 'core/network/auth_interceptor.dart';
+import 'core/session/session_guard.dart';
+import 'core/session/auth_session_bridge.dart';
+import 'data/services/favorite_api_service.dart';
 
 import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
@@ -35,11 +38,17 @@ class MovieLogApp extends StatefulWidget {
     this.authViewModel,
     this.tokenStorage,
     this.authenticatedRatingApiService,
+    this.favoriteApiService,
+    this.movieRecordApiService,
+    this.movieSearchService,
   });
 
   final AuthViewModel? authViewModel;
   final TokenStorage? tokenStorage;
   final AuthenticatedRatingApiService? authenticatedRatingApiService;
+  final FavoriteApiService? favoriteApiService;
+  final MovieRecordApiService? movieRecordApiService;
+  final MovieSearchService? movieSearchService;
   final GoRouter? routerConfig;
   final MovieCatalogService? catalogService;
   final MemberApiService? memberApiService;
@@ -59,6 +68,8 @@ class _MovieLogAppState extends State<MovieLogApp> {
   late final AuthViewModel? _auth;
   late final GoRouter _router;
   late final AuthenticatedRatingApiService _tokenRatings;
+  final _session = SessionGuard();
+  AuthSessionBridge? _bridge;
   @override
   void initState() {
     super.initState();
@@ -68,11 +79,12 @@ class _MovieLogAppState extends State<MovieLogApp> {
     _auth = enabled
         ? widget.authViewModel ??
               AuthViewModel(
-                AuthApiService(_publicClient, _authClient),
+                AuthApiService(_publicClient, _authClient, version: 'v8'),
                 widget.tokenStorage ?? SecureTokenStorage(),
               )
         : null;
     if (_auth != null) {
+      _bridge = AuthSessionBridge(_auth, _session);
       _authClient.interceptors.add(
         AuthInterceptor(
           _auth.storage,
@@ -83,10 +95,14 @@ class _MovieLogAppState extends State<MovieLogApp> {
     }
     _memberClient = _auth == null
         ? createMovieLogClient()
-        : (createWorkbookClient()..options.baseUrl += '/v7');
+        : (createWorkbookClient()..options.baseUrl += '/v8');
     _tokenRatings =
         widget.authenticatedRatingApiService ??
-        AuthenticatedRatingApiService(_publicClient, _authClient);
+        AuthenticatedRatingApiService(
+          _publicClient,
+          _authClient,
+          version: 'v8',
+        );
     _router =
         widget.routerConfig ?? AppRouter.create(useTmdb: true, auth: _auth);
     _auth?.restoreSession();
@@ -94,6 +110,8 @@ class _MovieLogAppState extends State<MovieLogApp> {
 
   @override
   void dispose() {
+    _bridge?.dispose();
+    _session.dispose();
     if (widget.routerConfig == null) _router.dispose();
     if (widget.authViewModel == null) _auth?.dispose();
     _publicClient.close();
@@ -106,6 +124,16 @@ class _MovieLogAppState extends State<MovieLogApp> {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
+        ChangeNotifierProvider<SessionGuard>.value(value: _session),
+        Provider<FavoriteApiService>(
+          create: (_) =>
+              widget.favoriteApiService ?? FavoriteApiService(_authClient),
+        ),
+        Provider<MovieRecordApiService>(
+          create: (_) =>
+              widget.movieRecordApiService ??
+              MovieRecordApiService(_authClient),
+        ),
         ChangeNotifierProvider(
           create: (_) => widget.learningSession ?? LearningMemberSession(),
         ),
@@ -122,7 +150,7 @@ class _MovieLogAppState extends State<MovieLogApp> {
               widget.memberCheckService ??
               SignUpService(
                 context.read(),
-                version: _auth == null ? 'v6' : 'v7',
+                version: _auth == null ? 'v6' : 'v8',
               ),
         ),
         Provider<RatingApiService>(
@@ -146,6 +174,17 @@ class _MovieLogAppState extends State<MovieLogApp> {
             final catalog = context.read<MovieCatalogService>();
             return catalog is MovieDetailService
                 ? catalog as MovieDetailService
+                : const MissingTokenMovieService();
+          },
+        ),
+        Provider<MovieSearchService>(
+          create: (context) {
+            if (widget.movieSearchService != null) {
+              return widget.movieSearchService!;
+            }
+            final catalog = context.read<MovieCatalogService>();
+            return catalog is MovieSearchService
+                ? catalog as MovieSearchService
                 : const MissingTokenMovieService();
           },
         ),

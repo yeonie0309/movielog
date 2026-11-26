@@ -1,0 +1,28 @@
+00:00 +0: loading /Users/yeonie/UMC11/movielog/integration_test/week9_evidence_test.dart
+Running Gradle task 'assembleDebug'...                          
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by net.rubygrapefruit.platform.internal.NativeLibraryLoader in an unnamed module (file:/Users/yeonie/.gradle/wrapper/dists/gradle-9.3.1-all/9ot9r568e8zfvvd4mn8rbu1j0/gradle-9.3.1/lib/native-platform-0.22-milestone-29.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+Running Gradle task 'assembleDebug'...                             13.8s
+✓ Built build/app/outputs/flutter-apk/app-debug.apk
+Installing build/app/outputs/flutter-apk/app-debug.apk...           4.2s
+00:00 +0: 9주차 Android states 실제 화면 검증
+WEEK9_CAPTURE=10-favorites-empty-fixture
+WEEK9_CAPTURE=11-favorites-error-injected
+WEEK9_CAPTURE=12-favorites-partial-injected
+WEEK9_CAPTURE=13-favorites-card-recovered-fixture
+WEEK9_VIDEO_START=05-controlled-conflicts
+WEEK9_CAPTURE=21-conflict409-reconciled-injected
+WEEK9_CAPTURE=22-conflict404-reconciled-injected
+WEEK9_CAPTURE=23-timeout-icon-retained-injected
+WEEK9_VIDEO_STOP=05-controlled-conflicts
+WEEK9_VIDEO_START=06-generation-isolation
+WEEK9_CAPTURE=25-search-generation-injected
+WEEK9_CAPTURE=26-genre-generation-injected
+WEEK9_VIDEO_STOP=06-generation-isolation
+WEEK9_CAPTURE=20-invalid-token-cleared-actual
+WEEK9_RESULT={"passed":true,"phase":"states","source":"controlled fixtures plus actual invalid-token API","emptyErrorPartialRetry":true,"conflict409404Reconciled":true,"requests":[{"method":"GET","path":"/v8/favorites","status":401,"response":{"isSuccess":false,"code":"AUTH401_3","message":"유효하지 않은 토큰입니다.","result":null}}]}
+01:23 +1: (tearDownAll)
+01:24 +1: All tests passed!

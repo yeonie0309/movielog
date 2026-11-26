@@ -11,6 +11,10 @@ import '../models/movie.dart';
 import '../theme/app_colors.dart';
 import '../widgets/movie/movie_poster.dart';
 import '../widgets/movie/rating_dialog.dart';
+import '../widgets/movie/favorite_button.dart';
+import '../view_models/favorite_detail_view_model.dart';
+import '../data/services/favorite_api_service.dart';
+import '../core/network/api_error.dart';
 
 class MovieDetailScreen extends StatefulWidget {
   const MovieDetailScreen({
@@ -53,10 +57,55 @@ class _MovieDetailScreenState extends State<MovieDetailScreen> {
   Future<void> _openRatingDialog() async {
     if (widget.serverLinked) {
       final vm = context.read<MovieDetailViewModel>();
+      final favorite = context.read<FavoriteDetailViewModel?>();
+      final currentAuth = context.read<AuthViewModel?>();
+      final version = currentAuth?.sessionVersion;
       final saved = await showDialog<bool>(
         context: context,
         barrierDismissible: false,
         builder: (_) => RatingDialog(
+          showAddToFavorite: favorite?.isFavorite == false,
+          onRecordSubmit: favorite == null
+              ? null
+              : (score, comment, addToFavorites) async {
+                  try {
+                    if (favorite.isFavorite == true) {
+                      await vm.createRating(
+                        score: score,
+                        comment: comment,
+                        preserveApiError: true,
+                      );
+                    } else {
+                      await vm.createMovieRecord(
+                        context.read<MovieRecordApiService>(),
+                        score: score,
+                        comment: comment,
+                        addToFavorites: addToFavorites,
+                      );
+                    }
+                    if (currentAuth == null ||
+                        !currentAuth.isCurrent(version!)) {
+                      throw const SessionChangedException();
+                    }
+                    await favorite.load();
+                  } catch (error) {
+                    if (currentAuth == null ||
+                        !currentAuth.isCurrent(version!)) {
+                      throw const SessionChangedException();
+                    }
+                    if (const {
+                      'RATING409_1',
+                      'FAVORITE409_1',
+                      'MEMBER404_1',
+                    }.contains(apiErrorCode(error))) {
+                      await favorite.load();
+                      throw RatingDialogClosed(
+                        apiErrorMessage(error, '등록 상태가 변경되었습니다. 다시 확인해 주세요.'),
+                      );
+                    }
+                    rethrow;
+                  }
+                },
           onSubmit: (score, comment) async {
             try {
               await vm.createRating(score: score, comment: comment);
@@ -75,11 +124,8 @@ class _MovieDetailScreenState extends State<MovieDetailScreen> {
         ),
       );
       if (!mounted || saved != true) return;
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
-          content: Text('평점을 등록했습니다. 마이페이지의 "내가 등록한 평점"에서 확인할 수 있습니다.'),
-        ),
-      );
+      ScaffoldMessenger.of(context)
+          .showSnackBar(const SnackBar(content: Text('평점을 저장했습니다.')));
       return;
     }
     final rating = await showDialog<double>(
@@ -122,6 +168,9 @@ class _MovieDetailScreenState extends State<MovieDetailScreen> {
         ?.sessionRatings
         .where((rating) => rating.movieId == movie.id)
         .firstOrNull;
+    final favoriteState = widget.serverLinked
+        ? context.watch<FavoriteDetailViewModel?>()
+        : null;
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
@@ -131,17 +180,21 @@ class _MovieDetailScreenState extends State<MovieDetailScreen> {
         ),
         title: const Text('영화 상세'),
         actions: [
-          IconButton(
-            key: const Key('favorite-button'),
-            tooltip: _isFavorite ? '즐겨찾기 삭제' : '즐겨찾기 추가',
-            onPressed: _toggleFavorite,
-            icon: Icon(
-              _isFavorite
-                  ? Icons.bookmark_rounded
-                  : Icons.bookmark_border_rounded,
-              color: _isFavorite ? AppColors.violet : null,
+          if (widget.serverLinked &&
+              context.watch<FavoriteDetailViewModel?>() != null)
+            const FavoriteButton()
+          else
+            IconButton(
+              key: const Key('favorite-button'),
+              tooltip: _isFavorite ? '즐겨찾기 삭제' : '즐겨찾기 추가',
+              onPressed: _toggleFavorite,
+              icon: Icon(
+                _isFavorite
+                    ? Icons.bookmark_rounded
+                    : Icons.bookmark_border_rounded,
+                color: _isFavorite ? AppColors.violet : null,
+              ),
             ),
-          ),
         ],
       ),
       body: SafeArea(
@@ -214,11 +267,15 @@ class _MovieDetailScreenState extends State<MovieDetailScreen> {
                   FilledButton.icon(
                     key: const Key('open-rating-dialog-button'),
                     onPressed:
-                        widget.serverLinked &&
-                            context.watch<AuthViewModel?>()?.status !=
-                                AuthStatus.signedIn &&
-                            context.watch<LearningMemberSession>().memberId ==
-                                null
+                        favoriteState != null &&
+                            (favoriteState.busy ||
+                                favoriteState.isFavorite == null)
+                        ? null
+                        : widget.serverLinked &&
+                              context.watch<AuthViewModel?>()?.status !=
+                                  AuthStatus.signedIn &&
+                              context.watch<LearningMemberSession>().memberId ==
+                                  null
                         ? null
                         : currentRating != null
                         ? () => context.push('/my/ratings')

@@ -15,6 +15,19 @@ Dio createTmdbClient(String accessToken) {
       },
     ),
   );
+  dio.interceptors.add(
+    InterceptorsWrapper(
+      onRequest: (options, handler) {
+        final uri = options.uri;
+        if (uri.scheme != 'https' ||
+            uri.host != 'api.themoviedb.org' ||
+            uri.port != 443) {
+          options.headers.remove('Authorization');
+        }
+        handler.next(options);
+      },
+    ),
+  );
   if (kDebugMode) dio.interceptors.add(TmdbLoggingInterceptor());
   return dio;
 }

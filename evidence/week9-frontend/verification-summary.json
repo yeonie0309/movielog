@@ -1,0 +1,32 @@
+{
+  "flutterTests": 109,
+  "week9Tests": 15,
+  "androidScenarios": 2,
+  "actualLiveRequests": 43,
+  "actualApiRequests": 44,
+  "pngScreenshots": 26,
+  "videos": 6,
+  "analyzeErrors": 0,
+  "analyzeWarnings": 0,
+  "existingWeek0Infos": 2,
+  "fixtureMemberIds": [
+    23,
+    24
+  ],
+  "fixtureAccountsCreatedAcrossAttempts": 12,
+  "finalFavoritesAndRatingsRemoved": true,
+  "tokensAbsentFromChangedText": true,
+  "envUntracked": true,
+  "manualUserCheckPending": true,
+  "iOSVerified": false,
+  "controlledFailures": [
+    "next-page transport",
+    "search transport",
+    "favorites list",
+    "one movie",
+    "409/404 conflict"
+  ],
+  "actualAuth401": "AUTH401_3",
+  "originalNotionEdited": false,
+  "umcSubmitted": false
+}

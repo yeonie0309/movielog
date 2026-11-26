@@ -59,6 +59,13 @@ class AuthMyPageScreen extends StatelessWidget {
               '현재 API는 로그인한 회원의 전체 평점 조회를 제공하지 않습니다. 재시작하면 이 목록은 비워집니다.',
             ),
           ),
+          ListTile(
+            key: const Key('open-my-favorites'),
+            leading: const Icon(Icons.bookmark_border),
+            title: const Text('내 즐겨찾기'),
+            trailing: const Icon(Icons.chevron_right),
+            onTap: member == null ? null : () => context.push('/my/favorites'),
+          ),
           OutlinedButton(
             onPressed: () => context.push('/member-ratings'),
             child: const Text('공개 회원별 평점 조회'),

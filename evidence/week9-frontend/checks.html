@@ -1,0 +1,22 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><title>Week 9 checks</title><style>body{margin:0;background:#edf0f6;color:#172033;font:16px/1.55 -apple-system,BlinkMacSystemFont,sans-serif}
+main{max-width:1060px;margin:24px auto;padding:30px;background:white;border-radius:16px}h1{font-size:28px;margin:0 0 12px}h2{font-size:19px;margin:22px 0 8px}p{color:#536078}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f4f6fb;border-left:4px solid #745ab5;padding:14px;font:14px/1.5 ui-monospace,Menlo,monospace}nav a{margin-right:20px}</style><main><nav><a href="checks.html">실행 검사</a><a href="network.html">실제 요청</a><a href="safety.html">보안·정리</a></nav><h1>MovieLog · Week 9 실행 검증</h1><p>실제 CLI 출력·Android 테스트 결과를 읽는 뷰어. 터미널 화면을 재현한 이미지가 아닙니다.</p><h2>flutter analyze --no-pub --no-fatal-infos</h2><pre>Analyzing movielog...
+
+   info • Don&#x27;t invoke &#x27;print&#x27; in production code. Try using a logging framework • lib/week0/dart_practice.dart:16:5 • avoid_print
+   info • Don&#x27;t invoke &#x27;print&#x27; in production code. Try using a logging framework • lib/week0/dart_practice.dart:21:3 • avoid_print
+
+2 issues found. (ran in 3.6s)</pre><h2>flutter test --no-pub --reporter expanded</h2><pre>00:03 +104: /Users/yeonie/UMC11/movielog/test/week4_async_movie_list_test.dart: 선택한 장르를 저장하고 다시 생성할 때 복원한다
+00:03 +105: /Users/yeonie/UMC11/movielog/test/widget_test.dart: 별점을 선택하면 평점 저장 버튼이 활성화된다
+00:03 +106: /Users/yeonie/UMC11/movielog/test/week6_frontend_test.dart: 마이페이지 자식 평점 화면·뒤로가기·하단 탭 없음·null 후기 숨김
+00:03 +107: /Users/yeonie/UMC11/movielog/test/week6_frontend_test.dart: 마이페이지 자식 평점 화면·뒤로가기·하단 탭 없음·null 후기 숨김
+00:03 +108: /Users/yeonie/UMC11/movielog/test/week6_frontend_test.dart: 마이페이지 자식 평점 화면·뒤로가기·하단 탭 없음·null 후기 숨김
+00:04 +109: All tests passed!</pre><h2>Android 실제 실행</h2><pre>live: 03:01 +1: All tests passed!
+원본 result-live.json passed=True
+states: 01:24 +1: All tests passed!
+원본 result-states.json passed=True</pre><h2>요약</h2><pre>{
+  &quot;flutterTests&quot;: 109,
+  &quot;week9Tests&quot;: 15,
+  &quot;androidScenarios&quot;: 2,
+  &quot;analyzeErrors&quot;: 0,
+  &quot;analyzeWarnings&quot;: 0,
+  &quot;existingWeek0Infos&quot;: 2
+}</pre></main></html>
