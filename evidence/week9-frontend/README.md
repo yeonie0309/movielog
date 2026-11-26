@@ -1,5 +1,9 @@
 # 9주차 프론트 실행 증빙
 
+PR: https://github.com/yeonie0309/movielog/pull/20
+
+30-pr-created.jpg는 실제 GitHub PR 생성 화면이며 네 사진이 width260의 2×2 표로 로드된 것을 확인했다.
+
 원본 「9주차 - 즐겨찾기 연동과 검색, 페이지네이션」의 **스터디 인증·Guided/Required·Challenge·제출 양식**에 맞춰 준비했다. 원본 Notion과 UMC 제출은 수정하지 않았다.
 
 ## 실제 서버·Android 화면

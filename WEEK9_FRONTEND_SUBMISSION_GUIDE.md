@@ -2,6 +2,12 @@
 
 원본: 「9주차 - 즐겨찾기 연동과 검색, 페이지네이션」
 
+PR: https://github.com/yeonie0309/movielog/pull/20
+
+브랜치: codex/week-9-frontend → feature/week-8-backend
+
+검증: Flutter 109개(신규15), Android 통합 실행2개, 실제 요청44건 통과. analyze 오류·경고0, 기존 week0 info2건. Android 기본 main.dart 실행도 확인했다.
+
 원본 Notion은 수정하지 않았고 UMC에 제출하지 않았다. 아래 문구는 실제 작업 기록 초안이며, 본인의 이해 여부·스터디 참석·사람이 직접 수행하는 수동 검증은 직접 확인한다.
 
 ## 1. 스터디 인증 — 원본 순서대로
@@ -125,7 +131,9 @@
 
 ## 7. 제출 양식 — 원본 필드 유지
 
-PR 링크: PR 생성 후 이 가이드에 기록한 링크를 넣는다.
+PR 링크: https://github.com/yeonie0309/movielog/pull/20
+
+PR 생성 증빙: 30-pr-created.jpg
 
 영화 상세 즐겨찾기 등록·해제 영상: 01-favorite-roundtrip.mp4
 
