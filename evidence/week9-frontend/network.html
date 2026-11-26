@@ -1,0 +1,71 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><title>Week 9 network</title><style>body{margin:0;background:#edf0f6;color:#172033;font:16px/1.55 -apple-system,BlinkMacSystemFont,sans-serif}
+main{max-width:1060px;margin:24px auto;padding:30px;background:white;border-radius:16px}h1{font-size:28px;margin:0 0 12px}h2{font-size:19px;margin:22px 0 8px}p{color:#536078}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f4f6fb;border-left:4px solid #745ab5;padding:14px;font:14px/1.5 ui-monospace,Menlo,monospace}nav a{margin-right:20px}</style><main><nav><a href="checks.html">실행 검사</a><a href="network.html">실제 요청</a><a href="safety.html">보안·정리</a></nav><h1>MovieLog · 실제 v8 / TMDB 요청</h1><p>result-live.json 원본. Authorization 값·비밀번호 제외. bearerAttached는 부착 여부만 의미합니다.</p><h2>실제 성공 요청 흐름</h2><pre>GET    /v8/favorites/550                   → 200
+POST   /v8/favorites                       → 201
+GET    /v8/favorites/550                   → 200
+GET    /v8/favorites                       → 200
+GET    /v8/favorites/550                   → 200
+DELETE /v8/favorites/550                   → 200
+GET    /v8/favorites                       → 200
+GET    /v8/favorites/550                   → 200
+GET    /discover/movie                     → 200
+GET    /discover/movie                     → 200
+GET    /discover/movie                     → 200
+GET    /search/movie                       → 200
+GET    /v8/favorites/414906                → 200
+GET    /search/movie                       → 200
+GET    /search/movie                       → 200
+GET    /search/movie                       → 200
+GET    /search/movie                       → 200
+GET    /v8/favorites/155                   → 200
+POST   /v8/movie-records                   → 201
+GET    /v8/favorites/155                   → 200
+GET    /v8/favorites/155                   → 200
+GET    /v8/favorites                       → 200
+GET    /v8/favorites                       → 200
+GET    /v8/favorites                       → 200
+DELETE /v8/favorites/155                   → 200
+GET    /v8/favorites                       → 200</pre><h2>실제 통합 저장</h2><pre>{
+  &quot;method&quot;: &quot;POST&quot;,
+  &quot;path&quot;: &quot;/v8/movie-records&quot;,
+  &quot;query&quot;: {},
+  &quot;status&quot;: 201,
+  &quot;bearerAttached&quot;: true,
+  &quot;body&quot;: {
+    &quot;movieId&quot;: 155,
+    &quot;score&quot;: 4,
+    &quot;comment&quot;: &quot;9주차 통합 저장 검증&quot;,
+    &quot;addToFavorites&quot;: true
+  },
+  &quot;response&quot;: {
+    &quot;isSuccess&quot;: true,
+    &quot;code&quot;: &quot;COMMON201&quot;,
+    &quot;message&quot;: &quot;영화 기록을 저장했습니다.&quot;,
+    &quot;result&quot;: {
+      &quot;rating&quot;: {
+        &quot;ratingId&quot;: 9,
+        &quot;movieId&quot;: 155,
+        &quot;score&quot;: 4,
+        &quot;comment&quot;: &quot;9주차 통합 저장 검증&quot;,
+        &quot;createdAt&quot;: &quot;2026-11-26T18:07:51.309Z&quot;,
+        &quot;updatedAt&quot;: &quot;2026-11-26T18:07:51.309Z&quot;
+      },
+      &quot;favorite&quot;: {
+        &quot;favoriteId&quot;: 43,
+        &quot;movieId&quot;: 155,
+        &quot;createdAt&quot;: &quot;2026-11-26T18:07:51.311Z&quot;
+      }
+    }
+  }
+}</pre><h2>실제 무효 토큰 응답</h2><pre>[
+  {
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;path&quot;: &quot;/v8/favorites&quot;,
+    &quot;status&quot;: 401,
+    &quot;response&quot;: {
+      &quot;isSuccess&quot;: false,
+      &quot;code&quot;: &quot;AUTH401_3&quot;,
+      &quot;message&quot;: &quot;유효하지 않은 토큰입니다.&quot;,
+      &quot;result&quot;: null
+    }
+  }
+]</pre></main></html>

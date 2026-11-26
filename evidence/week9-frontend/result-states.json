@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "phase": "states",
+  "source": "controlled fixtures plus actual invalid-token API",
+  "emptyErrorPartialRetry": true,
+  "conflict409404Reconciled": true,
+  "requests": [
+    {
+      "method": "GET",
+      "path": "/v8/favorites",
+      "status": 401,
+      "response": {
+        "isSuccess": false,
+        "code": "AUTH401_3",
+        "message": "유효하지 않은 토큰입니다.",
+        "result": null
+      }
+    }
+  ]
+}

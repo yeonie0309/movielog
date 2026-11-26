@@ -4,6 +4,12 @@ import '../../theme/app_colors.dart';
 import 'movie_rating_input.dart';
 import '../../data/models/rating_request.dart';
 import '../../widgets/movielog_button.dart';
+import '../../core/network/api_error.dart';
+
+class RatingDialogClosed implements Exception {
+  const RatingDialogClosed(this.message);
+  final String message;
+}
 
 class RatingDialog extends StatefulWidget {
   const RatingDialog({
@@ -12,6 +18,8 @@ class RatingDialog extends StatefulWidget {
     this.initialRating = 0,
     this.initialComment,
     this.onSubmit,
+    this.onRecordSubmit,
+    this.showAddToFavorite = false,
   });
 
   // Legacy practice metadata; server writes use the ViewModel's TMDB movie ID.
@@ -19,6 +27,9 @@ class RatingDialog extends StatefulWidget {
   final double initialRating;
   final String? initialComment;
   final Future<void> Function(int score, String? comment)? onSubmit;
+  final Future<void> Function(int score, String? comment, bool addToFavorites)?
+  onRecordSubmit;
+  final bool showAddToFavorite;
 
   @override
   State<RatingDialog> createState() => _RatingDialogState();
@@ -29,6 +40,9 @@ class _RatingDialogState extends State<RatingDialog> {
   late final TextEditingController _comment;
   bool _isSubmitting = false;
   String? _error;
+  bool _addToFavorites = false;
+  bool get _serverLinked =>
+      widget.onSubmit != null || widget.onRecordSubmit != null;
 
   @override
   void initState() {
@@ -46,7 +60,7 @@ class _RatingDialogState extends State<RatingDialog> {
   Future<void> _save() async {
     if (_isSubmitting || _rating == 0) return;
     final submit = widget.onSubmit;
-    if (submit == null) {
+    if (!_serverLinked) {
       Navigator.pop(context, _rating);
       return;
     }
@@ -56,10 +70,18 @@ class _RatingDialogState extends State<RatingDialog> {
       _error = null;
     });
     try {
-      await submit(
-        validateServerScore(_rating),
-        normalizedComment(_comment.text),
-      );
+      if (widget.onRecordSubmit != null) {
+        await widget.onRecordSubmit!(
+          validateServerScore(_rating),
+          normalizedComment(_comment.text),
+          widget.showAddToFavorite && _addToFavorites,
+        );
+      } else {
+        await submit!(
+          validateServerScore(_rating),
+          normalizedComment(_comment.text),
+        );
+      }
       if (!mounted) return;
       // Rebuild PopScope before a successful programmatic pop.
       setState(() => _isSubmitting = false);
@@ -68,6 +90,18 @@ class _RatingDialogState extends State<RatingDialog> {
       });
     } catch (error) {
       if (!mounted) return;
+      if (error is RatingDialogClosed || error is SessionChangedException) {
+        setState(() => _isSubmitting = false);
+        WidgetsBinding.instance.addPostFrameCallback((_) {
+          if (!mounted) return;
+          final messenger = ScaffoldMessenger.of(context);
+          Navigator.pop(context, false);
+          if (error is RatingDialogClosed) {
+            messenger.showSnackBar(SnackBar(content: Text(error.message)));
+          }
+        });
+        return;
+      }
       setState(() {
         _isSubmitting = false;
         _error = error is StateError
@@ -104,11 +138,11 @@ class _RatingDialogState extends State<RatingDialog> {
                   const SizedBox(height: 20),
                   MovieRatingInput(
                     rating: _rating,
-                    integerOnly: widget.onSubmit != null,
+                    integerOnly: _serverLinked,
                     enabled: !_isSubmitting,
                     onRatingUpdate: (value) => setState(() => _rating = value),
                   ),
-                  if (widget.onSubmit != null) ...[
+                  if (_serverLinked) ...[
                     const SizedBox(height: 16),
                     TextField(
                       key: const Key('rating-comment-field'),
@@ -119,6 +153,18 @@ class _RatingDialogState extends State<RatingDialog> {
                       maxLines: 4,
                       decoration: const InputDecoration(labelText: '코멘트 (선택)'),
                     ),
+                    if (widget.showAddToFavorite)
+                      CheckboxListTile(
+                        key: const Key('add-to-favorites-checkbox'),
+                        contentPadding: EdgeInsets.zero,
+                        title: const Text('즐겨찾기에도 추가'),
+                        value: _addToFavorites,
+                        onChanged: _isSubmitting
+                            ? null
+                            : (value) => setState(
+                                () => _addToFavorites = value ?? false,
+                              ),
+                      ),
                     if (_error != null)
                       Text(
                         _error!,
@@ -142,7 +188,7 @@ class _RatingDialogState extends State<RatingDialog> {
                             ? null
                             : () => Navigator.pop(
                                 context,
-                                widget.onSubmit == null ? null : false,
+                                _serverLinked ? false : null,
                               ),
                         child: const Text('취소'),
                       ),

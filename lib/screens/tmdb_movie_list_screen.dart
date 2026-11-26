@@ -2,99 +2,99 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
 
-import '../theme/app_colors.dart';
-import '../view_models/movie_list_view_model.dart';
-import '../view_models/movie_load_status.dart';
-import '../view_models/tmdb_movie_mapper.dart';
-import '../widgets/movie/movie_grid.dart';
-import '../widgets/movie/movie_list_empty.dart';
-import '../widgets/movie/movie_list_error.dart';
-import '../widgets/movie/movie_list_loading.dart';
+import '../view_models/paged_movies_view_model.dart';
+import '../widgets/movie/paged_movie_results.dart';
 
-class TmdbMovieListScreen extends StatelessWidget {
+class TmdbMovieListScreen extends StatefulWidget {
   const TmdbMovieListScreen({super.key});
+  @override
+  State<TmdbMovieListScreen> createState() => _TmdbMovieListScreenState();
+}
+
+class _TmdbMovieListScreenState extends State<TmdbMovieListScreen> {
+  final _scroll = ScrollController();
+  bool _infinite = false;
+  void _next() {
+    if (!_infinite ||
+        !_scroll.hasClients ||
+        _scroll.position.extentAfter > 280) {
+      return;
+    }
+    final vm = context.read<PagedMoviesViewModel>();
+    if (vm.nextPageError == null) vm.loadNextPage();
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    _scroll.addListener(_next);
+  }
+
+  @override
+  void dispose() {
+    _scroll.removeListener(_next);
+    _scroll.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
+    final vm = context.watch<PagedMoviesViewModel>();
     return SafeArea(
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
-            padding: const EdgeInsets.fromLTRB(20, 16, 20, 8),
-            child: Consumer<MovieListViewModel>(
-              builder: (context, viewModel, child) => Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    '영화',
-                    style: Theme.of(context).textTheme.headlineMedium
-                        ?.copyWith(fontWeight: FontWeight.w800),
-                  ),
-                  Text(
-                    viewModel.isLoading
-                        ? '영화를 불러오는 중이에요.'
-                        : '${viewModel.movies.length}편의 영화를 둘러보세요.',
-                    style: Theme.of(context).textTheme.bodySmall,
-                  ),
-                ],
-              ),
+            padding: const EdgeInsets.fromLTRB(20, 8, 8, 0),
+            child: Row(
+              children: [
+                Text('영화', style: Theme.of(context).textTheme.headlineMedium),
+                const Spacer(),
+                IconButton(
+                  key: const Key('open-movie-search'),
+                  tooltip: '영화 검색',
+                  onPressed: () => context.push('/movies/search'),
+                  icon: const Icon(Icons.search),
+                ),
+              ],
             ),
           ),
           SizedBox(
             height: 52,
-            child: Consumer<MovieListViewModel>(
-              builder: (context, viewModel, child) => ListView.separated(
-                key: const Key('tmdb-genre-chips'),
-                scrollDirection: Axis.horizontal,
-                padding: const EdgeInsets.symmetric(horizontal: 16),
-                itemCount: viewModel.genres.length + 1,
-                separatorBuilder: (context, index) => const SizedBox(width: 8),
-                itemBuilder: (context, index) {
-                  final genre = index == 0 ? null : viewModel.genres[index - 1];
-                  final genreId = genre?.id;
-                  return FilterChip(
-                    key: Key('tmdb-genre-${genreId ?? 'all'}'),
-                    label: Text(genre?.name ?? '전체'),
-                    selected: viewModel.selectedGenreId == genreId,
-                    selectedColor: AppColors.violetContainer,
-                    onSelected: viewModel.isLoading
-                        ? null
-                        : (_) => context.read<MovieListViewModel>().selectGenre(
-                            genreId,
-                          ),
-                  );
-                },
-              ),
+            child: ListView.separated(
+              key: const Key('tmdb-genre-chips'),
+              scrollDirection: Axis.horizontal,
+              padding: const EdgeInsets.symmetric(horizontal: 16),
+              itemCount: vm.genres.length + 1,
+              separatorBuilder: (_, _) => const SizedBox(width: 8),
+              itemBuilder: (context, index) {
+                final genre = index == 0 ? null : vm.genres[index - 1];
+                return FilterChip(
+                  key: Key('tmdb-genre-${genre?.id.toString() ?? 'all'}'),
+                  label: Text(genre?.name ?? '전체'),
+                  selected: vm.genreId == genre?.id,
+                  onSelected: (_) {
+                    if (_scroll.hasClients) _scroll.jumpTo(0);
+                    vm.loadInitial(selectedGenre: genre?.id);
+                  },
+                );
+              },
             ),
           ),
+          SwitchListTile(
+            key: const Key('infinite-toggle'),
+            dense: true,
+            title: const Text('무한 스크롤'),
+            value: _infinite,
+            onChanged: (value) {
+              setState(() => _infinite = value);
+              if (value) _next();
+            },
+          ),
           Expanded(
-            child: Consumer<MovieListViewModel>(
-              builder: (context, viewModel, child) {
-                return switch (viewModel.status) {
-                  MovieLoadStatus.idle ||
-                  MovieLoadStatus.loading => const MovieListLoading(),
-                  MovieLoadStatus.empty => const MovieListEmpty(),
-                  MovieLoadStatus.error => MovieListError(
-                    message: viewModel.message ?? '영화를 불러오지 못했어요.',
-                    onRetry: () => context.read<MovieListViewModel>().retry(),
-                  ),
-                  MovieLoadStatus.success => MovieGrid(
-                    movies: viewModel.movies
-                        .map(
-                          (dto) => movieFromTmdb(dto, genres: viewModel.genres),
-                        )
-                        .toList(),
-                    onMovieTap: (movie) => context.push(
-                      '/movies/${movie.id}',
-                      extra: viewModel.movies.firstWhere(
-                        (dto) => dto.id == movie.id,
-                      ),
-                    ),
-                    onRefresh: () => context.read<MovieListViewModel>().retry(),
-                  ),
-                };
-              },
+            child: PagedMovieResults(
+              vm: vm,
+              controller: _scroll,
+              infinite: _infinite,
             ),
           ),
         ],

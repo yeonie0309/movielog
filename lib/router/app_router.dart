@@ -25,7 +25,12 @@ import '../screens/tmdb_home_screen.dart';
 import '../screens/tmdb_movie_list_screen.dart';
 import '../services/fake_movie_service.dart';
 import '../view_models/movie_home_view_model.dart';
-import '../view_models/movie_list_view_model.dart';
+import '../view_models/paged_movies_view_model.dart';
+import '../view_models/favorites_view_model.dart';
+import '../data/services/favorite_api_service.dart';
+import '../core/session/session_guard.dart';
+import '../screens/movie_search_screen.dart';
+import '../screens/favorites_screen.dart';
 import '../view_models/auth_view_model.dart';
 import '../screens/login_screen.dart';
 import '../screens/auth_my_page_screen.dart';
@@ -113,9 +118,12 @@ abstract final class AppRouter {
                   builder: (context, state) {
                     if (useTmdb) {
                       return ChangeNotifierProvider(
-                        create: (context) => MovieListViewModel(
-                          context.read<MovieCatalogService>(),
-                        )..loadInitial(),
+                        create: (context) =>
+                            PagedMoviesViewModel(
+                                context.read<MovieCatalogService>(),
+                              )
+                              ..loadGenres()
+                              ..loadInitial(),
                         child: const TmdbMovieListScreen(),
                       );
                     }
@@ -147,6 +155,47 @@ abstract final class AppRouter {
                       ? const MyPageScreen()
                       : const AuthMyPageScreen(),
                   routes: [
+                    if (auth != null)
+                      GoRoute(
+                        path: 'favorites',
+                        parentNavigatorKey: rootNavigatorKey,
+                        builder: (context, state) {
+                          final guard = context.watch<SessionGuard>();
+                          if (!guard.isSignedIn) {
+                            return Scaffold(
+                              appBar: AppBar(
+                                title: const Text('내 즐겨찾기'),
+                                centerTitle: true,
+                              ),
+                              body:
+                                  auth.memberStatus ==
+                                          MemberLoadStatus.loading ||
+                                      auth.memberStatus == MemberLoadStatus.idle
+                                  ? const Center(
+                                      child: CircularProgressIndicator(),
+                                    )
+                                  : Center(
+                                      child: TextButton(
+                                        onPressed: () =>
+                                            auth.loadMember(force: true),
+                                        child: const Text(
+                                          '회원 정보를 확인하지 못했습니다. 다시 시도',
+                                        ),
+                                      ),
+                                    ),
+                            );
+                          }
+                          return ChangeNotifierProvider(
+                            key: ValueKey('favorites-${guard.generation}'),
+                            create: (context) => FavoritesViewModel(
+                              context.read<FavoriteApiService>(),
+                              context.read<MovieDetailService>(),
+                              guard,
+                            )..refresh(),
+                            child: const FavoritesScreen(),
+                          );
+                        },
+                      ),
                     if (auth != null)
                       GoRoute(
                         path: 'profile/edit',
@@ -202,6 +251,18 @@ abstract final class AppRouter {
               ],
             ),
           ],
+        ),
+        GoRoute(
+          path: '/movies/search',
+          parentNavigatorKey: rootNavigatorKey,
+          builder: (context, state) => ChangeNotifierProvider(
+            create: (context) => PagedMoviesViewModel(
+              context.read<MovieCatalogService>(),
+              searchService: context.read<MovieSearchService>(),
+              searchMode: true,
+            ),
+            child: const MovieSearchScreen(),
+          ),
         ),
         GoRoute(
           parentNavigatorKey: rootNavigatorKey,

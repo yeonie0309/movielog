@@ -1,0 +1,35 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><title>Week 9 safety</title><style>body{margin:0;background:#edf0f6;color:#172033;font:16px/1.55 -apple-system,BlinkMacSystemFont,sans-serif}
+main{max-width:1060px;margin:24px auto;padding:30px;background:white;border-radius:16px}h1{font-size:28px;margin:0 0 12px}h2{font-size:19px;margin:22px 0 8px}p{color:#536078}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f4f6fb;border-left:4px solid #745ab5;padding:14px;font:14px/1.5 ui-monospace,Menlo,monospace}nav a{margin-right:20px}</style><main><nav><a href="checks.html">실행 검사</a><a href="network.html">실제 요청</a><a href="safety.html">보안·정리</a></nav><h1>MovieLog · 세션·보안·정리 검증</h1><p>자동 테스트·실제 실행 기록의 결과입니다. 사람의 수동 검증 완료를 의미하지 않습니다.</p><h2>실제 검증 요약</h2><pre>{
+  &quot;flutterTests&quot;: 109,
+  &quot;week9Tests&quot;: 15,
+  &quot;androidScenarios&quot;: 2,
+  &quot;actualLiveRequests&quot;: 43,
+  &quot;actualApiRequests&quot;: 44,
+  &quot;pngScreenshots&quot;: 26,
+  &quot;videos&quot;: 6,
+  &quot;analyzeErrors&quot;: 0,
+  &quot;analyzeWarnings&quot;: 0,
+  &quot;existingWeek0Infos&quot;: 2,
+  &quot;fixtureMemberIds&quot;: [
+    23,
+    24
+  ],
+  &quot;fixtureAccountsCreatedAcrossAttempts&quot;: 12,
+  &quot;finalFavoritesAndRatingsRemoved&quot;: true,
+  &quot;tokensAbsentFromChangedText&quot;: true,
+  &quot;envUntracked&quot;: true,
+  &quot;manualUserCheckPending&quot;: true,
+  &quot;iOSVerified&quot;: false,
+  &quot;controlledFailures&quot;: [
+    &quot;next-page transport&quot;,
+    &quot;search transport&quot;,
+    &quot;favorites list&quot;,
+    &quot;one movie&quot;,
+    &quot;409/404 conflict&quot;
+  ],
+  &quot;actualAuth401&quot;: &quot;AUTH401_3&quot;,
+  &quot;originalNotionEdited&quot;: false,
+  &quot;umcSubmitted&quot;: false
+}</pre><h2>실패 주입 구분</h2><pre>다음 page·검색·목록·영화 한 건 실패와 409/404는 제어된 실패 주입입니다.
+실제 v8 회원가입·로그인·즐겨찾기·통합 저장·계정 분리 및 AUTH401_3은 서버 응답으로 확인했습니다.
+중단 실행의 회원 ID와 데이터 정리는 interrupted-attempts에 별도 보관합니다.</pre></main></html>

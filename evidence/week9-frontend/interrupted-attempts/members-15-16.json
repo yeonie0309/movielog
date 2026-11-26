@@ -1,0 +1,298 @@
+{
+  "passed": false,
+  "phase": "live",
+  "fixtureMemberIds": [
+    15,
+    16
+  ],
+  "fixtureFavoritesAndRatingsRemoved": true,
+  "requests": [
+    {
+      "method": "POST",
+      "path": "/v8/members",
+      "query": {},
+      "status": 201,
+      "bearerAttached": false,
+      "response": {
+        "isSuccess": true,
+        "code": "COMMON201",
+        "message": "회원가입에 성공했습니다.",
+        "result": {
+          "memberId": 15,
+          "email": "w9a1795715390909@example.com",
+          "nickname": "w9a5390909"
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/v8/members",
+      "query": {},
+      "status": 201,
+      "bearerAttached": false,
+      "response": {
+        "isSuccess": true,
+        "code": "COMMON201",
+        "message": "회원가입에 성공했습니다.",
+        "result": {
+          "memberId": 16,
+          "email": "w9b1795715390909@example.com",
+          "nickname": "w9b5390909"
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/v8/auth/login",
+      "query": {},
+      "status": 200,
+      "bearerAttached": false,
+      "response": {
+        "isSuccess": true,
+        "code": "COMMON200",
+        "message": "로그인에 성공했습니다.",
+        "result": {
+          "nickname": "w9a5390909"
+        }
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/v8/members/me",
+      "query": {},
+      "status": 200,
+      "bearerAttached": true,
+      "body": null,
+      "response": {
+        "isSuccess": true,
+        "code": "COMMON200",
+        "message": "회원 정보를 조회했습니다.",
+        "result": {
+          "email": "w9a1795715390909@example.com",
+          "nickname": "w9a5390909",
+          "createdAt": "2026-11-26T17:49:54.643Z"
+        }
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/movie/popular",
+      "query": {
+        "language": "ko-KR",
+        "page": 1
+      },
+      "status": 200,
+      "bearerAttached": true,
+      "body": null,
+      "response": {
+        "page": 1,
+        "count": 20
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/genre/movie/list",
+      "query": {
+        "language": "ko"
+      },
+      "status": 200,
+      "bearerAttached": true,
+      "body": null,
+      "response": {
+        "page": null,
+        "count": null
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/movie/550",
+      "query": {
+        "language": "ko-KR"
+      },
+      "status": 200,
+      "bearerAttached": true,
+      "body": null,
+      "response": {
+        "page": null,
+        "count": null
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/v8/favorites/550",
+      "query": {},
+      "status": 200,
+      "bearerAttached": true,
+      "body": null,
+      "response": {
+        "isSuccess": true,
+        "code": "COMMON200",
+        "message": "즐겨찾기 여부를 조회했습니다.",
+        "result": {
+          "isFavorite": false
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/v8/favorites",
+      "query": {},
+      "status": 201,
+      "bearerAttached": true,
+      "body": {
+        "movieId": 550
+      },
+      "response": {
+        "isSuccess": true,
+        "code": "COMMON201",
+        "message": "즐겨찾기를 등록했습니다.",
+        "result": {
+          "favoriteId": 37,
+          "movieId": 550,
+          "createdAt": "2026-11-26T17:50:08.951Z"
+        }
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/v8/favorites/550",
+      "query": {},
+      "status": 200,
+      "bearerAttached": true,
+      "body": null,
+      "response": {
+        "isSuccess": true,
+        "code": "COMMON200",
+        "message": "즐겨찾기 여부를 조회했습니다.",
+        "result": {
+          "isFavorite": true
+        }
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/v8/favorites",
+      "query": {},
+      "status": 200,
+      "bearerAttached": true,
+      "body": null,
+      "response": {
+        "isSuccess": true,
+        "code": "COMMON200",
+        "message": "내 즐겨찾기 목록을 조회했습니다.",
+        "result": [
+          {
+            "favoriteId": 37,
+            "movieId": 550,
+            "createdAt": "2026-11-26T17:50:08.951Z"
+          }
+        ]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/movie/550",
+      "status": null,
+      "response": null
+    },
+    {
+      "method": "POST",
+      "path": "/v8/auth/login",
+      "query": {},
+      "status": 200,
+      "bearerAttached": false,
+      "response": {
+        "isSuccess": true,
+        "code": "COMMON200",
+        "message": "로그인에 성공했습니다.",
+        "result": {
+          "nickname": "w9a5390909"
+        }
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/v8/members/me",
+      "query": {},
+      "status": 200,
+      "bearerAttached": true,
+      "body": null,
+      "response": {
+        "isSuccess": true,
+        "code": "COMMON200",
+        "message": "회원 정보를 조회했습니다.",
+        "result": {
+          "email": "w9a1795715390909@example.com",
+          "nickname": "w9a5390909",
+          "createdAt": "2026-11-26T17:49:54.643Z"
+        }
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/v8/favorites",
+      "query": {},
+      "status": 200,
+      "bearerAttached": true,
+      "body": null,
+      "response": {
+        "isSuccess": true,
+        "code": "COMMON200",
+        "message": "내 즐겨찾기 목록을 조회했습니다.",
+        "result": [
+          {
+            "favoriteId": 37,
+            "movieId": 550,
+            "createdAt": "2026-11-26T17:50:08.951Z"
+          }
+        ]
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/v8/favorites/550",
+      "query": {},
+      "status": 200,
+      "bearerAttached": true,
+      "body": null,
+      "response": {
+        "isSuccess": true,
+        "code": "COMMON200",
+        "message": "즐겨찾기를 해제했습니다.",
+        "result": null
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/v8/members/15/ratings",
+      "query": {},
+      "status": 200,
+      "bearerAttached": false,
+      "body": null,
+      "response": []
+    },
+    {
+      "method": "GET",
+      "path": "/v8/favorites",
+      "query": {},
+      "status": 200,
+      "bearerAttached": true,
+      "body": null,
+      "response": {
+        "isSuccess": true,
+        "code": "COMMON200",
+        "message": "내 즐겨찾기 목록을 조회했습니다.",
+        "result": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/v8/members/15/ratings",
+      "query": {},
+      "status": 200,
+      "bearerAttached": false,
+      "body": null,
+      "response": []
+    }
+  ]
+}

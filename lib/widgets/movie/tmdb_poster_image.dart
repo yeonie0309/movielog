@@ -23,6 +23,8 @@ class TmdbPosterImage extends StatelessWidget {
       '$imageBaseUrl$path',
       fit: fit,
       semanticLabel: '영화 포스터',
+      loadingBuilder: (context, child, progress) =>
+          progress == null ? child : _placeholder(),
       errorBuilder: (context, error, stackTrace) => _placeholder(),
     );
   }

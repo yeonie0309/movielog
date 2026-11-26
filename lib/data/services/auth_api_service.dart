@@ -24,22 +24,23 @@ T parseV7Result<T>(
 }
 
 class AuthApiService {
-  AuthApiService(this.publicClient, this.authClient);
+  AuthApiService(this.publicClient, this.authClient, {this.version = 'v7'});
+  final String version;
   final Dio publicClient;
   final Dio authClient;
   Future<LoginResult> login(LoginRequest request) async => parseV7Result(
-    await publicClient.post('/v7/auth/login', data: request.toJson()),
+    await publicClient.post('/$version/auth/login', data: request.toJson()),
     200,
     LoginResult.fromJson,
   );
   Future<MemberInfo> fetchMe() async => parseV7Result(
-    await authClient.get('/v7/members/me'),
+    await authClient.get('/$version/members/me'),
     200,
     MemberInfo.fromJson,
   );
   Future<MemberInfo> updateNickname(String nickname) async => parseV7Result(
     await authClient.patch(
-      '/v7/members/me',
+      '/$version/members/me',
       data: {'nickname': nickname.trim()},
     ),
     200,
@@ -48,12 +49,17 @@ class AuthApiService {
 }
 
 class AuthenticatedRatingApiService {
-  AuthenticatedRatingApiService(this.publicClient, this.authClient);
+  AuthenticatedRatingApiService(
+    this.publicClient,
+    this.authClient, {
+    this.version = 'v7',
+  });
+  final String version;
   final Dio publicClient;
   final Dio authClient;
   Future<List<MemberRating>> getMemberRatings(int memberId) async {
     final response = await publicClient.get<List<dynamic>>(
-      '/v7/members/$memberId/ratings',
+      '/$version/members/$memberId/ratings',
     );
     return response.data!
         .map((row) => MemberRating.fromJson(row as Map<String, dynamic>))
@@ -62,7 +68,7 @@ class AuthenticatedRatingApiService {
 
   Future<MemberRating> createRating(CreateRatingRequest request) async =>
       parseV7Result(
-        await authClient.post('/v7/ratings', data: request.toJson()),
+        await authClient.post('/$version/ratings', data: request.toJson()),
         201,
         MemberRating.fromJson,
       );
@@ -74,7 +80,7 @@ class AuthenticatedRatingApiService {
     validateServerScore(score.toDouble());
     return parseV7Result(
       await authClient.patch(
-        '/v7/ratings/$ratingId',
+        '/$version/ratings/$ratingId',
         data: {'score': score, 'comment': normalizedComment(comment)},
       ),
       200,
@@ -83,7 +89,7 @@ class AuthenticatedRatingApiService {
   }
 
   Future<void> deleteRating(int ratingId) async {
-    final response = await authClient.delete('/v7/ratings/$ratingId');
+    final response = await authClient.delete('/$version/ratings/$ratingId');
     final body = response.data;
     if (response.statusCode != 200 ||
         body is! Map ||

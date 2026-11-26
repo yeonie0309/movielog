@@ -16,10 +16,11 @@ class AuthInterceptor extends Interceptor {
   bool _protected(RequestOptions options) {
     final uri = options.uri;
     return uri.scheme == 'https' &&
+        uri.port == 443 &&
         uri.host == 'workbook.devnoco.com' &&
-        (uri.path == '/v7/members/me' ||
-            uri.path == '/v7/ratings' ||
-            uri.path.startsWith('/v7/ratings/'));
+        RegExp(
+          r'^/v[78]/(members/me|ratings(?:/\d+)?|favorites(?:/\d+)?|movie-records)$',
+        ).hasMatch(uri.path);
   }
 
   @override

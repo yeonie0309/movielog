@@ -14,10 +14,34 @@ abstract class MovieDetailService {
   Future<TmdbMovieDto> fetchMovieDetail(int movieId);
 }
 
-class TmdbMovieService implements MovieCatalogService, MovieDetailService {
+abstract interface class MovieSearchService {
+  Future<TmdbMoviePageDto> searchMovies({required String query, int page = 1});
+}
+
+class TmdbMovieService
+    implements MovieCatalogService, MovieDetailService, MovieSearchService {
   TmdbMovieService(this._dio);
 
   final Dio _dio;
+
+  @override
+  Future<TmdbMoviePageDto> searchMovies({
+    required String query,
+    int page = 1,
+  }) async {
+    if (query.trim().isEmpty) throw ArgumentError('빈 검색어');
+    if (page < 1 || page > 500) throw RangeError.range(page, 1, 500);
+    final response = await _dio.get<Map<String, dynamic>>(
+      '/search/movie',
+      queryParameters: {
+        'query': query.trim(),
+        'page': page,
+        'language': 'ko-KR',
+        'include_adult': false,
+      },
+    );
+    return TmdbMoviePageDto.fromJson(response.data!);
+  }
 
   @override
   Future<TmdbMovieDto> fetchMovieDetail(int movieId) async {
@@ -42,6 +66,7 @@ class TmdbMovieService implements MovieCatalogService, MovieDetailService {
     required int page,
     int? genreId,
   }) async {
+    if (page < 1 || page > 500) throw RangeError.range(page, 1, 500);
     final response = await _dio.get<Map<String, dynamic>>(
       '/discover/movie',
       queryParameters: {
@@ -70,7 +95,7 @@ class TmdbMovieService implements MovieCatalogService, MovieDetailService {
 }
 
 class MissingTokenMovieService
-    implements MovieCatalogService, MovieDetailService {
+    implements MovieCatalogService, MovieDetailService, MovieSearchService {
   const MissingTokenMovieService();
 
   Never _missing() =>
@@ -90,4 +115,10 @@ class MissingTokenMovieService
 
   @override
   Future<List<TmdbGenreDto>> fetchGenres() async => _missing();
+
+  @override
+  Future<TmdbMoviePageDto> searchMovies({
+    required String query,
+    int page = 1,
+  }) async => _missing();
 }

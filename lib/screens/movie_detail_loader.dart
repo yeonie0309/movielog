@@ -10,6 +10,9 @@ import '../view_models/tmdb_movie_mapper.dart';
 import 'movie_detail_screen.dart';
 import '../view_models/auth_view_model.dart';
 import '../data/services/auth_api_service.dart';
+import '../data/services/favorite_api_service.dart';
+import '../view_models/favorite_detail_view_model.dart';
+import '../core/session/session_guard.dart';
 
 class MovieDetailLoader extends StatefulWidget {
   const MovieDetailLoader({
@@ -64,7 +67,7 @@ class _MovieDetailLoaderState extends State<MovieDetailLoader> {
       final auth = context.watch<AuthViewModel?>();
       final authenticated = auth?.status == AuthStatus.signedIn;
       final memberId = context.watch<LearningMemberSession>().memberId;
-      return ChangeNotifierProvider(
+      final detail = ChangeNotifierProvider(
         key: ValueKey(
           'detail-${widget.movieId}-$memberId-${auth?.sessionVersion}',
         ),
@@ -84,6 +87,17 @@ class _MovieDetailLoaderState extends State<MovieDetailLoader> {
           movie: movieFromTmdb(snapshot.data!),
           serverLinked: true,
         ),
+      );
+      if (auth == null) return detail;
+      final session = context.watch<SessionGuard>();
+      return ChangeNotifierProvider(
+        key: ValueKey('favorite-${widget.movieId}-${session.generation}'),
+        create: (context) => FavoriteDetailViewModel(
+          context.read<FavoriteApiService>(),
+          session,
+          widget.movieId,
+        )..load(),
+        child: detail,
       );
     },
   );
