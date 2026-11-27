@@ -18,5 +18,6 @@
   "restoredTestsPassed": 15,
   "notionEdited": false,
   "umcSubmitted": false,
-  "evidenceNote": "01-06 browser screenshots; 07-14 actual-log/code documents, not terminal screenshots."
+  "evidenceNote": "01-06 browser screenshots; 07-14 actual-log/code documents, not terminal screenshots.",
+  "pullRequest": "https://github.com/yeonie0309/movielog/pull/21"
 }

@@ -2,7 +2,7 @@
 
 대상: MakeUs → PE (Mobile) A팀 → 레아의 워크북 → **9주차 - 함께 테스트하고 다듬기**.
 원본 노션은 수정하지 않았습니다. 아래 내용은 복사할 초안입니다. 본인의 이해·경험에 관한 표현은 읽고 맞게 조정하세요.
-PR 링크는 이 문서 마지막의 실제 링크를 사용합니다. 스터디 인증 사진과 UMC 제출은 직접 진행합니다.
+PR 링크: https://github.com/yeonie0309/movielog/pull/21 스터디 인증 사진과 UMC 제출은 직접 진행합니다.
 
 ## 1. 학습 목표 / 본문
 제공된 설명·실습 코드는 지우지 않습니다. 필요하면 해당 실습 바로 아래에 구현 경로와 결과를 덧붙입니다.
@@ -106,7 +106,7 @@ node scripts/verify-week9-mutations.cjs
 ## 9. 미션 기록 — 과정 포함해서 복사
 이름 / 닉네임: 이가연 / 레아
 저장소: https://github.com/yeonie0309/movielog
-PR: 아래 실제 PR 링크 참고
+PR: https://github.com/yeonie0309/movielog/pull/21
 환경: NestJS12·TypeORM, node:test·Supertest·sql.js, 실제 로컬 MySQL.
 
 진행 과정:
@@ -142,3 +142,6 @@ PR: 아래 실제 PR 링크 참고
 ## 11. PR / 제출
 실습 인증은 실행 결과를 모으는 곳이고, 미션 기록은 과정·판단·결과를 설명하는 곳입니다. 필요한 사진은 두 곳에 재사용할 수 있습니다. PR에도 대표 사진과 테스트 결과를 첨부합니다.
 원본 노션 내용 입력·본인 이해 확인·스터디 사진 추가 후 UMC 제출은 직접 합니다. CodeRabbit은 기본 브랜치가 아닌 PR을 자동 건너뛸 수 있어 리뷰 완료로 표시하지 않습니다.
+
+최종 PR: https://github.com/yeonie0309/movielog/pull/21
+브랜치: codex/week-9-backend → codex/week-9-frontend

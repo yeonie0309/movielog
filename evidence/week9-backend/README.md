@@ -21,3 +21,5 @@
 
 01~06은 실제 브라우저 캡처, 07~14는 실제원문을 렌더링한 문서로 터미널 캡처가 아니다. 운영진이 터미널 원화면을 요구할 때는 가이드의 명령을 본인 터미널에서 실행해 캡처한다. 원본 TXT·JSON·코드를 함께 제공한다.
 Swagger 실습은 일회용 메모리DB, live-api-results.json은 실제MySQL이다. 실패실험은 dist 임시변경이며 SHA256 검증과 finally 복원 후 재실행했다. 실제개인 JWT/비밀번호는 증빙에 포함하지 않는다. 원본 노션/UMC 제출은 수정·실행하지 않았다.
+
+PR: https://github.com/yeonie0309/movielog/pull/21
