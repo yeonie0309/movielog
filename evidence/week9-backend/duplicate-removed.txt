@@ -1,0 +1,44 @@
+✖ favorite integration 3: 중복 POST는 409 FAVORITE409_1, DB는 1건 유지 (116.918917ms)
+✖ favorite unit: 중복이면 FAVORITE409_1, save를 호출하지 않는다 (0.639333ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 0
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 538.898792
+
+✖ failing tests:
+
+test at test/week9-memory.e2e.test.cjs:46:1
+✖ favorite integration 3: 중복 POST는 409 FAVORITE409_1, DB는 1건 유지 (116.918917ms)
+  Error: expected 409 "Conflict", got 500 "Internal Server Error"
+      at TestContext.<anonymous> (/Users/yeonie/UMC11/movielog/movie-backend/test/week9-memory.e2e.test.cjs:50:6)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+  ----
+      at Test._assertStatus (/Users/yeonie/UMC11/movielog/movie-backend/node_modules/supertest/lib/test.js:376:14)
+      at /Users/yeonie/UMC11/movielog/movie-backend/node_modules/supertest/lib/test.js:432:13
+      at Test._assertFunction (/Users/yeonie/UMC11/movielog/movie-backend/node_modules/supertest/lib/test.js:409:13)
+      at Test.assert (/Users/yeonie/UMC11/movielog/movie-backend/node_modules/supertest/lib/test.js:274:23)
+      at localAssert (/Users/yeonie/UMC11/movielog/movie-backend/node_modules/supertest/lib/test.js:196:38)
+      at Server.<anonymous> (/Users/yeonie/UMC11/movielog/movie-backend/node_modules/supertest/lib/test.js:203:13)
+      at Server.wrapper (node:events:639:12)
+      at Server.emit (node:events:514:20)
+      at emitCloseNT (node:net:2941:8)
+      at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+
+test at test/week9-unit.test.cjs:28:1
+✖ favorite unit: 중복이면 FAVORITE409_1, save를 호출하지 않는다 (0.639333ms)
+  AssertionError [ERR_ASSERTION]: Missing expected rejection.
+      at async TestContext.<anonymous> (/Users/yeonie/UMC11/movielog/movie-backend/test/week9-unit.test.cjs:37:3)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    operator: 'rejects',
+    diff: 'simple'
+  }

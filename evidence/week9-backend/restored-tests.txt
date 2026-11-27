@@ -1,0 +1,23 @@
+✔ favorite integration 1: 토큰 없는 POST는 401 AUTH401_2, 저장 0건 (78.113292ms)
+✔ favorite integration 2: 인증 POST는 201 COMMON201과 실제 DB 저장 (7.776709ms)
+✔ favorite integration 3: 중복 POST는 409 FAVORITE409_1, DB는 1건 유지 (4.93525ms)
+✔ favorite integration 4: 미등록 영화 GET은 200 isFavorite false (2.391875ms)
+✔ rating integration 1: 토큰 없는 POST는 401 AUTH401_2 (2.538083ms)
+✔ rating integration 2: 인증 POST는 201 COMMON201과 실제 DB 저장 (3.041375ms)
+✔ transaction: 기존 즐겨찾기 충돌은 FAVORITE409_1, 평점 개수 불변 (6.279083ms)
+✔ transaction rollback: 첫 INSERT 이후 두 번째 INSERT 실패 시 평점을 실제 DB에서 롤백한다 (5.27475ms)
+✔ validation: 잘못된 평점은 400, DB 쓰기 없음 (3.010125ms)
+✔ Swagger: 모든 15개 API의 설명·인증 구분·요청 예시·오류 코드를 문서화한다 (1.269541ms)
+✔ Swagger: /swagger-ui와 기존 /docs의 UI·JSON이 인증 없이 제공된다 (3.083458ms)
+✔ favorite unit: 새 영화는 한 번 저장하고 movieId를 반환한다 (0.771334ms)
+✔ favorite unit: 중복이면 FAVORITE409_1, save를 호출하지 않는다 (0.243833ms)
+✔ rating unit: 같은 영화 중복 평점이면 RATING409_1, save를 호출하지 않는다 (0.095542ms)
+✔ rating unit: 다른 회원의 평점을 수정하면 RATING403_1, 원본과 DB를 바꾸지 않는다 (0.100458ms)
+ℹ tests 15
+ℹ suites 0
+ℹ pass 15
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 342.274125

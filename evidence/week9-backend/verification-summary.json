@@ -1,0 +1,23 @@
+{
+  "backendTests": 85,
+  "newUnitTests": 4,
+  "newMemoryIntegrationTests": 11,
+  "flutterTests": 109,
+  "analyzeErrors": 0,
+  "analyzeWarnings": 0,
+  "existingInfos": 2,
+  "swaggerOperations": 15,
+  "publicOperations": 5,
+  "protectedOperations": 10,
+  "mysqlHttpRequests": 37,
+  "mysqlReportPassed": true,
+  "mutationExpectedFailures": [
+    2,
+    1
+  ],
+  "restoredTestsPassed": 15,
+  "notionEdited": false,
+  "umcSubmitted": false,
+  "evidenceNote": "01-06 browser screenshots; 07-14 actual-log/code documents, not terminal screenshots.",
+  "pullRequest": "https://github.com/yeonie0309/movielog/pull/21"
+}
