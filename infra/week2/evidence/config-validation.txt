@@ -1,0 +1,5 @@
+config.alloy: PASS
+pipelines/01-host-metrics.alloy: PASS
+pipelines/02-mysql-metrics.alloy: PASS
+pipelines/03-app-metrics.alloy: PASS
+alerts.test.yaml: PASS

@@ -1,0 +1,57 @@
+rule_files:
+  - alerts.yaml
+evaluation_interval: 15s
+tests:
+  - name: p95 above one second persists then fires
+    interval: 15s
+    input_series:
+      - series: 'up{job="app",instance="a"}'
+        values: '1+0x40'
+      - series: 'http_request_duration_seconds_bucket{job="app",le="1"}'
+        values: '0+90x40'
+      - series: 'http_request_duration_seconds_bucket{job="app",le="3"}'
+        values: '0+100x40'
+      - series: 'http_request_duration_seconds_bucket{job="app",le="+Inf"}'
+        values: '0+100x40'
+      - series: 'http_requests_total{job="app",status="201"}'
+        values: '0+100x40'
+    alert_rule_test:
+      - eval_time: 2m
+        alertname: MovieLogHighP95
+        exp_alerts:
+          - exp_labels:
+              severity: warning
+              service: movielog
+            exp_annotations:
+              summary: MovieLog p95 응답시간이 1초를 1분 이상 초과했습니다
+      - eval_time: 2m
+        alertname: MovieLogHighErrorRatio
+        exp_alerts: []
+  - name: healthy latency does not fire
+    interval: 15s
+    input_series:
+      - series: 'up{job="app",instance="a"}'
+        values: '1+0x40'
+      - series: 'http_request_duration_seconds_bucket{job="app",le="1"}'
+        values: '0+100x40'
+      - series: 'http_request_duration_seconds_bucket{job="app",le="+Inf"}'
+        values: '0+100x40'
+    alert_rule_test:
+      - eval_time: 2m
+        alertname: MovieLogHighP95
+        exp_alerts: []
+      - eval_time: 2m
+        alertname: MovieLogAppDown
+        exp_alerts: []
+  - name: absent application is detected separately from zero errors
+    interval: 15s
+    alert_rule_test:
+      - eval_time: 2m
+        alertname: MovieLogAppDown
+        exp_alerts:
+          - exp_labels:
+              job: app
+              severity: critical
+              service: movielog
+            exp_annotations:
+              summary: MovieLog 메트릭 수집 대상이 내려갔거나 사라졌습니다

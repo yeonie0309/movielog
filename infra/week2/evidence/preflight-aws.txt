@@ -1,0 +1,23 @@
+{
+  "account": "189923011699",
+  "region": "ap-southeast-2",
+  "vpc": "vpc-0800988720726e899",
+  "subnets": [
+    {
+      "id": "subnet-057304c6c667226ef",
+      "az": "ap-southeast-2c"
+    },
+    {
+      "id": "subnet-0c4e167eeeb86c993",
+      "az": "ap-southeast-2b"
+    },
+    {
+      "id": "subnet-038efe7e9be10e93f",
+      "az": "ap-southeast-2a"
+    }
+  ],
+  "ami": "ami-0f9d69ac19d6dd660",
+  "db_engine": "8.4.11",
+  "rds_option_count": 4
+}
+{"existingAppParameters": []}

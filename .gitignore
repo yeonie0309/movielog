@@ -50,3 +50,6 @@ app.*.map.json
 
 # Widget Preview related
 .widget_preview/
+
+# Disposable Infra observability credentials/state; never commit cloud tokens.
+/infra/week2/.local/

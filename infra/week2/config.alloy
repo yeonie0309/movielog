@@ -1,0 +1,13 @@
+logging {
+  level = "info"
+}
+
+remotecfg {
+  url = sys.env("GC_FLEET_URL")
+  basic_auth {
+    username = sys.env("GC_FLEET_USER")
+    password = sys.env("GC_TOKEN")
+  }
+  id = constants.hostname
+  poll_frequency = "5m"
+}

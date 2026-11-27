@@ -1,0 +1,15 @@
+{
+  "backendTests": 79,
+  "safetyTests": 9,
+  "alloyConfigsValidated": 4,
+  "promtoolScenarios": 3,
+  "localMetricsHttpStatus": 200,
+  "dockerArchitecture": "arm64",
+  "dockerUser": "node",
+  "cloudResourcesCreated": false,
+  "grafanaAccountReady": false,
+  "loadMeasured": false,
+  "alertReceived": false,
+  "notionEdited": false,
+  "submitted": false
+}

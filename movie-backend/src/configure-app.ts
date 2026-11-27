@@ -1,10 +1,12 @@
 import { ValidationPipe, type INestApplication } from "@nestjs/common";
+import { configureMetrics } from "./observability/metrics";
 import { HttpExceptionFilter } from "./filter/http-exception.filter";
 
 export function configureApp(
   app: INestApplication,
   env: NodeJS.ProcessEnv = process.env,
 ) {
+  if (env.METRICS_ENABLED === "true") configureMetrics(app);
   app.useGlobalFilters(new HttpExceptionFilter());
   app.useGlobalPipes(
     new ValidationPipe({

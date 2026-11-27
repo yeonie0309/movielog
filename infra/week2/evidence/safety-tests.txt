@@ -1,0 +1,14 @@
+test_alb_ingress_restricted_to_application_sg (test_cloud.Infra2SafetyTests.test_alb_ingress_restricted_to_application_sg) ... ok
+test_cleanup_report_does_not_write_week1 (test_cloud.Infra2SafetyTests.test_cleanup_report_does_not_write_week1) ... ok
+test_foundation_refuses_existing_parameters (test_cloud.Infra2SafetyTests.test_foundation_refuses_existing_parameters) ... ok
+test_metrics_enabled_in_bootstrap_but_no_embedded_secrets (test_cloud.Infra2SafetyTests.test_metrics_enabled_in_bootstrap_but_no_embedded_secrets) ... ok
+test_no_direct_bootstrap_application_port (test_cloud.Infra2SafetyTests.test_no_direct_bootstrap_application_port) ... ok
+test_private_alb_even_if_reused_cluster_asks_for_public (test_cloud.Infra2SafetyTests.test_private_alb_even_if_reused_cluster_asks_for_public) ... ok
+test_no_public_plaintext_target (test_load.SecretTests.test_no_public_plaintext_target) ... ok
+test_only_declared_disposable_load_stages (test_load.SecretTests.test_only_declared_disposable_load_stages) ... ok
+test_recursive_export_redacts_headers_and_login (test_load.SecretTests.test_recursive_export_redacts_headers_and_login) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.001s
+
+OK

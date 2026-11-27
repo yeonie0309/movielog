@@ -1,0 +1,40 @@
+{
+  "checks": [
+    {
+      "file": "config.alloy",
+      "image": "grafana/alloy:v1.20.1",
+      "exitCode": 0,
+      "output": "",
+      "network": "none"
+    },
+    {
+      "file": "pipelines/01-host-metrics.alloy",
+      "image": "grafana/alloy:v1.20.1",
+      "exitCode": 0,
+      "output": "",
+      "network": "none"
+    },
+    {
+      "file": "pipelines/02-mysql-metrics.alloy",
+      "image": "grafana/alloy:v1.20.1",
+      "exitCode": 0,
+      "output": "",
+      "network": "none"
+    },
+    {
+      "file": "pipelines/03-app-metrics.alloy",
+      "image": "grafana/alloy:v1.20.1",
+      "exitCode": 0,
+      "output": "",
+      "network": "none"
+    },
+    {
+      "file": "alerts.test.yaml",
+      "image": "prom/prometheus:v3.5.0",
+      "exitCode": 0,
+      "output": "  SUCCESS\n\n",
+      "network": "none"
+    }
+  ],
+  "passed": true
+}
