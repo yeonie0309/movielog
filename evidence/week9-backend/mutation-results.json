@@ -1,0 +1,19 @@
+{
+  "mutations": [
+    {
+      "name": "duplicate-removed",
+      "exitCode": 1,
+      "expectedFailures": 2,
+      "originalSha256": "99eff0513fa32ba71db62108ae28172957babd56139787ba49a218f88085bf33"
+    },
+    {
+      "name": "transaction-removed",
+      "exitCode": 1,
+      "expectedFailures": 1,
+      "originalSha256": "14d3342c7c07a2c16e1b7592fbfa6cd3429c29ab16d02d5cb9c52f11b827810a"
+    }
+  ],
+  "restored": true,
+  "restoredTestExit": 0,
+  "sourceEdited": false
+}

@@ -1,0 +1,29 @@
+✖ transaction rollback: 첫 INSERT 이후 두 번째 INSERT 실패 시 평점을 실제 DB에서 롤백한다 (81.728041ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 297.633958
+
+✖ failing tests:
+
+test at test/week9-memory.e2e.test.cjs:90:1
+✖ transaction rollback: 첫 INSERT 이후 두 번째 INSERT 실패 시 평점을 실제 DB에서 롤백한다 (81.728041ms)
+  AssertionError [ERR_ASSERTION]: ROLLBACK_REQUIRED: 첫 INSERT가 남으면 트랜잭션이 무효
+  
+  1 !== 0
+  
+      at TestContext.<anonymous> (/Users/yeonie/UMC11/movielog/movie-backend/test/week9-memory.e2e.test.cjs:102:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 1,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

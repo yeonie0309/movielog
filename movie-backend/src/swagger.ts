@@ -1,13 +1,14 @@
+import { enrichWeek9Swagger } from "./swagger-week9";
 import type { INestApplication } from "@nestjs/common";
 import { DocumentBuilder, SwaggerModule } from "@nestjs/swagger";
 
 export function configureSwagger(app: INestApplication) {
   const config = new DocumentBuilder()
-    .setTitle("MovieLog 8주차 API")
+    .setTitle("MovieLog 9주차 API")
     .setDescription(
       "공개 회원가입·로그인·중복 확인·회원별 평점 조회와 Bearer 인증이 필요한 내 정보·평점 쓰기·즐겨찾기·영화 기록을 구분합니다. 요청에 memberId를 보내지 않습니다.",
     )
-    .setVersion("8.0")
+    .setVersion("9.0")
     .addBearerAuth()
     .build();
   const document = SwaggerModule.createDocument(app, config);
@@ -97,7 +98,9 @@ export function configureSwagger(app: INestApplication) {
     if (entry.method === "post") {
       operation.responses[409] = {
         description:
-          "FAVORITE409_1 즐겨찾기 중복. 영화 기록은 RATING409_1 평점 중복도 반환합니다.",
+          entry.path === "/movie-records"
+            ? "FAVORITE409_1 즐겨찾기 중복 / RATING409_1 평점 중복"
+            : "FAVORITE409_1 즐겨찾기 중복",
         content: {
           "application/json": {
             example: {
@@ -178,6 +181,10 @@ export function configureSwagger(app: INestApplication) {
       if (item[method]) item[method]!.security = [{ bearer: [] }];
     }
   }
+  enrichWeek9Swagger(document);
+  SwaggerModule.setup("swagger-ui", app, document, {
+    swaggerOptions: { persistAuthorization: false },
+  });
   SwaggerModule.setup("docs", app, document, {
     swaggerOptions: { persistAuthorization: false },
   });

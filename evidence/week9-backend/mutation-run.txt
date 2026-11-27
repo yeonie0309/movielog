@@ -1,0 +1,13 @@
+{
+  "mutations": [
+    {
+      "name": "duplicate-removed",
+      "expectedFailures": 2
+    },
+    {
+      "name": "transaction-removed",
+      "expectedFailures": 1
+    }
+  ],
+  "restored": true
+}

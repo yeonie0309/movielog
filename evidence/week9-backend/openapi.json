@@ -1,0 +1,3145 @@
+{
+  "openapi": "3.0.0",
+  "paths": {
+    "/auth/login": {
+      "post": {
+        "operationId": "AuthController_login",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "email",
+                  "password"
+                ],
+                "properties": {
+                  "email": {
+                    "type": "string",
+                    "format": "email",
+                    "maxLength": 254,
+                    "example": "reader@example.com"
+                  },
+                  "password": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 1024,
+                    "writeOnly": true,
+                    "example": "Sample123!"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "로그인에 성공했습니다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "isSuccess",
+                    "code",
+                    "message",
+                    "result"
+                  ],
+                  "properties": {
+                    "isSuccess": {
+                      "type": "boolean",
+                      "example": true
+                    },
+                    "code": {
+                      "type": "string",
+                      "example": "COMMON200"
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "로그인에 성공했습니다."
+                    },
+                    "result": {
+                      "type": "object",
+                      "required": [
+                        "nickname",
+                        "accessToken"
+                      ],
+                      "properties": {
+                        "nickname": {
+                          "type": "string",
+                          "example": "영화조아"
+                        },
+                        "accessToken": {
+                          "type": "string",
+                          "example": "<로그인 응답의 JWT>"
+                        }
+                      }
+                    }
+                  }
+                },
+                "example": {
+                  "isSuccess": true,
+                  "code": "COMMON200",
+                  "message": "로그인에 성공했습니다.",
+                  "result": {
+                    "nickname": "영화조아",
+                    "accessToken": "<로그인 응답의 JWT>"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "COMMON400 · 요청 입력 검증에 실패했습니다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "isSuccess",
+                    "code",
+                    "message",
+                    "result"
+                  ],
+                  "properties": {
+                    "isSuccess": {
+                      "type": "boolean",
+                      "example": false
+                    },
+                    "code": {
+                      "type": "string",
+                      "example": "COMMON400"
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "요청 입력 검증에 실패했습니다."
+                    },
+                    "result": {
+                      "nullable": true,
+                      "example": null
+                    }
+                  }
+                },
+                "examples": {
+                  "COMMON400": {
+                    "summary": "요청 입력 검증에 실패했습니다.",
+                    "value": {
+                      "isSuccess": false,
+                      "code": "COMMON400",
+                      "message": "요청 입력 검증에 실패했습니다.",
+                      "result": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "AUTH401_1 · 이메일 또는 비밀번호가 올바르지 않습니다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "isSuccess",
+                    "code",
+                    "message",
+                    "result"
+                  ],
+                  "properties": {
+                    "isSuccess": {
+                      "type": "boolean",
+                      "example": false
+                    },
+                    "code": {
+                      "type": "string",
+                      "example": "AUTH401_1"
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "이메일 또는 비밀번호가 올바르지 않습니다."
+                    },
+                    "result": {
+                      "nullable": true,
+                      "example": null
+                    }
+                  }
+                },
+                "examples": {
+                  "AUTH401_1": {
+                    "summary": "이메일 또는 비밀번호가 올바르지 않습니다.",
+                    "value": {
+                      "isSuccess": false,
+                      "code": "AUTH401_1",
+                      "message": "이메일 또는 비밀번호가 올바르지 않습니다.",
+                      "result": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "COMMON500 · 서버 내부 오류가 발생했습니다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "isSuccess",
+                    "code",
+                    "message",
+                    "result"
+                  ],
+                  "properties": {
+                    "isSuccess": {
+                      "type": "boolean",
+                      "example": false
+                    },
+                    "code": {
+                      "type": "string",
+                      "example": "COMMON500"
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "서버 내부 오류가 발생했습니다."
+                    },
+                    "result": {
+                      "nullable": true,
+                      "example": null
+                    }
+                  }
+                },
+                "examples": {
+                  "COMMON500": {
+                    "summary": "서버 내부 오류가 발생했습니다.",
+                    "value": {
+                      "isSuccess": false,
+                      "code": "COMMON500",
+                      "message": "서버 내부 오류가 발생했습니다.",
+                      "result": null
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "인증"
+        ],
+        "summary": "이메일·비밀번호 로그인 (공개)",
+        "description": "공개 API. Authorization 헤더 없이 호출할 수 있습니다.",
+        "security": []
+      }
+    },
+    "/members/me": {
+      "get": {
+        "operationId": "MemberController_getMyInfo",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "회원 정보를 조회했습니다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "isSuccess",
+                    "code",
+                    "message",
+                    "result"
+                  ],
+                  "properties": {
+                    "isSuccess": {
+                      "type": "boolean",
+                      "example": true
+                    },
+                    "code": {
+                      "type": "string",
+                      "example": "COMMON200"
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "회원 정보를 조회했습니다."
+                    },
+                    "result": {
+                      "type": "object",
+                      "required": [
+                        "email",
+                        "nickname",
+                        "createdAt"
+                      ],
+                      "properties": {
+                        "email": {
+                          "type": "string",
+                          "example": "reader@example.com"
+                        },
+                        "nickname": {
+                          "type": "string",
+                          "example": "영화조아"
+                        },
+                        "createdAt": {
+                          "type": "string",
+                          "example": "2026-11-28T00:00:00.000Z"
+                        }
+                      }
+                    }
+                  }
+                },
+                "example": {
+                  "isSuccess": true,
+                  "code": "COMMON200",
+                  "message": "회원 정보를 조회했습니다.",
+                  "result": {
+                    "email": "reader@example.com",
+                    "nickname": "영화조아",
+                    "createdAt": "2026-11-28T00:00:00.000Z"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "COMMON400 · 요청 입력 검증에 실패했습니다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "isSuccess",
+                    "code",
+                    "message",
+                    "result"
+                  ],
+                  "properties": {
+                    "isSuccess": {
+                      "type": "boolean",
+                      "example": false
+                    },
+                    "code": {
+                      "type": "string",
+                      "example": "COMMON400"
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "요청 입력 검증에 실패했습니다."
+                    },
+                    "result": {
+                      "nullable": true,
+                      "example": null
+                    }
+                  }
+                },
+                "examples": {
+                  "COMMON400": {
+                    "summary": "요청 입력 검증에 실패했습니다.",
+                    "value": {
+                      "isSuccess": false,
+                      "code": "COMMON400",
+                      "message": "요청 입력 검증에 실패했습니다.",
+                      "result": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "AUTH401_2 · 로그인이 필요한 요청입니다. / AUTH401_3 · 유효하지 않은 토큰입니다. / AUTH401_4 · 토큰이 만료되었습니다. 다시 로그인해주세요.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "isSuccess",
+                    "code",
+                    "message",
+                    "result"
+                  ],
+                  "properties": {
+                    "isSuccess": {
+                      "type": "boolean",
+                      "example": false
+                    },
+                    "code": {
+                      "type": "string",
+                      "example": "AUTH401_4"
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "토큰이 만료되었습니다. 다시 로그인해주세요."
+                    },
+                    "result": {
+                      "nullable": true,
+                      "example": null
+                    }
+                  }
+                },
+                "examples": {
+                  "AUTH401_2": {
+                    "summary": "로그인이 필요한 요청입니다.",
+                    "value": {
+                      "isSuccess": false,
+                      "code": "AUTH401_2",
+                      "message": "로그인이 필요한 요청입니다.",
+                      "result": null
+                    }
+                  },
+                  "AUTH401_3": {
+                    "summary": "유효하지 않은 토큰입니다.",
+                    "value": {
+                      "isSuccess": false,
+                      "code": "AUTH401_3",
+                      "message": "유효하지 않은 토큰입니다.",
+                      "result": null
+                    }
+                  },
+                  "AUTH401_4": {
+                    "summary": "토큰이 만료되었습니다. 다시 로그인해주세요.",
+                    "value": {
+                      "isSuccess": false,
+                      "code": "AUTH401_4",
+                      "message": "토큰이 만료되었습니다. 다시 로그인해주세요.",
+                      "result": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "MEMBER404_1 · 해당 회원을 찾을 수 없습니다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "isSuccess",
+                    "code",
+                    "message",
+                    "result"
+                  ],
+                  "properties": {
+                    "isSuccess": {
+                      "type": "boolean",
+                      "example": false
+                    },
+                    "code": {
+                      "type": "string",
+                      "example": "MEMBER404_1"
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "해당 회원을 찾을 수 없습니다."
+                    },
+                    "result": {
+                      "nullable": true,
+                      "example": null
+                    }
+                  }
+                },
+                "examples": {
+                  "MEMBER404_1": {
+                    "summary": "해당 회원을 찾을 수 없습니다.",
+                    "value": {
+                      "isSuccess": false,
+                      "code": "MEMBER404_1",
+                      "message": "해당 회원을 찾을 수 없습니다.",
+                      "result": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "COMMON500 · 서버 내부 오류가 발생했습니다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "isSuccess",
+                    "code",
+                    "message",
+                    "result"
+                  ],
+                  "properties": {
+                    "isSuccess": {
+                      "type": "boolean",
+                      "example": false
+                    },
+                    "code": {
+                      "type": "string",
+                      "example": "COMMON500"
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "서버 내부 오류가 발생했습니다."
+                    },
+                    "result": {
+                      "nullable": true,
+                      "example": null
+                    }
+                  }
+                },
+                "examples": {
+                  "COMMON500": {
+                    "summary": "서버 내부 오류가 발생했습니다.",
+                    "value": {
+                      "isSuccess": false,
+                      "code": "COMMON500",
+                      "message": "서버 내부 오류가 발생했습니다.",
+                      "result": null
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "회원"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "로그인한 내 정보 조회",
+        "description": "Bearer JWT 필수. 사용자 ID는 토큰에서 추출하며 body에 memberId를 받지 않습니다."
+      },
+      "patch": {
+        "operationId": "MemberController_updateMyInfo",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "nickname"
+                ],
+                "properties": {
+                  "nickname": {
+                    "type": "string",
+                    "minLength": 2,
+                    "maxLength": 12,
+                    "example": "영화조아"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "회원 정보를 수정했습니다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "isSuccess",
+                    "code",
+                    "message",
+                    "result"
+                  ],
+                  "properties": {
+                    "isSuccess": {
+                      "type": "boolean",
+                      "example": true
+                    },
+                    "code": {
+                      "type": "string",
+                      "example": "COMMON200"
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "회원 정보를 수정했습니다."
+                    },
+                    "result": {
+                      "type": "object",
+                      "required": [
+                        "email",
+                        "nickname",
+                        "createdAt"
+                      ],
+                      "properties": {
+                        "email": {
+                          "type": "string",
+                          "example": "reader@example.com"
+                        },
+                        "nickname": {
+                          "type": "string",
+                          "example": "영화조아"
+                        },
+                        "createdAt": {
+                          "type": "string",
+                          "example": "2026-11-28T00:00:00.000Z"
+                        }
+                      }
+                    }
+                  }
+                },
+                "example": {
+                  "isSuccess": true,
+                  "code": "COMMON200",
+                  "message": "회원 정보를 수정했습니다.",
+                  "result": {
+                    "email": "reader@example.com",
+                    "nickname": "영화조아",
+                    "createdAt": "2026-11-28T00:00:00.000Z"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "COMMON400 · 요청 입력 검증에 실패했습니다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "isSuccess",
+                    "code",
+                    "message",
+                    "result"
+                  ],
+                  "properties": {
+                    "isSuccess": {
+                      "type": "boolean",
+                      "example": false
+                    },
+                    "code": {
+                      "type": "string",
+                      "example": "COMMON400"
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "요청 입력 검증에 실패했습니다."
+                    },
+                    "result": {
+                      "nullable": true,
+                      "example": null
+                    }
+                  }
+                },
+                "examples": {
+                  "COMMON400": {
+                    "summary": "요청 입력 검증에 실패했습니다.",
+                    "value": {
+                      "isSuccess": false,
+                      "code": "COMMON400",
+                      "message": "요청 입력 검증에 실패했습니다.",
+                      "result": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "AUTH401_2 · 로그인이 필요한 요청입니다. / AUTH401_3 · 유효하지 않은 토큰입니다. / AUTH401_4 · 토큰이 만료되었습니다. 다시 로그인해주세요.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "isSuccess",
+                    "code",
+                    "message",
+                    "result"
+                  ],
+                  "properties": {
+                    "isSuccess": {
+                      "type": "boolean",
+                      "example": false
+                    },
+                    "code": {
+                      "type": "string",
+                      "example": "AUTH401_4"
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "토큰이 만료되었습니다. 다시 로그인해주세요."
+                    },
+                    "result": {
+                      "nullable": true,
+                      "example": null
+                    }
+                  }
+                },
+                "examples": {
+                  "AUTH401_2": {
+                    "summary": "로그인이 필요한 요청입니다.",
+                    "value": {
+                      "isSuccess": false,
+                      "code": "AUTH401_2",
+                      "message": "로그인이 필요한 요청입니다.",
+                      "result": null
+                    }
+                  },
+                  "AUTH401_3": {
+                    "summary": "유효하지 않은 토큰입니다.",
+                    "value": {
+                      "isSuccess": false,
+                      "code": "AUTH401_3",
+                      "message": "유효하지 않은 토큰입니다.",
+                      "result": null
+                    }
+                  },
+                  "AUTH401_4": {
+                    "summary": "토큰이 만료되었습니다. 다시 로그인해주세요.",
+                    "value": {
+                      "isSuccess": false,
+                      "code": "AUTH401_4",
+                      "message": "토큰이 만료되었습니다. 다시 로그인해주세요.",
+                      "result": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "MEMBER404_1 · 해당 회원을 찾을 수 없습니다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "isSuccess",
+                    "code",
+                    "message",
+                    "result"
+                  ],
+                  "properties": {
+                    "isSuccess": {
+                      "type": "boolean",
+                      "example": false
+                    },
+                    "code": {
+                      "type": "string",
+                      "example": "MEMBER404_1"
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "해당 회원을 찾을 수 없습니다."
+                    },
+                    "result": {
+                      "nullable": true,
+                      "example": null
+                    }
+                  }
+                },
+                "examples": {
+                  "MEMBER404_1": {
+                    "summary": "해당 회원을 찾을 수 없습니다.",
+                    "value": {
+                      "isSuccess": false,
+                      "code": "MEMBER404_1",
+                      "message": "해당 회원을 찾을 수 없습니다.",
+                      "result": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "MEMBER409_1 · 이미 사용 중인 닉네임입니다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "isSuccess",
+                    "code",
+                    "message",
+                    "result"
+                  ],
+                  "properties": {
+                    "isSuccess": {
+                      "type": "boolean",
+                      "example": false
+                    },
+                    "code": {
+                      "type": "string",
+                      "example": "MEMBER409_1"
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "이미 사용 중인 닉네임입니다."
+                    },
+                    "result": {
+                      "nullable": true,
+                      "example": null
+                    }
+                  }
+                },
+                "examples": {
+                  "MEMBER409_1": {
+                    "summary": "이미 사용 중인 닉네임입니다.",
+                    "value": {
+                      "isSuccess": false,
+                      "code": "MEMBER409_1",
+                      "message": "이미 사용 중인 닉네임입니다.",
+                      "result": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "COMMON500 · 서버 내부 오류가 발생했습니다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "isSuccess",
+                    "code",
+                    "message",
+                    "result"
+                  ],
+                  "properties": {
+                    "isSuccess": {
+                      "type": "boolean",
+                      "example": false
+                    },
+                    "code": {
+                      "type": "string",
+                      "example": "COMMON500"
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "서버 내부 오류가 발생했습니다."
+                    },
+                    "result": {
+                      "nullable": true,
+                      "example": null
+                    }
+                  }
+                },
+                "examples": {
+                  "COMMON500": {
+                    "summary": "서버 내부 오류가 발생했습니다.",
+                    "value": {
+                      "isSuccess": false,
+                      "code": "COMMON500",
+                      "message": "서버 내부 오류가 발생했습니다.",
+                      "result": null
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "회원"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "내 닉네임 변경",
+        "description": "Bearer JWT 필수. 사용자 ID는 토큰에서 추출하며 body에 memberId를 받지 않습니다."
+      }
+    },
+    "/members/nickname/{nickname}": {
+      "get": {
+        "operationId": "MemberController_checkNickname",
+        "parameters": [
+          {
+            "name": "nickname",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minLength": 2,
+              "maxLength": 12,
+              "example": "영화조아"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "조회 성공 (원본 JSON 형식)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "available"
+                  ],
+                  "properties": {
+                    "available": {
+                      "type": "boolean",
+                      "example": true
+                    }
+                  }
+                },
+                "example": {
+                  "available": true
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "COMMON400 · 요청 입력 검증에 실패했습니다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "isSuccess",
+                    "code",
+                    "message",
+                    "result"
+                  ],
+                  "properties": {
+                    "isSuccess": {
+                      "type": "boolean",
+                      "example": false
+                    },
+                    "code": {
+                      "type": "string",
+                      "example": "COMMON400"
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "요청 입력 검증에 실패했습니다."
+                    },
+                    "result": {
+                      "nullable": true,
+                      "example": null
+                    }
+                  }
+                },
+                "examples": {
+                  "COMMON400": {
+                    "summary": "요청 입력 검증에 실패했습니다.",
+                    "value": {
+                      "isSuccess": false,
+                      "code": "COMMON400",
+                      "message": "요청 입력 검증에 실패했습니다.",
+                      "result": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "COMMON500 · 서버 내부 오류가 발생했습니다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "isSuccess",
+                    "code",
+                    "message",
+                    "result"
+                  ],
+                  "properties": {
+                    "isSuccess": {
+                      "type": "boolean",
+                      "example": false
+                    },
+                    "code": {
+                      "type": "string",
+                      "example": "COMMON500"
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "서버 내부 오류가 발생했습니다."
+                    },
+                    "result": {
+                      "nullable": true,
+                      "example": null
+                    }
+                  }
+                },
+                "examples": {
+                  "COMMON500": {
+                    "summary": "서버 내부 오류가 발생했습니다.",
+                    "value": {
+                      "isSuccess": false,
+                      "code": "COMMON500",
+                      "message": "서버 내부 오류가 발생했습니다.",
+                      "result": null
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "회원"
+        ],
+        "summary": "닉네임 사용 가능 여부 (공개)",
+        "description": "공개 API. Authorization 헤더 없이 호출할 수 있습니다.",
+        "security": []
+      }
+    },
+    "/members/email/{email}": {
+      "get": {
+        "operationId": "MemberController_checkEmail",
+        "parameters": [
+          {
+            "name": "email",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "email",
+              "maxLength": 254,
+              "example": "reader@example.com"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "조회 성공 (원본 JSON 형식)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "available"
+                  ],
+                  "properties": {
+                    "available": {
+                      "type": "boolean",
+                      "example": true
+                    }
+                  }
+                },
+                "example": {
+                  "available": true
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "COMMON400 · 요청 입력 검증에 실패했습니다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "isSuccess",
+                    "code",
+                    "message",
+                    "result"
+                  ],
+                  "properties": {
+                    "isSuccess": {
+                      "type": "boolean",
+                      "example": false
+                    },
+                    "code": {
+                      "type": "string",
+                      "example": "COMMON400"
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "요청 입력 검증에 실패했습니다."
+                    },
+                    "result": {
+                      "nullable": true,
+                      "example": null
+                    }
+                  }
+                },
+                "examples": {
+                  "COMMON400": {
+                    "summary": "요청 입력 검증에 실패했습니다.",
+                    "value": {
+                      "isSuccess": false,
+                      "code": "COMMON400",
+                      "message": "요청 입력 검증에 실패했습니다.",
+                      "result": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "COMMON500 · 서버 내부 오류가 발생했습니다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "isSuccess",
+                    "code",
+                    "message",
+                    "result"
+                  ],
+                  "properties": {
+                    "isSuccess": {
+                      "type": "boolean",
+                      "example": false
+                    },
+                    "code": {
+                      "type": "string",
+                      "example": "COMMON500"
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "서버 내부 오류가 발생했습니다."
+                    },
+                    "result": {
+                      "nullable": true,
+                      "example": null
+                    }
+                  }
+                },
+                "examples": {
+                  "COMMON500": {
+                    "summary": "서버 내부 오류가 발생했습니다.",
+                    "value": {
+                      "isSuccess": false,
+                      "code": "COMMON500",
+                      "message": "서버 내부 오류가 발생했습니다.",
+                      "result": null
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "회원"
+        ],
+        "summary": "이메일 사용 가능 여부 (공개)",
+        "description": "공개 API. Authorization 헤더 없이 호출할 수 있습니다.",
+        "security": []
+      }
+    },
+    "/members": {
+      "post": {
+        "operationId": "MemberController_signUp",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "email",
+                  "nickname",
+                  "password"
+                ],
+                "properties": {
+                  "email": {
+                    "type": "string",
+                    "format": "email",
+                    "maxLength": 254,
+                    "example": "reader@example.com"
+                  },
+                  "nickname": {
+                    "type": "string",
+                    "minLength": 2,
+                    "maxLength": 12,
+                    "example": "영화조아"
+                  },
+                  "password": {
+                    "type": "string",
+                    "minLength": 8,
+                    "writeOnly": true,
+                    "example": "Sample123!",
+                    "description": "대문자·소문자·숫자·!@#$%^&* 포함, UTF-8 72바이트 이하"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "회원가입에 성공했습니다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "isSuccess",
+                    "code",
+                    "message",
+                    "result"
+                  ],
+                  "properties": {
+                    "isSuccess": {
+                      "type": "boolean",
+                      "example": true
+                    },
+                    "code": {
+                      "type": "string",
+                      "example": "COMMON201"
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "회원가입에 성공했습니다."
+                    },
+                    "result": {
+                      "type": "object",
+                      "required": [
+                        "memberId",
+                        "email",
+                        "nickname"
+                      ],
+                      "properties": {
+                        "memberId": {
+                          "type": "integer",
+                          "example": 1
+                        },
+                        "email": {
+                          "type": "string",
+                          "example": "reader@example.com"
+                        },
+                        "nickname": {
+                          "type": "string",
+                          "example": "영화조아"
+                        }
+                      }
+                    }
+                  }
+                },
+                "example": {
+                  "isSuccess": true,
+                  "code": "COMMON201",
+                  "message": "회원가입에 성공했습니다.",
+                  "result": {
+                    "memberId": 1,
+                    "email": "reader@example.com",
+                    "nickname": "영화조아"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "COMMON400 · 요청 입력 검증에 실패했습니다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "isSuccess",
+                    "code",
+                    "message",
+                    "result"
+                  ],
+                  "properties": {
+                    "isSuccess": {
+                      "type": "boolean",
+                      "example": false
+                    },
+                    "code": {
+                      "type": "string",
+                      "example": "COMMON400"
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "요청 입력 검증에 실패했습니다."
+                    },
+                    "result": {
+                      "nullable": true,
+                      "example": null
+                    }
+                  }
+                },
+                "examples": {
+                  "COMMON400": {
+                    "summary": "요청 입력 검증에 실패했습니다.",
+                    "value": {
+                      "isSuccess": false,
+                      "code": "COMMON400",
+                      "message": "요청 입력 검증에 실패했습니다.",
+                      "result": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "MEMBER4091 · 이미 사용 중인 이메일입니다. / MEMBER4092 · 이미 사용 중인 닉네임입니다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "isSuccess",
+                    "code",
+                    "message",
+                    "result"
+                  ],
+                  "properties": {
+                    "isSuccess": {
+                      "type": "boolean",
+                      "example": false
+                    },
+                    "code": {
+                      "type": "string",
+                      "example": "MEMBER4092"
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "이미 사용 중인 닉네임입니다."
+                    },
+                    "result": {
+                      "nullable": true,
+                      "example": null
+                    }
+                  }
+                },
+                "examples": {
+                  "MEMBER4091": {
+                    "summary": "이미 사용 중인 이메일입니다.",
+                    "value": {
+                      "isSuccess": false,
+                      "code": "MEMBER4091",
+                      "message": "이미 사용 중인 이메일입니다.",
+                      "result": null
+                    }
+                  },
+                  "MEMBER4092": {
+                    "summary": "이미 사용 중인 닉네임입니다.",
+                    "value": {
+                      "isSuccess": false,
+                      "code": "MEMBER4092",
+                      "message": "이미 사용 중인 닉네임입니다.",
+                      "result": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "COMMON500 · 서버 내부 오류가 발생했습니다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "isSuccess",
+                    "code",
+                    "message",
+                    "result"
+                  ],
+                  "properties": {
+                    "isSuccess": {
+                      "type": "boolean",
+                      "example": false
+                    },
+                    "code": {
+                      "type": "string",
+                      "example": "COMMON500"
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "서버 내부 오류가 발생했습니다."
+                    },
+                    "result": {
+                      "nullable": true,
+                      "example": null
+                    }
+                  }
+                },
+                "examples": {
+                  "COMMON500": {
+                    "summary": "서버 내부 오류가 발생했습니다.",
+                    "value": {
+                      "isSuccess": false,
+                      "code": "COMMON500",
+                      "message": "서버 내부 오류가 발생했습니다.",
+                      "result": null
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "회원"
+        ],
+        "summary": "회원가입 (공개)",
+        "description": "공개 API. Authorization 헤더 없이 호출할 수 있습니다.",
+        "security": []
+      }
+    },
+    "/members/{memberId}/ratings": {
+      "get": {
+        "operationId": "RatingController_getRatings",
+        "parameters": [
+          {
+            "name": "memberId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 9007199254740991,
+              "example": 1
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 1000000,
+              "example": 0
+            }
+          },
+          {
+            "name": "size",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 100,
+              "example": 10
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "조회 성공 (원본 JSON 형식)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "ratingId",
+                      "movieId",
+                      "score",
+                      "comment",
+                      "createdAt",
+                      "updatedAt"
+                    ],
+                    "properties": {
+                      "ratingId": {
+                        "type": "integer",
+                        "example": 1
+                      },
+                      "movieId": {
+                        "type": "integer",
+                        "example": 550
+                      },
+                      "score": {
+                        "type": "integer",
+                        "example": 5
+                      },
+                      "comment": {
+                        "type": "string",
+                        "example": "다시 보고 싶은 영화입니다."
+                      },
+                      "createdAt": {
+                        "type": "string",
+                        "example": "2026-11-28T00:00:00.000Z"
+                      },
+                      "updatedAt": {
+                        "type": "string",
+                        "example": "2026-11-28T00:00:00.000Z"
+                      }
+                    }
+                  },
+                  "example": [
+                    {
+                      "ratingId": 1,
+                      "movieId": 550,
+                      "score": 5,
+                      "comment": "다시 보고 싶은 영화입니다.",
+                      "createdAt": "2026-11-28T00:00:00.000Z",
+                      "updatedAt": "2026-11-28T00:00:00.000Z"
+                    }
+                  ]
+                },
+                "example": [
+                  {
+                    "ratingId": 1,
+                    "movieId": 550,
+                    "score": 5,
+                    "comment": "다시 보고 싶은 영화입니다.",
+                    "createdAt": "2026-11-28T00:00:00.000Z",
+                    "updatedAt": "2026-11-28T00:00:00.000Z"
+                  }
+                ]
+              }
+            }
+          },
+          "400": {
+            "description": "COMMON400 · 요청 입력 검증에 실패했습니다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "isSuccess",
+                    "code",
+                    "message",
+                    "result"
+                  ],
+                  "properties": {
+                    "isSuccess": {
+                      "type": "boolean",
+                      "example": false
+                    },
+                    "code": {
+                      "type": "string",
+                      "example": "COMMON400"
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "요청 입력 검증에 실패했습니다."
+                    },
+                    "result": {
+                      "nullable": true,
+                      "example": null
+                    }
+                  }
+                },
+                "examples": {
+                  "COMMON400": {
+                    "summary": "요청 입력 검증에 실패했습니다.",
+                    "value": {
+                      "isSuccess": false,
+                      "code": "COMMON400",
+                      "message": "요청 입력 검증에 실패했습니다.",
+                      "result": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "MEMBER404_1 · 해당 회원을 찾을 수 없습니다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "isSuccess",
+                    "code",
+                    "message",
+                    "result"
+                  ],
+                  "properties": {
+                    "isSuccess": {
+                      "type": "boolean",
+                      "example": false
+                    },
+                    "code": {
+                      "type": "string",
+                      "example": "MEMBER404_1"
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "해당 회원을 찾을 수 없습니다."
+                    },
+                    "result": {
+                      "nullable": true,
+                      "example": null
+                    }
+                  }
+                },
+                "examples": {
+                  "MEMBER404_1": {
+                    "summary": "해당 회원을 찾을 수 없습니다.",
+                    "value": {
+                      "isSuccess": false,
+                      "code": "MEMBER404_1",
+                      "message": "해당 회원을 찾을 수 없습니다.",
+                      "result": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "COMMON500 · 서버 내부 오류가 발생했습니다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "isSuccess",
+                    "code",
+                    "message",
+                    "result"
+                  ],
+                  "properties": {
+                    "isSuccess": {
+                      "type": "boolean",
+                      "example": false
+                    },
+                    "code": {
+                      "type": "string",
+                      "example": "COMMON500"
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "서버 내부 오류가 발생했습니다."
+                    },
+                    "result": {
+                      "nullable": true,
+                      "example": null
+                    }
+                  }
+                },
+                "examples": {
+                  "COMMON500": {
+                    "summary": "서버 내부 오류가 발생했습니다.",
+                    "value": {
+                      "isSuccess": false,
+                      "code": "COMMON500",
+                      "message": "서버 내부 오류가 발생했습니다.",
+                      "result": null
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "평점"
+        ],
+        "summary": "회원별 평점 최신순 조회 (공개)",
+        "description": "공개 API. Authorization 헤더 없이 호출할 수 있습니다. page/size 미지정 시 전체 배열. page는 0부터, 기본 size=10. 빈 목록은 []입니다.",
+        "security": []
+      }
+    },
+    "/ratings": {
+      "post": {
+        "operationId": "RatingController_create",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "movieId",
+                  "score"
+                ],
+                "properties": {
+                  "movieId": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 9007199254740991,
+                    "example": 550
+                  },
+                  "score": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 5,
+                    "example": 5
+                  },
+                  "comment": {
+                    "type": "string",
+                    "nullable": true,
+                    "maxLength": 500,
+                    "example": "다시 보고 싶은 영화입니다."
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "평점 등록에 성공했습니다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "isSuccess",
+                    "code",
+                    "message",
+                    "result"
+                  ],
+                  "properties": {
+                    "isSuccess": {
+                      "type": "boolean",
+                      "example": true
+                    },
+                    "code": {
+                      "type": "string",
+                      "example": "COMMON201"
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "평점 등록에 성공했습니다."
+                    },
+                    "result": {
+                      "type": "object",
+                      "required": [
+                        "ratingId",
+                        "movieId",
+                        "score",
+                        "comment",
+                        "createdAt",
+                        "updatedAt"
+                      ],
+                      "properties": {
+                        "ratingId": {
+                          "type": "integer",
+                          "example": 1
+                        },
+                        "movieId": {
+                          "type": "integer",
+                          "example": 550
+                        },
+                        "score": {
+                          "type": "integer",
+                          "example": 5
+                        },
+                        "comment": {
+                          "type": "string",
+                          "example": "다시 보고 싶은 영화입니다."
+                        },
+                        "createdAt": {
+                          "type": "string",
+                          "example": "2026-11-28T00:00:00.000Z"
+                        },
+                        "updatedAt": {
+                          "type": "string",
+                          "example": "2026-11-28T00:00:00.000Z"
+                        }
+                      }
+                    }
+                  }
+                },
+                "example": {
+                  "isSuccess": true,
+                  "code": "COMMON201",
+                  "message": "평점 등록에 성공했습니다.",
+                  "result": {
+                    "ratingId": 1,
+                    "movieId": 550,
+                    "score": 5,
+                    "comment": "다시 보고 싶은 영화입니다.",
+                    "createdAt": "2026-11-28T00:00:00.000Z",
+                    "updatedAt": "2026-11-28T00:00:00.000Z"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "COMMON400 · 요청 입력 검증에 실패했습니다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "isSuccess",
+                    "code",
+                    "message",
+                    "result"
+                  ],
+                  "properties": {
+                    "isSuccess": {
+                      "type": "boolean",
+                      "example": false
+                    },
+                    "code": {
+                      "type": "string",
+                      "example": "COMMON400"
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "요청 입력 검증에 실패했습니다."
+                    },
+                    "result": {
+                      "nullable": true,
+                      "example": null
+                    }
+                  }
+                },
+                "examples": {
+                  "COMMON400": {
+                    "summary": "요청 입력 검증에 실패했습니다.",
+                    "value": {
+                      "isSuccess": false,
+                      "code": "COMMON400",
+                      "message": "요청 입력 검증에 실패했습니다.",
+                      "result": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "AUTH401_2 · 로그인이 필요한 요청입니다. / AUTH401_3 · 유효하지 않은 토큰입니다. / AUTH401_4 · 토큰이 만료되었습니다. 다시 로그인해주세요.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "isSuccess",
+                    "code",
+                    "message",
+                    "result"
+                  ],
+                  "properties": {
+                    "isSuccess": {
+                      "type": "boolean",
+                      "example": false
+                    },
+                    "code": {
+                      "type": "string",
+                      "example": "AUTH401_4"
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "토큰이 만료되었습니다. 다시 로그인해주세요."
+                    },
+                    "result": {
+                      "nullable": true,
+                      "example": null
+                    }
+                  }
+                },
+                "examples": {
+                  "AUTH401_2": {
+                    "summary": "로그인이 필요한 요청입니다.",
+                    "value": {
+                      "isSuccess": false,
+                      "code": "AUTH401_2",
+                      "message": "로그인이 필요한 요청입니다.",
+                      "result": null
+                    }
+                  },
+                  "AUTH401_3": {
+                    "summary": "유효하지 않은 토큰입니다.",
+                    "value": {
+                      "isSuccess": false,
+                      "code": "AUTH401_3",
+                      "message": "유효하지 않은 토큰입니다.",
+                      "result": null
+                    }
+                  },
+                  "AUTH401_4": {
+                    "summary": "토큰이 만료되었습니다. 다시 로그인해주세요.",
+                    "value": {
+                      "isSuccess": false,
+                      "code": "AUTH401_4",
+                      "message": "토큰이 만료되었습니다. 다시 로그인해주세요.",
+                      "result": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "MEMBER404_1 · 해당 회원을 찾을 수 없습니다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "isSuccess",
+                    "code",
+                    "message",
+                    "result"
+                  ],
+                  "properties": {
+                    "isSuccess": {
+                      "type": "boolean",
+                      "example": false
+                    },
+                    "code": {
+                      "type": "string",
+                      "example": "MEMBER404_1"
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "해당 회원을 찾을 수 없습니다."
+                    },
+                    "result": {
+                      "nullable": true,
+                      "example": null
+                    }
+                  }
+                },
+                "examples": {
+                  "MEMBER404_1": {
+                    "summary": "해당 회원을 찾을 수 없습니다.",
+                    "value": {
+                      "isSuccess": false,
+                      "code": "MEMBER404_1",
+                      "message": "해당 회원을 찾을 수 없습니다.",
+                      "result": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "RATING409_1 · 이미 이 영화에 평점을 남기셨습니다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "isSuccess",
+                    "code",
+                    "message",
+                    "result"
+                  ],
+                  "properties": {
+                    "isSuccess": {
+                      "type": "boolean",
+                      "example": false
+                    },
+                    "code": {
+                      "type": "string",
+                      "example": "RATING409_1"
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "이미 이 영화에 평점을 남기셨습니다."
+                    },
+                    "result": {
+                      "nullable": true,
+                      "example": null
+                    }
+                  }
+                },
+                "examples": {
+                  "RATING409_1": {
+                    "summary": "이미 이 영화에 평점을 남기셨습니다.",
+                    "value": {
+                      "isSuccess": false,
+                      "code": "RATING409_1",
+                      "message": "이미 이 영화에 평점을 남기셨습니다.",
+                      "result": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "COMMON500 · 서버 내부 오류가 발생했습니다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "isSuccess",
+                    "code",
+                    "message",
+                    "result"
+                  ],
+                  "properties": {
+                    "isSuccess": {
+                      "type": "boolean",
+                      "example": false
+                    },
+                    "code": {
+                      "type": "string",
+                      "example": "COMMON500"
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "서버 내부 오류가 발생했습니다."
+                    },
+                    "result": {
+                      "nullable": true,
+                      "example": null
+                    }
+                  }
+                },
+                "examples": {
+                  "COMMON500": {
+                    "summary": "서버 내부 오류가 발생했습니다.",
+                    "value": {
+                      "isSuccess": false,
+                      "code": "COMMON500",
+                      "message": "서버 내부 오류가 발생했습니다.",
+                      "result": null
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "평점"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "내 평점 등록",
+        "description": "Bearer JWT 필수. 사용자 ID는 토큰에서 추출하며 body에 memberId를 받지 않습니다."
+      }
+    },
+    "/ratings/{ratingId}": {
+      "patch": {
+        "operationId": "RatingController_update",
+        "parameters": [
+          {
+            "name": "ratingId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 9007199254740991,
+              "example": 1
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "score"
+                ],
+                "properties": {
+                  "score": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 5,
+                    "example": 5
+                  },
+                  "comment": {
+                    "type": "string",
+                    "nullable": true,
+                    "maxLength": 500,
+                    "example": "다시 보고 싶은 영화입니다."
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "평점 수정에 성공했습니다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "isSuccess",
+                    "code",
+                    "message",
+                    "result"
+                  ],
+                  "properties": {
+                    "isSuccess": {
+                      "type": "boolean",
+                      "example": true
+                    },
+                    "code": {
+                      "type": "string",
+                      "example": "COMMON200"
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "평점 수정에 성공했습니다."
+                    },
+                    "result": {
+                      "type": "object",
+                      "required": [
+                        "ratingId",
+                        "movieId",
+                        "score",
+                        "comment",
+                        "createdAt",
+                        "updatedAt"
+                      ],
+                      "properties": {
+                        "ratingId": {
+                          "type": "integer",
+                          "example": 1
+                        },
+                        "movieId": {
+                          "type": "integer",
+                          "example": 550
+                        },
+                        "score": {
+                          "type": "integer",
+                          "example": 5
+                        },
+                        "comment": {
+                          "type": "string",
+                          "example": "다시 보고 싶은 영화입니다."
+                        },
+                        "createdAt": {
+                          "type": "string",
+                          "example": "2026-11-28T00:00:00.000Z"
+                        },
+                        "updatedAt": {
+                          "type": "string",
+                          "example": "2026-11-28T00:00:00.000Z"
+                        }
+                      }
+                    }
+                  }
+                },
+                "example": {
+                  "isSuccess": true,
+                  "code": "COMMON200",
+                  "message": "평점 수정에 성공했습니다.",
+                  "result": {
+                    "ratingId": 1,
+                    "movieId": 550,
+                    "score": 5,
+                    "comment": "다시 보고 싶은 영화입니다.",
+                    "createdAt": "2026-11-28T00:00:00.000Z",
+                    "updatedAt": "2026-11-28T00:00:00.000Z"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "COMMON400 · 요청 입력 검증에 실패했습니다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "isSuccess",
+                    "code",
+                    "message",
+                    "result"
+                  ],
+                  "properties": {
+                    "isSuccess": {
+                      "type": "boolean",
+                      "example": false
+                    },
+                    "code": {
+                      "type": "string",
+                      "example": "COMMON400"
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "요청 입력 검증에 실패했습니다."
+                    },
+                    "result": {
+                      "nullable": true,
+                      "example": null
+                    }
+                  }
+                },
+                "examples": {
+                  "COMMON400": {
+                    "summary": "요청 입력 검증에 실패했습니다.",
+                    "value": {
+                      "isSuccess": false,
+                      "code": "COMMON400",
+                      "message": "요청 입력 검증에 실패했습니다.",
+                      "result": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "AUTH401_2 · 로그인이 필요한 요청입니다. / AUTH401_3 · 유효하지 않은 토큰입니다. / AUTH401_4 · 토큰이 만료되었습니다. 다시 로그인해주세요.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "isSuccess",
+                    "code",
+                    "message",
+                    "result"
+                  ],
+                  "properties": {
+                    "isSuccess": {
+                      "type": "boolean",
+                      "example": false
+                    },
+                    "code": {
+                      "type": "string",
+                      "example": "AUTH401_4"
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "토큰이 만료되었습니다. 다시 로그인해주세요."
+                    },
+                    "result": {
+                      "nullable": true,
+                      "example": null
+                    }
+                  }
+                },
+                "examples": {
+                  "AUTH401_2": {
+                    "summary": "로그인이 필요한 요청입니다.",
+                    "value": {
+                      "isSuccess": false,
+                      "code": "AUTH401_2",
+                      "message": "로그인이 필요한 요청입니다.",
+                      "result": null
+                    }
+                  },
+                  "AUTH401_3": {
+                    "summary": "유효하지 않은 토큰입니다.",
+                    "value": {
+                      "isSuccess": false,
+                      "code": "AUTH401_3",
+                      "message": "유효하지 않은 토큰입니다.",
+                      "result": null
+                    }
+                  },
+                  "AUTH401_4": {
+                    "summary": "토큰이 만료되었습니다. 다시 로그인해주세요.",
+                    "value": {
+                      "isSuccess": false,
+                      "code": "AUTH401_4",
+                      "message": "토큰이 만료되었습니다. 다시 로그인해주세요.",
+                      "result": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "RATING403_1 · 본인이 작성한 평점만 수정하거나 삭제할 수 있습니다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "isSuccess",
+                    "code",
+                    "message",
+                    "result"
+                  ],
+                  "properties": {
+                    "isSuccess": {
+                      "type": "boolean",
+                      "example": false
+                    },
+                    "code": {
+                      "type": "string",
+                      "example": "RATING403_1"
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "본인이 작성한 평점만 수정하거나 삭제할 수 있습니다."
+                    },
+                    "result": {
+                      "nullable": true,
+                      "example": null
+                    }
+                  }
+                },
+                "examples": {
+                  "RATING403_1": {
+                    "summary": "본인이 작성한 평점만 수정하거나 삭제할 수 있습니다.",
+                    "value": {
+                      "isSuccess": false,
+                      "code": "RATING403_1",
+                      "message": "본인이 작성한 평점만 수정하거나 삭제할 수 있습니다.",
+                      "result": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "RATING404_1 · 해당 평점을 찾을 수 없습니다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "isSuccess",
+                    "code",
+                    "message",
+                    "result"
+                  ],
+                  "properties": {
+                    "isSuccess": {
+                      "type": "boolean",
+                      "example": false
+                    },
+                    "code": {
+                      "type": "string",
+                      "example": "RATING404_1"
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "해당 평점을 찾을 수 없습니다."
+                    },
+                    "result": {
+                      "nullable": true,
+                      "example": null
+                    }
+                  }
+                },
+                "examples": {
+                  "RATING404_1": {
+                    "summary": "해당 평점을 찾을 수 없습니다.",
+                    "value": {
+                      "isSuccess": false,
+                      "code": "RATING404_1",
+                      "message": "해당 평점을 찾을 수 없습니다.",
+                      "result": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "COMMON500 · 서버 내부 오류가 발생했습니다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "isSuccess",
+                    "code",
+                    "message",
+                    "result"
+                  ],
+                  "properties": {
+                    "isSuccess": {
+                      "type": "boolean",
+                      "example": false
+                    },
+                    "code": {
+                      "type": "string",
+                      "example": "COMMON500"
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "서버 내부 오류가 발생했습니다."
+                    },
+                    "result": {
+                      "nullable": true,
+                      "example": null
+                    }
+                  }
+                },
+                "examples": {
+                  "COMMON500": {
+                    "summary": "서버 내부 오류가 발생했습니다.",
+                    "value": {
+                      "isSuccess": false,
+                      "code": "COMMON500",
+                      "message": "서버 내부 오류가 발생했습니다.",
+                      "result": null
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "평점"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "내가 작성한 평점 수정",
+        "description": "Bearer JWT 필수. 사용자 ID는 토큰에서 추출하며 body에 memberId를 받지 않습니다."
+      },
+      "delete": {
+        "operationId": "RatingController_delete",
+        "parameters": [
+          {
+            "name": "ratingId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 9007199254740991,
+              "example": 1
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "평점을 삭제했습니다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "isSuccess",
+                    "code",
+                    "message",
+                    "result"
+                  ],
+                  "properties": {
+                    "isSuccess": {
+                      "type": "boolean",
+                      "example": true
+                    },
+                    "code": {
+                      "type": "string",
+                      "example": "COMMON200"
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "평점을 삭제했습니다."
+                    },
+                    "result": {
+                      "nullable": true,
+                      "example": null
+                    }
+                  }
+                },
+                "example": {
+                  "isSuccess": true,
+                  "code": "COMMON200",
+                  "message": "평점을 삭제했습니다.",
+                  "result": null
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "COMMON400 · 요청 입력 검증에 실패했습니다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "isSuccess",
+                    "code",
+                    "message",
+                    "result"
+                  ],
+                  "properties": {
+                    "isSuccess": {
+                      "type": "boolean",
+                      "example": false
+                    },
+                    "code": {
+                      "type": "string",
+                      "example": "COMMON400"
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "요청 입력 검증에 실패했습니다."
+                    },
+                    "result": {
+                      "nullable": true,
+                      "example": null
+                    }
+                  }
+                },
+                "examples": {
+                  "COMMON400": {
+                    "summary": "요청 입력 검증에 실패했습니다.",
+                    "value": {
+                      "isSuccess": false,
+                      "code": "COMMON400",
+                      "message": "요청 입력 검증에 실패했습니다.",
+                      "result": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "AUTH401_2 · 로그인이 필요한 요청입니다. / AUTH401_3 · 유효하지 않은 토큰입니다. / AUTH401_4 · 토큰이 만료되었습니다. 다시 로그인해주세요.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "isSuccess",
+                    "code",
+                    "message",
+                    "result"
+                  ],
+                  "properties": {
+                    "isSuccess": {
+                      "type": "boolean",
+                      "example": false
+                    },
+                    "code": {
+                      "type": "string",
+                      "example": "AUTH401_4"
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "토큰이 만료되었습니다. 다시 로그인해주세요."
+                    },
+                    "result": {
+                      "nullable": true,
+                      "example": null
+                    }
+                  }
+                },
+                "examples": {
+                  "AUTH401_2": {
+                    "summary": "로그인이 필요한 요청입니다.",
+                    "value": {
+                      "isSuccess": false,
+                      "code": "AUTH401_2",
+                      "message": "로그인이 필요한 요청입니다.",
+                      "result": null
+                    }
+                  },
+                  "AUTH401_3": {
+                    "summary": "유효하지 않은 토큰입니다.",
+                    "value": {
+                      "isSuccess": false,
+                      "code": "AUTH401_3",
+                      "message": "유효하지 않은 토큰입니다.",
+                      "result": null
+                    }
+                  },
+                  "AUTH401_4": {
+                    "summary": "토큰이 만료되었습니다. 다시 로그인해주세요.",
+                    "value": {
+                      "isSuccess": false,
+                      "code": "AUTH401_4",
+                      "message": "토큰이 만료되었습니다. 다시 로그인해주세요.",
+                      "result": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "RATING403_1 · 본인이 작성한 평점만 수정하거나 삭제할 수 있습니다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "isSuccess",
+                    "code",
+                    "message",
+                    "result"
+                  ],
+                  "properties": {
+                    "isSuccess": {
+                      "type": "boolean",
+                      "example": false
+                    },
+                    "code": {
+                      "type": "string",
+                      "example": "RATING403_1"
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "본인이 작성한 평점만 수정하거나 삭제할 수 있습니다."
+                    },
+                    "result": {
+                      "nullable": true,
+                      "example": null
+                    }
+                  }
+                },
+                "examples": {
+                  "RATING403_1": {
+                    "summary": "본인이 작성한 평점만 수정하거나 삭제할 수 있습니다.",
+                    "value": {
+                      "isSuccess": false,
+                      "code": "RATING403_1",
+                      "message": "본인이 작성한 평점만 수정하거나 삭제할 수 있습니다.",
+                      "result": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "RATING404_1 · 해당 평점을 찾을 수 없습니다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "isSuccess",
+                    "code",
+                    "message",
+                    "result"
+                  ],
+                  "properties": {
+                    "isSuccess": {
+                      "type": "boolean",
+                      "example": false
+                    },
+                    "code": {
+                      "type": "string",
+                      "example": "RATING404_1"
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "해당 평점을 찾을 수 없습니다."
+                    },
+                    "result": {
+                      "nullable": true,
+                      "example": null
+                    }
+                  }
+                },
+                "examples": {
+                  "RATING404_1": {
+                    "summary": "해당 평점을 찾을 수 없습니다.",
+                    "value": {
+                      "isSuccess": false,
+                      "code": "RATING404_1",
+                      "message": "해당 평점을 찾을 수 없습니다.",
+                      "result": null
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "COMMON500 · 서버 내부 오류가 발생했습니다.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "isSuccess",
+                    "code",
+                    "message",
+                    "result"
+                  ],
+                  "properties": {
+                    "isSuccess": {
+                      "type": "boolean",
+                      "example": false
+                    },
+                    "code": {
+                      "type": "string",
+                      "example": "COMMON500"
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "서버 내부 오류가 발생했습니다."
+                    },
+                    "result": {
+                      "nullable": true,
+                      "example": null
+                    }
+                  }
+                },
+                "examples": {
+                  "COMMON500": {
+                    "summary": "서버 내부 오류가 발생했습니다.",
+                    "value": {
+                      "isSuccess": false,
+                      "code": "COMMON500",
+                      "message": "서버 내부 오류가 발생했습니다.",
+                      "result": null
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "평점"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "내가 작성한 평점 삭제",
+        "description": "Bearer JWT 필수. 사용자 ID는 토큰에서 추출하며 body에 memberId를 받지 않습니다."
+      }
+    },
+    "/favorites": {
+      "post": {
+        "operationId": "FavoriteController_create",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateFavoriteDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "즐겨찾기를 등록했습니다.",
+            "content": {
+              "application/json": {
+                "example": {
+                  "isSuccess": true,
+                  "code": "COMMON201",
+                  "message": "즐겨찾기를 등록했습니다.",
+                  "result": {
+                    "favoriteId": 1,
+                    "movieId": 550,
+                    "createdAt": "2026-11-17T00:00:00.000Z"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "입력 검증 실패 · COMMON400"
+          },
+          "401": {
+            "description": "AUTH401_2 토큰 누락 / AUTH401_3 무효 / AUTH401_4 만료",
+            "content": {
+              "application/json": {
+                "example": {
+                  "isSuccess": false,
+                  "code": "AUTH401_2",
+                  "message": "로그인이 필요합니다.",
+                  "result": null
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "MEMBER404_1 회원 없음"
+          },
+          "409": {
+            "description": "FAVORITE409_1 즐겨찾기 중복",
+            "content": {
+              "application/json": {
+                "example": {
+                  "isSuccess": false,
+                  "code": "FAVORITE409_1",
+                  "message": "이미 이 영화를 즐겨찾기하셨습니다.",
+                  "result": null
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "로그인 회원의 즐겨찾기 등록",
+        "tags": [
+          "즐겨찾기"
+        ],
+        "description": "Bearer JWT 필수. Authorize에 토큰만 입력합니다. 사용자 ID는 토큰에서 추출합니다."
+      },
+      "get": {
+        "operationId": "FavoriteController_list",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "내 즐겨찾기 목록을 조회했습니다.",
+            "content": {
+              "application/json": {
+                "example": {
+                  "isSuccess": true,
+                  "code": "COMMON200",
+                  "message": "내 즐겨찾기 목록을 조회했습니다.",
+                  "result": [
+                    {
+                      "favoriteId": 1,
+                      "movieId": 550,
+                      "createdAt": "2026-11-17T00:00:00.000Z"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "입력 검증 실패 · COMMON400"
+          },
+          "401": {
+            "description": "AUTH401_2 토큰 누락 / AUTH401_3 무효 / AUTH401_4 만료",
+            "content": {
+              "application/json": {
+                "example": {
+                  "isSuccess": false,
+                  "code": "AUTH401_2",
+                  "message": "로그인이 필요합니다.",
+                  "result": null
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "내 즐겨찾기 최신순 목록",
+        "tags": [
+          "즐겨찾기"
+        ],
+        "description": "Bearer JWT 필수. Authorize에 토큰만 입력합니다. 사용자 ID는 토큰에서 추출합니다."
+      }
+    },
+    "/favorites/{movieId}": {
+      "get": {
+        "operationId": "FavoriteController_status",
+        "parameters": [
+          {
+            "name": "movieId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 9007199254740991
+            },
+            "example": 550
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "즐겨찾기 여부를 조회했습니다.",
+            "content": {
+              "application/json": {
+                "example": {
+                  "isSuccess": true,
+                  "code": "COMMON200",
+                  "message": "즐겨찾기 여부를 조회했습니다.",
+                  "result": {
+                    "isFavorite": true
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "입력 검증 실패 · COMMON400"
+          },
+          "401": {
+            "description": "AUTH401_2 토큰 누락 / AUTH401_3 무효 / AUTH401_4 만료",
+            "content": {
+              "application/json": {
+                "example": {
+                  "isSuccess": false,
+                  "code": "AUTH401_2",
+                  "message": "로그인이 필요합니다.",
+                  "result": null
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "특정 영화 즐겨찾기 여부",
+        "tags": [
+          "즐겨찾기"
+        ],
+        "description": "Bearer JWT 필수. Authorize에 토큰만 입력합니다. 사용자 ID는 토큰에서 추출합니다."
+      },
+      "delete": {
+        "operationId": "FavoriteController_delete",
+        "parameters": [
+          {
+            "name": "movieId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 9007199254740991
+            },
+            "example": 550
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "즐겨찾기를 해제했습니다.",
+            "content": {
+              "application/json": {
+                "example": {
+                  "isSuccess": true,
+                  "code": "COMMON200",
+                  "message": "즐겨찾기를 해제했습니다.",
+                  "result": null
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "입력 검증 실패 · COMMON400"
+          },
+          "401": {
+            "description": "AUTH401_2 토큰 누락 / AUTH401_3 무효 / AUTH401_4 만료",
+            "content": {
+              "application/json": {
+                "example": {
+                  "isSuccess": false,
+                  "code": "AUTH401_2",
+                  "message": "로그인이 필요합니다.",
+                  "result": null
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "FAVORITE404_1 해제할 즐겨찾기 없음",
+            "content": {
+              "application/json": {
+                "example": {
+                  "isSuccess": false,
+                  "code": "FAVORITE404_1",
+                  "message": "즐겨찾기한 영화를 찾을 수 없습니다.",
+                  "result": null
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "내 즐겨찾기 해제",
+        "tags": [
+          "즐겨찾기"
+        ],
+        "description": "Bearer JWT 필수. Authorize에 토큰만 입력합니다. 사용자 ID는 토큰에서 추출합니다."
+      }
+    },
+    "/movie-records": {
+      "post": {
+        "operationId": "MovieRecordController_create",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "movieId",
+                  "score",
+                  "addToFavorites"
+                ],
+                "properties": {
+                  "movieId": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 9007199254740991,
+                    "example": 238
+                  },
+                  "score": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 5,
+                    "example": 5
+                  },
+                  "comment": {
+                    "type": "string",
+                    "nullable": true,
+                    "maxLength": 500,
+                    "example": "다시 보고 싶은 영화입니다."
+                  },
+                  "addToFavorites": {
+                    "type": "boolean",
+                    "example": true
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "영화 기록을 저장했습니다.",
+            "content": {
+              "application/json": {
+                "example": {
+                  "isSuccess": true,
+                  "code": "COMMON201",
+                  "message": "영화 기록을 저장했습니다.",
+                  "result": {
+                    "rating": {
+                      "ratingId": 1,
+                      "movieId": 238,
+                      "score": 5,
+                      "comment": "다시 보고 싶은 영화입니다.",
+                      "createdAt": "2026-11-17T00:00:00.000Z",
+                      "updatedAt": "2026-11-17T00:00:00.000Z"
+                    },
+                    "favorite": {
+                      "favoriteId": 1,
+                      "movieId": 238,
+                      "createdAt": "2026-11-17T00:00:00.000Z"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "입력 검증 실패 · COMMON400"
+          },
+          "401": {
+            "description": "AUTH401_2 토큰 누락 / AUTH401_3 무효 / AUTH401_4 만료",
+            "content": {
+              "application/json": {
+                "example": {
+                  "isSuccess": false,
+                  "code": "AUTH401_2",
+                  "message": "로그인이 필요합니다.",
+                  "result": null
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "MEMBER404_1 회원 없음"
+          },
+          "409": {
+            "description": "FAVORITE409_1 즐겨찾기 중복 / RATING409_1 평점 중복",
+            "content": {
+              "application/json": {
+                "example": {
+                  "isSuccess": false,
+                  "code": "FAVORITE409_1",
+                  "message": "이미 이 영화를 즐겨찾기하셨습니다.",
+                  "result": null
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "평점과 선택적 즐겨찾기를 한 트랜잭션으로 저장",
+        "tags": [
+          "영화 기록"
+        ],
+        "description": "Bearer JWT 필수. Authorize에 토큰만 입력합니다. 사용자 ID는 토큰에서 추출합니다."
+      }
+    }
+  },
+  "info": {
+    "title": "MovieLog 9주차 API",
+    "description": "공개 회원가입·로그인·중복 확인·회원별 평점 조회와 Bearer 인증이 필요한 내 정보·평점 쓰기·즐겨찾기·영화 기록을 구분합니다. 요청에 memberId를 보내지 않습니다.",
+    "version": "9.0",
+    "contact": {}
+  },
+  "tags": [],
+  "servers": [],
+  "components": {
+    "securitySchemes": {
+      "bearer": {
+        "scheme": "bearer",
+        "bearerFormat": "JWT",
+        "type": "http"
+      }
+    },
+    "schemas": {
+      "LoginRequestDto": {
+        "type": "object",
+        "properties": {}
+      },
+      "MemberUpdateRequestDto": {
+        "type": "object",
+        "properties": {}
+      },
+      "CreateMemberDto": {
+        "type": "object",
+        "properties": {}
+      },
+      "CreateRatingDto": {
+        "type": "object",
+        "properties": {}
+      },
+      "UpdateRatingDto": {
+        "type": "object",
+        "properties": {}
+      },
+      "CreateFavoriteDto": {
+        "type": "object",
+        "properties": {
+          "movieId": {
+            "type": "number",
+            "example": 550,
+            "minimum": 1,
+            "maximum": 9007199254740991
+          }
+        },
+        "required": [
+          "movieId"
+        ]
+      },
+      "CreateMovieRecordDto": {
+        "type": "object",
+        "properties": {}
+      }
+    }
+  }
+}
