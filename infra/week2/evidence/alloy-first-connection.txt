@@ -1,0 +1,14 @@
+SSM command 4d0a6348-0152-479a-b5f3-e2e959e2beab on i-028ca7137808dc8d4
+ts=2026-11-28T06:01:59.97072787Z level=info msg="starting complete graph evaluation" controller_path=/remotecfg controller_id=self_monitoring_logs_linux.default trace_id=0f925db202ac7514aed0f06cfdea739f
+ts=2026-11-28T06:02:00.02583268Z level=info msg="finished node evaluation" controller_path=/remotecfg controller_id=self_monitoring_logs_linux.default trace_id=0f925db202ac7514aed0f06cfdea739f node_id=loki.write.grafana_cloud_loki duration=55.076379ms
+ts=2026-11-28T06:02:00.026122757Z level=info msg="finished node evaluation" controller_path=/remotecfg controller_id=self_monitoring_logs_linux.default trace_id=0f925db202ac7514aed0f06cfdea739f node_id=argument.attributes duration=34.149µs
+ts=2026-11-28T06:02:00.027546733Z level=info msg="finished node evaluation" controller_path=/remotecfg controller_id=self_monitoring_logs_linux.default trace_id=0f925db202ac7514aed0f06cfdea739f node_id=loki.source.journal.alloy_logs_tag duration=1.334797ms
+ts=2026-11-28T06:02:00.028491401Z level=info msg="finished node evaluation" controller_path=/remotecfg controller_id=self_monitoring_logs_linux.default trace_id=0f925db202ac7514aed0f06cfdea739f node_id=loki.source.journal.alloy_logs_unit duration=705.043µs
+ts=2026-11-28T06:02:00.031539218Z level=info msg="finished complete graph evaluation" controller_path=/remotecfg controller_id=self_monitoring_logs_linux.default trace_id=0f925db202ac7514aed0f06cfdea739f duration=60.9156ms
+ts=2026-11-28T06:02:00.031590466Z level=info msg="finished node evaluation" controller_path=/ controller_id=remotecfg trace_id=708eab042a8b09c07e95a58df7affc76 node_id=self_monitoring_logs_linux.default duration=61.13061ms
+ts=2026-11-28T06:02:00.031619725Z level=info msg="finished node evaluation" controller_path=/ controller_id=remotecfg trace_id=708eab042a8b09c07e95a58df7affc76 node_id=declare.self_monitoring_metrics duration=5.62µs
+ts=2026-11-28T06:02:00.031650887Z level=info msg="finished node evaluation" controller_path=/ controller_id=remotecfg trace_id=708eab042a8b09c07e95a58df7affc76 node_id=declare.self_monitoring_logs_linux duration=2.412µs
+ts=2026-11-28T06:02:00.031656122Z level=info msg="finished complete graph evaluation" controller_path=/ controller_id=remotecfg trace_id=708eab042a8b09c07e95a58df7affc76 duration=86.268497ms
+ts=2026-11-28T06:02:00.031674977Z level=info msg="successfully loaded remote configuration" service=remotecfg config_hash=7f5f9b5f config_size=7947
+ts=2026-11-28T06:02:00.29932556Z level=info
+---Output truncated---

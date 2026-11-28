@@ -1,0 +1,1 @@
+Baseline EC2 requested; DB schema initialization follows via SSM.

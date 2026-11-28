@@ -1,0 +1,15 @@
+  FAILED:
+    name: absent application is detected separately from zero errors,
+    alertname: MovieLogAppDown, time: 2m, 
+        exp:[
+            0:
+              Labels:{alertname="MovieLogAppDown", service="movielog", severity="critical"}
+              Annotations:{summary="MovieLog 메트릭 수집 대상이 내려갔거나 사라졌습니다"}
+            ], 
+        got:[
+            0:
+              Labels:{alertname="MovieLogAppDown", job="app", service="movielog", severity="critical"}
+              Annotations:{summary="MovieLog 메트릭 수집 대상이 내려갔거나 사라졌습니다"}
+            ]
+
+

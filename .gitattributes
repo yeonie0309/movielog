@@ -1,3 +1,4 @@
 # Preserve unified-diff context spaces and exact CLI output in evidence files.
 infra/week1/monitor-ui-recovery.patch -whitespace
 infra/week1/evidence/*.txt -whitespace
+infra/week2/evidence/*.txt -whitespace

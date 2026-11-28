@@ -1,0 +1,28 @@
+groups:
+  - name: movielog_infra2
+    interval: 15s
+    rules:
+      - alert: MovieLogHighP95
+        expr: histogram_quantile(0.95, sum by (le) (rate(http_request_duration_seconds_bucket{job="app"}[5m]))) > 1
+        for: 1m
+        labels:
+          severity: warning
+          service: movielog
+        annotations:
+          summary: MovieLog p95 응답시간이 1초를 1분 이상 초과했습니다
+      - alert: MovieLogAppDown
+        expr: up{job="app"} == 0 or absent(up{job="app"})
+        for: 1m
+        labels:
+          severity: critical
+          service: movielog
+        annotations:
+          summary: MovieLog 메트릭 수집 대상이 내려갔거나 사라졌습니다
+      - alert: MovieLogHighErrorRatio
+        expr: (sum(rate(http_requests_total{job="app",status=~"5.."}[5m])) / sum(rate(http_requests_total{job="app"}[5m])) or vector(0)) > 0.01
+        for: 1m
+        labels:
+          severity: warning
+          service: movielog
+        annotations:
+          summary: MovieLog 5xx 비율이 1퍼센트를 초과했습니다

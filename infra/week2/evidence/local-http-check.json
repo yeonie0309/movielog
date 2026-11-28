@@ -1,0 +1,28 @@
+{
+  "environment": "Local real NestJS + existing local MySQL; read-only health, rejected writes and invalid requests only",
+  "calls": [
+    {
+      "method": "GET",
+      "path": "/health",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/ratings",
+      "status": 401
+    },
+    {
+      "method": "GET",
+      "path": "/members/0/ratings",
+      "status": 400
+    },
+    {
+      "method": "GET",
+      "path": "/nonexistent-551",
+      "status": 404
+    }
+  ],
+  "metricsStatus": 200,
+  "contentType": "text/plain; version=0.0.4; charset=utf-8",
+  "notCloudEvidence": true
+}

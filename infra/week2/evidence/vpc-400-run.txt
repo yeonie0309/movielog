@@ -1,0 +1,3 @@
+SSM command 1e65789a-15ac-4080-bd21-224ea65fd45a on i-07ec10722dff9e425
+{"runId":"474f295e-db4c-46bf-a8b0-a1082b825483","status":"finished","startedAt":1795846958166,"finishedAt":1795847003178,"scenarioName":"Infra2 VPC 400RPS load","totals":{"sent":15907,"success":15631,"failure":276,"byType":{"network":0,"timeout":276,"server":0,"client":0},"slow":181,"dropped":94},"percentiles":{"p50":18,"p95":52,"p99":1432,"max":4973,"count":15631},"baseline":{"complete":true,"sampleCount":3145,"failureRate":0,"clientFailureRate":0,"p95":78},"downtimeMs":40,"warnings":[],"outageCount":4,"resultFile":"/opt/infra2/results/load-400.json"}
+

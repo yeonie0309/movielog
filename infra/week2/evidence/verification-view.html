@@ -1,0 +1,26 @@
+<!doctype html><meta charset="utf-8"><title>실제 검증 실행 로그</title><style>body{font-family:-apple-system,sans-serif;margin:35px;background:#f3f6fa;color:#18283d}h1{font-size:30px}article{padding:22px;background:white;border-radius:14px;margin:18px 0}pre{font:14px/1.5 ui-monospace,monospace;white-space:pre-wrap}p{line-height:1.7}</style><h1>Infra 2주차 · 실제 검증 실행 로그</h1><p>실행한 CLI 로그 원문을 보여주는 문서 뷰어입니다. 터미널 앱 화면 캡처가 아닙니다.</p><article><h2>백엔드 실제 테스트:79개 통과</h2><pre>✔ metrics: opt-in disabled preserves old app behavior (197.253583ms)
+✔ metrics: repeated configuration reuses a per-app registry (0.108958ms)
+✔ metrics: route template prevents ID/query cardinality and secret leakage (10.750875ms)
+✔ metrics: records final filter status for HttpException and unexpected error (4.965875ms)
+✔ metrics: arbitrary 404s collapse and probes do not pollute application latency (5.876ms)
+✔ metrics: histogram has SLO 1s boundary, cumulative buckets and Node runtime series (1.632125ms)
+ℹ tests 79
+ℹ suites 0
+ℹ pass 79
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2311.057417</pre><small>원본 파일:backend-tests.txt</small></article><article><h2>백엔드 타입 검사:통과</h2><pre>
+&gt; movielog-movie-api@0.1.0 lint
+&gt; tsc --noEmit -p tsconfig.json
+</pre><small>원본 파일:backend-types.txt</small></article><article><h2>실습 안전장치:11개 통과</h2><pre>...........
+----------------------------------------------------------------------
+Ran 11 tests in 0.003s
+
+OK</pre><small>원본 파일:infra-safety-tests.txt</small></article><article><h2>PromQL 알림 시나리오:3개 통과</h2><pre>  SUCCESS
+</pre><small>원본 파일:promql-tests.txt</small></article><article><h2>Alloy 설정:4개 검증</h2><pre>config.alloy: PASS
+pipelines/01-host-metrics.alloy: PASS
+pipelines/02-mysql-metrics.alloy: PASS
+pipelines/03-app-metrics.alloy: PASS
+alerts.test.yaml: PASS</pre><small>원본 파일:config-validation.txt</small></article>

@@ -1,0 +1,1494 @@
+{
+  "scenario": {
+    "name": "Infra2 600RPS",
+    "target": {
+      "url": "http://127.0.0.1:9377/movie-records",
+      "method": "POST",
+      "headers": {
+        "Content-Type": "application/json",
+        "Authorization": "[REDACTED]"
+      },
+      "body": "{\"movieId\": {{counter}}, \"score\": 5, \"comment\": \"lab\", \"addToFavorites\": true}",
+      "timeoutMs": 5000
+    },
+    "success": {
+      "statusCodes": [
+        201
+      ]
+    },
+    "load": {
+      "rps": 600,
+      "durationSec": 40
+    },
+    "analysis": {
+      "slowThresholdMs": 1000,
+      "baselineSec": 8,
+      "minConsecutiveFailures": 3
+    }
+  },
+  "summary": {
+    "runId": "393235bd-8c80-469e-91d4-688373b81280",
+    "status": "finished",
+    "startedAt": 1795846265012,
+    "finishedAt": 1795846309035,
+    "scenarioName": "Infra2 600RPS",
+    "totals": {
+      "sent": 23581,
+      "success": 6433,
+      "failure": 17148,
+      "byType": {
+        "network": 996,
+        "timeout": 16152,
+        "server": 0,
+        "client": 0
+      },
+      "slow": 685,
+      "dropped": 419
+    },
+    "percentiles": {
+      "p50": 255,
+      "p95": 2692,
+      "p99": 4475,
+      "max": 4976,
+      "count": 6433
+    },
+    "baseline": {
+      "complete": true,
+      "sampleCount": 4741,
+      "failureRate": 0,
+      "clientFailureRate": 0,
+      "p95": 430
+    },
+    "outages": [
+      {
+        "startTs": 1795846275060,
+        "endTs": 1795846275067,
+        "durationMs": 7,
+        "failureCount": 3,
+        "byType": {
+          "network": 0,
+          "timeout": 3,
+          "server": 0,
+          "client": 0
+        },
+        "ongoing": false
+      },
+      {
+        "startTs": 1795846275302,
+        "endTs": 1795846275309,
+        "durationMs": 7,
+        "failureCount": 3,
+        "byType": {
+          "network": 0,
+          "timeout": 3,
+          "server": 0,
+          "client": 0
+        },
+        "ongoing": false
+      },
+      {
+        "startTs": 1795846275350,
+        "endTs": 1795846275357,
+        "durationMs": 7,
+        "failureCount": 3,
+        "byType": {
+          "network": 0,
+          "timeout": 3,
+          "server": 0,
+          "client": 0
+        },
+        "ongoing": false
+      },
+      {
+        "startTs": 1795846275592,
+        "endTs": 1795846275599,
+        "durationMs": 7,
+        "failureCount": 3,
+        "byType": {
+          "network": 0,
+          "timeout": 3,
+          "server": 0,
+          "client": 0
+        },
+        "ongoing": false
+      },
+      {
+        "startTs": 1795846275668,
+        "endTs": 1795846275675,
+        "durationMs": 7,
+        "failureCount": 3,
+        "byType": {
+          "network": 0,
+          "timeout": 3,
+          "server": 0,
+          "client": 0
+        },
+        "ongoing": false
+      },
+      {
+        "startTs": 1795846275753,
+        "endTs": 1795846275760,
+        "durationMs": 7,
+        "failureCount": 3,
+        "byType": {
+          "network": 0,
+          "timeout": 3,
+          "server": 0,
+          "client": 0
+        },
+        "ongoing": false
+      },
+      {
+        "startTs": 1795846275763,
+        "endTs": 1795846275771,
+        "durationMs": 8,
+        "failureCount": 3,
+        "byType": {
+          "network": 0,
+          "timeout": 3,
+          "server": 0,
+          "client": 0
+        },
+        "ongoing": false
+      },
+      {
+        "startTs": 1795846275876,
+        "endTs": 1795846275901,
+        "durationMs": 25,
+        "failureCount": 15,
+        "byType": {
+          "network": 0,
+          "timeout": 15,
+          "server": 0,
+          "client": 0
+        },
+        "ongoing": false
+      },
+      {
+        "startTs": 1795846275905,
+        "endTs": 1795846276011,
+        "durationMs": 106,
+        "failureCount": 62,
+        "byType": {
+          "network": 0,
+          "timeout": 62,
+          "server": 0,
+          "client": 0
+        },
+        "ongoing": false
+      },
+      {
+        "startTs": 1795846276018,
+        "endTs": 1795846276073,
+        "durationMs": 55,
+        "failureCount": 32,
+        "byType": {
+          "network": 0,
+          "timeout": 32,
+          "server": 0,
+          "client": 0
+        },
+        "ongoing": false
+      },
+      {
+        "startTs": 1795846276091,
+        "endTs": 1795846276105,
+        "durationMs": 14,
+        "failureCount": 8,
+        "byType": {
+          "network": 0,
+          "timeout": 8,
+          "server": 0,
+          "client": 0
+        },
+        "ongoing": false
+      },
+      {
+        "startTs": 1795846276118,
+        "endTs": 1795846276255,
+        "durationMs": 137,
+        "failureCount": 79,
+        "byType": {
+          "network": 0,
+          "timeout": 79,
+          "server": 0,
+          "client": 0
+        },
+        "ongoing": false
+      },
+      {
+        "startTs": 1795846276264,
+        "endTs": 1795846276272,
+        "durationMs": 8,
+        "failureCount": 4,
+        "byType": {
+          "network": 0,
+          "timeout": 4,
+          "server": 0,
+          "client": 0
+        },
+        "ongoing": false
+      },
+      {
+        "startTs": 1795846276288,
+        "endTs": 1795846276380,
+        "durationMs": 92,
+        "failureCount": 54,
+        "byType": {
+          "network": 0,
+          "timeout": 54,
+          "server": 0,
+          "client": 0
+        },
+        "ongoing": false
+      },
+      {
+        "startTs": 1795846276380,
+        "endTs": 1795846276387,
+        "durationMs": 7,
+        "failureCount": 3,
+        "byType": {
+          "network": 0,
+          "timeout": 3,
+          "server": 0,
+          "client": 0
+        },
+        "ongoing": false
+      },
+      {
+        "startTs": 1795846276401,
+        "endTs": 1795846276557,
+        "durationMs": 156,
+        "failureCount": 93,
+        "byType": {
+          "network": 0,
+          "timeout": 93,
+          "server": 0,
+          "client": 0
+        },
+        "ongoing": false
+      },
+      {
+        "startTs": 1795846276561,
+        "endTs": 1795846276570,
+        "durationMs": 9,
+        "failureCount": 5,
+        "byType": {
+          "network": 0,
+          "timeout": 5,
+          "server": 0,
+          "client": 0
+        },
+        "ongoing": false
+      },
+      {
+        "startTs": 1795846276614,
+        "endTs": 1795846276622,
+        "durationMs": 8,
+        "failureCount": 3,
+        "byType": {
+          "network": 0,
+          "timeout": 3,
+          "server": 0,
+          "client": 0
+        },
+        "ongoing": false
+      },
+      {
+        "startTs": 1795846276624,
+        "endTs": 1795846276741,
+        "durationMs": 117,
+        "failureCount": 68,
+        "byType": {
+          "network": 0,
+          "timeout": 68,
+          "server": 0,
+          "client": 0
+        },
+        "ongoing": false
+      },
+      {
+        "startTs": 1795846276773,
+        "endTs": 1795846276917,
+        "durationMs": 144,
+        "failureCount": 85,
+        "byType": {
+          "network": 0,
+          "timeout": 85,
+          "server": 0,
+          "client": 0
+        },
+        "ongoing": false
+      },
+      {
+        "startTs": 1795846276936,
+        "endTs": 1795846276944,
+        "durationMs": 8,
+        "failureCount": 3,
+        "byType": {
+          "network": 0,
+          "timeout": 3,
+          "server": 0,
+          "client": 0
+        },
+        "ongoing": false
+      },
+      {
+        "startTs": 1795846276948,
+        "endTs": 1795846276955,
+        "durationMs": 7,
+        "failureCount": 3,
+        "byType": {
+          "network": 0,
+          "timeout": 3,
+          "server": 0,
+          "client": 0
+        },
+        "ongoing": false
+      },
+      {
+        "startTs": 1795846276987,
+        "endTs": 1795846276994,
+        "durationMs": 7,
+        "failureCount": 3,
+        "byType": {
+          "network": 0,
+          "timeout": 3,
+          "server": 0,
+          "client": 0
+        },
+        "ongoing": false
+      },
+      {
+        "startTs": 1795846277019,
+        "endTs": 1795846277295,
+        "durationMs": 276,
+        "failureCount": 156,
+        "byType": {
+          "network": 0,
+          "timeout": 156,
+          "server": 0,
+          "client": 0
+        },
+        "ongoing": false
+      },
+      {
+        "startTs": 1795846277328,
+        "endTs": 1795846277337,
+        "durationMs": 9,
+        "failureCount": 5,
+        "byType": {
+          "network": 0,
+          "timeout": 5,
+          "server": 0,
+          "client": 0
+        },
+        "ongoing": false
+      },
+      {
+        "startTs": 1795846277359,
+        "endTs": 1795846277367,
+        "durationMs": 8,
+        "failureCount": 4,
+        "byType": {
+          "network": 0,
+          "timeout": 4,
+          "server": 0,
+          "client": 0
+        },
+        "ongoing": false
+      },
+      {
+        "startTs": 1795846277386,
+        "endTs": 1795846277453,
+        "durationMs": 67,
+        "failureCount": 39,
+        "byType": {
+          "network": 0,
+          "timeout": 39,
+          "server": 0,
+          "client": 0
+        },
+        "ongoing": false
+      },
+      {
+        "startTs": 1795846277453,
+        "endTs": 1795846277474,
+        "durationMs": 21,
+        "failureCount": 10,
+        "byType": {
+          "network": 0,
+          "timeout": 10,
+          "server": 0,
+          "client": 0
+        },
+        "ongoing": false
+      },
+      {
+        "startTs": 1795846277508,
+        "endTs": 1795846277519,
+        "durationMs": 11,
+        "failureCount": 5,
+        "byType": {
+          "network": 0,
+          "timeout": 5,
+          "server": 0,
+          "client": 0
+        },
+        "ongoing": false
+      },
+      {
+        "startTs": 1795846277528,
+        "endTs": 1795846277622,
+        "durationMs": 94,
+        "failureCount": 55,
+        "byType": {
+          "network": 0,
+          "timeout": 55,
+          "server": 0,
+          "client": 0
+        },
+        "ongoing": false
+      },
+      {
+        "startTs": 1795846277645,
+        "endTs": 1795846277653,
+        "durationMs": 8,
+        "failureCount": 4,
+        "byType": {
+          "network": 0,
+          "timeout": 4,
+          "server": 0,
+          "client": 0
+        },
+        "ongoing": false
+      },
+      {
+        "startTs": 1795846277653,
+        "endTs": 1795846277806,
+        "durationMs": 153,
+        "failureCount": 90,
+        "byType": {
+          "network": 0,
+          "timeout": 90,
+          "server": 0,
+          "client": 0
+        },
+        "ongoing": false
+      },
+      {
+        "startTs": 1795846277830,
+        "endTs": 1795846277841,
+        "durationMs": 11,
+        "failureCount": 5,
+        "byType": {
+          "network": 0,
+          "timeout": 5,
+          "server": 0,
+          "client": 0
+        },
+        "ongoing": false
+      },
+      {
+        "startTs": 1795846277846,
+        "endTs": 1795846277975,
+        "durationMs": 129,
+        "failureCount": 76,
+        "byType": {
+          "network": 0,
+          "timeout": 76,
+          "server": 0,
+          "client": 0
+        },
+        "ongoing": false
+      },
+      {
+        "startTs": 1795846277983,
+        "endTs": 1795846277991,
+        "durationMs": 8,
+        "failureCount": 4,
+        "byType": {
+          "network": 0,
+          "timeout": 4,
+          "server": 0,
+          "client": 0
+        },
+        "ongoing": false
+      },
+      {
+        "startTs": 1795846278016,
+        "endTs": 1795846278114,
+        "durationMs": 98,
+        "failureCount": 58,
+        "byType": {
+          "network": 0,
+          "timeout": 58,
+          "server": 0,
+          "client": 0
+        },
+        "ongoing": false
+      },
+      {
+        "startTs": 1795846278125,
+        "endTs": 1795846278133,
+        "durationMs": 8,
+        "failureCount": 4,
+        "byType": {
+          "network": 0,
+          "timeout": 4,
+          "server": 0,
+          "client": 0
+        },
+        "ongoing": false
+      },
+      {
+        "startTs": 1795846278171,
+        "endTs": 1795846278240,
+        "durationMs": 69,
+        "failureCount": 40,
+        "byType": {
+          "network": 0,
+          "timeout": 40,
+          "server": 0,
+          "client": 0
+        },
+        "ongoing": false
+      },
+      {
+        "startTs": 1795846278254,
+        "endTs": 1795846278261,
+        "durationMs": 7,
+        "failureCount": 3,
+        "byType": {
+          "network": 0,
+          "timeout": 3,
+          "server": 0,
+          "client": 0
+        },
+        "ongoing": false
+      },
+      {
+        "startTs": 1795846278268,
+        "endTs": 1795846278277,
+        "durationMs": 9,
+        "failureCount": 4,
+        "byType": {
+          "network": 0,
+          "timeout": 4,
+          "server": 0,
+          "client": 0
+        },
+        "ongoing": false
+      },
+      {
+        "startTs": 1795846278288,
+        "endTs": 1795846278361,
+        "durationMs": 73,
+        "failureCount": 44,
+        "byType": {
+          "network": 0,
+          "timeout": 44,
+          "server": 0,
+          "client": 0
+        },
+        "ongoing": false
+      },
+      {
+        "startTs": 1795846278361,
+        "endTs": 1795846278368,
+        "durationMs": 7,
+        "failureCount": 3,
+        "byType": {
+          "network": 0,
+          "timeout": 3,
+          "server": 0,
+          "client": 0
+        },
+        "ongoing": false
+      },
+      {
+        "startTs": 1795846278391,
+        "endTs": 1795846278399,
+        "durationMs": 8,
+        "failureCount": 4,
+        "byType": {
+          "network": 0,
+          "timeout": 4,
+          "server": 0,
+          "client": 0
+        },
+        "ongoing": false
+      },
+      {
+        "startTs": 1795846278402,
+        "endTs": 1795846278489,
+        "durationMs": 87,
+        "failureCount": 48,
+        "byType": {
+          "network": 0,
+          "timeout": 48,
+          "server": 0,
+          "client": 0
+        },
+        "ongoing": false
+      },
+      {
+        "startTs": 1795846278517,
+        "endTs": 1795846278524,
+        "durationMs": 7,
+        "failureCount": 3,
+        "byType": {
+          "network": 0,
+          "timeout": 3,
+          "server": 0,
+          "client": 0
+        },
+        "ongoing": false
+      },
+      {
+        "startTs": 1795846278524,
+        "endTs": 1795846278530,
+        "durationMs": 6,
+        "failureCount": 3,
+        "byType": {
+          "network": 0,
+          "timeout": 3,
+          "server": 0,
+          "client": 0
+        },
+        "ongoing": false
+      },
+      {
+        "startTs": 1795846278533,
+        "endTs": 1795846278539,
+        "durationMs": 6,
+        "failureCount": 3,
+        "byType": {
+          "network": 0,
+          "timeout": 3,
+          "server": 0,
+          "client": 0
+        },
+        "ongoing": false
+      },
+      {
+        "startTs": 1795846278543,
+        "endTs": 1795846278624,
+        "durationMs": 81,
+        "failureCount": 48,
+        "byType": {
+          "network": 0,
+          "timeout": 48,
+          "server": 0,
+          "client": 0
+        },
+        "ongoing": false
+      },
+      {
+        "startTs": 1795846278636,
+        "endTs": 1795846278742,
+        "durationMs": 106,
+        "failureCount": 63,
+        "byType": {
+          "network": 0,
+          "timeout": 63,
+          "server": 0,
+          "client": 0
+        },
+        "ongoing": false
+      },
+      {
+        "startTs": 1795846278753,
+        "endTs": 1795846278864,
+        "durationMs": 111,
+        "failureCount": 65,
+        "byType": {
+          "network": 0,
+          "timeout": 65,
+          "server": 0,
+          "client": 0
+        },
+        "ongoing": false
+      },
+      {
+        "startTs": 1795846278869,
+        "endTs": 1795846278900,
+        "durationMs": 31,
+        "failureCount": 18,
+        "byType": {
+          "network": 0,
+          "timeout": 18,
+          "server": 0,
+          "client": 0
+        },
+        "ongoing": false
+      },
+      {
+        "startTs": 1795846278902,
+        "endTs": 1795846278983,
+        "durationMs": 81,
+        "failureCount": 47,
+        "byType": {
+          "network": 0,
+          "timeout": 47,
+          "server": 0,
+          "client": 0
+        },
+        "ongoing": false
+      },
+      {
+        "startTs": 1795846278987,
+        "endTs": 1795846279064,
+        "durationMs": 77,
+        "failureCount": 45,
+        "byType": {
+          "network": 0,
+          "timeout": 45,
+          "server": 0,
+          "client": 0
+        },
+        "ongoing": false
+      },
+      {
+        "startTs": 1795846279077,
+        "endTs": 1795846279142,
+        "durationMs": 65,
+        "failureCount": 38,
+        "byType": {
+          "network": 0,
+          "timeout": 38,
+          "server": 0,
+          "client": 0
+        },
+        "ongoing": false
+      },
+      {
+        "startTs": 1795846279142,
+        "endTs": 1795846279148,
+        "durationMs": 6,
+        "failureCount": 3,
+        "byType": {
+          "network": 0,
+          "timeout": 3,
+          "server": 0,
+          "client": 0
+        },
+        "ongoing": false
+      },
+      {
+        "startTs": 1795846279160,
+        "endTs": null,
+        "durationMs": 25850,
+        "failureCount": 15194,
+        "byType": {
+          "network": 996,
+          "timeout": 14198,
+          "server": 0,
+          "client": 0
+        },
+        "ongoing": true
+      }
+    ],
+    "downtimeMs": 28538,
+    "warnings": []
+  },
+  "buckets": [
+    {
+      "tsSec": 1795846265,
+      "sent": 543,
+      "success": 543,
+      "failure": 0,
+      "byType": {
+        "network": 0,
+        "timeout": 0,
+        "server": 0,
+        "client": 0
+      },
+      "slow": 0,
+      "p50": 348,
+      "p95": 503,
+      "p99": 539,
+      "maxMs": 554
+    },
+    {
+      "tsSec": 1795846266,
+      "sent": 599,
+      "success": 599,
+      "failure": 0,
+      "byType": {
+        "network": 0,
+        "timeout": 0,
+        "server": 0,
+        "client": 0
+      },
+      "slow": 0,
+      "p50": 365,
+      "p95": 457,
+      "p99": 481,
+      "maxMs": 491
+    },
+    {
+      "tsSec": 1795846267,
+      "sent": 598,
+      "success": 598,
+      "failure": 0,
+      "byType": {
+        "network": 0,
+        "timeout": 0,
+        "server": 0,
+        "client": 0
+      },
+      "slow": 0,
+      "p50": 353,
+      "p95": 441,
+      "p99": 460,
+      "maxMs": 468
+    },
+    {
+      "tsSec": 1795846268,
+      "sent": 597,
+      "success": 597,
+      "failure": 0,
+      "byType": {
+        "network": 0,
+        "timeout": 0,
+        "server": 0,
+        "client": 0
+      },
+      "slow": 0,
+      "p50": 257,
+      "p95": 326,
+      "p99": 335,
+      "maxMs": 338
+    },
+    {
+      "tsSec": 1795846269,
+      "sent": 596,
+      "success": 596,
+      "failure": 0,
+      "byType": {
+        "network": 0,
+        "timeout": 0,
+        "server": 0,
+        "client": 0
+      },
+      "slow": 0,
+      "p50": 182,
+      "p95": 246,
+      "p99": 264,
+      "maxMs": 276
+    },
+    {
+      "tsSec": 1795846270,
+      "sent": 601,
+      "success": 601,
+      "failure": 0,
+      "byType": {
+        "network": 0,
+        "timeout": 0,
+        "server": 0,
+        "client": 0
+      },
+      "slow": 0,
+      "p50": 177,
+      "p95": 192,
+      "p99": 208,
+      "maxMs": 219
+    },
+    {
+      "tsSec": 1795846271,
+      "sent": 599,
+      "success": 599,
+      "failure": 0,
+      "byType": {
+        "network": 0,
+        "timeout": 0,
+        "server": 0,
+        "client": 0
+      },
+      "slow": 0,
+      "p50": 181,
+      "p95": 200,
+      "p99": 208,
+      "maxMs": 213
+    },
+    {
+      "tsSec": 1795846272,
+      "sent": 600,
+      "success": 600,
+      "failure": 0,
+      "byType": {
+        "network": 0,
+        "timeout": 0,
+        "server": 0,
+        "client": 0
+      },
+      "slow": 0,
+      "p50": 178,
+      "p95": 201,
+      "p99": 209,
+      "maxMs": 214
+    },
+    {
+      "tsSec": 1795846273,
+      "sent": 599,
+      "success": 599,
+      "failure": 0,
+      "byType": {
+        "network": 0,
+        "timeout": 0,
+        "server": 0,
+        "client": 0
+      },
+      "slow": 0,
+      "p50": 216,
+      "p95": 417,
+      "p99": 436,
+      "maxMs": 451
+    },
+    {
+      "tsSec": 1795846274,
+      "sent": 586,
+      "success": 538,
+      "failure": 48,
+      "byType": {
+        "network": 0,
+        "timeout": 48,
+        "server": 0,
+        "client": 0
+      },
+      "slow": 237,
+      "p50": 880,
+      "p95": 3412,
+      "p99": 4537,
+      "maxMs": 4847
+    },
+    {
+      "tsSec": 1795846275,
+      "sent": 599,
+      "success": 284,
+      "failure": 315,
+      "byType": {
+        "network": 0,
+        "timeout": 315,
+        "server": 0,
+        "client": 0
+      },
+      "slow": 284,
+      "p50": 3173,
+      "p95": 4828,
+      "p99": 4971,
+      "maxMs": 4976
+    },
+    {
+      "tsSec": 1795846276,
+      "sent": 597,
+      "success": 97,
+      "failure": 500,
+      "byType": {
+        "network": 0,
+        "timeout": 500,
+        "server": 0,
+        "client": 0
+      },
+      "slow": 40,
+      "p50": 914,
+      "p95": 4279,
+      "p99": 4772,
+      "maxMs": 4772
+    },
+    {
+      "tsSec": 1795846277,
+      "sent": 580,
+      "success": 85,
+      "failure": 495,
+      "byType": {
+        "network": 0,
+        "timeout": 495,
+        "server": 0,
+        "client": 0
+      },
+      "slow": 27,
+      "p50": 862,
+      "p95": 1974,
+      "p99": 4975,
+      "maxMs": 4975
+    },
+    {
+      "tsSec": 1795846278,
+      "sent": 596,
+      "success": 85,
+      "failure": 511,
+      "byType": {
+        "network": 0,
+        "timeout": 511,
+        "server": 0,
+        "client": 0
+      },
+      "slow": 85,
+      "p50": 2761,
+      "p95": 4081,
+      "p99": 4319,
+      "maxMs": 4319
+    },
+    {
+      "tsSec": 1795846279,
+      "sent": 589,
+      "success": 12,
+      "failure": 577,
+      "byType": {
+        "network": 0,
+        "timeout": 577,
+        "server": 0,
+        "client": 0
+      },
+      "slow": 12,
+      "p50": 4782,
+      "p95": 4802,
+      "p99": 4802,
+      "maxMs": 4802
+    },
+    {
+      "tsSec": 1795846280,
+      "sent": 568,
+      "success": 0,
+      "failure": 568,
+      "byType": {
+        "network": 0,
+        "timeout": 568,
+        "server": 0,
+        "client": 0
+      },
+      "slow": 0,
+      "p50": null,
+      "p95": null,
+      "p99": null,
+      "maxMs": null
+    },
+    {
+      "tsSec": 1795846281,
+      "sent": 599,
+      "success": 0,
+      "failure": 599,
+      "byType": {
+        "network": 0,
+        "timeout": 599,
+        "server": 0,
+        "client": 0
+      },
+      "slow": 0,
+      "p50": null,
+      "p95": null,
+      "p99": null,
+      "maxMs": null
+    },
+    {
+      "tsSec": 1795846282,
+      "sent": 600,
+      "success": 0,
+      "failure": 600,
+      "byType": {
+        "network": 0,
+        "timeout": 600,
+        "server": 0,
+        "client": 0
+      },
+      "slow": 0,
+      "p50": null,
+      "p95": null,
+      "p99": null,
+      "maxMs": null
+    },
+    {
+      "tsSec": 1795846283,
+      "sent": 591,
+      "success": 0,
+      "failure": 591,
+      "byType": {
+        "network": 0,
+        "timeout": 591,
+        "server": 0,
+        "client": 0
+      },
+      "slow": 0,
+      "p50": null,
+      "p95": null,
+      "p99": null,
+      "maxMs": null
+    },
+    {
+      "tsSec": 1795846284,
+      "sent": 596,
+      "success": 0,
+      "failure": 596,
+      "byType": {
+        "network": 0,
+        "timeout": 596,
+        "server": 0,
+        "client": 0
+      },
+      "slow": 0,
+      "p50": null,
+      "p95": null,
+      "p99": null,
+      "maxMs": null
+    },
+    {
+      "tsSec": 1795846285,
+      "sent": 574,
+      "success": 0,
+      "failure": 574,
+      "byType": {
+        "network": 0,
+        "timeout": 574,
+        "server": 0,
+        "client": 0
+      },
+      "slow": 0,
+      "p50": null,
+      "p95": null,
+      "p99": null,
+      "maxMs": null
+    },
+    {
+      "tsSec": 1795846286,
+      "sent": 600,
+      "success": 0,
+      "failure": 600,
+      "byType": {
+        "network": 0,
+        "timeout": 600,
+        "server": 0,
+        "client": 0
+      },
+      "slow": 0,
+      "p50": null,
+      "p95": null,
+      "p99": null,
+      "maxMs": null
+    },
+    {
+      "tsSec": 1795846287,
+      "sent": 597,
+      "success": 0,
+      "failure": 597,
+      "byType": {
+        "network": 0,
+        "timeout": 597,
+        "server": 0,
+        "client": 0
+      },
+      "slow": 0,
+      "p50": null,
+      "p95": null,
+      "p99": null,
+      "maxMs": null
+    },
+    {
+      "tsSec": 1795846288,
+      "sent": 593,
+      "success": 0,
+      "failure": 593,
+      "byType": {
+        "network": 0,
+        "timeout": 593,
+        "server": 0,
+        "client": 0
+      },
+      "slow": 0,
+      "p50": null,
+      "p95": null,
+      "p99": null,
+      "maxMs": null
+    },
+    {
+      "tsSec": 1795846289,
+      "sent": 560,
+      "success": 0,
+      "failure": 560,
+      "byType": {
+        "network": 0,
+        "timeout": 560,
+        "server": 0,
+        "client": 0
+      },
+      "slow": 0,
+      "p50": null,
+      "p95": null,
+      "p99": null,
+      "maxMs": null
+    },
+    {
+      "tsSec": 1795846290,
+      "sent": 569,
+      "success": 0,
+      "failure": 569,
+      "byType": {
+        "network": 0,
+        "timeout": 569,
+        "server": 0,
+        "client": 0
+      },
+      "slow": 0,
+      "p50": null,
+      "p95": null,
+      "p99": null,
+      "maxMs": null
+    },
+    {
+      "tsSec": 1795846291,
+      "sent": 600,
+      "success": 0,
+      "failure": 600,
+      "byType": {
+        "network": 0,
+        "timeout": 600,
+        "server": 0,
+        "client": 0
+      },
+      "slow": 0,
+      "p50": null,
+      "p95": null,
+      "p99": null,
+      "maxMs": null
+    },
+    {
+      "tsSec": 1795846292,
+      "sent": 595,
+      "success": 0,
+      "failure": 595,
+      "byType": {
+        "network": 0,
+        "timeout": 595,
+        "server": 0,
+        "client": 0
+      },
+      "slow": 0,
+      "p50": null,
+      "p95": null,
+      "p99": null,
+      "maxMs": null
+    },
+    {
+      "tsSec": 1795846293,
+      "sent": 599,
+      "success": 0,
+      "failure": 599,
+      "byType": {
+        "network": 0,
+        "timeout": 599,
+        "server": 0,
+        "client": 0
+      },
+      "slow": 0,
+      "p50": null,
+      "p95": null,
+      "p99": null,
+      "maxMs": null
+    },
+    {
+      "tsSec": 1795846294,
+      "sent": 598,
+      "success": 0,
+      "failure": 598,
+      "byType": {
+        "network": 0,
+        "timeout": 598,
+        "server": 0,
+        "client": 0
+      },
+      "slow": 0,
+      "p50": null,
+      "p95": null,
+      "p99": null,
+      "maxMs": null
+    },
+    {
+      "tsSec": 1795846295,
+      "sent": 598,
+      "success": 0,
+      "failure": 598,
+      "byType": {
+        "network": 0,
+        "timeout": 598,
+        "server": 0,
+        "client": 0
+      },
+      "slow": 0,
+      "p50": null,
+      "p95": null,
+      "p99": null,
+      "maxMs": null
+    },
+    {
+      "tsSec": 1795846296,
+      "sent": 597,
+      "success": 0,
+      "failure": 597,
+      "byType": {
+        "network": 0,
+        "timeout": 597,
+        "server": 0,
+        "client": 0
+      },
+      "slow": 0,
+      "p50": null,
+      "p95": null,
+      "p99": null,
+      "maxMs": null
+    },
+    {
+      "tsSec": 1795846297,
+      "sent": 596,
+      "success": 0,
+      "failure": 596,
+      "byType": {
+        "network": 0,
+        "timeout": 596,
+        "server": 0,
+        "client": 0
+      },
+      "slow": 0,
+      "p50": null,
+      "p95": null,
+      "p99": null,
+      "maxMs": null
+    },
+    {
+      "tsSec": 1795846298,
+      "sent": 597,
+      "success": 0,
+      "failure": 597,
+      "byType": {
+        "network": 0,
+        "timeout": 597,
+        "server": 0,
+        "client": 0
+      },
+      "slow": 0,
+      "p50": null,
+      "p95": null,
+      "p99": null,
+      "maxMs": null
+    },
+    {
+      "tsSec": 1795846299,
+      "sent": 583,
+      "success": 0,
+      "failure": 583,
+      "byType": {
+        "network": 0,
+        "timeout": 583,
+        "server": 0,
+        "client": 0
+      },
+      "slow": 0,
+      "p50": null,
+      "p95": null,
+      "p99": null,
+      "maxMs": null
+    },
+    {
+      "tsSec": 1795846300,
+      "sent": 590,
+      "success": 0,
+      "failure": 590,
+      "byType": {
+        "network": 0,
+        "timeout": 590,
+        "server": 0,
+        "client": 0
+      },
+      "slow": 0,
+      "p50": null,
+      "p95": null,
+      "p99": null,
+      "maxMs": null
+    },
+    {
+      "tsSec": 1795846301,
+      "sent": 514,
+      "success": 0,
+      "failure": 514,
+      "byType": {
+        "network": 0,
+        "timeout": 514,
+        "server": 0,
+        "client": 0
+      },
+      "slow": 0,
+      "p50": null,
+      "p95": null,
+      "p99": null,
+      "maxMs": null
+    },
+    {
+      "tsSec": 1795846302,
+      "sent": 598,
+      "success": 0,
+      "failure": 598,
+      "byType": {
+        "network": 0,
+        "timeout": 598,
+        "server": 0,
+        "client": 0
+      },
+      "slow": 0,
+      "p50": null,
+      "p95": null,
+      "p99": null,
+      "maxMs": null
+    },
+    {
+      "tsSec": 1795846303,
+      "sent": 591,
+      "success": 0,
+      "failure": 591,
+      "byType": {
+        "network": 416,
+        "timeout": 175,
+        "server": 0,
+        "client": 0
+      },
+      "slow": 0,
+      "p50": null,
+      "p95": null,
+      "p99": null,
+      "maxMs": null
+    },
+    {
+      "tsSec": 1795846304,
+      "sent": 592,
+      "success": 0,
+      "failure": 592,
+      "byType": {
+        "network": 573,
+        "timeout": 19,
+        "server": 0,
+        "client": 0
+      },
+      "slow": 0,
+      "p50": null,
+      "p95": null,
+      "p99": null,
+      "maxMs": null
+    },
+    {
+      "tsSec": 1795846305,
+      "sent": 7,
+      "success": 0,
+      "failure": 7,
+      "byType": {
+        "network": 7,
+        "timeout": 0,
+        "server": 0,
+        "client": 0
+      },
+      "slow": 0,
+      "p50": null,
+      "p95": null,
+      "p99": null,
+      "maxMs": null
+    }
+  ]
+}

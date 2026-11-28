@@ -1,0 +1,21 @@
+Waiting for initial readiness: [('i-0061baf170283f53a', 'initial'), ('i-028ca7137808dc8d4', 'initial')]
+Waiting for initial readiness: [('i-0061baf170283f53a', 'initial'), ('i-028ca7137808dc8d4', 'initial')]
+Waiting for initial readiness: [('i-0061baf170283f53a', 'unhealthy'), ('i-028ca7137808dc8d4', 'unhealthy')]
+Waiting for initial readiness: [('i-0061baf170283f53a', 'unhealthy'), ('i-028ca7137808dc8d4', 'unhealthy')]
+Waiting for initial readiness: [('i-0061baf170283f53a', 'unhealthy'), ('i-028ca7137808dc8d4', 'unhealthy')]
+Waiting for initial readiness: [('i-0061baf170283f53a', 'unhealthy'), ('i-028ca7137808dc8d4', 'unhealthy')]
+Waiting for initial readiness: [('i-0061baf170283f53a', 'unhealthy'), ('i-028ca7137808dc8d4', 'unhealthy')]
+Waiting for initial readiness: [('i-0061baf170283f53a', 'unhealthy'), ('i-028ca7137808dc8d4', 'healthy')]
+Both AWS targets are healthy. Measurement may begin.
+[
+  {
+    "instance": "i-0061baf170283f53a",
+    "state": "healthy",
+    "reason": null
+  },
+  {
+    "instance": "i-028ca7137808dc8d4",
+    "state": "healthy",
+    "reason": null
+  }
+]
