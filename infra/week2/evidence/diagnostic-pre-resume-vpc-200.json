@@ -1,0 +1,766 @@
+{
+  "scenario": {
+    "name": "Infra2 VPC 200RPS load",
+    "target": {
+      "url": "http://internal-movielog-infra2-alb-15969546.ap-southeast-2.elb.amazonaws.com/movie-records",
+      "method": "POST",
+      "headers": {
+        "Content-Type": "application/json",
+        "Authorization": "[REDACTED]"
+      },
+      "body": "{\"movieId\": {{counter}}, \"score\": 5, \"comment\": \"lab\", \"addToFavorites\": true}",
+      "timeoutMs": 5000
+    },
+    "success": {
+      "statusCodes": [
+        201
+      ]
+    },
+    "load": {
+      "rps": 200,
+      "durationSec": 40
+    },
+    "analysis": {
+      "slowThresholdMs": 1000,
+      "baselineSec": 8,
+      "minConsecutiveFailures": 3
+    }
+  },
+  "summary": {
+    "runId": "52ad7457-adad-4e8f-a248-f97147c19bac",
+    "status": "finished",
+    "startedAt": 1795846823455,
+    "finishedAt": 1795846863474,
+    "scenarioName": "Infra2 VPC 200RPS load",
+    "totals": {
+      "sent": 7995,
+      "success": 7995,
+      "failure": 0,
+      "byType": {
+        "network": 0,
+        "timeout": 0,
+        "server": 0,
+        "client": 0
+      },
+      "slow": 0,
+      "dropped": 5
+    },
+    "percentiles": {
+      "p50": 18,
+      "p95": 24,
+      "p99": 76,
+      "max": 276,
+      "count": 7995
+    },
+    "baseline": {
+      "complete": true,
+      "sampleCount": 1599,
+      "failureRate": 0,
+      "clientFailureRate": 0,
+      "p95": 27
+    },
+    "outages": [],
+    "downtimeMs": 0,
+    "warnings": []
+  },
+  "buckets": [
+    {
+      "tsSec": 1795846823,
+      "sent": 107,
+      "success": 107,
+      "failure": 0,
+      "byType": {
+        "network": 0,
+        "timeout": 0,
+        "server": 0,
+        "client": 0
+      },
+      "slow": 0,
+      "p50": 20,
+      "p95": 53,
+      "p99": 71,
+      "maxMs": 71
+    },
+    {
+      "tsSec": 1795846824,
+      "sent": 200,
+      "success": 200,
+      "failure": 0,
+      "byType": {
+        "network": 0,
+        "timeout": 0,
+        "server": 0,
+        "client": 0
+      },
+      "slow": 0,
+      "p50": 18,
+      "p95": 21,
+      "p99": 26,
+      "maxMs": 34
+    },
+    {
+      "tsSec": 1795846825,
+      "sent": 200,
+      "success": 200,
+      "failure": 0,
+      "byType": {
+        "network": 0,
+        "timeout": 0,
+        "server": 0,
+        "client": 0
+      },
+      "slow": 0,
+      "p50": 19,
+      "p95": 25,
+      "p99": 30,
+      "maxMs": 39
+    },
+    {
+      "tsSec": 1795846826,
+      "sent": 200,
+      "success": 200,
+      "failure": 0,
+      "byType": {
+        "network": 0,
+        "timeout": 0,
+        "server": 0,
+        "client": 0
+      },
+      "slow": 0,
+      "p50": 18,
+      "p95": 21,
+      "p99": 21,
+      "maxMs": 23
+    },
+    {
+      "tsSec": 1795846827,
+      "sent": 200,
+      "success": 200,
+      "failure": 0,
+      "byType": {
+        "network": 0,
+        "timeout": 0,
+        "server": 0,
+        "client": 0
+      },
+      "slow": 0,
+      "p50": 18,
+      "p95": 23,
+      "p99": 25,
+      "maxMs": 28
+    },
+    {
+      "tsSec": 1795846828,
+      "sent": 200,
+      "success": 200,
+      "failure": 0,
+      "byType": {
+        "network": 0,
+        "timeout": 0,
+        "server": 0,
+        "client": 0
+      },
+      "slow": 0,
+      "p50": 18,
+      "p95": 21,
+      "p99": 25,
+      "maxMs": 30
+    },
+    {
+      "tsSec": 1795846829,
+      "sent": 200,
+      "success": 200,
+      "failure": 0,
+      "byType": {
+        "network": 0,
+        "timeout": 0,
+        "server": 0,
+        "client": 0
+      },
+      "slow": 0,
+      "p50": 17,
+      "p95": 20,
+      "p99": 45,
+      "maxMs": 98
+    },
+    {
+      "tsSec": 1795846830,
+      "sent": 200,
+      "success": 200,
+      "failure": 0,
+      "byType": {
+        "network": 0,
+        "timeout": 0,
+        "server": 0,
+        "client": 0
+      },
+      "slow": 0,
+      "p50": 19,
+      "p95": 80,
+      "p99": 102,
+      "maxMs": 120
+    },
+    {
+      "tsSec": 1795846831,
+      "sent": 200,
+      "success": 200,
+      "failure": 0,
+      "byType": {
+        "network": 0,
+        "timeout": 0,
+        "server": 0,
+        "client": 0
+      },
+      "slow": 0,
+      "p50": 19,
+      "p95": 22,
+      "p99": 24,
+      "maxMs": 25
+    },
+    {
+      "tsSec": 1795846832,
+      "sent": 199,
+      "success": 199,
+      "failure": 0,
+      "byType": {
+        "network": 0,
+        "timeout": 0,
+        "server": 0,
+        "client": 0
+      },
+      "slow": 0,
+      "p50": 18,
+      "p95": 21,
+      "p99": 24,
+      "maxMs": 30
+    },
+    {
+      "tsSec": 1795846833,
+      "sent": 201,
+      "success": 201,
+      "failure": 0,
+      "byType": {
+        "network": 0,
+        "timeout": 0,
+        "server": 0,
+        "client": 0
+      },
+      "slow": 0,
+      "p50": 18,
+      "p95": 21,
+      "p99": 23,
+      "maxMs": 25
+    },
+    {
+      "tsSec": 1795846834,
+      "sent": 200,
+      "success": 200,
+      "failure": 0,
+      "byType": {
+        "network": 0,
+        "timeout": 0,
+        "server": 0,
+        "client": 0
+      },
+      "slow": 0,
+      "p50": 18,
+      "p95": 20,
+      "p99": 24,
+      "maxMs": 29
+    },
+    {
+      "tsSec": 1795846835,
+      "sent": 200,
+      "success": 200,
+      "failure": 0,
+      "byType": {
+        "network": 0,
+        "timeout": 0,
+        "server": 0,
+        "client": 0
+      },
+      "slow": 0,
+      "p50": 19,
+      "p95": 22,
+      "p99": 29,
+      "maxMs": 31
+    },
+    {
+      "tsSec": 1795846836,
+      "sent": 200,
+      "success": 200,
+      "failure": 0,
+      "byType": {
+        "network": 0,
+        "timeout": 0,
+        "server": 0,
+        "client": 0
+      },
+      "slow": 0,
+      "p50": 19,
+      "p95": 27,
+      "p99": 37,
+      "maxMs": 46
+    },
+    {
+      "tsSec": 1795846837,
+      "sent": 200,
+      "success": 200,
+      "failure": 0,
+      "byType": {
+        "network": 0,
+        "timeout": 0,
+        "server": 0,
+        "client": 0
+      },
+      "slow": 0,
+      "p50": 18,
+      "p95": 21,
+      "p99": 24,
+      "maxMs": 25
+    },
+    {
+      "tsSec": 1795846838,
+      "sent": 199,
+      "success": 199,
+      "failure": 0,
+      "byType": {
+        "network": 0,
+        "timeout": 0,
+        "server": 0,
+        "client": 0
+      },
+      "slow": 0,
+      "p50": 17,
+      "p95": 22,
+      "p99": 25,
+      "maxMs": 29
+    },
+    {
+      "tsSec": 1795846839,
+      "sent": 200,
+      "success": 200,
+      "failure": 0,
+      "byType": {
+        "network": 0,
+        "timeout": 0,
+        "server": 0,
+        "client": 0
+      },
+      "slow": 0,
+      "p50": 18,
+      "p95": 21,
+      "p99": 23,
+      "maxMs": 26
+    },
+    {
+      "tsSec": 1795846840,
+      "sent": 200,
+      "success": 200,
+      "failure": 0,
+      "byType": {
+        "network": 0,
+        "timeout": 0,
+        "server": 0,
+        "client": 0
+      },
+      "slow": 0,
+      "p50": 17,
+      "p95": 20,
+      "p99": 22,
+      "maxMs": 25
+    },
+    {
+      "tsSec": 1795846841,
+      "sent": 200,
+      "success": 200,
+      "failure": 0,
+      "byType": {
+        "network": 0,
+        "timeout": 0,
+        "server": 0,
+        "client": 0
+      },
+      "slow": 0,
+      "p50": 18,
+      "p95": 21,
+      "p99": 24,
+      "maxMs": 36
+    },
+    {
+      "tsSec": 1795846842,
+      "sent": 198,
+      "success": 198,
+      "failure": 0,
+      "byType": {
+        "network": 0,
+        "timeout": 0,
+        "server": 0,
+        "client": 0
+      },
+      "slow": 0,
+      "p50": 19,
+      "p95": 31,
+      "p99": 42,
+      "maxMs": 42
+    },
+    {
+      "tsSec": 1795846843,
+      "sent": 200,
+      "success": 200,
+      "failure": 0,
+      "byType": {
+        "network": 0,
+        "timeout": 0,
+        "server": 0,
+        "client": 0
+      },
+      "slow": 0,
+      "p50": 17,
+      "p95": 21,
+      "p99": 22,
+      "maxMs": 23
+    },
+    {
+      "tsSec": 1795846844,
+      "sent": 200,
+      "success": 200,
+      "failure": 0,
+      "byType": {
+        "network": 0,
+        "timeout": 0,
+        "server": 0,
+        "client": 0
+      },
+      "slow": 0,
+      "p50": 17,
+      "p95": 22,
+      "p99": 41,
+      "maxMs": 62
+    },
+    {
+      "tsSec": 1795846845,
+      "sent": 200,
+      "success": 200,
+      "failure": 0,
+      "byType": {
+        "network": 0,
+        "timeout": 0,
+        "server": 0,
+        "client": 0
+      },
+      "slow": 0,
+      "p50": 18,
+      "p95": 71,
+      "p99": 91,
+      "maxMs": 91
+    },
+    {
+      "tsSec": 1795846846,
+      "sent": 200,
+      "success": 200,
+      "failure": 0,
+      "byType": {
+        "network": 0,
+        "timeout": 0,
+        "server": 0,
+        "client": 0
+      },
+      "slow": 0,
+      "p50": 17,
+      "p95": 21,
+      "p99": 24,
+      "maxMs": 25
+    },
+    {
+      "tsSec": 1795846847,
+      "sent": 200,
+      "success": 200,
+      "failure": 0,
+      "byType": {
+        "network": 0,
+        "timeout": 0,
+        "server": 0,
+        "client": 0
+      },
+      "slow": 0,
+      "p50": 17,
+      "p95": 20,
+      "p99": 26,
+      "maxMs": 31
+    },
+    {
+      "tsSec": 1795846848,
+      "sent": 200,
+      "success": 200,
+      "failure": 0,
+      "byType": {
+        "network": 0,
+        "timeout": 0,
+        "server": 0,
+        "client": 0
+      },
+      "slow": 0,
+      "p50": 17,
+      "p95": 20,
+      "p99": 23,
+      "maxMs": 33
+    },
+    {
+      "tsSec": 1795846849,
+      "sent": 200,
+      "success": 200,
+      "failure": 0,
+      "byType": {
+        "network": 0,
+        "timeout": 0,
+        "server": 0,
+        "client": 0
+      },
+      "slow": 0,
+      "p50": 17,
+      "p95": 20,
+      "p99": 29,
+      "maxMs": 35
+    },
+    {
+      "tsSec": 1795846850,
+      "sent": 200,
+      "success": 200,
+      "failure": 0,
+      "byType": {
+        "network": 0,
+        "timeout": 0,
+        "server": 0,
+        "client": 0
+      },
+      "slow": 0,
+      "p50": 18,
+      "p95": 27,
+      "p99": 32,
+      "maxMs": 34
+    },
+    {
+      "tsSec": 1795846851,
+      "sent": 200,
+      "success": 200,
+      "failure": 0,
+      "byType": {
+        "network": 0,
+        "timeout": 0,
+        "server": 0,
+        "client": 0
+      },
+      "slow": 0,
+      "p50": 18,
+      "p95": 32,
+      "p99": 46,
+      "maxMs": 55
+    },
+    {
+      "tsSec": 1795846852,
+      "sent": 200,
+      "success": 200,
+      "failure": 0,
+      "byType": {
+        "network": 0,
+        "timeout": 0,
+        "server": 0,
+        "client": 0
+      },
+      "slow": 0,
+      "p50": 17,
+      "p95": 20,
+      "p99": 22,
+      "maxMs": 24
+    },
+    {
+      "tsSec": 1795846853,
+      "sent": 200,
+      "success": 200,
+      "failure": 0,
+      "byType": {
+        "network": 0,
+        "timeout": 0,
+        "server": 0,
+        "client": 0
+      },
+      "slow": 0,
+      "p50": 17,
+      "p95": 20,
+      "p99": 22,
+      "maxMs": 23
+    },
+    {
+      "tsSec": 1795846854,
+      "sent": 200,
+      "success": 200,
+      "failure": 0,
+      "byType": {
+        "network": 0,
+        "timeout": 0,
+        "server": 0,
+        "client": 0
+      },
+      "slow": 0,
+      "p50": 17,
+      "p95": 20,
+      "p99": 32,
+      "maxMs": 52
+    },
+    {
+      "tsSec": 1795846855,
+      "sent": 200,
+      "success": 200,
+      "failure": 0,
+      "byType": {
+        "network": 0,
+        "timeout": 0,
+        "server": 0,
+        "client": 0
+      },
+      "slow": 0,
+      "p50": 17,
+      "p95": 29,
+      "p99": 42,
+      "maxMs": 51
+    },
+    {
+      "tsSec": 1795846856,
+      "sent": 200,
+      "success": 200,
+      "failure": 0,
+      "byType": {
+        "network": 0,
+        "timeout": 0,
+        "server": 0,
+        "client": 0
+      },
+      "slow": 0,
+      "p50": 17,
+      "p95": 21,
+      "p99": 28,
+      "maxMs": 30
+    },
+    {
+      "tsSec": 1795846857,
+      "sent": 200,
+      "success": 200,
+      "failure": 0,
+      "byType": {
+        "network": 0,
+        "timeout": 0,
+        "server": 0,
+        "client": 0
+      },
+      "slow": 0,
+      "p50": 17,
+      "p95": 20,
+      "p99": 23,
+      "maxMs": 24
+    },
+    {
+      "tsSec": 1795846858,
+      "sent": 200,
+      "success": 200,
+      "failure": 0,
+      "byType": {
+        "network": 0,
+        "timeout": 0,
+        "server": 0,
+        "client": 0
+      },
+      "slow": 0,
+      "p50": 17,
+      "p95": 20,
+      "p99": 21,
+      "maxMs": 23
+    },
+    {
+      "tsSec": 1795846859,
+      "sent": 200,
+      "success": 200,
+      "failure": 0,
+      "byType": {
+        "network": 0,
+        "timeout": 0,
+        "server": 0,
+        "client": 0
+      },
+      "slow": 0,
+      "p50": 17,
+      "p95": 22,
+      "p99": 37,
+      "maxMs": 232
+    },
+    {
+      "tsSec": 1795846860,
+      "sent": 200,
+      "success": 200,
+      "failure": 0,
+      "byType": {
+        "network": 0,
+        "timeout": 0,
+        "server": 0,
+        "client": 0
+      },
+      "slow": 0,
+      "p50": 19,
+      "p95": 232,
+      "p99": 270,
+      "maxMs": 276
+    },
+    {
+      "tsSec": 1795846861,
+      "sent": 200,
+      "success": 200,
+      "failure": 0,
+      "byType": {
+        "network": 0,
+        "timeout": 0,
+        "server": 0,
+        "client": 0
+      },
+      "slow": 0,
+      "p50": 18,
+      "p95": 26,
+      "p99": 33,
+      "maxMs": 33
+    },
+    {
+      "tsSec": 1795846862,
+      "sent": 200,
+      "success": 200,
+      "failure": 0,
+      "byType": {
+        "network": 0,
+        "timeout": 0,
+        "server": 0,
+        "client": 0
+      },
+      "slow": 0,
+      "p50": 17,
+      "p95": 20,
+      "p99": 24,
+      "maxMs": 26
+    },
+    {
+      "tsSec": 1795846863,
+      "sent": 91,
+      "success": 91,
+      "failure": 0,
+      "byType": {
+        "network": 0,
+        "timeout": 0,
+        "server": 0,
+        "client": 0
+      },
+      "slow": 0,
+      "p50": 17,
+      "p95": 20,
+      "p99": 22,
+      "maxMs": 22
+    }
+  ],
+  "syntheticMemberId": 5
+}

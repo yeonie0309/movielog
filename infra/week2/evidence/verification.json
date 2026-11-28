@@ -1,15 +1,25 @@
 {
   "backendTests": 79,
-  "safetyTests": 9,
+  "safetyTests": 11,
   "alloyConfigsValidated": 4,
   "promtoolScenarios": 3,
   "localMetricsHttpStatus": 200,
   "dockerArchitecture": "arm64",
   "dockerUser": "node",
-  "cloudResourcesCreated": false,
-  "grafanaAccountReady": false,
-  "loadMeasured": false,
-  "alertReceived": false,
+  "cloudResourcesCreated": true,
+  "grafanaAccountReady": true,
+  "loadMeasured": true,
+  "alertReceived": true,
   "notionEdited": false,
-  "submitted": false
+  "submitted": false,
+  "loadStages": [
+    200,
+    400,
+    600,
+    800
+  ],
+  "observedTargetInflectionRps": 800,
+  "absoluteServerCapacityProven": false,
+  "cloudResourcesCleaned": true,
+  "grafanaLabTokenRevoked": true
 }

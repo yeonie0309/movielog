@@ -1,0 +1,9080 @@
+[
+  {
+    "at": 1795845733315,
+    "cpuPercent": 91.18942731277532,
+    "Threads_connected": 5,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845735320,
+    "cpuPercent": 87.72893772893772,
+    "Threads_connected": 6,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845737395,
+    "cpuPercent": 98.05352798053528,
+    "Threads_connected": 6,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845739398,
+    "cpuPercent": 59.319526627218934,
+    "Threads_connected": 6,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845741474,
+    "cpuPercent": 64.86068111455108,
+    "Threads_connected": 6,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845743476,
+    "cpuPercent": 68.22289156626506,
+    "Threads_connected": 6,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845745482,
+    "cpuPercent": 58.223684210526315,
+    "Threads_connected": 6,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845747485,
+    "cpuPercent": 49.11433172302737,
+    "Threads_connected": 6,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845749637,
+    "cpuPercent": 90.85923217550274,
+    "Threads_connected": 6,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845751640,
+    "cpuPercent": 74.72727272727273,
+    "Threads_connected": 6,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845753713,
+    "cpuPercent": 57.27272727272727,
+    "Threads_connected": 6,
+    "Threads_running": 3
+  },
+  {
+    "at": 1795845755716,
+    "cpuPercent": 60,
+    "Threads_connected": 6,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845757720,
+    "cpuPercent": 48.613376835236544,
+    "Threads_connected": 6,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845759793,
+    "cpuPercent": 56.42737896494157,
+    "Threads_connected": 6,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845761797,
+    "cpuPercent": 82.88288288288288,
+    "Threads_connected": 6,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845763800,
+    "cpuPercent": 66.26297577854672,
+    "Threads_connected": 6,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845765873,
+    "cpuPercent": 60.90604026845637,
+    "Threads_connected": 6,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845767877,
+    "cpuPercent": 61.28500823723228,
+    "Threads_connected": 6,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845769880,
+    "cpuPercent": 57.83699059561129,
+    "Threads_connected": 6,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845771953,
+    "cpuPercent": 57.996768982229405,
+    "Threads_connected": 6,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845773956,
+    "cpuPercent": 77.21280602636536,
+    "Threads_connected": 6,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845775960,
+    "cpuPercent": 60.89193825042882,
+    "Threads_connected": 6,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845778035,
+    "cpuPercent": 58.478605388272584,
+    "Threads_connected": 6,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845780058,
+    "cpuPercent": 62.83891547049441,
+    "Threads_connected": 6,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845782115,
+    "cpuPercent": 65.51724137931035,
+    "Threads_connected": 6,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845784158,
+    "cpuPercent": 59.220389805097454,
+    "Threads_connected": 6,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845786195,
+    "cpuPercent": 81.335952848723,
+    "Threads_connected": 6,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845788197,
+    "cpuPercent": 54.75819032761311,
+    "Threads_connected": 6,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845790200,
+    "cpuPercent": 56.78627145085804,
+    "Threads_connected": 6,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845792202,
+    "cpuPercent": 61.93656093489148,
+    "Threads_connected": 6,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845794204,
+    "cpuPercent": 65.5982905982906,
+    "Threads_connected": 6,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845796274,
+    "cpuPercent": 64.81876332622602,
+    "Threads_connected": 6,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845798277,
+    "cpuPercent": 77.65089722675367,
+    "Threads_connected": 6,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845800280,
+    "cpuPercent": 92.42144177449168,
+    "Threads_connected": 6,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845802285,
+    "cpuPercent": 33.0952380952381,
+    "Threads_connected": 6,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845804290,
+    "cpuPercent": 2.2167487684729092,
+    "Threads_connected": 6,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845806293,
+    "cpuPercent": 1.2594458438287104,
+    "Threads_connected": 6,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845808297,
+    "cpuPercent": 6.483790523690769,
+    "Threads_connected": 6,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845810300,
+    "cpuPercent": 3.2581453634085267,
+    "Threads_connected": 6,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845812304,
+    "cpuPercent": 0.25188916876573986,
+    "Threads_connected": 6,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845814308,
+    "cpuPercent": 0.7518796992481258,
+    "Threads_connected": 6,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845816312,
+    "cpuPercent": 0.2512562814070307,
+    "Threads_connected": 6,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845818314,
+    "cpuPercent": 4.511278195488721,
+    "Threads_connected": 6,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845820319,
+    "cpuPercent": 1.253132832080206,
+    "Threads_connected": 6,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845822324,
+    "cpuPercent": 1.749999999999996,
+    "Threads_connected": 6,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845824328,
+    "cpuPercent": 0.7499999999999951,
+    "Threads_connected": 6,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845826332,
+    "cpuPercent": 1.4925373134328401,
+    "Threads_connected": 6,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845828336,
+    "cpuPercent": 4.522613065326631,
+    "Threads_connected": 7,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845830340,
+    "cpuPercent": 1.005025125628145,
+    "Threads_connected": 7,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845832344,
+    "cpuPercent": 0.25188916876573986,
+    "Threads_connected": 7,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845834348,
+    "cpuPercent": 1.0000000000000009,
+    "Threads_connected": 7,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845836352,
+    "cpuPercent": 0.2525252525252486,
+    "Threads_connected": 7,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845838356,
+    "cpuPercent": 4.511278195488721,
+    "Threads_connected": 7,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845840375,
+    "cpuPercent": 6.435643564356431,
+    "Threads_connected": 7,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845842379,
+    "cpuPercent": 0.7499999999999951,
+    "Threads_connected": 7,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845844383,
+    "cpuPercent": 1.980198019801982,
+    "Threads_connected": 7,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845846387,
+    "cpuPercent": 0.7518796992481258,
+    "Threads_connected": 7,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845848391,
+    "cpuPercent": 5.513784461152882,
+    "Threads_connected": 7,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845850395,
+    "cpuPercent": 1.0000000000000009,
+    "Threads_connected": 7,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845852399,
+    "cpuPercent": 0.5025125628140725,
+    "Threads_connected": 7,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845854403,
+    "cpuPercent": 0.7518796992481258,
+    "Threads_connected": 7,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845856407,
+    "cpuPercent": 0.5012531328320802,
+    "Threads_connected": 7,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845858410,
+    "cpuPercent": 4.020100502512558,
+    "Threads_connected": 7,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845860420,
+    "cpuPercent": 0.7575757575757569,
+    "Threads_connected": 7,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845862424,
+    "cpuPercent": 0.5012531328320802,
+    "Threads_connected": 7,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845864428,
+    "cpuPercent": 0.5025125628140725,
+    "Threads_connected": 7,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845866432,
+    "cpuPercent": 0,
+    "Threads_connected": 7,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845868436,
+    "cpuPercent": 3.5264483627204024,
+    "Threads_connected": 7,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845870440,
+    "cpuPercent": 2.487562189054726,
+    "Threads_connected": 7,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845872444,
+    "cpuPercent": 0.25188916876573986,
+    "Threads_connected": 7,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845874448,
+    "cpuPercent": 0.5012531328320802,
+    "Threads_connected": 7,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845876451,
+    "cpuPercent": 0.5025125628140725,
+    "Threads_connected": 7,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845878454,
+    "cpuPercent": 0.25188916876573986,
+    "Threads_connected": 7,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845880459,
+    "cpuPercent": 4.2713567839196,
+    "Threads_connected": 7,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845882462,
+    "cpuPercent": 2.2332506203473934,
+    "Threads_connected": 7,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845884466,
+    "cpuPercent": 0.2512562814070307,
+    "Threads_connected": 7,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845886470,
+    "cpuPercent": 8.607594936708862,
+    "Threads_connected": 7,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845888474,
+    "cpuPercent": 0.5025125628140725,
+    "Threads_connected": 7,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845890478,
+    "cpuPercent": 4.761904761904767,
+    "Threads_connected": 7,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845892482,
+    "cpuPercent": 0.5025125628140725,
+    "Threads_connected": 7,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845894485,
+    "cpuPercent": 0.7518796992481258,
+    "Threads_connected": 7,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845896489,
+    "cpuPercent": 0.5025125628140725,
+    "Threads_connected": 7,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845898493,
+    "cpuPercent": 0.9975062344139696,
+    "Threads_connected": 7,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845900499,
+    "cpuPercent": 4.749999999999998,
+    "Threads_connected": 7,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845902501,
+    "cpuPercent": 1.0000000000000009,
+    "Threads_connected": 7,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845904505,
+    "cpuPercent": 0.7518796992481258,
+    "Threads_connected": 7,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845906509,
+    "cpuPercent": 0.25188916876573986,
+    "Threads_connected": 7,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845908513,
+    "cpuPercent": 0.5025125628140725,
+    "Threads_connected": 7,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845910516,
+    "cpuPercent": 4.522613065326631,
+    "Threads_connected": 7,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845912520,
+    "cpuPercent": 0.7556675062972307,
+    "Threads_connected": 7,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845914524,
+    "cpuPercent": 0.5025125628140725,
+    "Threads_connected": 7,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845916528,
+    "cpuPercent": 3.233830845771146,
+    "Threads_connected": 7,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845918530,
+    "cpuPercent": 0.5037783375314908,
+    "Threads_connected": 7,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845920534,
+    "cpuPercent": 5.472636815920396,
+    "Threads_connected": 7,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845922538,
+    "cpuPercent": 1.2562814070351758,
+    "Threads_connected": 7,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845924542,
+    "cpuPercent": 0.5025125628140725,
+    "Threads_connected": 7,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845926545,
+    "cpuPercent": 1.0000000000000009,
+    "Threads_connected": 7,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845928549,
+    "cpuPercent": 0.7499999999999951,
+    "Threads_connected": 7,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845930551,
+    "cpuPercent": 4.522613065326631,
+    "Threads_connected": 7,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845932556,
+    "cpuPercent": 0.7499999999999951,
+    "Threads_connected": 7,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845934559,
+    "cpuPercent": 0.25188916876573986,
+    "Threads_connected": 7,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845936563,
+    "cpuPercent": 1.2468827930174564,
+    "Threads_connected": 7,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845938566,
+    "cpuPercent": 0.7518796992481258,
+    "Threads_connected": 7,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845940570,
+    "cpuPercent": 4.511278195488721,
+    "Threads_connected": 7,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845942573,
+    "cpuPercent": 1.0025062656641603,
+    "Threads_connected": 7,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845944576,
+    "cpuPercent": 1.0000000000000009,
+    "Threads_connected": 7,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845946580,
+    "cpuPercent": 1.4925373134328401,
+    "Threads_connected": 7,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845948583,
+    "cpuPercent": 0.7518796992481258,
+    "Threads_connected": 7,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845950585,
+    "cpuPercent": 4.749999999999998,
+    "Threads_connected": 7,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845952590,
+    "cpuPercent": 0.5025125628140725,
+    "Threads_connected": 7,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845954594,
+    "cpuPercent": 0.7499999999999951,
+    "Threads_connected": 7,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845956597,
+    "cpuPercent": 0.5025125628140725,
+    "Threads_connected": 7,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845958600,
+    "cpuPercent": 0.5025125628140725,
+    "Threads_connected": 7,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845960604,
+    "cpuPercent": 9.22693266832918,
+    "Threads_connected": 7,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845962608,
+    "cpuPercent": 0.7499999999999951,
+    "Threads_connected": 7,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845964612,
+    "cpuPercent": 0.25188916876573986,
+    "Threads_connected": 8,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845966615,
+    "cpuPercent": 0.25188916876573986,
+    "Threads_connected": 8,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845968619,
+    "cpuPercent": 1.0000000000000009,
+    "Threads_connected": 8,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845970623,
+    "cpuPercent": 4.511278195488721,
+    "Threads_connected": 8,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845972627,
+    "cpuPercent": 0.5025125628140725,
+    "Threads_connected": 8,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845974630,
+    "cpuPercent": 1.0000000000000009,
+    "Threads_connected": 8,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845976634,
+    "cpuPercent": 0.9975062344139696,
+    "Threads_connected": 8,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845978636,
+    "cpuPercent": 2.261306532663321,
+    "Threads_connected": 8,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845980640,
+    "cpuPercent": 4.975124378109452,
+    "Threads_connected": 8,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845982643,
+    "cpuPercent": 0,
+    "Threads_connected": 8,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845984646,
+    "cpuPercent": 1.2499999999999956,
+    "Threads_connected": 8,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845986650,
+    "cpuPercent": 0.25188916876573986,
+    "Threads_connected": 8,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845988654,
+    "cpuPercent": 0.7499999999999951,
+    "Threads_connected": 8,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845990656,
+    "cpuPercent": 4.292929292929292,
+    "Threads_connected": 8,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845992660,
+    "cpuPercent": 0,
+    "Threads_connected": 8,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845994664,
+    "cpuPercent": 0,
+    "Threads_connected": 8,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845996672,
+    "cpuPercent": 0.7499999999999951,
+    "Threads_connected": 8,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795845998676,
+    "cpuPercent": 0.5012531328320802,
+    "Threads_connected": 8,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846000680,
+    "cpuPercent": 5.472636815920396,
+    "Threads_connected": 8,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846002684,
+    "cpuPercent": 10.97256857855362,
+    "Threads_connected": 8,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846004688,
+    "cpuPercent": 7.106598984771573,
+    "Threads_connected": 8,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846006690,
+    "cpuPercent": 1.995012468827928,
+    "Threads_connected": 8,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846008694,
+    "cpuPercent": 0.5025125628140725,
+    "Threads_connected": 8,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846010698,
+    "cpuPercent": 5.808080808080806,
+    "Threads_connected": 8,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846012700,
+    "cpuPercent": 0,
+    "Threads_connected": 8,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846014704,
+    "cpuPercent": 0.5076142131979711,
+    "Threads_connected": 8,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846016708,
+    "cpuPercent": 0.5050505050505083,
+    "Threads_connected": 8,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846018712,
+    "cpuPercent": 1.0025062656641603,
+    "Threads_connected": 8,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846020716,
+    "cpuPercent": 8.478802992518709,
+    "Threads_connected": 8,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846022720,
+    "cpuPercent": 0,
+    "Threads_connected": 8,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846024724,
+    "cpuPercent": 1.005025125628145,
+    "Threads_connected": 8,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846026728,
+    "cpuPercent": 0.7575757575757569,
+    "Threads_connected": 8,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846028732,
+    "cpuPercent": 0.5037783375314908,
+    "Threads_connected": 8,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846030737,
+    "cpuPercent": 5.263157894736848,
+    "Threads_connected": 8,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846032740,
+    "cpuPercent": 10.659898477157359,
+    "Threads_connected": 18,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846034744,
+    "cpuPercent": 30.670103092783506,
+    "Threads_connected": 24,
+    "Threads_running": 7
+  },
+  {
+    "at": 1795846036748,
+    "cpuPercent": 28.179551122194514,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846038750,
+    "cpuPercent": 31.188118811881193,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846040753,
+    "cpuPercent": 34.5679012345679,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846042758,
+    "cpuPercent": 29.187817258883253,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846044760,
+    "cpuPercent": 29.25,
+    "Threads_connected": 24,
+    "Threads_running": 13
+  },
+  {
+    "at": 1795846046764,
+    "cpuPercent": 20.50632911392405,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846048766,
+    "cpuPercent": 24.49494949494949,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846050770,
+    "cpuPercent": 28.915662650602414,
+    "Threads_connected": 24,
+    "Threads_running": 3
+  },
+  {
+    "at": 1795846052774,
+    "cpuPercent": 32.03883495145631,
+    "Threads_connected": 24,
+    "Threads_running": 3
+  },
+  {
+    "at": 1795846054778,
+    "cpuPercent": 26.506024096385538,
+    "Threads_connected": 24,
+    "Threads_running": 3
+  },
+  {
+    "at": 1795846056780,
+    "cpuPercent": 20.551378446115287,
+    "Threads_connected": 24,
+    "Threads_running": 3
+  },
+  {
+    "at": 1795846058783,
+    "cpuPercent": 25.558312655086844,
+    "Threads_connected": 24,
+    "Threads_running": 3
+  },
+  {
+    "at": 1795846060787,
+    "cpuPercent": 32.06650831353919,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846062789,
+    "cpuPercent": 36.60933660933661,
+    "Threads_connected": 24,
+    "Threads_running": 3
+  },
+  {
+    "at": 1795846064793,
+    "cpuPercent": 24.57002457002457,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846066797,
+    "cpuPercent": 28.125,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846068800,
+    "cpuPercent": 28.467153284671532,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846070804,
+    "cpuPercent": 27.475247524752476,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846072806,
+    "cpuPercent": 26.172839506172842,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846074810,
+    "cpuPercent": 1.0101010101010055,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846076814,
+    "cpuPercent": 1.2499999999999956,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846078818,
+    "cpuPercent": 0.2525252525252486,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846080821,
+    "cpuPercent": 8.208955223880599,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846082825,
+    "cpuPercent": 4.2713567839196,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846084830,
+    "cpuPercent": 1.4962593516209433,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846086834,
+    "cpuPercent": 1.0075566750629705,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846088837,
+    "cpuPercent": 0.5063291139240533,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846090840,
+    "cpuPercent": 1.7587939698492483,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846092844,
+    "cpuPercent": 4.545454545454541,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846094848,
+    "cpuPercent": 1.005025125628145,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846096851,
+    "cpuPercent": 0.5037783375314908,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846098854,
+    "cpuPercent": 1.2626262626262652,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846100858,
+    "cpuPercent": 0.7575757575757569,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846102862,
+    "cpuPercent": 4.040404040404044,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846104864,
+    "cpuPercent": 1.0101010101010055,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846106869,
+    "cpuPercent": 1.0025062656641603,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846108873,
+    "cpuPercent": 0,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846110877,
+    "cpuPercent": 0.5037783375314908,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846112880,
+    "cpuPercent": 4.2713567839196,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846114883,
+    "cpuPercent": 0.5050505050505083,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846116887,
+    "cpuPercent": 0.5063291139240533,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846118890,
+    "cpuPercent": 1.0025062656641603,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846120893,
+    "cpuPercent": 0.5089058524173073,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846122897,
+    "cpuPercent": 5.7644110275689275,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846124900,
+    "cpuPercent": 1.5000000000000013,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846126904,
+    "cpuPercent": 1.7456359102244412,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846128907,
+    "cpuPercent": 0.2525252525252486,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846130910,
+    "cpuPercent": 1.0101010101010055,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846132914,
+    "cpuPercent": 3.7878787878787845,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846134918,
+    "cpuPercent": 0.5063291139240533,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846136921,
+    "cpuPercent": 0.5037783375314908,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846138925,
+    "cpuPercent": 2.0253164556962022,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846140930,
+    "cpuPercent": 2.487562189054726,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846142933,
+    "cpuPercent": 4.040404040404044,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846144936,
+    "cpuPercent": 0.5050505050505083,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846146940,
+    "cpuPercent": 0.25380710659898,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846148944,
+    "cpuPercent": 0.5025125628140725,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846150946,
+    "cpuPercent": 1.0075566750629705,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846152949,
+    "cpuPercent": 5.513784461152882,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846154953,
+    "cpuPercent": 0.7556675062972307,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846156957,
+    "cpuPercent": 0.5025125628140725,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846158961,
+    "cpuPercent": 0.2525252525252486,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846160963,
+    "cpuPercent": 1.0075566750629705,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846162967,
+    "cpuPercent": 4.282115869017633,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846164970,
+    "cpuPercent": 0.7575757575757569,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846166974,
+    "cpuPercent": 0.5063291139240533,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846168976,
+    "cpuPercent": 0,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846170980,
+    "cpuPercent": 1.0075566750629705,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846172984,
+    "cpuPercent": 4.282115869017633,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846174988,
+    "cpuPercent": 1.005025125628145,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846176990,
+    "cpuPercent": 1.5075376884422065,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846178994,
+    "cpuPercent": 0.2525252525252486,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846180997,
+    "cpuPercent": 1.5075376884422065,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846183001,
+    "cpuPercent": 5.7644110275689275,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846185016,
+    "cpuPercent": 0.5037783375314908,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846187021,
+    "cpuPercent": 3.1862745098039214,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846189022,
+    "cpuPercent": 11.45038167938931,
+    "Threads_connected": 24,
+    "Threads_running": 4
+  },
+  {
+    "at": 1795846191025,
+    "cpuPercent": 49.87531172069826,
+    "Threads_connected": 24,
+    "Threads_running": 3
+  },
+  {
+    "at": 1795846193028,
+    "cpuPercent": 49.51456310679612,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846195031,
+    "cpuPercent": 45.952380952380956,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846197033,
+    "cpuPercent": 47.146401985111666,
+    "Threads_connected": 24,
+    "Threads_running": 3
+  },
+  {
+    "at": 1795846199036,
+    "cpuPercent": 42.96482412060302,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846201040,
+    "cpuPercent": 51.421800947867304,
+    "Threads_connected": 24,
+    "Threads_running": 4
+  },
+  {
+    "at": 1795846203044,
+    "cpuPercent": 49.87405541561712,
+    "Threads_connected": 24,
+    "Threads_running": 5
+  },
+  {
+    "at": 1795846205048,
+    "cpuPercent": 41.93548387096774,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846207051,
+    "cpuPercent": 39.70588235294118,
+    "Threads_connected": 24,
+    "Threads_running": 6
+  },
+  {
+    "at": 1795846209054,
+    "cpuPercent": 40.931372549019606,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846211058,
+    "cpuPercent": 45.965770171149146,
+    "Threads_connected": 24,
+    "Threads_running": 3
+  },
+  {
+    "at": 1795846213061,
+    "cpuPercent": 48.56459330143541,
+    "Threads_connected": 24,
+    "Threads_running": 3
+  },
+  {
+    "at": 1795846215066,
+    "cpuPercent": 45.58823529411765,
+    "Threads_connected": 24,
+    "Threads_running": 11
+  },
+  {
+    "at": 1795846217069,
+    "cpuPercent": 36.79012345679013,
+    "Threads_connected": 24,
+    "Threads_running": 8
+  },
+  {
+    "at": 1795846219073,
+    "cpuPercent": 39,
+    "Threads_connected": 24,
+    "Threads_running": 3
+  },
+  {
+    "at": 1795846221077,
+    "cpuPercent": 48.786407766990294,
+    "Threads_connected": 24,
+    "Threads_running": 3
+  },
+  {
+    "at": 1795846223080,
+    "cpuPercent": 46.984924623115575,
+    "Threads_connected": 24,
+    "Threads_running": 5
+  },
+  {
+    "at": 1795846225083,
+    "cpuPercent": 47.073170731707314,
+    "Threads_connected": 24,
+    "Threads_running": 3
+  },
+  {
+    "at": 1795846227087,
+    "cpuPercent": 35.06172839506173,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846229090,
+    "cpuPercent": 29.38271604938272,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846231094,
+    "cpuPercent": 1.995012468827928,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846233098,
+    "cpuPercent": 0.75949367088608,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846235102,
+    "cpuPercent": 5.48628428927681,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846237106,
+    "cpuPercent": 1.2562814070351758,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846239110,
+    "cpuPercent": 1.0025062656641603,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846241114,
+    "cpuPercent": 2.244389027431426,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846243118,
+    "cpuPercent": 1.9900497512437831,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846245127,
+    "cpuPercent": 7.823960880195601,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846247130,
+    "cpuPercent": 1.4962593516209433,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846249133,
+    "cpuPercent": 0.25188916876573986,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846251137,
+    "cpuPercent": 0.25380710659898,
+    "Threads_connected": 25,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846253140,
+    "cpuPercent": 0.7537688442211032,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846255143,
+    "cpuPercent": 5.513784461152882,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846257148,
+    "cpuPercent": 0.7575757575757569,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846259151,
+    "cpuPercent": 1.7543859649122862,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846261154,
+    "cpuPercent": 3.4482758620689613,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846263158,
+    "cpuPercent": 0.5025125628140725,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846265161,
+    "cpuPercent": 8.5427135678392,
+    "Threads_connected": 24,
+    "Threads_running": 5
+  },
+  {
+    "at": 1795846267164,
+    "cpuPercent": 49.63503649635036,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846269167,
+    "cpuPercent": 51.59705159705159,
+    "Threads_connected": 24,
+    "Threads_running": 3
+  },
+  {
+    "at": 1795846271170,
+    "cpuPercent": 55.98086124401913,
+    "Threads_connected": 24,
+    "Threads_running": 4
+  },
+  {
+    "at": 1795846273173,
+    "cpuPercent": 55.44554455445545,
+    "Threads_connected": 24,
+    "Threads_running": 3
+  },
+  {
+    "at": 1795846275237,
+    "cpuPercent": 62.28813559322034,
+    "Threads_connected": 24,
+    "Threads_running": 3
+  },
+  {
+    "at": 1795846277240,
+    "cpuPercent": 68.36363636363636,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846279313,
+    "cpuPercent": 75.94433399602386,
+    "Threads_connected": 24,
+    "Threads_running": 4
+  },
+  {
+    "at": 1795846281316,
+    "cpuPercent": 71.50537634408603,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846283319,
+    "cpuPercent": 66.96914700544465,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846285395,
+    "cpuPercent": 88.55291576673866,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846287400,
+    "cpuPercent": 83.72591006423983,
+    "Threads_connected": 24,
+    "Threads_running": 4
+  },
+  {
+    "at": 1795846289476,
+    "cpuPercent": 70.83333333333333,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846291480,
+    "cpuPercent": 70.71823204419888,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846293553,
+    "cpuPercent": 71.56133828996283,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846295555,
+    "cpuPercent": 76.31067961165049,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846297560,
+    "cpuPercent": 72.95238095238095,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846299635,
+    "cpuPercent": 79.17485265225933,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846301640,
+    "cpuPercent": 84.93449781659389,
+    "Threads_connected": 24,
+    "Threads_running": 3
+  },
+  {
+    "at": 1795846303644,
+    "cpuPercent": 68.43033509700176,
+    "Threads_connected": 24,
+    "Threads_running": 3
+  },
+  {
+    "at": 1795846305715,
+    "cpuPercent": 72.93497363796133,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846307718,
+    "cpuPercent": 70.77205882352942,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846309721,
+    "cpuPercent": 65.18010291595198,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846311793,
+    "cpuPercent": 75.22935779816513,
+    "Threads_connected": 24,
+    "Threads_running": 7
+  },
+  {
+    "at": 1795846313797,
+    "cpuPercent": 76.54320987654322,
+    "Threads_connected": 24,
+    "Threads_running": 3
+  },
+  {
+    "at": 1795846315801,
+    "cpuPercent": 94.53681710213777,
+    "Threads_connected": 24,
+    "Threads_running": 3
+  },
+  {
+    "at": 1795846317805,
+    "cpuPercent": 71.37745974955277,
+    "Threads_connected": 24,
+    "Threads_running": 3
+  },
+  {
+    "at": 1795846319875,
+    "cpuPercent": 58.99705014749262,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846321879,
+    "cpuPercent": 49.01315789473685,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846323882,
+    "cpuPercent": 38.36805555555556,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846325886,
+    "cpuPercent": 0.7575757575757569,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846327890,
+    "cpuPercent": 5.076142131979699,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846329894,
+    "cpuPercent": 5.82278481012658,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846331897,
+    "cpuPercent": 0.7575757575757569,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846333900,
+    "cpuPercent": 0.5089058524173073,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846335904,
+    "cpuPercent": 1.5037593984962405,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846337918,
+    "cpuPercent": 5.793450881612094,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846339920,
+    "cpuPercent": 1.4962593516209433,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846341925,
+    "cpuPercent": 1.2658227848101222,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846343929,
+    "cpuPercent": 1.253132832080206,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846345933,
+    "cpuPercent": 6.329113924050633,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846347935,
+    "cpuPercent": 4.556962025316458,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846349939,
+    "cpuPercent": 1.7632241813602012,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846351944,
+    "cpuPercent": 1.005025125628145,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846353948,
+    "cpuPercent": 3.7688442211055273,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846355951,
+    "cpuPercent": 2.749999999999997,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846357955,
+    "cpuPercent": 5.263157894736848,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846359959,
+    "cpuPercent": 20.256410256410252,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846361963,
+    "cpuPercent": 3.0456852791878153,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846363965,
+    "cpuPercent": 4.5000000000000036,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846365970,
+    "cpuPercent": 3.2499999999999973,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846367974,
+    "cpuPercent": 0.7575757575757569,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846369978,
+    "cpuPercent": 6.060606060606055,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846371986,
+    "cpuPercent": 3.2828282828282873,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846373990,
+    "cpuPercent": 3.007518796992481,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846375994,
+    "cpuPercent": 3.007518796992481,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846377998,
+    "cpuPercent": 3.2499999999999973,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846380000,
+    "cpuPercent": 9.022556390977442,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846382009,
+    "cpuPercent": 6.188118811881194,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846384013,
+    "cpuPercent": 2.7707808564231717,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846386018,
+    "cpuPercent": 0.7575757575757569,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846388020,
+    "cpuPercent": 2.0000000000000018,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846390025,
+    "cpuPercent": 5.527638190954775,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846392029,
+    "cpuPercent": 1.253132832080206,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846394033,
+    "cpuPercent": 2.020202020202022,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846396035,
+    "cpuPercent": 1.7632241813602012,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846398039,
+    "cpuPercent": 0.5063291139240533,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846400043,
+    "cpuPercent": 5.037783375314864,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846402048,
+    "cpuPercent": 17.839195979899504,
+    "Threads_connected": 24,
+    "Threads_running": 3
+  },
+  {
+    "at": 1795846404052,
+    "cpuPercent": 70.17543859649122,
+    "Threads_connected": 24,
+    "Threads_running": 5
+  },
+  {
+    "at": 1795846406055,
+    "cpuPercent": 11.221945137157107,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846408059,
+    "cpuPercent": 0.5050505050505083,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846410066,
+    "cpuPercent": 8.436724565756826,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846412070,
+    "cpuPercent": 1.0152284263959421,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846414074,
+    "cpuPercent": 1.2562814070351758,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846416076,
+    "cpuPercent": 1.2626262626262652,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846418080,
+    "cpuPercent": 0.7575757575757569,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846420084,
+    "cpuPercent": 6.965174129353235,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846422088,
+    "cpuPercent": 1.995012468827928,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846424090,
+    "cpuPercent": 4.228855721393032,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846426094,
+    "cpuPercent": 7.881773399014779,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846428098,
+    "cpuPercent": 1.0025062656641603,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846430102,
+    "cpuPercent": 4.534005037783373,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846432106,
+    "cpuPercent": 1.0126582278481067,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846434110,
+    "cpuPercent": 1.0101010101010055,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846436114,
+    "cpuPercent": 0.7575757575757569,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846438118,
+    "cpuPercent": 0.25316455696202667,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846440154,
+    "cpuPercent": 11.22448979591837,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846442158,
+    "cpuPercent": 3.855421686746985,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846444162,
+    "cpuPercent": 1.253132832080206,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846446166,
+    "cpuPercent": 1.2594458438287104,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846448170,
+    "cpuPercent": 0.5037783375314908,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846450172,
+    "cpuPercent": 11.363636363636365,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846452175,
+    "cpuPercent": 2.030456852791873,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846454178,
+    "cpuPercent": 2.493765586034913,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846456182,
+    "cpuPercent": 20.610687022900763,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846458187,
+    "cpuPercent": 1.0126582278481067,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846460190,
+    "cpuPercent": 11.311053984575835,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846462196,
+    "cpuPercent": 7.57575757575758,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846464200,
+    "cpuPercent": 11.586901763224178,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846466204,
+    "cpuPercent": 4.040404040404044,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846468209,
+    "cpuPercent": 0.25316455696202667,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846470213,
+    "cpuPercent": 6.000000000000005,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846472217,
+    "cpuPercent": 2.2556390977443663,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846474220,
+    "cpuPercent": 0.5050505050505083,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846476224,
+    "cpuPercent": 1.0101010101010055,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846478227,
+    "cpuPercent": 1.0075566750629705,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846480231,
+    "cpuPercent": 6.516290726817042,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846482236,
+    "cpuPercent": 2.777777777777779,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846484240,
+    "cpuPercent": 1.5151515151515138,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846486244,
+    "cpuPercent": 3.482587064676612,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846488248,
+    "cpuPercent": 0,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846490252,
+    "cpuPercent": 5.276381909547734,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846492256,
+    "cpuPercent": 0.5050505050505083,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846494260,
+    "cpuPercent": 0.5050505050505083,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846496264,
+    "cpuPercent": 1.005025125628145,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846498267,
+    "cpuPercent": 0.7556675062972307,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846500286,
+    "cpuPercent": 8.70646766169154,
+    "Threads_connected": 24,
+    "Threads_running": 3
+  },
+  {
+    "at": 1795846502288,
+    "cpuPercent": 7.462686567164178,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846504293,
+    "cpuPercent": 5.867346938775508,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846506296,
+    "cpuPercent": 1.5037593984962405,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846508300,
+    "cpuPercent": 0.7575757575757569,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846510303,
+    "cpuPercent": 1.7543859649122862,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846512307,
+    "cpuPercent": 4.282115869017633,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846514310,
+    "cpuPercent": 0.5063291139240533,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846516312,
+    "cpuPercent": 1.5075376884422065,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846518315,
+    "cpuPercent": 0.5037783375314908,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846520319,
+    "cpuPercent": 0.5037783375314908,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846522323,
+    "cpuPercent": 5.037783375314864,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846524328,
+    "cpuPercent": 0.75949367088608,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846526330,
+    "cpuPercent": 1.9900497512437831,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846528334,
+    "cpuPercent": 0.2525252525252486,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846530337,
+    "cpuPercent": 20.84367245657568,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846532340,
+    "cpuPercent": 70.07481296758104,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846534343,
+    "cpuPercent": 66.08040201005025,
+    "Threads_connected": 24,
+    "Threads_running": 6
+  },
+  {
+    "at": 1795846536346,
+    "cpuPercent": 70.44334975369458,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846538350,
+    "cpuPercent": 62.83618581907091,
+    "Threads_connected": 24,
+    "Threads_running": 3
+  },
+  {
+    "at": 1795846540364,
+    "cpuPercent": 66.33416458852868,
+    "Threads_connected": 24,
+    "Threads_running": 5
+  },
+  {
+    "at": 1795846542367,
+    "cpuPercent": 70.24390243902438,
+    "Threads_connected": 24,
+    "Threads_running": 5
+  },
+  {
+    "at": 1795846544370,
+    "cpuPercent": 71.25,
+    "Threads_connected": 24,
+    "Threads_running": 5
+  },
+  {
+    "at": 1795846546373,
+    "cpuPercent": 73.6842105263158,
+    "Threads_connected": 24,
+    "Threads_running": 6
+  },
+  {
+    "at": 1795846548437,
+    "cpuPercent": 69.09492273730685,
+    "Threads_connected": 24,
+    "Threads_running": 3
+  },
+  {
+    "at": 1795846550441,
+    "cpuPercent": 71.02272727272727,
+    "Threads_connected": 24,
+    "Threads_running": 7
+  },
+  {
+    "at": 1795846552516,
+    "cpuPercent": 91.32947976878613,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846554521,
+    "cpuPercent": 78.63554757630162,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846556599,
+    "cpuPercent": 89.12280701754386,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846558674,
+    "cpuPercent": 87.84313725490196,
+    "Threads_connected": 24,
+    "Threads_running": 3
+  },
+  {
+    "at": 1795846560676,
+    "cpuPercent": 99.58419958419958,
+    "Threads_connected": 24,
+    "Threads_running": 3
+  },
+  {
+    "at": 1795846562679,
+    "cpuPercent": 91.03313840155946,
+    "Threads_connected": 24,
+    "Threads_running": 3
+  },
+  {
+    "at": 1795846564754,
+    "cpuPercent": 74.46808510638299,
+    "Threads_connected": 24,
+    "Threads_running": 3
+  },
+  {
+    "at": 1795846566756,
+    "cpuPercent": 77.27272727272727,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846568759,
+    "cpuPercent": 80.84677419354838,
+    "Threads_connected": 24,
+    "Threads_running": 3
+  },
+  {
+    "at": 1795846570838,
+    "cpuPercent": 84.87544483985765,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846572918,
+    "cpuPercent": 74.41441441441441,
+    "Threads_connected": 24,
+    "Threads_running": 3
+  },
+  {
+    "at": 1795846574921,
+    "cpuPercent": 94.6086956521739,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846576923,
+    "cpuPercent": 87.02290076335878,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846578995,
+    "cpuPercent": 92.8709055876686,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846580998,
+    "cpuPercent": 96.03024574669186,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846583003,
+    "cpuPercent": 98.17073170731707,
+    "Threads_connected": 24,
+    "Threads_running": 3
+  },
+  {
+    "at": 1795846585073,
+    "cpuPercent": 91.89189189189189,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846587075,
+    "cpuPercent": 89.72477064220183,
+    "Threads_connected": 24,
+    "Threads_running": 3
+  },
+  {
+    "at": 1795846589077,
+    "cpuPercent": 91.68173598553345,
+    "Threads_connected": 24,
+    "Threads_running": 3
+  },
+  {
+    "at": 1795846591081,
+    "cpuPercent": 97.06422018348624,
+    "Threads_connected": 24,
+    "Threads_running": 4
+  },
+  {
+    "at": 1795846593085,
+    "cpuPercent": 97.07602339181287,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846595156,
+    "cpuPercent": 100,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846597234,
+    "cpuPercent": 100,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846599313,
+    "cpuPercent": 100,
+    "Threads_connected": 24,
+    "Threads_running": 3
+  },
+  {
+    "at": 1795846601401,
+    "cpuPercent": 100,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846603558,
+    "cpuPercent": 98.75,
+    "Threads_connected": 24,
+    "Threads_running": 4
+  },
+  {
+    "at": 1795846605961,
+    "cpuPercent": 96.37377963737796,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846608282,
+    "cpuPercent": 76.4406779661017,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846610290,
+    "cpuPercent": 71.45015105740181,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846612294,
+    "cpuPercent": 46.83026584867076,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846614356,
+    "cpuPercent": 54.2483660130719,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846616358,
+    "cpuPercent": 93.9879759519038,
+    "Threads_connected": 25,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846618362,
+    "cpuPercent": 96.82203389830508,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846620438,
+    "cpuPercent": 88.29981718464352,
+    "Threads_connected": 24,
+    "Threads_running": 4
+  },
+  {
+    "at": 1795846622440,
+    "cpuPercent": 75.70621468926554,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846624443,
+    "cpuPercent": 75.13513513513513,
+    "Threads_connected": 24,
+    "Threads_running": 4
+  },
+  {
+    "at": 1795846626515,
+    "cpuPercent": 75.57932263814618,
+    "Threads_connected": 24,
+    "Threads_running": 3
+  },
+  {
+    "at": 1795846628519,
+    "cpuPercent": 70.53571428571428,
+    "Threads_connected": 24,
+    "Threads_running": 3
+  },
+  {
+    "at": 1795846630524,
+    "cpuPercent": 91.66666666666666,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846632595,
+    "cpuPercent": 83.47386172006746,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846634598,
+    "cpuPercent": 25.688073394495415,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846636603,
+    "cpuPercent": 4.040404040404044,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846638607,
+    "cpuPercent": 2.2556390977443663,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846640610,
+    "cpuPercent": 0.5115089514066473,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846642614,
+    "cpuPercent": 6.060606060606055,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846644618,
+    "cpuPercent": 9.462915601023013,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846646622,
+    "cpuPercent": 2.7568922305764465,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846648625,
+    "cpuPercent": 1.269035532994922,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846650629,
+    "cpuPercent": 1.7676767676767624,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846652632,
+    "cpuPercent": 1.7632241813602012,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846654636,
+    "cpuPercent": 9.090909090909093,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846656639,
+    "cpuPercent": 2.784810126582282,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846658643,
+    "cpuPercent": 1.7676767676767624,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846660647,
+    "cpuPercent": 3.759398496240607,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846662650,
+    "cpuPercent": 4.444444444444439,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846664653,
+    "cpuPercent": 5.808080808080806,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846666657,
+    "cpuPercent": 6.733167082294267,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846668660,
+    "cpuPercent": 46.116504854368934,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846670664,
+    "cpuPercent": 5.5415617128463435,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846672674,
+    "cpuPercent": 1.2594458438287104,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846674677,
+    "cpuPercent": 8.291457286432157,
+    "Threads_connected": 25,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846676681,
+    "cpuPercent": 3.0226700251889116,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846678684,
+    "cpuPercent": 2.7638190954773822,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846680686,
+    "cpuPercent": 11.750000000000005,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846682690,
+    "cpuPercent": 4.691358024691361,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846684694,
+    "cpuPercent": 6.549118387909325,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846686696,
+    "cpuPercent": 2.7707808564231717,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846688698,
+    "cpuPercent": 2.261306532663321,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846690702,
+    "cpuPercent": 4.010025062656641,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846692706,
+    "cpuPercent": 5.223880597014929,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846694710,
+    "cpuPercent": 5.7644110275689275,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846696713,
+    "cpuPercent": 1.253132832080206,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846698717,
+    "cpuPercent": 2.030456852791873,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846700720,
+    "cpuPercent": 2.010050251256279,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846702724,
+    "cpuPercent": 1.005025125628145,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846704727,
+    "cpuPercent": 5.289672544080604,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846706730,
+    "cpuPercent": 0.5050505050505083,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846708734,
+    "cpuPercent": 1.741293532338306,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846710738,
+    "cpuPercent": 2.0000000000000018,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846712741,
+    "cpuPercent": 1.005025125628145,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846714745,
+    "cpuPercent": 4.545454545454541,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846716749,
+    "cpuPercent": 1.7543859649122862,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846718753,
+    "cpuPercent": 1.005025125628145,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846720755,
+    "cpuPercent": 1.5075376884422065,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846722759,
+    "cpuPercent": 3.6945812807881784,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846724762,
+    "cpuPercent": 4.534005037783373,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846726766,
+    "cpuPercent": 1.5000000000000013,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846728768,
+    "cpuPercent": 3.797468354430378,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846730771,
+    "cpuPercent": 1.7632241813602012,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846732775,
+    "cpuPercent": 1.0025062656641603,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846734779,
+    "cpuPercent": 4.545454545454541,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846736783,
+    "cpuPercent": 1.741293532338306,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846738786,
+    "cpuPercent": 0.7556675062972307,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846740790,
+    "cpuPercent": 4.645476772616142,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846742794,
+    "cpuPercent": 1.005025125628145,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846744798,
+    "cpuPercent": 4.522613065326631,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846746802,
+    "cpuPercent": 1.5075376884422065,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846748806,
+    "cpuPercent": 0.5063291139240533,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846750810,
+    "cpuPercent": 1.0075566750629705,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846752814,
+    "cpuPercent": 1.2499999999999956,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846754816,
+    "cpuPercent": 4.325699745547073,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846756821,
+    "cpuPercent": 1.2499999999999956,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846758826,
+    "cpuPercent": 0.5063291139240533,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846760830,
+    "cpuPercent": 1.2594458438287104,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846762834,
+    "cpuPercent": 1.005025125628145,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846764838,
+    "cpuPercent": 5.263157894736848,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846766842,
+    "cpuPercent": 1.0075566750629705,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846768846,
+    "cpuPercent": 0.5037783375314908,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846770849,
+    "cpuPercent": 1.2562814070351758,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846772853,
+    "cpuPercent": 1.005025125628145,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846774855,
+    "cpuPercent": 1.995012468827928,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846776859,
+    "cpuPercent": 4.060913705583758,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846778863,
+    "cpuPercent": 2.4752475247524774,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846780867,
+    "cpuPercent": 0.5089058524173073,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846782870,
+    "cpuPercent": 2.749999999999997,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846784873,
+    "cpuPercent": 1.0075566750629705,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846786877,
+    "cpuPercent": 10.804020100502509,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846788880,
+    "cpuPercent": 0.5063291139240533,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846790883,
+    "cpuPercent": 1.749999999999996,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846792886,
+    "cpuPercent": 1.005025125628145,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846794889,
+    "cpuPercent": 1.2594458438287104,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846796894,
+    "cpuPercent": 4.303797468354431,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846798895,
+    "cpuPercent": 2.784810126582282,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846800914,
+    "cpuPercent": 8.292682926829265,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846802917,
+    "cpuPercent": 1.243781094527363,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846804919,
+    "cpuPercent": 1.0075566750629705,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846806924,
+    "cpuPercent": 4.797979797979801,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846808928,
+    "cpuPercent": 0.2525252525252486,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846810932,
+    "cpuPercent": 2.493765586034913,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846812936,
+    "cpuPercent": 1.7543859649122862,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846814940,
+    "cpuPercent": 0.5076142131979711,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846816944,
+    "cpuPercent": 4.282115869017633,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846818947,
+    "cpuPercent": 0.5050505050505083,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846820950,
+    "cpuPercent": 1.0101010101010055,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846822954,
+    "cpuPercent": 0.7556675062972307,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846824958,
+    "cpuPercent": 25.615763546798032,
+    "Threads_connected": 24,
+    "Threads_running": 3
+  },
+  {
+    "at": 1795846826961,
+    "cpuPercent": 30.075187969924812,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846828963,
+    "cpuPercent": 24.938271604938265,
+    "Threads_connected": 24,
+    "Threads_running": 3
+  },
+  {
+    "at": 1795846830967,
+    "cpuPercent": 30.17031630170316,
+    "Threads_connected": 24,
+    "Threads_running": 4
+  },
+  {
+    "at": 1795846832970,
+    "cpuPercent": 25.552825552825553,
+    "Threads_connected": 24,
+    "Threads_running": 3
+  },
+  {
+    "at": 1795846834973,
+    "cpuPercent": 26.076555023923444,
+    "Threads_connected": 24,
+    "Threads_running": 3
+  },
+  {
+    "at": 1795846836977,
+    "cpuPercent": 31.026252983293556,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846838979,
+    "cpuPercent": 25.365853658536587,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846840982,
+    "cpuPercent": 25.721153846153843,
+    "Threads_connected": 24,
+    "Threads_running": 3
+  },
+  {
+    "at": 1795846842985,
+    "cpuPercent": 28.436018957345976,
+    "Threads_connected": 24,
+    "Threads_running": 3
+  },
+  {
+    "at": 1795846844987,
+    "cpuPercent": 26.35294117647059,
+    "Threads_connected": 24,
+    "Threads_running": 3
+  },
+  {
+    "at": 1795846846991,
+    "cpuPercent": 36.602870813397125,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846848995,
+    "cpuPercent": 25.882352941176467,
+    "Threads_connected": 24,
+    "Threads_running": 3
+  },
+  {
+    "at": 1795846850997,
+    "cpuPercent": 27.441860465116275,
+    "Threads_connected": 24,
+    "Threads_running": 3
+  },
+  {
+    "at": 1795846853000,
+    "cpuPercent": 25.118483412322277,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846855013,
+    "cpuPercent": 28.735632183908045,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846857017,
+    "cpuPercent": 30.23809523809524,
+    "Threads_connected": 24,
+    "Threads_running": 3
+  },
+  {
+    "at": 1795846859019,
+    "cpuPercent": 27.884615384615387,
+    "Threads_connected": 24,
+    "Threads_running": 3
+  },
+  {
+    "at": 1795846861022,
+    "cpuPercent": 31.13636363636364,
+    "Threads_connected": 24,
+    "Threads_running": 3
+  },
+  {
+    "at": 1795846863025,
+    "cpuPercent": 22.303921568627448,
+    "Threads_connected": 24,
+    "Threads_running": 3
+  },
+  {
+    "at": 1795846865029,
+    "cpuPercent": 5.985037406483795,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846867032,
+    "cpuPercent": 4.797979797979801,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846869036,
+    "cpuPercent": 1.0075566750629705,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846871040,
+    "cpuPercent": 1.0075566750629705,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846873045,
+    "cpuPercent": 0.7537688442211032,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846875048,
+    "cpuPercent": 1.005025125628145,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846877052,
+    "cpuPercent": 5.249999999999999,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846879056,
+    "cpuPercent": 0.7537688442211032,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846881060,
+    "cpuPercent": 0.75949367088608,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846883062,
+    "cpuPercent": 1.4962593516209433,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846885066,
+    "cpuPercent": 1.2594458438287104,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846887070,
+    "cpuPercent": 3.7878787878787845,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846889072,
+    "cpuPercent": 0.5050505050505083,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846891075,
+    "cpuPercent": 1.5000000000000013,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846893079,
+    "cpuPercent": 0.5037783375314908,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846895083,
+    "cpuPercent": 0.7556675062972307,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846897087,
+    "cpuPercent": 4.0506329113924044,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846899089,
+    "cpuPercent": 0.7556675062972307,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846901092,
+    "cpuPercent": 1.5113350125944613,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846903096,
+    "cpuPercent": 1.995012468827928,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846905101,
+    "cpuPercent": 2.7431421446383997,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846907104,
+    "cpuPercent": 5.037783375314864,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846909108,
+    "cpuPercent": 0.2525252525252486,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846911112,
+    "cpuPercent": 1.5037593984962405,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846913116,
+    "cpuPercent": 0.5050505050505083,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846915118,
+    "cpuPercent": 1.0101010101010055,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846917122,
+    "cpuPercent": 3.544303797468351,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846919126,
+    "cpuPercent": 3.2828282828282873,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846921130,
+    "cpuPercent": 2.970297029702973,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846923132,
+    "cpuPercent": 0,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846925136,
+    "cpuPercent": 0.5050505050505083,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846927140,
+    "cpuPercent": 4.7858942065491235,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846929141,
+    "cpuPercent": 0.25316455696202667,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846931145,
+    "cpuPercent": 1.5037593984962405,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846933149,
+    "cpuPercent": 1.2594458438287104,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846935153,
+    "cpuPercent": 1.7456359102244412,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846937156,
+    "cpuPercent": 1.5075376884422065,
+    "Threads_connected": 23,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846968991,
+    "cpuPercent": 37.94871794871795,
+    "Threads_connected": 24,
+    "Threads_running": 3
+  },
+  {
+    "at": 1795846970995,
+    "cpuPercent": 31.185567010309278,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846973000,
+    "cpuPercent": 30.512820512820515,
+    "Threads_connected": 24,
+    "Threads_running": 4
+  },
+  {
+    "at": 1795846975005,
+    "cpuPercent": 32.330827067669176,
+    "Threads_connected": 24,
+    "Threads_running": 4
+  },
+  {
+    "at": 1795846977010,
+    "cpuPercent": 32.42574257425742,
+    "Threads_connected": 24,
+    "Threads_running": 5
+  },
+  {
+    "at": 1795846979015,
+    "cpuPercent": 35.16209476309227,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846981019,
+    "cpuPercent": 39.75903614457831,
+    "Threads_connected": 24,
+    "Threads_running": 3
+  },
+  {
+    "at": 1795846983023,
+    "cpuPercent": 32.920792079207914,
+    "Threads_connected": 24,
+    "Threads_running": 4
+  },
+  {
+    "at": 1795846985027,
+    "cpuPercent": 31.818181818181824,
+    "Threads_connected": 24,
+    "Threads_running": 5
+  },
+  {
+    "at": 1795846987030,
+    "cpuPercent": 27.77777777777778,
+    "Threads_connected": 24,
+    "Threads_running": 3
+  },
+  {
+    "at": 1795846989033,
+    "cpuPercent": 34.203655352480425,
+    "Threads_connected": 24,
+    "Threads_running": 3
+  },
+  {
+    "at": 1795846991038,
+    "cpuPercent": 35.13513513513513,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795846993042,
+    "cpuPercent": 31.565656565656564,
+    "Threads_connected": 24,
+    "Threads_running": 3
+  },
+  {
+    "at": 1795846995047,
+    "cpuPercent": 29.8469387755102,
+    "Threads_connected": 24,
+    "Threads_running": 9
+  },
+  {
+    "at": 1795846997075,
+    "cpuPercent": 54.65346534653466,
+    "Threads_connected": 24,
+    "Threads_running": 3
+  },
+  {
+    "at": 1795846999080,
+    "cpuPercent": 79.520697167756,
+    "Threads_connected": 24,
+    "Threads_running": 3
+  },
+  {
+    "at": 1795847001083,
+    "cpuPercent": 71.71314741035857,
+    "Threads_connected": 24,
+    "Threads_running": 3
+  },
+  {
+    "at": 1795847003155,
+    "cpuPercent": 66.79389312977099,
+    "Threads_connected": 24,
+    "Threads_running": 3
+  },
+  {
+    "at": 1795847005159,
+    "cpuPercent": 67.69825918762089,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847007163,
+    "cpuPercent": 50.67698259187621,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847009166,
+    "cpuPercent": 1.2562814070351758,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847011170,
+    "cpuPercent": 0.25316455696202667,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847013173,
+    "cpuPercent": 4.030226700251893,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847015177,
+    "cpuPercent": 0.2525252525252486,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847017181,
+    "cpuPercent": 1.2562814070351758,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847019184,
+    "cpuPercent": 0.7537688442211032,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847021188,
+    "cpuPercent": 1.2626262626262652,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847023191,
+    "cpuPercent": 7.231920199501252,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847025196,
+    "cpuPercent": 2.0050125313283207,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847027200,
+    "cpuPercent": 1.0025062656641603,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847029204,
+    "cpuPercent": 1.0025062656641603,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847031208,
+    "cpuPercent": 0.75949367088608,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847033212,
+    "cpuPercent": 4.761904761904767,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847035216,
+    "cpuPercent": 0.5063291139240533,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847037220,
+    "cpuPercent": 0.5037783375314908,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847039224,
+    "cpuPercent": 3.2911392405063244,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847041227,
+    "cpuPercent": 2.487562189054726,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847043230,
+    "cpuPercent": 4.282115869017633,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847045233,
+    "cpuPercent": 1.5000000000000013,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847047237,
+    "cpuPercent": 1.5037593984962405,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847049240,
+    "cpuPercent": 0,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847051242,
+    "cpuPercent": 1.0126582278481067,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847053246,
+    "cpuPercent": 4.7858942065491235,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847055250,
+    "cpuPercent": 1.5000000000000013,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847057252,
+    "cpuPercent": 0.25316455696202667,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847059257,
+    "cpuPercent": 0,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847061260,
+    "cpuPercent": 1.2562814070351758,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847063264,
+    "cpuPercent": 4.2713567839196,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847065267,
+    "cpuPercent": 1.0126582278481067,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847067270,
+    "cpuPercent": 0.5037783375314908,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847069272,
+    "cpuPercent": 0.5050505050505083,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847071276,
+    "cpuPercent": 0.7537688442211032,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847073278,
+    "cpuPercent": 3.562340966921118,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847075281,
+    "cpuPercent": 0.5050505050505083,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847077286,
+    "cpuPercent": 0.7575757575757569,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847079290,
+    "cpuPercent": 1.005025125628145,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847081293,
+    "cpuPercent": 1.0101010101010055,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847083297,
+    "cpuPercent": 5.970149253731338,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847085301,
+    "cpuPercent": 2.722772277227725,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847087305,
+    "cpuPercent": 0.2525252525252486,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847089308,
+    "cpuPercent": 1.0025062656641603,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847091312,
+    "cpuPercent": 1.5075376884422065,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847093316,
+    "cpuPercent": 3.544303797468351,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847095320,
+    "cpuPercent": 1.2594458438287104,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847097322,
+    "cpuPercent": 0.7556675062972307,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847099326,
+    "cpuPercent": 1.985111662531014,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847101330,
+    "cpuPercent": 3.9800995024875663,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847103334,
+    "cpuPercent": 2.0050125313283207,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847105337,
+    "cpuPercent": 3.2828282828282873,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847107340,
+    "cpuPercent": 0.75949367088608,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847109344,
+    "cpuPercent": 0.5037783375314908,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847111348,
+    "cpuPercent": 0.7556675062972307,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847113350,
+    "cpuPercent": 1.005025125628145,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847115355,
+    "cpuPercent": 4.0506329113924044,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847117359,
+    "cpuPercent": 1.741293532338306,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847119363,
+    "cpuPercent": 1.9900497512437831,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847121365,
+    "cpuPercent": 1.5075376884422065,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847123369,
+    "cpuPercent": 1.253132832080206,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847125373,
+    "cpuPercent": 5.513784461152882,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847127377,
+    "cpuPercent": 0.7518796992481258,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847129380,
+    "cpuPercent": 1.2562814070351758,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847131383,
+    "cpuPercent": 0.5037783375314908,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847133385,
+    "cpuPercent": 0,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847135388,
+    "cpuPercent": 5.249999999999999,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847137391,
+    "cpuPercent": 0.5063291139240533,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847139395,
+    "cpuPercent": 1.5000000000000013,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847141398,
+    "cpuPercent": 0.761421319796951,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847143401,
+    "cpuPercent": 4.91400491400491,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847145403,
+    "cpuPercent": 6.203473945409432,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847147407,
+    "cpuPercent": 1.2499999999999956,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847149410,
+    "cpuPercent": 0.5050505050505083,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847151414,
+    "cpuPercent": 1.2594458438287104,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847153416,
+    "cpuPercent": 0.5037783375314908,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847155420,
+    "cpuPercent": 5.263157894736848,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847157424,
+    "cpuPercent": 1.0025062656641603,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847159428,
+    "cpuPercent": 3.7688442211055273,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847161430,
+    "cpuPercent": 4.187192118226601,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847163433,
+    "cpuPercent": 0.5050505050505083,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847165435,
+    "cpuPercent": 4.534005037783373,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847167437,
+    "cpuPercent": 1.0075566750629705,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847169440,
+    "cpuPercent": 0.5037783375314908,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847171443,
+    "cpuPercent": 1.7676767676767624,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847173447,
+    "cpuPercent": 0.7537688442211032,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847175450,
+    "cpuPercent": 4.773869346733672,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847177454,
+    "cpuPercent": 0.25188916876573986,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847179457,
+    "cpuPercent": 1.0025062656641603,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847181460,
+    "cpuPercent": 1.0101010101010055,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847183464,
+    "cpuPercent": 0.5037783375314908,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847185467,
+    "cpuPercent": 5.500000000000005,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847187470,
+    "cpuPercent": 0.7537688442211032,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847189473,
+    "cpuPercent": 1.2562814070351758,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847191476,
+    "cpuPercent": 0.5037783375314908,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847193480,
+    "cpuPercent": 0.7537688442211032,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847195484,
+    "cpuPercent": 5.000000000000004,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847197486,
+    "cpuPercent": 0.7575757575757569,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847199490,
+    "cpuPercent": 0.5037783375314908,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847201494,
+    "cpuPercent": 1.0126582278481067,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847203498,
+    "cpuPercent": 2.481389578163773,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847205502,
+    "cpuPercent": 6.188118811881194,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847207506,
+    "cpuPercent": 0.7537688442211032,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847209511,
+    "cpuPercent": 0.7537688442211032,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847211514,
+    "cpuPercent": 1.2594458438287104,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847213518,
+    "cpuPercent": 0.5050505050505083,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847215521,
+    "cpuPercent": 5.970149253731338,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847217524,
+    "cpuPercent": 0.5037783375314908,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847219527,
+    "cpuPercent": 1.005025125628145,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847221532,
+    "cpuPercent": 3.4482758620689613,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847223536,
+    "cpuPercent": 0,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847225540,
+    "cpuPercent": 3.5532994923857864,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847227543,
+    "cpuPercent": 1.2562814070351758,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847229547,
+    "cpuPercent": 0.5037783375314908,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847231550,
+    "cpuPercent": 0.2544529262086481,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847233554,
+    "cpuPercent": 0.2525252525252486,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847235557,
+    "cpuPercent": 5.263157894736848,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847237561,
+    "cpuPercent": 0.2525252525252486,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847239565,
+    "cpuPercent": 1.253132832080206,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847241570,
+    "cpuPercent": 1.749999999999996,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847243573,
+    "cpuPercent": 1.005025125628145,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847245576,
+    "cpuPercent": 4.314720812182737,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847247580,
+    "cpuPercent": 1.0000000000000009,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847249583,
+    "cpuPercent": 1.253132832080206,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847251586,
+    "cpuPercent": 1.253132832080206,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847253590,
+    "cpuPercent": 0.7537688442211032,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847255594,
+    "cpuPercent": 4.511278195488721,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847257598,
+    "cpuPercent": 0.7575757575757569,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847259601,
+    "cpuPercent": 1.9900497512437831,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847261605,
+    "cpuPercent": 1.5075376884422065,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847263607,
+    "cpuPercent": 1.5000000000000013,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847265609,
+    "cpuPercent": 6.913580246913575,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847267611,
+    "cpuPercent": 1.5000000000000013,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847269614,
+    "cpuPercent": 0.5050505050505083,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847271618,
+    "cpuPercent": 1.2562814070351758,
+    "Threads_connected": 24,
+    "Threads_running": 3
+  },
+  {
+    "at": 1795847273622,
+    "cpuPercent": 0.5050505050505083,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847275625,
+    "cpuPercent": 5.000000000000004,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847277628,
+    "cpuPercent": 1.5037593984962405,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847279632,
+    "cpuPercent": 3.7878787878787845,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847281636,
+    "cpuPercent": 5.867970660146704,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847283639,
+    "cpuPercent": 1.253132832080206,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847285641,
+    "cpuPercent": 0.7575757575757569,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847287651,
+    "cpuPercent": 4.534005037783373,
+    "Threads_connected": 24,
+    "Threads_running": 3
+  },
+  {
+    "at": 1795847289655,
+    "cpuPercent": 1.2499999999999956,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847291657,
+    "cpuPercent": 1.5151515151515138,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847293660,
+    "cpuPercent": 0.7556675062972307,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847295663,
+    "cpuPercent": 1.7456359102244412,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847297667,
+    "cpuPercent": 3.797468354430378,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847299669,
+    "cpuPercent": 1.253132832080206,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847301675,
+    "cpuPercent": 1.2594458438287104,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847303678,
+    "cpuPercent": 1.0025062656641603,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847305682,
+    "cpuPercent": 2.487562189054726,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847307684,
+    "cpuPercent": 4.030226700251893,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847309687,
+    "cpuPercent": 1.2562814070351758,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847311691,
+    "cpuPercent": 0.7556675062972307,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847313694,
+    "cpuPercent": 0.5037783375314908,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847315697,
+    "cpuPercent": 2.487562189054726,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847317700,
+    "cpuPercent": 4.761904761904767,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847319704,
+    "cpuPercent": 1.5037593984962405,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847321706,
+    "cpuPercent": 0.7575757575757569,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847323708,
+    "cpuPercent": 2.7295285359801524,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847325710,
+    "cpuPercent": 1.749999999999996,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847327714,
+    "cpuPercent": 4.534005037783373,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847329717,
+    "cpuPercent": 1.253132832080206,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847331720,
+    "cpuPercent": 1.0075566750629705,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847333724,
+    "cpuPercent": 1.005025125628145,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847335728,
+    "cpuPercent": 1.0075566750629705,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847337730,
+    "cpuPercent": 4.2713567839196,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847339732,
+    "cpuPercent": 0.7556675062972307,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847341739,
+    "cpuPercent": 2.487562189054726,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847343743,
+    "cpuPercent": 1.0025062656641603,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847345747,
+    "cpuPercent": 1.0075566750629705,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847347749,
+    "cpuPercent": 4.761904761904767,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847349753,
+    "cpuPercent": 0.25380710659898,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847351755,
+    "cpuPercent": 1.005025125628145,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847353760,
+    "cpuPercent": 0.25316455696202667,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847355764,
+    "cpuPercent": 1.5000000000000013,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847357766,
+    "cpuPercent": 3.5532994923857864,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847359772,
+    "cpuPercent": 0.25380710659898,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847361776,
+    "cpuPercent": 1.2562814070351758,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847363781,
+    "cpuPercent": 1.005025125628145,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847365783,
+    "cpuPercent": 1.5075376884422065,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847367787,
+    "cpuPercent": 5.223880597014929,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847369790,
+    "cpuPercent": 0.7556675062972307,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847371794,
+    "cpuPercent": 1.7456359102244412,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847373798,
+    "cpuPercent": 0.2525252525252486,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847375801,
+    "cpuPercent": 1.5037593984962405,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847377805,
+    "cpuPercent": 5.012531328320802,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847379808,
+    "cpuPercent": 1.0101010101010055,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847381811,
+    "cpuPercent": 1.0075566750629705,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847383815,
+    "cpuPercent": 2.493765586034913,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847385818,
+    "cpuPercent": 2.722772277227725,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847387822,
+    "cpuPercent": 4.0506329113924044,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847389825,
+    "cpuPercent": 0.5037783375314908,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847391829,
+    "cpuPercent": 1.2562814070351758,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847393832,
+    "cpuPercent": 0.5050505050505083,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847395836,
+    "cpuPercent": 1.0075566750629705,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847397839,
+    "cpuPercent": 4.522613065326631,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847399844,
+    "cpuPercent": 4.249999999999998,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847401859,
+    "cpuPercent": 5.896805896805901,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847403863,
+    "cpuPercent": 0.7499999999999951,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847405866,
+    "cpuPercent": 0.75949367088608,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847407870,
+    "cpuPercent": 4.534005037783373,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847409874,
+    "cpuPercent": 0.7575757575757569,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847411878,
+    "cpuPercent": 1.5075376884422065,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847413881,
+    "cpuPercent": 0.25316455696202667,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847415883,
+    "cpuPercent": 1.005025125628145,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847417887,
+    "cpuPercent": 3.544303797468351,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847419890,
+    "cpuPercent": 0.7537688442211032,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847421893,
+    "cpuPercent": 1.0101010101010055,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847423897,
+    "cpuPercent": 1.985111662531014,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847425900,
+    "cpuPercent": 1.5075376884422065,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847427904,
+    "cpuPercent": 4.282115869017633,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847429907,
+    "cpuPercent": 0.5037783375314908,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847431910,
+    "cpuPercent": 1.0075566750629705,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847433914,
+    "cpuPercent": 0.5037783375314908,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847435918,
+    "cpuPercent": 1.7543859649122862,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847437921,
+    "cpuPercent": 4.292929292929292,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847439926,
+    "cpuPercent": 1.0075566750629705,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847441930,
+    "cpuPercent": 0.7556675062972307,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847443934,
+    "cpuPercent": 2.736318407960203,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847445937,
+    "cpuPercent": 2.4752475247524774,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847447940,
+    "cpuPercent": 2.8205128205128216,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847449944,
+    "cpuPercent": 0.5050505050505083,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847451947,
+    "cpuPercent": 1.2594458438287104,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847453950,
+    "cpuPercent": 0,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847455954,
+    "cpuPercent": 1.7543859649122862,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847457958,
+    "cpuPercent": 3.0456852791878153,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847459962,
+    "cpuPercent": 1.2626262626262652,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847461966,
+    "cpuPercent": 2.481389578163773,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847463970,
+    "cpuPercent": 0.5050505050505083,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847465974,
+    "cpuPercent": 1.2562814070351758,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847467978,
+    "cpuPercent": 0.5037783375314908,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847469981,
+    "cpuPercent": 4.314720812182737,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847471984,
+    "cpuPercent": 1.2499999999999956,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847473987,
+    "cpuPercent": 0.5050505050505083,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847475990,
+    "cpuPercent": 1.7456359102244412,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847477993,
+    "cpuPercent": 0.2525252525252486,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847479996,
+    "cpuPercent": 5.012531328320802,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847482000,
+    "cpuPercent": 1.0075566750629705,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847484004,
+    "cpuPercent": 0.5050505050505083,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847486008,
+    "cpuPercent": 1.995012468827928,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847488012,
+    "cpuPercent": 0.7556675062972307,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847490020,
+    "cpuPercent": 5.000000000000004,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847492024,
+    "cpuPercent": 1.0025062656641603,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847494027,
+    "cpuPercent": 0.2525252525252486,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847496030,
+    "cpuPercent": 0.5063291139240533,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847498034,
+    "cpuPercent": 0.7537688442211032,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847500038,
+    "cpuPercent": 5.263157894736848,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847502040,
+    "cpuPercent": 0.7575757575757569,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847504045,
+    "cpuPercent": 2.977667493796521,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847506049,
+    "cpuPercent": 2.493765586034913,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847508053,
+    "cpuPercent": 0.7537688442211032,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847510056,
+    "cpuPercent": 4.534005037783373,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847512062,
+    "cpuPercent": 1.0101010101010055,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847514066,
+    "cpuPercent": 0.5037783375314908,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847516070,
+    "cpuPercent": 1.5037593984962405,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847518072,
+    "cpuPercent": 1.0025062656641603,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847520085,
+    "cpuPercent": 7.304785894206544,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847522088,
+    "cpuPercent": 2.7093596059113323,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847524093,
+    "cpuPercent": 0.7537688442211032,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847526095,
+    "cpuPercent": 0.2544529262086481,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847528099,
+    "cpuPercent": 0.7537688442211032,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847530104,
+    "cpuPercent": 4.292929292929292,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847532107,
+    "cpuPercent": 1.0126582278481067,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847534109,
+    "cpuPercent": 2.2332506203473934,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847536113,
+    "cpuPercent": 1.0075566750629705,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847538117,
+    "cpuPercent": 1.0025062656641603,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847540122,
+    "cpuPercent": 4.534005037783373,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847542126,
+    "cpuPercent": 1.0075566750629705,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847544130,
+    "cpuPercent": 0.7556675062972307,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847546134,
+    "cpuPercent": 0.5050505050505083,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847548137,
+    "cpuPercent": 0,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847550141,
+    "cpuPercent": 4.773869346733672,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847552145,
+    "cpuPercent": 0.25316455696202667,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847554149,
+    "cpuPercent": 0.7537688442211032,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847556153,
+    "cpuPercent": 1.5075376884422065,
+    "Threads_connected": 25,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847558157,
+    "cpuPercent": 0.7537688442211032,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847560160,
+    "cpuPercent": 4.314720812182737,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847562164,
+    "cpuPercent": 1.0075566750629705,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847564167,
+    "cpuPercent": 1.2562814070351758,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847566170,
+    "cpuPercent": 1.9900497512437831,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847568174,
+    "cpuPercent": 0.5037783375314908,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847570178,
+    "cpuPercent": 5.249999999999999,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847572182,
+    "cpuPercent": 0.5076142131979711,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847574186,
+    "cpuPercent": 0.25316455696202667,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847576190,
+    "cpuPercent": 0.7575757575757569,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847578194,
+    "cpuPercent": 0.7537688442211032,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847580197,
+    "cpuPercent": 5.48628428927681,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847582200,
+    "cpuPercent": 1.2499999999999956,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847584204,
+    "cpuPercent": 0.5037783375314908,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847586208,
+    "cpuPercent": 0.5076142131979711,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847588212,
+    "cpuPercent": 1.0025062656641603,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847590216,
+    "cpuPercent": 4.292929292929292,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847592219,
+    "cpuPercent": 1.253132832080206,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847594222,
+    "cpuPercent": 1.749999999999996,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847596226,
+    "cpuPercent": 0.7537688442211032,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847598230,
+    "cpuPercent": 0.5050505050505083,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847600234,
+    "cpuPercent": 5.263157894736848,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847602238,
+    "cpuPercent": 1.5037593984962405,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847604242,
+    "cpuPercent": 1.253132832080206,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847606246,
+    "cpuPercent": 1.2594458438287104,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847608249,
+    "cpuPercent": 0.5050505050505083,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847610253,
+    "cpuPercent": 5.940594059405946,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847612257,
+    "cpuPercent": 0.7556675062972307,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847614260,
+    "cpuPercent": 0.5050505050505083,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847616263,
+    "cpuPercent": 2.0050125313283207,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847618267,
+    "cpuPercent": 1.005025125628145,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847620270,
+    "cpuPercent": 5.05050505050505,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847622274,
+    "cpuPercent": 1.5000000000000013,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847624277,
+    "cpuPercent": 1.005025125628145,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847626280,
+    "cpuPercent": 2.500000000000002,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847628284,
+    "cpuPercent": 0.7537688442211032,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847630288,
+    "cpuPercent": 4.282115869017633,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847632320,
+    "cpuPercent": 0.5076142131979711,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847634324,
+    "cpuPercent": 0.990099009900991,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847636328,
+    "cpuPercent": 1.749999999999996,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847638332,
+    "cpuPercent": 0.25188916876573986,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847640336,
+    "cpuPercent": 11.138613861386137,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847642340,
+    "cpuPercent": 2.7568922305764465,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847644344,
+    "cpuPercent": 0.5037783375314908,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847646348,
+    "cpuPercent": 1.5075376884422065,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847648351,
+    "cpuPercent": 0.2525252525252486,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847650355,
+    "cpuPercent": 0.5063291139240533,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847652359,
+    "cpuPercent": 4.071246819338425,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847654364,
+    "cpuPercent": 1.2499999999999956,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847656366,
+    "cpuPercent": 0.7556675062972307,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847658370,
+    "cpuPercent": 1.0025062656641603,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847660374,
+    "cpuPercent": 1.2499999999999956,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847662378,
+    "cpuPercent": 5.263157894736848,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847664381,
+    "cpuPercent": 0.5037783375314908,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847666383,
+    "cpuPercent": 1.2594458438287104,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847668387,
+    "cpuPercent": 0.7556675062972307,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847670390,
+    "cpuPercent": 1.5037593984962405,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847672393,
+    "cpuPercent": 4.522613065326631,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847674397,
+    "cpuPercent": 0.25316455696202667,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847676400,
+    "cpuPercent": 1.0075566750629705,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847678403,
+    "cpuPercent": 0.5037783375314908,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847680406,
+    "cpuPercent": 1.2626262626262652,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847682410,
+    "cpuPercent": 5.012531328320802,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847684414,
+    "cpuPercent": 1.253132832080206,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847686418,
+    "cpuPercent": 1.5000000000000013,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847688420,
+    "cpuPercent": 0.2525252525252486,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847690424,
+    "cpuPercent": 0.5050505050505083,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847692428,
+    "cpuPercent": 5.025125628140703,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847694432,
+    "cpuPercent": 0.5050505050505083,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847696435,
+    "cpuPercent": 0.7575757575757569,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847698439,
+    "cpuPercent": 0.7537688442211032,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847700460,
+    "cpuPercent": 3.4653465346534684,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847702464,
+    "cpuPercent": 4.726368159203975,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847704466,
+    "cpuPercent": 0.5050505050505083,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847706470,
+    "cpuPercent": 1.5037593984962405,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847708474,
+    "cpuPercent": 0.7537688442211032,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847710478,
+    "cpuPercent": 1.5075376884422065,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847712481,
+    "cpuPercent": 4.0506329113924044,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847714485,
+    "cpuPercent": 1.2499999999999956,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847716488,
+    "cpuPercent": 1.253132832080206,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847718491,
+    "cpuPercent": 0.7518796992481258,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847720494,
+    "cpuPercent": 1.0075566750629705,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847722497,
+    "cpuPercent": 4.303797468354431,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847724500,
+    "cpuPercent": 1.253132832080206,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847726504,
+    "cpuPercent": 1.5037593984962405,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847728507,
+    "cpuPercent": 0,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847730510,
+    "cpuPercent": 1.253132832080206,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847732514,
+    "cpuPercent": 4.282115869017633,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847734518,
+    "cpuPercent": 0.5037783375314908,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847736522,
+    "cpuPercent": 1.0101010101010055,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847738526,
+    "cpuPercent": 0.7556675062972307,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847740530,
+    "cpuPercent": 1.7721518987341756,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847742533,
+    "cpuPercent": 5.263157894736848,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847744537,
+    "cpuPercent": 0.7556675062972307,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847746540,
+    "cpuPercent": 1.995012468827928,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847748545,
+    "cpuPercent": 0.5025125628140725,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847750549,
+    "cpuPercent": 0,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847752553,
+    "cpuPercent": 4.0506329113924044,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847754557,
+    "cpuPercent": 0.7537688442211032,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847756561,
+    "cpuPercent": 1.0101010101010055,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847758564,
+    "cpuPercent": 0.7518796992481258,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847760573,
+    "cpuPercent": 6.435643564356431,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847762576,
+    "cpuPercent": 3.7878787878787845,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847764580,
+    "cpuPercent": 0.7556675062972307,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847766583,
+    "cpuPercent": 0.5063291139240533,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847768586,
+    "cpuPercent": 0.2525252525252486,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847770588,
+    "cpuPercent": 1.9900497512437831,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847772592,
+    "cpuPercent": 5.276381909547734,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847774594,
+    "cpuPercent": 0.7556675062972307,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847776598,
+    "cpuPercent": 1.0025062656641603,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847778602,
+    "cpuPercent": 0.7537688442211032,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847780606,
+    "cpuPercent": 0.5037783375314908,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847782610,
+    "cpuPercent": 4.7858942065491235,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847784614,
+    "cpuPercent": 0.7556675062972307,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847786616,
+    "cpuPercent": 1.0075566750629705,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847788620,
+    "cpuPercent": 1.253132832080206,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847790624,
+    "cpuPercent": 1.253132832080206,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847792628,
+    "cpuPercent": 4.511278195488721,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847794631,
+    "cpuPercent": 0.25316455696202667,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847796637,
+    "cpuPercent": 0.5076142131979711,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847798640,
+    "cpuPercent": 0.25188916876573986,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847800644,
+    "cpuPercent": 1.2594458438287104,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847802647,
+    "cpuPercent": 4.773869346733672,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847804650,
+    "cpuPercent": 0.7556675062972307,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847806653,
+    "cpuPercent": 0.7575757575757569,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847808657,
+    "cpuPercent": 0.5025125628140725,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847810660,
+    "cpuPercent": 1.2594458438287104,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847812664,
+    "cpuPercent": 3.535353535353536,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847814666,
+    "cpuPercent": 0.7556675062972307,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847816670,
+    "cpuPercent": 1.5037593984962405,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847818673,
+    "cpuPercent": 0.5025125628140725,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847820704,
+    "cpuPercent": 3.2098765432098775,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847822708,
+    "cpuPercent": 3.7220843672456594,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847824712,
+    "cpuPercent": 1.2562814070351758,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847826715,
+    "cpuPercent": 0.5076142131979711,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847828719,
+    "cpuPercent": 0.5025125628140725,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847830724,
+    "cpuPercent": 1.0075566750629705,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847832728,
+    "cpuPercent": 0.7537688442211032,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847834731,
+    "cpuPercent": 4.282115869017633,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847836735,
+    "cpuPercent": 0.5025125628140725,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847838739,
+    "cpuPercent": 0,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847840741,
+    "cpuPercent": 1.0101010101010055,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847842744,
+    "cpuPercent": 0.5050505050505083,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847844748,
+    "cpuPercent": 4.773869346733672,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847846752,
+    "cpuPercent": 0.5037783375314908,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847848756,
+    "cpuPercent": 0.5037783375314908,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847850759,
+    "cpuPercent": 1.980198019801982,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847852763,
+    "cpuPercent": 0.2525252525252486,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847854767,
+    "cpuPercent": 4.773869346733672,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847856770,
+    "cpuPercent": 1.0075566750629705,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847858773,
+    "cpuPercent": 0.7575757575757569,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847860777,
+    "cpuPercent": 1.5037593984962405,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847862779,
+    "cpuPercent": 1.0075566750629705,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847864784,
+    "cpuPercent": 4.0506329113924044,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847866786,
+    "cpuPercent": 3.712871287128716,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847868790,
+    "cpuPercent": 0.2525252525252486,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847870794,
+    "cpuPercent": 0.75949367088608,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847872798,
+    "cpuPercent": 0.5037783375314908,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847874800,
+    "cpuPercent": 5.500000000000005,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847876804,
+    "cpuPercent": 0.5050505050505083,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847878808,
+    "cpuPercent": 0.5037783375314908,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847880812,
+    "cpuPercent": 5.721393034825873,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847882814,
+    "cpuPercent": 0.5037783375314908,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847884818,
+    "cpuPercent": 4.761904761904767,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847886823,
+    "cpuPercent": 0.25380710659898,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847888827,
+    "cpuPercent": 0.5025125628140725,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847890829,
+    "cpuPercent": 0.75949367088608,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847892833,
+    "cpuPercent": 1.5037593984962405,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847894837,
+    "cpuPercent": 4.534005037783373,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847896840,
+    "cpuPercent": 0.2525252525252486,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847898842,
+    "cpuPercent": 0.5063291139240533,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847900846,
+    "cpuPercent": 1.5037593984962405,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847902850,
+    "cpuPercent": 0.25188916876573986,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847904853,
+    "cpuPercent": 4.797979797979801,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847906855,
+    "cpuPercent": 0.5037783375314908,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847908859,
+    "cpuPercent": 0,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847910863,
+    "cpuPercent": 1.5000000000000013,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847912867,
+    "cpuPercent": 0.7537688442211032,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847914870,
+    "cpuPercent": 4.761904761904767,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847916874,
+    "cpuPercent": 0.7575757575757569,
+    "Threads_connected": 24,
+    "Threads_running": 3
+  },
+  {
+    "at": 1795847918878,
+    "cpuPercent": 0.25188916876573986,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847920880,
+    "cpuPercent": 1.5113350125944613,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847922883,
+    "cpuPercent": 3.2019704433497553,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847924887,
+    "cpuPercent": 4.761904761904767,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847926890,
+    "cpuPercent": 2.481389578163773,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847928893,
+    "cpuPercent": 0.2525252525252486,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847930897,
+    "cpuPercent": 0.7575757575757569,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847932900,
+    "cpuPercent": 0,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847934904,
+    "cpuPercent": 6.467661691542292,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847936908,
+    "cpuPercent": 0.7556675062972307,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847938912,
+    "cpuPercent": 1.0025062656641603,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847940916,
+    "cpuPercent": 1.749999999999996,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847942920,
+    "cpuPercent": 0.5037783375314908,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847944924,
+    "cpuPercent": 4.761904761904767,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847946928,
+    "cpuPercent": 1.0075566750629705,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847948930,
+    "cpuPercent": 1.2499999999999956,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847950934,
+    "cpuPercent": 1.0075566750629705,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847952938,
+    "cpuPercent": 0.2525252525252486,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847954940,
+    "cpuPercent": 4.534005037783373,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847956943,
+    "cpuPercent": 0.25316455696202667,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847958947,
+    "cpuPercent": 1.005025125628145,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847960951,
+    "cpuPercent": 0.5063291139240533,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847962955,
+    "cpuPercent": 1.2468827930174564,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847964958,
+    "cpuPercent": 5.249999999999999,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847966962,
+    "cpuPercent": 0.5050505050505083,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847968966,
+    "cpuPercent": 0.5025125628140725,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847970970,
+    "cpuPercent": 0.7537688442211032,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847972973,
+    "cpuPercent": 0.7556675062972307,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847974978,
+    "cpuPercent": 5.2369077306733125,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847976982,
+    "cpuPercent": 1.0075566750629705,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847978986,
+    "cpuPercent": 0.5050505050505083,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847980989,
+    "cpuPercent": 2.0050125313283207,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847982994,
+    "cpuPercent": 1.9900497512437831,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847984997,
+    "cpuPercent": 5.012531328320802,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847987000,
+    "cpuPercent": 3.9119804400977953,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847989004,
+    "cpuPercent": 0.2525252525252486,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847991012,
+    "cpuPercent": 0.75949367088608,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847993017,
+    "cpuPercent": 1.005025125628145,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847995020,
+    "cpuPercent": 4.534005037783373,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847997023,
+    "cpuPercent": 1.0025062656641603,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795847999027,
+    "cpuPercent": 3.037974683544309,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848001032,
+    "cpuPercent": 4.444444444444439,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848003036,
+    "cpuPercent": 1.005025125628145,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848005039,
+    "cpuPercent": 2.7918781725888353,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848007043,
+    "cpuPercent": 2.2556390977443663,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848009047,
+    "cpuPercent": 0.2525252525252486,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848011051,
+    "cpuPercent": 1.0075566750629705,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848013053,
+    "cpuPercent": 1.2594458438287104,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848015058,
+    "cpuPercent": 1.7456359102244412,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848017062,
+    "cpuPercent": 4.761904761904767,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848019066,
+    "cpuPercent": 0.7537688442211032,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848021069,
+    "cpuPercent": 0.75949367088608,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848023072,
+    "cpuPercent": 1.0025062656641603,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848025076,
+    "cpuPercent": 1.2562814070351758,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848027080,
+    "cpuPercent": 4.7858942065491235,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848029083,
+    "cpuPercent": 0.2525252525252486,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848031086,
+    "cpuPercent": 2.0050125313283207,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848033090,
+    "cpuPercent": 0,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848035094,
+    "cpuPercent": 1.0025062656641603,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848037097,
+    "cpuPercent": 6.451612903225811,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848039100,
+    "cpuPercent": 0.5037783375314908,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848041104,
+    "cpuPercent": 1.2594458438287104,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848043107,
+    "cpuPercent": 1.5037593984962405,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848045110,
+    "cpuPercent": 1.0025062656641603,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848047113,
+    "cpuPercent": 6.218905472636815,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848049116,
+    "cpuPercent": 0.2525252525252486,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848051120,
+    "cpuPercent": 1.2594458438287104,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848053123,
+    "cpuPercent": 0,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848055128,
+    "cpuPercent": 1.7543859649122862,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848057133,
+    "cpuPercent": 5.000000000000004,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848059137,
+    "cpuPercent": 1.0101010101010055,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848061140,
+    "cpuPercent": 2.7295285359801524,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848063144,
+    "cpuPercent": 0,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848065148,
+    "cpuPercent": 0.7537688442211032,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848067152,
+    "cpuPercent": 4.314720812182737,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848069155,
+    "cpuPercent": 1.2499999999999956,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848071159,
+    "cpuPercent": 0.25380710659898,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848073163,
+    "cpuPercent": 0.5037783375314908,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848075167,
+    "cpuPercent": 1.9900497512437831,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848077169,
+    "cpuPercent": 4.761904761904767,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848079173,
+    "cpuPercent": 0.7556675062972307,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848081177,
+    "cpuPercent": 1.7543859649122862,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848083181,
+    "cpuPercent": 0.5037783375314908,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848085183,
+    "cpuPercent": 0.5063291139240533,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848087187,
+    "cpuPercent": 4.534005037783373,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848089190,
+    "cpuPercent": 0.7556675062972307,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848091194,
+    "cpuPercent": 0.5050505050505083,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848093197,
+    "cpuPercent": 0.2525252525252486,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848095199,
+    "cpuPercent": 0.5050505050505083,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848097204,
+    "cpuPercent": 5.025125628140703,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848099208,
+    "cpuPercent": 0.2525252525252486,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848101210,
+    "cpuPercent": 2.493765586034913,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848103214,
+    "cpuPercent": 2.977667493796521,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848105218,
+    "cpuPercent": 1.0075566750629705,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848107222,
+    "cpuPercent": 4.534005037783373,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848109226,
+    "cpuPercent": 2.238805970149249,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848111230,
+    "cpuPercent": 0.75949367088608,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848113234,
+    "cpuPercent": 0.5050505050505083,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848115238,
+    "cpuPercent": 1.0101010101010055,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848117242,
+    "cpuPercent": 4.522613065326631,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848119246,
+    "cpuPercent": 4.020100502512558,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848121250,
+    "cpuPercent": 4.926108374384242,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848123254,
+    "cpuPercent": 0.7556675062972307,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848125258,
+    "cpuPercent": 0.7537688442211032,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848127262,
+    "cpuPercent": 5.012531328320802,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848129266,
+    "cpuPercent": 0.2525252525252486,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848131270,
+    "cpuPercent": 0.25380710659898,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848133274,
+    "cpuPercent": 2.244389027431426,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848135278,
+    "cpuPercent": 1.5000000000000013,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848137282,
+    "cpuPercent": 4.292929292929292,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848139286,
+    "cpuPercent": 0.25188916876573986,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848141289,
+    "cpuPercent": 0.75949367088608,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848143293,
+    "cpuPercent": 0.7518796992481258,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848145295,
+    "cpuPercent": 0.7575757575757569,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848147297,
+    "cpuPercent": 4.522613065326631,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848149300,
+    "cpuPercent": 1.0075566750629705,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848151304,
+    "cpuPercent": 1.0000000000000009,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848153308,
+    "cpuPercent": 0.25188916876573986,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848155312,
+    "cpuPercent": 1.0025062656641603,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848157316,
+    "cpuPercent": 5.025125628140703,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848159320,
+    "cpuPercent": 0.2525252525252486,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848161323,
+    "cpuPercent": 1.0075566750629705,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848163327,
+    "cpuPercent": 2.2332506203473934,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848165330,
+    "cpuPercent": 2.0000000000000018,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848167334,
+    "cpuPercent": 4.2713567839196,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795848169338,
+    "cpuPercent": 0.25188916876573986,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873120938,
+    "cpuPercent": 2.244389027431426,
+    "Threads_connected": 23,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873122943,
+    "cpuPercent": 7.14285714285714,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873124948,
+    "cpuPercent": 1.4962593516209433,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873126952,
+    "cpuPercent": 3.1941031941031928,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873128956,
+    "cpuPercent": 3.4229828850855792,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873130960,
+    "cpuPercent": 1.7543859649122862,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873132964,
+    "cpuPercent": 7.334963325183375,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873134969,
+    "cpuPercent": 1.749999999999996,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873136973,
+    "cpuPercent": 2.7027027027026973,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873138977,
+    "cpuPercent": 2.716049382716046,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873140981,
+    "cpuPercent": 3.9119804400977953,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873142985,
+    "cpuPercent": 4.987531172069826,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873144988,
+    "cpuPercent": 1.2499999999999956,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873146993,
+    "cpuPercent": 2.9556650246305383,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873148997,
+    "cpuPercent": 2.9556650246305383,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873151000,
+    "cpuPercent": 2.716049382716046,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873153003,
+    "cpuPercent": 6.419753086419755,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873155014,
+    "cpuPercent": 1.985111662531014,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873157017,
+    "cpuPercent": 1.975308641975304,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873159021,
+    "cpuPercent": 2.7093596059113323,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873161025,
+    "cpuPercent": 2.2332506203473934,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873163029,
+    "cpuPercent": 5.472636815920396,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873165033,
+    "cpuPercent": 3.6855036855036882,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873167036,
+    "cpuPercent": 1.4925373134328401,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873169038,
+    "cpuPercent": 1.5000000000000013,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873171042,
+    "cpuPercent": 2.2222222222222254,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873173047,
+    "cpuPercent": 4.987531172069826,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873175050,
+    "cpuPercent": 2.4691358024691357,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873177054,
+    "cpuPercent": 1.253132832080206,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873179057,
+    "cpuPercent": 3.4229828850855792,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873181060,
+    "cpuPercent": 3.4482758620689613,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873183062,
+    "cpuPercent": 6.8627450980392135,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873185071,
+    "cpuPercent": 2.716049382716046,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873187075,
+    "cpuPercent": 2.716049382716046,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873189079,
+    "cpuPercent": 2.9484029484029506,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873191081,
+    "cpuPercent": 1.749999999999996,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873193084,
+    "cpuPercent": 5.249999999999999,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873195087,
+    "cpuPercent": 2.481389578163773,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873197090,
+    "cpuPercent": 2.9484029484029506,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873199092,
+    "cpuPercent": 5.223880597014929,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873201096,
+    "cpuPercent": 6.506024096385543,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873203100,
+    "cpuPercent": 7.334963325183375,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873205102,
+    "cpuPercent": 1.005025125628145,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873207106,
+    "cpuPercent": 2.481389578163773,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873209109,
+    "cpuPercent": 1.741293532338306,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873211113,
+    "cpuPercent": 3.2019704433497553,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873213117,
+    "cpuPercent": 7.560975609756094,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873215121,
+    "cpuPercent": 5.275779376498802,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873217124,
+    "cpuPercent": 1.4962593516209433,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873219128,
+    "cpuPercent": 4.1564792176039145,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873221132,
+    "cpuPercent": 2.2332506203473934,
+    "Threads_connected": 25,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873223136,
+    "cpuPercent": 5.2369077306733125,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873225139,
+    "cpuPercent": 2.238805970149249,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873227143,
+    "cpuPercent": 1.985111662531014,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873229147,
+    "cpuPercent": 3.1941031941031928,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873231150,
+    "cpuPercent": 2.481389578163773,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873233153,
+    "cpuPercent": 5.925925925925924,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873235157,
+    "cpuPercent": 1.985111662531014,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873237160,
+    "cpuPercent": 2.9629629629629672,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873239164,
+    "cpuPercent": 1.4962593516209433,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873241167,
+    "cpuPercent": 2.722772277227725,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873243170,
+    "cpuPercent": 6.419753086419755,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873245175,
+    "cpuPercent": 2.9484029484029506,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873247180,
+    "cpuPercent": 4.146341463414638,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873249183,
+    "cpuPercent": 1.2468827930174564,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873251186,
+    "cpuPercent": 1.5037593984962405,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873253190,
+    "cpuPercent": 5.223880597014929,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873255194,
+    "cpuPercent": 3.2098765432098775,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873257197,
+    "cpuPercent": 3.1862745098039214,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873259200,
+    "cpuPercent": 1.749999999999996,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873261204,
+    "cpuPercent": 4.854368932038833,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873263208,
+    "cpuPercent": 5.223880597014929,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873265210,
+    "cpuPercent": 0.7556675062972307,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873267215,
+    "cpuPercent": 1.253132832080206,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873269219,
+    "cpuPercent": 1.4962593516209433,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873271223,
+    "cpuPercent": 1.7456359102244412,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873273225,
+    "cpuPercent": 5.2369077306733125,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873275229,
+    "cpuPercent": 2.463054187192115,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873277233,
+    "cpuPercent": 1.741293532338306,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873279236,
+    "cpuPercent": 2.941176470588236,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873281239,
+    "cpuPercent": 1.995012468827928,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873283243,
+    "cpuPercent": 5.2369077306733125,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873285247,
+    "cpuPercent": 3.439803439803435,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873287250,
+    "cpuPercent": 0.5037783375314908,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873289252,
+    "cpuPercent": 1.749999999999996,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873291256,
+    "cpuPercent": 1.985111662531014,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873293260,
+    "cpuPercent": 5.405405405405405,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873295264,
+    "cpuPercent": 2.493765586034913,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873297266,
+    "cpuPercent": 3.2019704433497553,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873299270,
+    "cpuPercent": 2.7093596059113323,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873301274,
+    "cpuPercent": 2.970297029702973,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873303278,
+    "cpuPercent": 3.1862745098039214,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873305280,
+    "cpuPercent": 6.666666666666665,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873307284,
+    "cpuPercent": 2.6960784313725505,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873309289,
+    "cpuPercent": 1.985111662531014,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873311294,
+    "cpuPercent": 1.995012468827928,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873313298,
+    "cpuPercent": 1.4962593516209433,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873315301,
+    "cpuPercent": 6.896551724137934,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873317305,
+    "cpuPercent": 1.980198019801982,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873319309,
+    "cpuPercent": 6.127450980392157,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873321313,
+    "cpuPercent": 4.136253041362526,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873323317,
+    "cpuPercent": 2.2222222222222254,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873325320,
+    "cpuPercent": 5.2369077306733125,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873327324,
+    "cpuPercent": 2.9629629629629672,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873329328,
+    "cpuPercent": 2.941176470588236,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873331332,
+    "cpuPercent": 4.146341463414638,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873333336,
+    "cpuPercent": 1.980198019801982,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873335340,
+    "cpuPercent": 6.617647058823528,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873337344,
+    "cpuPercent": 1.2499999999999956,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873339347,
+    "cpuPercent": 2.238805970149249,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873341350,
+    "cpuPercent": 2.238805970149249,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873343354,
+    "cpuPercent": 1.4925373134328401,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873345358,
+    "cpuPercent": 7.352941176470584,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873347362,
+    "cpuPercent": 2.7093596059113323,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873349367,
+    "cpuPercent": 2.716049382716046,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873351370,
+    "cpuPercent": 2.9484029484029506,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873353374,
+    "cpuPercent": 1.985111662531014,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873355378,
+    "cpuPercent": 5.000000000000004,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873357382,
+    "cpuPercent": 3.2019704433497553,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873359386,
+    "cpuPercent": 2.941176470588236,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873361390,
+    "cpuPercent": 2.244389027431426,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873363392,
+    "cpuPercent": 1.985111662531014,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873365396,
+    "cpuPercent": 8.048780487804875,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873367400,
+    "cpuPercent": 2.941176470588236,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873369404,
+    "cpuPercent": 1.4962593516209433,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873371408,
+    "cpuPercent": 1.2562814070351758,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873373412,
+    "cpuPercent": 2.4691358024691357,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873375417,
+    "cpuPercent": 7.107843137254899,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873377420,
+    "cpuPercent": 1.4925373134328401,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873379424,
+    "cpuPercent": 3.1862745098039214,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873381428,
+    "cpuPercent": 4.136253041362526,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873383432,
+    "cpuPercent": 2.7093596059113323,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873385436,
+    "cpuPercent": 4.987531172069826,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873387439,
+    "cpuPercent": 1.749999999999996,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873389443,
+    "cpuPercent": 1.4962593516209433,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873391448,
+    "cpuPercent": 2.2332506203473934,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873393452,
+    "cpuPercent": 1.741293532338306,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873395455,
+    "cpuPercent": 5.707196029776673,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873397459,
+    "cpuPercent": 3.8834951456310662,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873399462,
+    "cpuPercent": 2.9556650246305383,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873401466,
+    "cpuPercent": 1.5037593984962405,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873403469,
+    "cpuPercent": 1.0025062656641603,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873405472,
+    "cpuPercent": 5.970149253731338,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873407475,
+    "cpuPercent": 1.2468827930174564,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873409478,
+    "cpuPercent": 3.9024390243902474,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873411481,
+    "cpuPercent": 2.4691358024691357,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873413485,
+    "cpuPercent": 2.2222222222222254,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873415490,
+    "cpuPercent": 5.2369077306733125,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873417492,
+    "cpuPercent": 1.9900497512437831,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873419494,
+    "cpuPercent": 3.6674816625916873,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873421497,
+    "cpuPercent": 5.755395683453235,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873423500,
+    "cpuPercent": 2.9629629629629672,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873425504,
+    "cpuPercent": 5.940594059405946,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873427507,
+    "cpuPercent": 0.5025125628140725,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873429510,
+    "cpuPercent": 2.2277227722772297,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873431514,
+    "cpuPercent": 2.238805970149249,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873433518,
+    "cpuPercent": 1.4925373134328401,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873435520,
+    "cpuPercent": 7.14285714285714,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873437524,
+    "cpuPercent": 1.7369727047146455,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873439529,
+    "cpuPercent": 5.432098765432103,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873441532,
+    "cpuPercent": 5.5421686746988,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873443535,
+    "cpuPercent": 2.9556650246305383,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873445539,
+    "cpuPercent": 5.693069306930698,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873447543,
+    "cpuPercent": 2.716049382716046,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873449547,
+    "cpuPercent": 2.2277227722772297,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873451549,
+    "cpuPercent": 2.2332506203473934,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873453553,
+    "cpuPercent": 3.4229828850855792,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873455556,
+    "cpuPercent": 5.707196029776673,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873457560,
+    "cpuPercent": 1.4962593516209433,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873459563,
+    "cpuPercent": 2.722772277227725,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873461567,
+    "cpuPercent": 2.244389027431426,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873463570,
+    "cpuPercent": 1.4962593516209433,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873465574,
+    "cpuPercent": 5.955334987593053,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873467577,
+    "cpuPercent": 1.980198019801982,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873469580,
+    "cpuPercent": 1.9900497512437831,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873471584,
+    "cpuPercent": 2.2222222222222254,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873473586,
+    "cpuPercent": 3.1862745098039214,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873475588,
+    "cpuPercent": 5.693069306930698,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873477592,
+    "cpuPercent": 1.5037593984962405,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873479596,
+    "cpuPercent": 1.741293532338306,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873481600,
+    "cpuPercent": 3.6855036855036882,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873483602,
+    "cpuPercent": 2.716049382716046,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873485605,
+    "cpuPercent": 2.4752475247524774,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873487608,
+    "cpuPercent": 5.459057071960293,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873489612,
+    "cpuPercent": 1.2499999999999956,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873491615,
+    "cpuPercent": 1.5037593984962405,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873493619,
+    "cpuPercent": 1.0000000000000009,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873495622,
+    "cpuPercent": 3.1941031941031928,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873497626,
+    "cpuPercent": 5.459057071960293,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873499630,
+    "cpuPercent": 2.7093596059113323,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873501634,
+    "cpuPercent": 6.937799043062198,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873503638,
+    "cpuPercent": 2.716049382716046,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873505640,
+    "cpuPercent": 4.3689320388349495,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873507643,
+    "cpuPercent": 6.8627450980392135,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873509647,
+    "cpuPercent": 2.2277227722772297,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873511649,
+    "cpuPercent": 2.9556650246305383,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873513653,
+    "cpuPercent": 1.2499999999999956,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873515657,
+    "cpuPercent": 3.9024390243902474,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873517660,
+    "cpuPercent": 7.107843137254899,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873519666,
+    "cpuPercent": 1.980198019801982,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873521670,
+    "cpuPercent": 1.995012468827928,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873523674,
+    "cpuPercent": 1.985111662531014,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873525678,
+    "cpuPercent": 2.481389578163773,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873527681,
+    "cpuPercent": 6.172839506172845,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873529685,
+    "cpuPercent": 1.985111662531014,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873531689,
+    "cpuPercent": 1.4962593516209433,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873533692,
+    "cpuPercent": 1.0025062656641603,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873535696,
+    "cpuPercent": 2.716049382716046,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873537700,
+    "cpuPercent": 6.8627450980392135,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873539702,
+    "cpuPercent": 3.6674816625916873,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873541705,
+    "cpuPercent": 1.5000000000000013,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873543709,
+    "cpuPercent": 2.970297029702973,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873545713,
+    "cpuPercent": 3.9024390243902474,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873547716,
+    "cpuPercent": 6.845965770171148,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873549720,
+    "cpuPercent": 1.741293532338306,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873551724,
+    "cpuPercent": 2.716049382716046,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873553727,
+    "cpuPercent": 2.4691358024691357,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873555729,
+    "cpuPercent": 8.088235294117652,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873557733,
+    "cpuPercent": 26.086956521739136,
+    "Threads_connected": 24,
+    "Threads_running": 3
+  },
+  {
+    "at": 1795873559736,
+    "cpuPercent": 24.70023980815348,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873561739,
+    "cpuPercent": 28.971962616822434,
+    "Threads_connected": 24,
+    "Threads_running": 4
+  },
+  {
+    "at": 1795873563743,
+    "cpuPercent": 19.354838709677423,
+    "Threads_connected": 24,
+    "Threads_running": 3
+  },
+  {
+    "at": 1795873565746,
+    "cpuPercent": 20.099255583126553,
+    "Threads_connected": 24,
+    "Threads_running": 3
+  },
+  {
+    "at": 1795873567750,
+    "cpuPercent": 24.694376528117356,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873569753,
+    "cpuPercent": 20.731707317073166,
+    "Threads_connected": 24,
+    "Threads_running": 3
+  },
+  {
+    "at": 1795873571757,
+    "cpuPercent": 26.71232876712328,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873573760,
+    "cpuPercent": 22.19570405727923,
+    "Threads_connected": 24,
+    "Threads_running": 3
+  },
+  {
+    "at": 1795873575764,
+    "cpuPercent": 23.167848699763592,
+    "Threads_connected": 24,
+    "Threads_running": 3
+  },
+  {
+    "at": 1795873577768,
+    "cpuPercent": 28.057553956834536,
+    "Threads_connected": 24,
+    "Threads_running": 4
+  },
+  {
+    "at": 1795873579772,
+    "cpuPercent": 23.222748815165872,
+    "Threads_connected": 24,
+    "Threads_running": 3
+  },
+  {
+    "at": 1795873581775,
+    "cpuPercent": 25.81395348837209,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873583779,
+    "cpuPercent": 23.708920187793424,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873585783,
+    "cpuPercent": 24.056603773584907,
+    "Threads_connected": 24,
+    "Threads_running": 3
+  },
+  {
+    "at": 1795873587785,
+    "cpuPercent": 25.71428571428571,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873589788,
+    "cpuPercent": 24.056603773584907,
+    "Threads_connected": 24,
+    "Threads_running": 3
+  },
+  {
+    "at": 1795873591792,
+    "cpuPercent": 24.942263279445733,
+    "Threads_connected": 24,
+    "Threads_running": 3
+  },
+  {
+    "at": 1795873593796,
+    "cpuPercent": 23.404255319148938,
+    "Threads_connected": 24,
+    "Threads_running": 3
+  },
+  {
+    "at": 1795873595800,
+    "cpuPercent": 18.069306930693074,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873597803,
+    "cpuPercent": 4.738154613466339,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873599806,
+    "cpuPercent": 2.238805970149249,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873601809,
+    "cpuPercent": 19.259259259259252,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873603813,
+    "cpuPercent": 37.97169811320755,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873605816,
+    "cpuPercent": 37.05463182897862,
+    "Threads_connected": 24,
+    "Threads_running": 4
+  },
+  {
+    "at": 1795873607820,
+    "cpuPercent": 38.90214797136038,
+    "Threads_connected": 24,
+    "Threads_running": 5
+  },
+  {
+    "at": 1795873609824,
+    "cpuPercent": 33.57664233576643,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873611828,
+    "cpuPercent": 35.26570048309179,
+    "Threads_connected": 24,
+    "Threads_running": 4
+  },
+  {
+    "at": 1795873613831,
+    "cpuPercent": 35.251798561151084,
+    "Threads_connected": 24,
+    "Threads_running": 4
+  },
+  {
+    "at": 1795873615835,
+    "cpuPercent": 36.602870813397125,
+    "Threads_connected": 24,
+    "Threads_running": 4
+  },
+  {
+    "at": 1795873617839,
+    "cpuPercent": 37.31707317073171,
+    "Threads_connected": 24,
+    "Threads_running": 4
+  },
+  {
+    "at": 1795873619843,
+    "cpuPercent": 34.96332518337408,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873621846,
+    "cpuPercent": 39.85680190930787,
+    "Threads_connected": 24,
+    "Threads_running": 3
+  },
+  {
+    "at": 1795873623849,
+    "cpuPercent": 34.93975903614458,
+    "Threads_connected": 24,
+    "Threads_running": 3
+  },
+  {
+    "at": 1795873625854,
+    "cpuPercent": 32.49999999999999,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873627859,
+    "cpuPercent": 37.1638141809291,
+    "Threads_connected": 24,
+    "Threads_running": 5
+  },
+  {
+    "at": 1795873629862,
+    "cpuPercent": 32.758620689655174,
+    "Threads_connected": 24,
+    "Threads_running": 4
+  },
+  {
+    "at": 1795873631867,
+    "cpuPercent": 34.71882640586797,
+    "Threads_connected": 24,
+    "Threads_running": 4
+  },
+  {
+    "at": 1795873633870,
+    "cpuPercent": 33.58024691358025,
+    "Threads_connected": 24,
+    "Threads_running": 3
+  },
+  {
+    "at": 1795873635873,
+    "cpuPercent": 35.529411764705884,
+    "Threads_connected": 24,
+    "Threads_running": 3
+  },
+  {
+    "at": 1795873637875,
+    "cpuPercent": 37.530266343825666,
+    "Threads_connected": 24,
+    "Threads_running": 4
+  },
+  {
+    "at": 1795873639879,
+    "cpuPercent": 34.21686746987952,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873641883,
+    "cpuPercent": 21.46341463414634,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873643887,
+    "cpuPercent": 2.2277227722772297,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873645889,
+    "cpuPercent": 4.400977995110022,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873647894,
+    "cpuPercent": 4.422604422604426,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873649897,
+    "cpuPercent": 3.970223325062039,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873651899,
+    "cpuPercent": 1.980198019801982,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873653902,
+    "cpuPercent": 1.985111662531014,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873655905,
+    "cpuPercent": 34.91271820448878,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873657910,
+    "cpuPercent": 44.471744471744465,
+    "Threads_connected": 24,
+    "Threads_running": 5
+  },
+  {
+    "at": 1795873659914,
+    "cpuPercent": 49.029126213592235,
+    "Threads_connected": 24,
+    "Threads_running": 5
+  },
+  {
+    "at": 1795873661916,
+    "cpuPercent": 45.945945945945944,
+    "Threads_connected": 24,
+    "Threads_running": 4
+  },
+  {
+    "at": 1795873663920,
+    "cpuPercent": 48.93111638954869,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873665924,
+    "cpuPercent": 50.11709601873536,
+    "Threads_connected": 24,
+    "Threads_running": 4
+  },
+  {
+    "at": 1795873667928,
+    "cpuPercent": 44.611528822055135,
+    "Threads_connected": 24,
+    "Threads_running": 4
+  },
+  {
+    "at": 1795873669931,
+    "cpuPercent": 55.90361445783132,
+    "Threads_connected": 24,
+    "Threads_running": 3
+  },
+  {
+    "at": 1795873671936,
+    "cpuPercent": 49.38574938574939,
+    "Threads_connected": 24,
+    "Threads_running": 3
+  },
+  {
+    "at": 1795873673940,
+    "cpuPercent": 43.50000000000001,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873675944,
+    "cpuPercent": 46.889952153110045,
+    "Threads_connected": 24,
+    "Threads_running": 4
+  },
+  {
+    "at": 1795873677946,
+    "cpuPercent": 44.827586206896555,
+    "Threads_connected": 24,
+    "Threads_running": 4
+  },
+  {
+    "at": 1795873679950,
+    "cpuPercent": 49.876543209876544,
+    "Threads_connected": 24,
+    "Threads_running": 3
+  },
+  {
+    "at": 1795873681954,
+    "cpuPercent": 51.84331797235022,
+    "Threads_connected": 24,
+    "Threads_running": 4
+  },
+  {
+    "at": 1795873683958,
+    "cpuPercent": 49.75961538461539,
+    "Threads_connected": 24,
+    "Threads_running": 5
+  },
+  {
+    "at": 1795873685963,
+    "cpuPercent": 46.47201946472019,
+    "Threads_connected": 24,
+    "Threads_running": 4
+  },
+  {
+    "at": 1795873687968,
+    "cpuPercent": 44.55205811138014,
+    "Threads_connected": 24,
+    "Threads_running": 4
+  },
+  {
+    "at": 1795873689972,
+    "cpuPercent": 48.78048780487805,
+    "Threads_connected": 24,
+    "Threads_running": 4
+  },
+  {
+    "at": 1795873691976,
+    "cpuPercent": 44.19753086419753,
+    "Threads_connected": 24,
+    "Threads_running": 4
+  },
+  {
+    "at": 1795873693979,
+    "cpuPercent": 45.25547445255474,
+    "Threads_connected": 24,
+    "Threads_running": 4
+  },
+  {
+    "at": 1795873695983,
+    "cpuPercent": 7.052896725440805,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873697986,
+    "cpuPercent": 2.716049382716046,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873699989,
+    "cpuPercent": 17.8921568627451,
+    "Threads_connected": 24,
+    "Threads_running": 4
+  },
+  {
+    "at": 1795873701999,
+    "cpuPercent": 49.271844660194176,
+    "Threads_connected": 24,
+    "Threads_running": 3
+  },
+  {
+    "at": 1795873704004,
+    "cpuPercent": 50.24038461538461,
+    "Threads_connected": 24,
+    "Threads_running": 5
+  },
+  {
+    "at": 1795873706008,
+    "cpuPercent": 53.47721822541966,
+    "Threads_connected": 24,
+    "Threads_running": 4
+  },
+  {
+    "at": 1795873708012,
+    "cpuPercent": 53.25301204819277,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873710020,
+    "cpuPercent": 57.10843373493976,
+    "Threads_connected": 24,
+    "Threads_running": 8
+  },
+  {
+    "at": 1795873712024,
+    "cpuPercent": 51.47783251231527,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873714028,
+    "cpuPercent": 52.89855072463768,
+    "Threads_connected": 24,
+    "Threads_running": 4
+  },
+  {
+    "at": 1795873716033,
+    "cpuPercent": 52.77108433734941,
+    "Threads_connected": 24,
+    "Threads_running": 4
+  },
+  {
+    "at": 1795873718037,
+    "cpuPercent": 52.322738386308075,
+    "Threads_connected": 24,
+    "Threads_running": 4
+  },
+  {
+    "at": 1795873720040,
+    "cpuPercent": 58.80952380952381,
+    "Threads_connected": 24,
+    "Threads_running": 4
+  },
+  {
+    "at": 1795873722044,
+    "cpuPercent": 56.234718826405874,
+    "Threads_connected": 24,
+    "Threads_running": 8
+  },
+  {
+    "at": 1795873724048,
+    "cpuPercent": 55.868544600938975,
+    "Threads_connected": 24,
+    "Threads_running": 4
+  },
+  {
+    "at": 1795873726052,
+    "cpuPercent": 57.88235294117647,
+    "Threads_connected": 24,
+    "Threads_running": 3
+  },
+  {
+    "at": 1795873728055,
+    "cpuPercent": 56.3855421686747,
+    "Threads_connected": 24,
+    "Threads_running": 4
+  },
+  {
+    "at": 1795873730061,
+    "cpuPercent": 57.00245700245701,
+    "Threads_connected": 24,
+    "Threads_running": 5
+  },
+  {
+    "at": 1795873732065,
+    "cpuPercent": 55.39568345323741,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873734069,
+    "cpuPercent": 53.233830845771145,
+    "Threads_connected": 24,
+    "Threads_running": 3
+  },
+  {
+    "at": 1795873736072,
+    "cpuPercent": 53.80952380952381,
+    "Threads_connected": 24,
+    "Threads_running": 5
+  },
+  {
+    "at": 1795873738077,
+    "cpuPercent": 10.224438902743138,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873740086,
+    "cpuPercent": 17.07317073170732,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873742090,
+    "cpuPercent": 3.482587064676612,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873744094,
+    "cpuPercent": 2.9484029484029506,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  },
+  {
+    "at": 1795873746097,
+    "cpuPercent": 4.726368159203975,
+    "Threads_connected": 24,
+    "Threads_running": 2
+  }
+]

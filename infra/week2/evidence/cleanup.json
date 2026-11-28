@@ -1,0 +1,19 @@
+{
+  "checkedAt": "2026-11-28T13:54:58.842465+00:00",
+  "region": "ap-southeast-2",
+  "activeLabEC2": 0,
+  "labRDS": 0,
+  "labALB": 0,
+  "labEBSVolumes": 0,
+  "labALBPublicIPs": 0,
+  "temporarySecretsRemovedFromLocalState": true,
+  "defaultVpcAndSubnetsPreserved": true,
+  "parametersRemaining": 0,
+  "roleAbsent": true,
+  "loadgen_roleAbsent": true,
+  "app_sgAbsent": true,
+  "alb_sgAbsent": true,
+  "db_sgAbsent": true,
+  "loadgen_sgAbsent": true,
+  "repositoryAbsent": true
+}

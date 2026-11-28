@@ -1,0 +1,17 @@
+SSM command 674a2e5f-ee22-458c-aeba-57ad042025d2 on i-0756fd49adf9d8db3
+....................................................................................................................................................................................................................................................................................................................
+status: done
+Initialized tables: 3
+Container readiness passed
+
+----------ERROR-------
+WARNING! Your password will be stored unencrypted in /root/.docker/config.json.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/engine/reference/commandline/login/#credentials-store
+
+WARNING! Your password will be stored unencrypted in /root/.docker/config.json.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/engine/reference/commandline/login/#credentials-store
+
+
+Bootstrap master parameter removed. Application uses DML-only DB user.

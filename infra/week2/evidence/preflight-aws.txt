@@ -16,7 +16,7 @@
       "az": "ap-southeast-2a"
     }
   ],
-  "ami": "ami-0f9d69ac19d6dd660",
+  "ami": "ami-066d7af73f2fc48cb",
   "db_engine": "8.4.11",
   "rds_option_count": 4
 }

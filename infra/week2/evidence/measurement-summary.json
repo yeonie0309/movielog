@@ -1,0 +1,188 @@
+{
+  "source": "Official workbook engine, dedicated VPC generator, four sequential 40-second stages",
+  "rows": [
+    {
+      "targetRps": 200,
+      "startKst": "2026-11-28T22:45:55.540000+09:00",
+      "startedAt": 1795873555540,
+      "finishedAt": 1795873595558,
+      "sendWindowSeconds": 40,
+      "successThroughputRps": 199.56019791094008,
+      "sentRps": 199.65,
+      "p95Ms": 21,
+      "totals": {
+        "sent": 7986,
+        "success": 7986,
+        "failure": 0,
+        "byType": {
+          "network": 0,
+          "timeout": 0,
+          "server": 0,
+          "client": 0
+        },
+        "slow": 0,
+        "dropped": 14
+      },
+      "successRatioOfSent": 1.0,
+      "deliveryRatio": 0.99825,
+      "cpu": {
+        "i-0061baf170283f53a": {
+          "count": 20,
+          "meanPercent": 23.38903211056047,
+          "maxPercent": 28.971962616822434
+        },
+        "i-028ca7137808dc8d4": {
+          "count": 20,
+          "meanPercent": 26.042265943011305,
+          "maxPercent": 30.714285714285715
+        }
+      },
+      "threadsConnectedMax": 24,
+      "threadsRunningMax": 4,
+      "generator": {
+        "nodeVersion": "v22.23.5",
+        "processCpuPercent": 32.47679794092658,
+        "hostCpuPercent": 18.937080024434938,
+        "freeMemoryBytes": 654774272
+      }
+    },
+    {
+      "targetRps": 400,
+      "startKst": "2026-11-28T22:46:41.013000+09:00",
+      "startedAt": 1795873601013,
+      "finishedAt": 1795873641044,
+      "sendWindowSeconds": 40,
+      "successThroughputRps": 396.34283430341486,
+      "sentRps": 396.65,
+      "p95Ms": 24,
+      "totals": {
+        "sent": 15866,
+        "success": 15866,
+        "failure": 0,
+        "byType": {
+          "network": 0,
+          "timeout": 0,
+          "server": 0,
+          "client": 0
+        },
+        "slow": 0,
+        "dropped": 134
+      },
+      "successRatioOfSent": 1.0,
+      "deliveryRatio": 0.991625,
+      "cpu": {
+        "i-0061baf170283f53a": {
+          "count": 20,
+          "meanPercent": 34.9479881217107,
+          "maxPercent": 39.85680190930787
+        },
+        "i-028ca7137808dc8d4": {
+          "count": 20,
+          "meanPercent": 35.663970305946236,
+          "maxPercent": 42.243436754176614
+        }
+      },
+      "threadsConnectedMax": 24,
+      "threadsRunningMax": 9,
+      "generator": {
+        "nodeVersion": "v22.23.5",
+        "processCpuPercent": 49.32882016437261,
+        "hostCpuPercent": 20.52962418082118,
+        "freeMemoryBytes": 652570624
+      }
+    },
+    {
+      "targetRps": 600,
+      "startKst": "2026-11-28T22:47:34.271000+09:00",
+      "startedAt": 1795873654271,
+      "finishedAt": 1795873694291,
+      "sendWindowSeconds": 40,
+      "successThroughputRps": 587.5812093953023,
+      "sentRps": 587.875,
+      "p95Ms": 84,
+      "totals": {
+        "sent": 23515,
+        "success": 23515,
+        "failure": 0,
+        "byType": {
+          "network": 0,
+          "timeout": 0,
+          "server": 0,
+          "client": 0
+        },
+        "slow": 0,
+        "dropped": 485
+      },
+      "successRatioOfSent": 1.0,
+      "deliveryRatio": 0.9797916666666666,
+      "cpu": {
+        "i-0061baf170283f53a": {
+          "count": 20,
+          "meanPercent": 46.963161276713535,
+          "maxPercent": 55.90361445783132
+        },
+        "i-028ca7137808dc8d4": {
+          "count": 20,
+          "meanPercent": 47.85576195363997,
+          "maxPercent": 51.7156862745098
+        }
+      },
+      "threadsConnectedMax": 24,
+      "threadsRunningMax": 7,
+      "generator": {
+        "nodeVersion": "v22.23.5",
+        "processCpuPercent": 64.80528235882059,
+        "hostCpuPercent": 32.97023432552248,
+        "freeMemoryBytes": 655212544
+      }
+    },
+    {
+      "targetRps": 800,
+      "startKst": "2026-11-28T22:48:19.444000+09:00",
+      "startedAt": 1795873699444,
+      "finishedAt": 1795873739581,
+      "sendWindowSeconds": 40,
+      "successThroughputRps": 680.7683683384408,
+      "sentRps": 683.1,
+      "p95Ms": 1911,
+      "totals": {
+        "sent": 27324,
+        "success": 27324,
+        "failure": 0,
+        "byType": {
+          "network": 0,
+          "timeout": 0,
+          "server": 0,
+          "client": 0
+        },
+        "slow": 7324,
+        "dropped": 4676
+      },
+      "successRatioOfSent": 1.0,
+      "deliveryRatio": 0.853875,
+      "cpu": {
+        "i-0061baf170283f53a": {
+          "count": 20,
+          "meanPercent": 50.277993623396945,
+          "maxPercent": 58.80952380952381
+        },
+        "i-028ca7137808dc8d4": {
+          "count": 20,
+          "meanPercent": 53.572349681161256,
+          "maxPercent": 59.305210918114135
+        }
+      },
+      "threadsConnectedMax": 24,
+      "threadsRunningMax": 8,
+      "generator": {
+        "nodeVersion": "v22.23.5",
+        "processCpuPercent": 82.51717368014549,
+        "hostCpuPercent": 41.07784431137724,
+        "freeMemoryBytes": 612868096
+      }
+    }
+  ],
+  "observedTargetInflectionRps": 800,
+  "absoluteServerCapacityProven": false,
+  "conclusion": "이 실험에서 처리량 증가가 꺾이는 첫 목표 부하는 800 RPS이다. 실제 처리량은 680.77 RPS, p95는 1.911초이며 측정기 미전송 4,676건의 영향도 포함한다."
+}

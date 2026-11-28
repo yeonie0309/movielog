@@ -1,0 +1,4 @@
+SSM command a257c05b-fad2-42c4-b04d-5e587a399b86 on i-00d4030da93bb8174
+v22.23.5
+Official engine installed; no credentials copied.
+

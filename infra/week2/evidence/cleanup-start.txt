@@ -1,0 +1,1 @@
+Billable resource deletion requested. Final cleanup must verify completion.

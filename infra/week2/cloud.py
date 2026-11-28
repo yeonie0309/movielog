@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Disposable week2 AWS lab. Reuse week1 logic without modifying its state.
-Secrets stay in .local/; ALL workloads use a fresh DB and private ALB via SSM.
+Secrets stay in .local/; fresh DB/private ALB, SSM control and VPC-local load.
 """
 import base64
 import importlib.util
@@ -82,6 +82,14 @@ def inspect():
     ]})['Parameters']
     print(json.dumps({'existingAppParameters': [{'name': p['Name'], 'type': p['Type']} for p in params]}))
 
+def status():
+    reservations = aws('ec2', 'describe-instances', {'Filters': [
+        {'Name': 'tag:Project', 'Values': [lab.PREFIX]}]})['Reservations']
+    instances = [{'id': i['InstanceId'], 'state': i['State']['Name']} for r in reservations for i in r['Instances']]
+    dbs = aws('rds', 'describe-db-instances')['DBInstances']
+    database = next((d['DBInstanceStatus'] for d in dbs if d['DBInstanceIdentifier'] == lab.state.get('db_id')), 'absent')
+    print(json.dumps({'rds': database, 'instances': instances, 'cleanupComplete': lab.state.get('cleanup_complete', False)}, indent=2))
+
 def foundation():
     if lab.state.get('cleanup_complete'):
         raise RuntimeError('State was cleaned; do not reuse recorded deleted resource IDs.')
@@ -153,6 +161,16 @@ def tunnel():
         '--parameters', json.dumps({'host': [lab.state['alb_dns']], 'portNumber': ['80'], 'localPortNumber': ['9377']})], check=True)
 
 def cleanup_start():
+    if aws('sts', 'get-caller-identity')['Account'] != lab.state['account'] or lab.REGION != lab.state['region']:
+        raise RuntimeError('Refusing cleanup in a different account or region')
+    if lab.state.get('loadgen'):
+        aws('ec2', 'terminate-instances', {'InstanceIds': [lab.state['loadgen']]})
+    if lab.state.get('loadgen_sg'):
+        try:
+            raw_aws('ec2', 'revoke-security-group-ingress', {'GroupId': lab.state['alb_sg'], 'IpPermissions': [
+                {'IpProtocol': 'tcp', 'FromPort': 80, 'ToPort': 80, 'UserIdGroupPairs': [{'GroupId': lab.state['loadgen_sg']}]}]})
+        except RuntimeError as error:
+            if not any(code in str(error) for code in ['InvalidPermission.NotFound', 'InvalidGroup.NotFound']): raise
     lab.cleanup_start()
     aws('ssm', 'delete-parameters', {'Names': ['/umc/app/' + k for k in [
         'gc-fleet-url', 'gc-fleet-user', 'gc-prom-url', 'gc-prom-user', 'gc-token', 'mysql-dsn', 'exporter-password'
@@ -162,8 +180,30 @@ def cleanup_finish():
     previous_root = lab.ROOT
     lab.ROOT = HERE
     try:
+        if lab.state.get('account') and (aws('sts', 'get-caller-identity')['Account'] != lab.state['account'] or lab.REGION != lab.state['region']):
+            raise RuntimeError('Refusing cleanup in a different account or region')
+        # Private ALB ingress references app SG while app ingress references ALB:
+        # remove this owned reverse reference before deleting either group.
+        if lab.state.get('cleanup_requested') and lab.state.get('app_sg') and lab.state.get('alb_sg'):
+            try:
+                raw_aws('ec2', 'revoke-security-group-ingress', {'GroupId': lab.state['alb_sg'], 'IpPermissions': [
+                    {'IpProtocol': 'tcp', 'FromPort': 80, 'ToPort': 80, 'UserIdGroupPairs': [{'GroupId': lab.state['app_sg']}]}]})
+            except RuntimeError as error:
+                if not any(code in str(error) for code in ['InvalidPermission.NotFound', 'InvalidGroup.NotFound']): raise
         lab.cleanup_finish()
         if lab.state.get('cleanup_complete'):
+            def remove(service, operation, data):
+                try: aws(service, operation, data)
+                except RuntimeError as error:
+                    if not any(code in str(error) for code in ['NoSuchEntity', 'InvalidGroup.NotFound']): raise
+            if lab.state.get('loadgen_role'):
+                name = lab.state['loadgen_role']
+                remove('iam', 'remove-role-from-instance-profile', {'InstanceProfileName': name, 'RoleName': name})
+                remove('iam', 'delete-instance-profile', {'InstanceProfileName': name})
+                remove('iam', 'detach-role-policy', {'RoleName': name, 'PolicyArn': 'arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore'})
+                remove('iam', 'delete-role', {'RoleName': name})
+            if lab.state.get('loadgen_sg'):
+                remove('ec2', 'delete-security-group', {'GroupId': lab.state['loadgen_sg']})
             lab.state.pop('exporter_password', None)
             lab.save()
     finally:
@@ -176,6 +216,7 @@ if __name__ == '__main__':
         ('init-db', lab.init_db), ('end-baseline', lab.end_baseline), ('cluster', lab.cluster),
         ('targets', lab.targets), ('wait-cluster', lab.wait_cluster)]:
         actions[name] = function
+    actions['status'] = status
     if len(sys.argv) != 2 or sys.argv[1] not in actions:
         raise SystemExit('Usage: cloud.py ' + '|'.join(actions))
     actions[sys.argv[1]]()

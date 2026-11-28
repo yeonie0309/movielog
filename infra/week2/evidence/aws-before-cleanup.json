@@ -1,0 +1,18 @@
+{
+  "rds": "available",
+  "instances": [
+    {
+      "id": "i-028ca7137808dc8d4",
+      "state": "running"
+    },
+    {
+      "id": "i-0061baf170283f53a",
+      "state": "running"
+    },
+    {
+      "id": "i-00d4030da93bb8174",
+      "state": "running"
+    }
+  ],
+  "cleanupComplete": false
+}

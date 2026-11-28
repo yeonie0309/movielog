@@ -1,4 +1,6 @@
 import base64
+import contextlib
+import io
 import importlib.util
 import json
 from pathlib import Path
@@ -10,6 +12,21 @@ cloud = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(cloud)
 
 class Infra2SafetyTests(unittest.TestCase):
+    def test_cleanup_rejects_wrong_account_before_terminating_loadgen(self):
+        with patch.dict(cloud.lab.state,{'account':'owner','region':cloud.lab.REGION,'loadgen':'i-owned'},clear=True), patch.object(cloud,'aws',return_value={'Account':'different'}) as request:
+            with self.assertRaisesRegex(RuntimeError,'different account'):
+                cloud.cleanup_start()
+        self.assertEqual(request.call_count,1)
+
+    def test_status_tolerates_expired_terminated_instance_records(self):
+        def read(service, operation, data=None):
+            if operation=='describe-instances':return {'Reservations':[]}
+            if operation=='describe-db-instances':return {'DBInstances':[]}
+            raise AssertionError('Status must remain read-only')
+        with patch.object(cloud,'aws',side_effect=read), patch.dict(cloud.lab.state,{'baseline':'expired-id'},clear=True), contextlib.redirect_stdout(io.StringIO()) as output:
+            cloud.status()
+        self.assertEqual(json.loads(output.getvalue())['instances'],[])
+
     def test_private_alb_even_if_reused_cluster_asks_for_public(self):
         with patch.object(cloud, 'raw_aws', return_value={}) as run:
             cloud.aws('elbv2', 'create-load-balancer', {'Scheme':'internet-facing'})
