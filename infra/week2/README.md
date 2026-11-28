@@ -44,6 +44,7 @@ SSM/EC2 credentials와secret정보를원격 명령문에 직접넣지 않는다.
 - Nest 테스팅: https://docs.nestjs.com/fundamentals/testing
 
 ## 제출 자료
+- PR: https://github.com/yeonie0309/movielog/pull/22 (base: codex/infra-week-1)
 - SUBMISSION_GUIDE.md: 원본 위에서부터 작성 위치, 정의·후기·필수 표·미션 과정·트러블슈팅.
 - LIMIT_REPORT.md / SLO.md: 실제 결과와 정의.
 - evidence/README.md: 최종 사진별 첨부 위치.

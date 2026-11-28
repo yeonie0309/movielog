@@ -21,5 +21,6 @@
   "observedTargetInflectionRps": 800,
   "absoluteServerCapacityProven": false,
   "cloudResourcesCleaned": true,
-  "grafanaLabTokenRevoked": true
+  "grafanaLabTokenRevoked": true,
+  "pullRequestUrl": "https://github.com/yeonie0309/movielog/pull/22"
 }

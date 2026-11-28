@@ -103,7 +103,7 @@ threads_connected는 현재 열려 있는 MySQL 연결 수이고 threads_running
 6. **알림:** p95>1초가1분 지속되면 본인 이메일로 알림을 보내도록 설정하고 실제 수신했다. 사진 `06-alert-configured.jpg`, `10-alert-firing.jpg`, `11-alert-received.jpg` 첨부. 이 증빙은 낮의 과부하 구간이다.
 7. **검증:** 백엔드79개, 실습 안전장치11개, Alloy 설정4개, promtool 시나리오3개를 통과했다. 백엔드 타입 검사도 통과했다. 사진 `16-verification-logs.jpg` 첨부. 실제 실행 로그를 보여주는 문서 뷰어 사진이며 터미널 앱 화면으로 설명하지 않는다.
 8. **정리:** 실습 EC2·RDS·ALB·EBS를 삭제하고 실습 전용 권한·설정도 정리했다. 기본 VPC·서브넷과 기존 로컬 프로젝트 데이터는 보존했다. 사진 `17-cleanup.jpg` 첨부.
-9. **코드:** PR 링크와 `18-pr.jpg`를 첨부한다. PR 링크는 아래 최종 답변 또는 README.md의 링크를 사용한다.
+9. **코드:** https://github.com/yeonie0309/movielog/pull/22 링크와 `18-pr.jpg`를 첨부한다. 네 사진의2×2 배치는 `20-pr-evidence-grid.jpg`에서 확인할 수 있다.
 
 ## 7. ‘⚡ 트러블 슈팅’ → ‘⚡ 이슈 No.1’
 

@@ -19,6 +19,8 @@ spec.loader.exec_module(cloud)
 aws, state = cloud.aws, cloud.lab.state
 
 def create():
+    if state.get('cleanup_requested') or state.get('cleanup_complete'):
+        raise RuntimeError('Lab cleanup started; refusing to reuse deleted resource IDs')
     if state.get('loadgen'):
         reservations = aws('ec2','describe-instances',{'Filters':[{'Name':'instance-id','Values':[state['loadgen']]}]})['Reservations']
         existing = [i for r in reservations for i in r['Instances']]
